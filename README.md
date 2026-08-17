@@ -164,37 +164,21 @@ node scripts/build.mjs                   # writes dist/
 node scripts/export-for-review.mjs > review.csv
 ```
 
-## Sharing a link
+## The live site
 
-`.github/workflows/pages.yml` validates the facts, builds, and publishes `dist/`
-to GitHub Pages on every push to `main`. It needs one manual step first:
+**https://whitetod-ops.github.io/kirkgame/** -- public, no sign-in.
+The design map is at `/docs/design-map.html`.
 
-> **Settings -> Pages -> Build and deployment -> Source: GitHub Actions**
+Pages serves the committed `index.html` at the repository root
+(Settings -> Pages -> Deploy from a branch -> `main` -> `/ (root)`). No deploy
+workflow is involved: pushing to `main` publishes.
 
-Either Pages source works, because the build writes the game to two places:
+`index.html` and `.nojekyll` at the root are **generated** by
+`scripts/build.mjs` and committed. Edit `src/`, rebuild, commit -- never
+hand-edit them. `.github/workflows/checks.yml` fails the push if you forget,
+and validates every fact before that.
 
-| Source setting | What serves | Needs the workflow |
-| --- | --- | --- |
-| GitHub Actions | `dist/` uploaded by the workflow | yes |
-| Deploy from a branch -> `main` -> `/ (root)` | committed `index.html` at the root | no |
-
-The root `index.html` and `.nojekyll` are **generated** by `scripts/build.mjs`
-and committed. Edit `src/`, rebuild, commit -- never hand-edit them.
-
-Until that is set the `configure-pages` step fails and the deploy is skipped,
-while validation and build still pass. A red run before Pages is switched on is
-expected, not a broken build.
-
-Enabling Pages does not retro-trigger a deploy, so after switching it on either
-re-run the last workflow or use the **Run workflow** button the
-`workflow_dispatch` trigger provides.
-
-This repository is public, so Pages costs nothing. Once live, the game is at
-`https://whitetod-ops.github.io/kirkgame/` and the design map at
-`/design-map.html`.
-
-A Pages site is readable by anyone who has the URL. It is a link to hand out,
-not an access-controlled one.
+A Pages site is readable by anyone with the URL.
 
 ## How a round is assembled
 

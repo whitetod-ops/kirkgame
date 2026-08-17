@@ -1,0 +1,41 @@
+# Pages is served straight from the committed index.html at the repo root
+# ("Deploy from a branch" -> main -> / (root)), so no deploy workflow is needed.
+# This is a guard instead: it fails the push if a fact is malformed, or if the
+# committed build output has drifted from src/ and the data files.
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Schema, sources, https, the claim-length cap that keeps one question on
+      # one screen, and the sensitive flags the tone rule depends on.
+      - name: Validate facts
+        run: node scripts/validate-facts.mjs
+
+      - name: Build
+        run: node scripts/build.mjs
+
+      # index.html is generated and committed, so it can silently go stale and
+      # quietly serve an old game. Rebuild and diff to catch that.
+      - name: Committed build output is current
+        run: |
+          if ! git diff --exit-code -- index.html dist/; then
+            echo "::error::Build output is stale. Run 'node scripts/build.mjs' and commit the result."
+            exit 1
+          fi
