@@ -2,8 +2,8 @@
 #
 # One-time setup, which has to be done by hand in the browser:
 #   Settings -> Pages -> Build and deployment -> Source: GitHub Actions
-# On a private repository, Pages needs a paid plan. Making the repository
-# public is the free route.
+# Until that is set, the configure-pages step fails and the deploy is skipped;
+# validation and build still pass. This repository is public, so Pages is free.
 name: Deploy to Pages
 
 on:

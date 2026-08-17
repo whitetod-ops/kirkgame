@@ -171,16 +171,20 @@ to GitHub Pages on every push to `main`. It needs one manual step first:
 
 > **Settings -> Pages -> Build and deployment -> Source: GitHub Actions**
 
-Until that is set, the workflow's deploy step fails. A red run before Pages is
-switched on is expected, not a broken build.
+Until that is set the `configure-pages` step fails and the deploy is skipped,
+while validation and build still pass. A red run before Pages is switched on is
+expected, not a broken build.
 
-**GitHub Pages on a private repository requires a paid plan.** Making the
-repository public is the free route. Once it is live the game is at
-`https://whitetod-ops.github.io/kirkgame/` with the design map at
+Enabling Pages does not retro-trigger a deploy, so after switching it on either
+re-run the last workflow or use the **Run workflow** button the
+`workflow_dispatch` trigger provides.
+
+This repository is public, so Pages costs nothing. Once live, the game is at
+`https://whitetod-ops.github.io/kirkgame/` and the design map at
 `/design-map.html`.
 
-A Pages site is public to anyone with the URL, whatever the repository's
-visibility. It is a link you can hand out, not an access-controlled one.
+A Pages site is readable by anyone who has the URL. It is a link to hand out,
+not an access-controlled one.
 
 ## How a round is assembled
 
