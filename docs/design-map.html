@@ -1,4 +1,4 @@
-<title>Kirk Ogren Game</title>
+<title>Give or Take</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -456,14 +456,16 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow">Design map &middot; version 0.1 &middot; nothing built yet</p>
-    <h1>Kirk Ogren Game</h1>
+    <p class="eyebrow">Design map &middot; version 0.2 &middot; a Kirk Ogren game &middot; nothing built yet</p>
+    <h1>Give or Take</h1>
     <p class="thesis">A history quiz that runs on over/under bets, built so that losing a question makes you want to go read about it.</p>
     <div class="decided">
       <span class="chip"><b>Solo</b> first, multiplayer designed in</span>
       <span class="chip"><b>Relaxed</b> pacing, timer optional</span>
       <span class="chip"><b>Wager</b> round, capped at 50%</span>
       <span class="chip"><b>10</b> categories now, <b>100</b> mapped</span>
+      <span class="chip"><b>Installable web app</b>, mobile first</span>
+      <span class="chip">Facts in <b>git</b>, database at phase 4</span>
     </div>
   </header>
 
@@ -473,6 +475,7 @@
     <p class="lede">The player chooses a historical period &mdash; the Civil War, Caesar's Rome, early Christianity, the American Revolution, America in the 1960s &mdash; and answers ten easy questions about it. Questions are phrased as bets: <em class="term">Abraham Lincoln was assassinated. Was that before or after 1870?</em></p>
     <p>Over/under does three useful things at once. It has a 50/50 floor, so nobody feels stupid. It teaches while it scores &mdash; guessing wrong on 1870 still plants 1865 in your head. And it needs no hand-written wrong answers, which is the difference between a game with 2,000 questions and a game with 200.</p>
     <p>The point is not the score. Every answer opens onto the real fact, the story behind it, and a link out. The game is a doorway into an afternoon of reading.</p>
+    <p><strong>The name says the mechanic and does a second job besides.</strong> <em>Give or take</em> is what an American says about an approximate figure &mdash; "1865, give or take." It tells a player who believes they are bad at history that roughly right is good enough here, which is the most useful thing a title can do for this audience.</p>
   </section>
 
   <section>
@@ -910,21 +913,68 @@
   </section>
 
   <section>
+    <p class="eyebrow">Where the facts live</p>
+    <h2>Git is the source of truth, permanently</h2>
+    <p>One JSON file per category in the repository, through the first couple of thousand facts. Pull request review <em>is</em> the review queue, git history is the audit trail, and it costs nothing to run. Two thousand facts is about 1.5&nbsp;MB &mdash; genuinely nothing.</p>
+    <p>A build step splits that into a small index &mdash; titles, blurbs and counts, roughly 15&nbsp;KB, loaded up front &mdash; plus per-category chunks fetched on demand at about 15&nbsp;KB each. Fast on cellular, and it is what makes offline play possible at all.</p>
+    <p>A database arrives at phase 4 alongside the Daily Challenge, not before. That is the first point where something is needed that git genuinely cannot do: per-player history so nobody meets the same question twice, flagged-question reports, the shared daily round, leaderboards.</p>
+
+    <div class="panel">
+      <span class="panel-label">The rule that survives the migration</span>
+      <p>Even after the database exists, <strong>git stays the source of truth for the fact text</strong>, and the database is a serving layer synced from it &mdash; the same shape as the recipe pipeline next door. It means a correction to a date still goes through review, instead of somebody hand-editing production at midnight.</p>
+      <p>One consequence to build for now rather than discover later: in solo play the answers ship to the browser, which is fine. The moment there is a leaderboard, client-side answers are trivially cheatable, so <strong>the daily round has to be scored server-side.</strong></p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Platform</p>
+    <h2>A one-thumb game that works on the subway</h2>
+    <p>Designed mobile-first at 390&times;844, not as a desktop page that shrinks. It ships as an installable web app rather than an App Store listing: Add to Home Screen gives a full-screen, icon-launched game with no review process, no thirty per cent cut and same-day releases. A service worker caches the category files, so a round still works on a plane. Native can come later, if it earns it.</p>
+
+    <div class="scroll">
+      <table>
+        <caption>Screen rules</caption>
+        <thead>
+          <tr><th scope="col">Rule</th><th scope="col">Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Answer buttons at the bottom, 56&ndash;64pt tall</td><td>Read at the top, tap at the bottom. Apple's 44pt minimum is a floor, and this audience skews older than average.</td></tr>
+          <tr><td>8pt minimum between the two buttons</td><td>A fat-finger misfire on a 50/50 question is the most infuriating failure this game can produce.</td></tr>
+          <tr><td>One question per screen, never scrolling</td><td>Constrains the data, not just the CSS: <em class="term">claim</em> gets a maximum length so no fact can break the layout.</td></tr>
+          <tr><td>19px base, 24&ndash;28px questions, text zoom left enabled</td><td>Half of "all ages" needs to scale the type up, and disabling that is the commonest way to lose them.</td></tr>
+          <tr><td>Only the reveal card scrolls</td><td>Context, go-deeper, source and save. The one screen where scrolling is natural.</td></tr>
+          <tr><td>iPad and landscape get a centred column</td><td>Not a second layout. There is no second layout.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <span class="panel-label">Three iOS traps, named now rather than debugged later</span>
+      <div class="scroll">
+        <table>
+          <tbody>
+            <tr><td><em class="term">100dvh</em>, never <em class="term">100vh</em></td><td>On iOS Safari <em class="term">100vh</em> is wrong by the height of the URL bar. This is the classic clipped-bottom bug.</td></tr>
+            <tr><td><em class="term">viewport-fit=cover</em> plus <em class="term">env(safe-area-inset-bottom)</em></td><td>Without it the answer buttons sit under the home indicator and get swiped instead of tapped.</td></tr>
+            <tr><td>No haptics exist</td><td>iOS Safari has no Vibration API. Feedback is visual, with optional sound. Do not design around a buzz that will never fire.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Push notifications, if the Daily Challenge ever wants them, work on iOS 16.4 and later &mdash; but only for a PWA the player has actually installed to the home screen.</p>
+    </div>
+  </section>
+
+  <section>
     <p class="eyebrow">Still open</p>
     <h2>Decisions this map does not make</h2>
 
     <ul class="opens">
       <li>
-        <h3>The game needs a real name</h3>
-        <p>"Kirk Ogren Game" is the project name. A player-facing name that says over/under and says history would carry the app store listing and the daily-challenge share card.</p>
-      </li>
-      <li>
         <h3>Tone policy for the hard periods</h3>
         <p>The map includes the Holocaust, slavery, and the Plains Wars, and the audience is "all ages." Over/under betting language on atrocity death tolls would be indefensible. These categories need an editorial rule &mdash; likely no wagering, no closest-guess on casualties, and questions pointed at people, resistance and consequence rather than counts. Worth settling before those files get written, not after.</p>
       </li>
       <li>
-        <h3>Where the code lives</h3>
-        <p>It is currently a folder inside the recipe site repository, which is a convenience, not a decision. Its own repository is the right home before phase 3.</p>
+        <h3>Licence, and whether the repository goes public</h3>
+        <p>The code and the fact data are separable questions. Two thousand reviewed, sourced historical facts have value independent of the game, and giving them away is a decision worth making deliberately rather than by default.</p>
       </li>
       <li>
         <h3>Sourcing standard</h3>
@@ -938,7 +988,7 @@
   </section>
 
   <footer>
-    <span>Kirk Ogren Game &middot; design map v0.1</span>
+    <span>Give or Take &middot; a Kirk Ogren game &middot; design map v0.2</span>
     <span>10 categories mapped in detail &middot; 100 slotted &middot; 1,000 eventual</span>
     <span>Nothing built yet, by request</span>
   </footer>

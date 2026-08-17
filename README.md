@@ -1,8 +1,14 @@
-# Kirk Ogren Game
+# Give or Take
+
+A Kirk Ogren game.
 
 An over/under history quiz. The player picks a historical period they already care
 about and answers ten easy questions about it. Every answer opens onto the real
 fact, the story behind it, and a link out — the game is a doorway into reading.
+
+The name is the American idiom for an approximate figure: "1865, give or take."
+It names the mechanic, and it tells a player who thinks they are bad at history
+that roughly right is good enough here.
 
 **Status: design only. No game code has been written yet, by request.**
 
@@ -62,6 +68,59 @@ that is the difference between a feasible project and an impossible one.
   what you went and looked up, is earned from the Research List, and can never
   win you a match.
 
+## Where the facts live
+
+One JSON file per category in this repository, through the first couple of
+thousand facts. Pull request review *is* the review queue, git history is the
+audit trail, and it costs nothing to run — 2,000 facts is about 1.5 MB.
+
+A build step splits that into a small index (`categories.json` — titles, blurbs,
+counts, ~15 KB, loaded up front) plus per-category chunks fetched on demand
+(~15 KB each). Fast on cellular, and it is what makes offline play possible.
+
+A database arrives at phase 4 with the Daily Challenge, not before — that is the
+first point needing something git genuinely cannot do: per-player history so
+nobody meets the same question twice, flagged-question reports, the shared daily
+round, leaderboards.
+
+**Git stays the source of truth for the fact text even then**, with the database
+as a serving layer synced from it. Same shape as the recipe pipeline. A date
+correction still goes through review instead of a midnight edit to production.
+
+One consequence to build for now rather than discover later: in solo play the
+answers ship to the browser, which is fine. The moment there is a leaderboard,
+client-side answers are trivially cheatable, so **the daily round must be scored
+server-side.**
+
+## Platform
+
+Mobile-first at 390×844, not a desktop page that shrinks. Shipped as an
+installable web app (Add to Home Screen) rather than an App Store listing: no
+review process, no 30% cut, same-day releases. A service worker caches the
+category files so a round works on a plane.
+
+- Answer buttons at the **bottom**, 56–64pt tall. Read at the top, tap at the
+  bottom. Apple's 44pt minimum is a floor; this audience skews older.
+- **8pt minimum between the two buttons.** A fat-finger misfire on a 50/50
+  question is the most infuriating failure this game can produce.
+- **One question per screen, never scrolling.** This constrains the data, not
+  just the CSS: `claim` gets a maximum length so no fact can break the layout.
+- 19px base, 24–28px questions, **text zoom left enabled**.
+- Only the reveal card scrolls. iPad and landscape get a centred column, not a
+  second layout.
+
+Three iOS traps, named now rather than debugged later:
+
+- Use `100dvh`, **never `100vh`** — on iOS Safari `100vh` is wrong by the height
+  of the URL bar, which is the classic clipped-bottom bug.
+- `viewport-fit=cover` plus `env(safe-area-inset-bottom)` padding, or the answer
+  buttons sit under the home indicator and get swiped instead of tapped.
+- **iOS Safari has no Vibration API.** Feedback is visual, with optional sound.
+  Do not design around a buzz that will never fire.
+
+Push notifications, if the Daily Challenge ever wants them, work on iOS 16.4+ —
+but only for a PWA the player has actually installed.
+
 ## Content rules (non-negotiable, same spirit as the recipe pipeline)
 
 - Every fact ships `status: "draft"`. Only human review promotes it. Nothing
@@ -84,13 +143,14 @@ have not been fact-checked by a human and must not be treated as verified.
 
 ## Open questions
 
-1. The game needs a real player-facing name.
-2. Tone policy for hard periods. The category map includes the Holocaust,
+1. Tone policy for hard periods. The category map includes the Holocaust,
    slavery and the Plains Wars, and the audience is "all ages" — over/under
    wagering on atrocity death tolls would be indefensible. Those categories need
    an editorial rule before their files get written.
-3. Sourcing standard — wave one cites Wikipedia; review should upgrade
+2. Sourcing standard — wave one cites Wikipedia; review should upgrade
    load-bearing facts to NPS, Library of Congress, NASA and academic sources.
-4. Who reviews 2,000 facts. This is the real bottleneck, and no amount of engine
+3. Who reviews 2,000 facts. This is the real bottleneck, and no amount of engine
    work makes it go away.
-5. Licence, and whether the repo goes public.
+4. Licence, and whether the repo goes public. The code and the fact data are
+   separable questions — 2,000 reviewed, sourced facts have value independent of
+   the game.
