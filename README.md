@@ -11,7 +11,7 @@ It names the mechanic, and it tells a player who thinks they are bad at history
 that roughly right is good enough here.
 
 **Status: playable prototype.** Three categories, 60 facts, solo play.
-`node scripts/build.mjs` then open `dist/give-or-take.html` in a browser.
+`node scripts/build.mjs` then open `dist/index.html` in a browser.
 
 The full design map — mechanics, scoring, round structure, the fairness problem,
 sudden death, the 100-category plan and the build order — is in
@@ -143,8 +143,10 @@ scripts/validate-facts.mjs  schema, claim length and the tone rule
 scripts/build.mjs           inlines everything into dist/
 scripts/export-for-review.mjs  flattens every fact to CSV for verification
 docs/design-map.html        the full design map
-dist/give-or-take.html      standalone -- open it straight off disk
-dist/artifact.html          page content only, for publishing
+dist/index.html             the game, standalone and offline-capable
+dist/artifact.html          page content only, for publishing as an artifact
+dist/design-map.html        the design map, served next to the game
+.github/workflows/pages.yml validates, builds and deploys on push to main
 ```
 
 `american-revolution.json` is written but deliberately absent from
@@ -161,6 +163,24 @@ node scripts/validate-facts.mjs          # exits 1 on any error
 node scripts/build.mjs                   # writes dist/
 node scripts/export-for-review.mjs > review.csv
 ```
+
+## Sharing a link
+
+`.github/workflows/pages.yml` validates the facts, builds, and publishes `dist/`
+to GitHub Pages on every push to `main`. It needs one manual step first:
+
+> **Settings -> Pages -> Build and deployment -> Source: GitHub Actions**
+
+Until that is set, the workflow's deploy step fails. A red run before Pages is
+switched on is expected, not a broken build.
+
+**GitHub Pages on a private repository requires a paid plan.** Making the
+repository public is the free route. Once it is live the game is at
+`https://whitetod-ops.github.io/kirkgame/` with the design map at
+`/design-map.html`.
+
+A Pages site is public to anyone with the URL, whatever the repository's
+visibility. It is a link you can hand out, not an access-controlled one.
 
 ## How a round is assembled
 

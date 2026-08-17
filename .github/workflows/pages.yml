@@ -1,0 +1,55 @@
+# Builds the game and publishes it to GitHub Pages on every push to main.
+#
+# One-time setup, which has to be done by hand in the browser:
+#   Settings -> Pages -> Build and deployment -> Source: GitHub Actions
+# On a private repository, Pages needs a paid plan. Making the repository
+# public is the free route.
+name: Deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once, and let a newer push win.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Fails the build rather than shipping a fact with no source, a claim too
+      # long for one screen, or a body count missing its sensitive flag.
+      - name: Validate facts
+        run: node scripts/validate-facts.mjs
+
+      - name: Build
+        run: node scripts/build.mjs
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

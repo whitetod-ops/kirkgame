@@ -1,9 +1,11 @@
-/* Inlines the fact data, styles and engine into two single files:
-     dist/give-or-take.html  a standalone page -- open it straight off disk
-     dist/artifact.html      page content only, for publishing
+/* Inlines the fact data, styles and engine into dist/, which is both the
+   deployable site and a set of files you can open straight off disk:
+     dist/index.html       the game, standalone and offline-capable
+     dist/artifact.html    page content only, for publishing as an artifact
+     dist/design-map.html  the design map, served alongside the game
    No dependencies. Run: node scripts/build.mjs */
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, copyFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const index = JSON.parse(readFileSync('data/categories.json', 'utf8'));
@@ -33,7 +35,7 @@ const body = `${markup}\n${data}\n<script>\n${js}\n</script>`;
 
 mkdirSync('dist', { recursive: true });
 
-writeFileSync('dist/give-or-take.html',
+writeFileSync('dist/index.html',
 `<!doctype html>
 <html lang="en">
 <head>
@@ -62,8 +64,12 @@ ${css}
 ${body}
 `);
 
+/* Served next to the game so one Pages site carries both. */
+copyFileSync('docs/design-map.html', 'dist/design-map.html');
+writeFileSync('dist/.nojekyll', '');
+
 const n = Object.values(payload.facts).reduce((a, f) => a + f.length, 0);
 console.log(`built ${categories.length} categories, ${n} facts`);
-for (const f of ['dist/give-or-take.html', 'dist/artifact.html']) {
+for (const f of ['dist/index.html', 'dist/artifact.html', 'dist/design-map.html']) {
   console.log(`  ${f}  ${(readFileSync(f).length / 1024).toFixed(1)} KB`);
 }
