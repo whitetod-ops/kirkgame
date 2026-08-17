@@ -171,6 +171,16 @@ to GitHub Pages on every push to `main`. It needs one manual step first:
 
 > **Settings -> Pages -> Build and deployment -> Source: GitHub Actions**
 
+Either Pages source works, because the build writes the game to two places:
+
+| Source setting | What serves | Needs the workflow |
+| --- | --- | --- |
+| GitHub Actions | `dist/` uploaded by the workflow | yes |
+| Deploy from a branch -> `main` -> `/ (root)` | committed `index.html` at the root | no |
+
+The root `index.html` and `.nojekyll` are **generated** by `scripts/build.mjs`
+and committed. Edit `src/`, rebuild, commit -- never hand-edit them.
+
 Until that is set the `configure-pages` step fails and the deploy is skipped,
 while validation and build still pass. A red run before Pages is switched on is
 expected, not a broken build.

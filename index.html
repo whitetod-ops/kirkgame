@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0E1116">
+<title>Give or Take</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Give or Take -- committed dark, mobile-first. */
+
+:root {
+  --ground: #0E1116;
+  --surface: #171C24;
+  --surface-2: #1F2631;
+  --ink: #F0E9DC;
+  --ink-soft: #C4BCAB;
+  --muted: #8B8676;
+  --rule: #2A313D;
+  --over: #4FC0A8;
+  --under: #F0836F;
+  --brass: #E3B25B;
+
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --pad: clamp(1rem, 5vw, 1.5rem);
+  --tap: 60px;
+}
+
+* { box-sizing: border-box; }
+
+/* Author display rules beat the UA's [hidden] rule, so state it outright.
+   Without this, .sheet keeps its display:flex while hidden and goes on
+   swallowing every tap aimed at the answer buttons behind it. */
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 19px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+/* ---------- shell ---------- */
+
+.app { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+
+.screen { display: none; flex: 1 1 auto; flex-direction: column; min-height: 0; }
+.screen.on { display: flex; }
+
+/* Home, results and research scroll. The question screen never does. */
+.scrollable {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: calc(var(--pad) + env(safe-area-inset-top)) var(--pad)
+           calc(var(--pad) + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---------- home ---------- */
+
+.home-head { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.kicker {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wordmark {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(3rem, 15vw, 4.25rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+}
+
+.wordmark .amp { color: var(--brass); font-style: italic; }
+
+.tagline { margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 30ch; }
+
+.cats { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--brass);
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.cat:active { background: var(--surface-2); transform: scale(0.99); }
+
+.cat-era {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cat-title { font-family: var(--display); font-size: 1.6rem; line-height: 1.1; }
+.cat-blurb { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.45; }
+
+.cat-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+.cat-meta b { color: var(--brass); font-weight: 500; }
+
+.home-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.1rem;
+}
+
+.switch { display: flex; align-items: center; gap: 0.65rem; font-size: 0.95rem; color: var(--ink-soft); }
+.switch input { width: 22px; height: 22px; accent-color: var(--over); }
+
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0.4rem 0;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.note { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+/* ---------- play ---------- */
+
+.topbar {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: calc(0.5rem + env(safe-area-inset-top)) var(--pad) 0.5rem;
+}
+
+.icon-btn {
+  width: 44px; height: 44px;
+  background: none; border: 0;
+  font-size: 1.6rem; line-height: 1;
+  color: var(--muted);
+  border-radius: 50%;
+}
+
+.dots { display: flex; gap: 5px; justify-content: center; }
+
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--rule);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dot.now { background: var(--ink-soft); transform: scale(1.5); }
+.dot.hit { background: var(--over); }
+.dot.miss { background: var(--under); }
+.dot.part { background: var(--brass); }
+
+.score {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+  color: var(--brass);
+  min-width: 3.5ch;
+  text-align: right;
+}
+
+.stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.5rem var(--pad);
+  text-align: center;
+}
+
+.band {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stem {
+  margin: 0;
+  font-size: clamp(1.15rem, 5.2vw, 1.5rem);
+  line-height: 1.32;
+  text-wrap: pretty;
+}
+
+.big {
+  margin: 0.1rem 0;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 17vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--brass);
+  font-variant-numeric: tabular-nums;
+}
+
+.big.small { font-size: clamp(2rem, 9vw, 2.75rem); }
+
+.ask {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* order-mode two-claim layout uses the action buttons themselves */
+
+.slider-wrap { display: flex; flex-direction: column; gap: 0.4rem; padding-top: 0.5rem; }
+.slider-val {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 13vw, 3.6rem);
+  color: var(--brass);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+#slider { width: 100%; height: 44px; accent-color: var(--brass); }
+.slider-ends {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
+}
+
+.actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0.5rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+.row { display: flex; gap: 8px; }
+.row > * { flex: 1 1 0; }
+
+.ans {
+  min-height: var(--tap);
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.25;
+  transition: background 0.12s, transform 0.08s, border-color 0.12s;
+}
+
+.ans:active { transform: scale(0.98); background: var(--surface-2); }
+.ans.under { border-color: rgba(240,131,111,0.45); color: var(--under); }
+.ans.over  { border-color: rgba(79,192,168,0.45); color: var(--over); }
+.ans.claim { font-family: var(--body); font-size: 0.95rem; font-weight: 400; text-align: left; }
+.ans.wide { flex: 1 1 100%; }
+.ans.brass { border-color: rgba(227,178,91,0.5); color: var(--brass); }
+.ans[disabled] { opacity: 0.45; }
+
+.stake-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- reveal sheet ---------- */
+
+.sheet-back {
+  position: fixed; inset: 0;
+  background: rgba(8,10,14,0.72);
+  z-index: 20;
+}
+
+.sheet {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 21;
+  max-height: 82dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--surface);
+  border-top: 3px solid var(--rule);
+  border-radius: 14px 14px 0 0;
+  padding: 1.25rem var(--pad) calc(1rem + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  animation: rise 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes rise { from { transform: translateY(100%); } to { transform: none; } }
+
+.verdict {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.verdict.good { color: var(--over); }
+.verdict.bad { color: var(--under); }
+.verdict.part { color: var(--brass); }
+.verdict .pts { color: var(--brass); font-variant-numeric: tabular-nums; }
+
+.truth { display: flex; flex-direction: column; gap: 0.15rem; }
+.truth-claim { font-size: 0.95rem; color: var(--ink-soft); }
+.truth-val {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 11vw, 3rem);
+  line-height: 1.05;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.sheet p { margin: 0; }
+.context { font-size: 0.95rem; line-height: 1.5; }
+
+.deeper {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--brass);
+  padding-left: 0.8rem;
+}
+
+.deeper b {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.sheet-links { display: flex; gap: 8px; }
+
+.sheet-links a, .save-btn {
+  flex: 1 1 0;
+  min-height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.4rem;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.save-btn.saved { color: var(--brass); border-color: rgba(227,178,91,0.5); }
+
+.next-btn {
+  min-height: var(--tap);
+  background: var(--ink);
+  color: var(--ground);
+  border: 0;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.next-btn:active { transform: scale(0.98); }
+
+.draft-flag {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- results ---------- */
+
+.res-head { display: flex; flex-direction: column; gap: 0.3rem; }
+.res-score {
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 20vw, 5rem);
+  line-height: 0.95;
+  color: var(--brass);
+  font-variant-numeric: tabular-nums;
+}
+.res-sub { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); letter-spacing: 0.06em; }
+.res-best { font-size: 0.95rem; color: var(--over); }
+
+h2.sec {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.rlist { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; }
+
+.rlist li {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr auto;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+
+.mark { font-family: var(--mono); font-size: 0.9rem; }
+.mark.good { color: var(--over); }
+.mark.bad { color: var(--under); }
+.mark.part { color: var(--brass); }
+
+.rlist .rc { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.rlist .rv { font-family: var(--mono); font-size: 0.78rem; color: var(--brass); }
+.rlist a { color: var(--ink-soft); font-family: var(--mono); font-size: 0.7rem; text-decoration: underline; }
+
+.stack { display: flex; flex-direction: column; gap: 8px; }
+
+/* ---------- research ---------- */
+
+.res-empty { color: var(--ink-soft); font-size: 0.95rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+
+  <section class="screen on" id="screen-home">
+    <div class="scrollable">
+      <header class="home-head">
+        <p class="kicker">A Kirk Ogren game</p>
+        <h1 class="wordmark">Give<span class="amp"> or </span>Take</h1>
+        <p class="tagline">Pick a period you care about. Ten easy questions. Nobody needs the exact year.</p>
+      </header>
+
+      <div class="cats" id="cats"></div>
+
+      <div class="home-foot">
+        <label class="switch">
+          <input type="checkbox" id="gentle">
+          <span>Gentler questions</span>
+        </label>
+        <button class="link-btn" id="open-research" type="button">Research list &middot; <span id="res-count">0</span> saved</button>
+        <p class="note">Prototype. These facts are unreviewed drafts with a source on every one &mdash; check them before trusting them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-play">
+    <div class="topbar">
+      <button class="icon-btn" id="quit" type="button" aria-label="Leave this round">&times;</button>
+      <div class="dots" id="dots"></div>
+      <div class="score" id="score" aria-label="Score">0</div>
+    </div>
+
+    <div class="stage">
+      <p class="band" id="band"></p>
+      <p class="stem" id="stem"></p>
+      <p class="big" id="big" hidden></p>
+      <p class="ask" id="ask"></p>
+      <div class="slider-wrap" id="slider-wrap" hidden>
+        <output class="slider-val" id="slider-val"></output>
+        <input type="range" id="slider" aria-label="Your guess">
+        <div class="slider-ends"><span id="slider-min"></span><span id="slider-max"></span></div>
+      </div>
+    </div>
+
+    <div class="actions" id="actions"></div>
+  </section>
+
+  <section class="screen" id="screen-results"><div class="scrollable" id="results-body"></div></section>
+  <section class="screen" id="screen-research"><div class="scrollable" id="research-body"></div></section>
+
+  <div class="sheet-back" id="sheet-back" hidden></div>
+  <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-live="polite"></div>
+
+</div>
+
+<script>window.GOT_DATA={"categories":[{"id":"civil-war","title":"The American Civil War","era":"19th-century America","blurb":"Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country."},{"id":"sixties-america","title":"America in the 1960s","era":"Postwar America","blurb":"Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still."},{"id":"ancient-egypt","title":"Ancient Egypt","era":"The ancient world","blurb":"Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation."}],"facts":{"civil-war":[{"id":"cw-sumter","kind":"year","claim":"Confederate artillery opened fire on Fort Sumter, starting the Civil War","value":1861,"context":"The bombardment of the federal fort in Charleston Harbor began before dawn on April 12, 1861. The garrison surrendered the next day.","goDeeper":"Nobody was killed by enemy fire during the battle. The only deaths came from an accidental cannon explosion during the surrender ceremony.","source":{"title":"Battle of Fort Sumter","url":"https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter"},"status":"draft"},{"id":"cw-lincoln-assassination","kind":"year","claim":"Abraham Lincoln was assassinated","value":1865,"context":"John Wilkes Booth shot Lincoln at Ford's Theatre on April 14, 1865. Lincoln died the next morning, five days after Lee's surrender.","goDeeper":"Booth's original plan was to kidnap Lincoln and ransom him for Confederate prisoners. He only switched to murder after the Confederacy collapsed.","source":{"title":"Assassination of Abraham Lincoln","url":"https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln"},"status":"draft"},{"id":"cw-gettysburg","kind":"year","claim":"The Battle of Gettysburg was fought","value":1863,"context":"Three days of fighting in Pennsylvania, July 1-3, 1863, ended Lee's second invasion of the North.","goDeeper":"Lee never again mounted a strategic offensive into Union territory after Gettysburg.","source":{"title":"Battle of Gettysburg","url":"https://en.wikipedia.org/wiki/Battle_of_Gettysburg"},"status":"draft"},{"id":"cw-gettysburg-address-words","kind":"number","claim":"Length of the Gettysburg Address","value":272,"unit":"words","approx":true,"context":"Lincoln's speech ran about 270 words and took roughly two minutes to deliver.","goDeeper":"The main speaker that day, Edward Everett, talked for two hours. Almost nobody remembers a word of it.","source":{"title":"Gettysburg Address","url":"https://en.wikipedia.org/wiki/Gettysburg_Address"},"status":"draft"},{"id":"cw-emancipation-effect","kind":"year","claim":"The Emancipation Proclamation took legal effect","value":1863,"context":"Lincoln issued a preliminary proclamation in September 1862; the final order took effect January 1, 1863.","goDeeper":"It applied only to territory in rebellion, so it freed nobody in the loyal slave states of Kentucky, Delaware, Maryland or Missouri.","source":{"title":"Emancipation Proclamation","url":"https://en.wikipedia.org/wiki/Emancipation_Proclamation"},"status":"draft"},{"id":"cw-appomattox","kind":"year","claim":"Robert E. Lee surrendered to Grant at Appomattox Court House","value":1865,"context":"The surrender took place on April 9, 1865, effectively ending the war in the East.","goDeeper":"Other Confederate armies kept fighting for weeks. The last significant surrender came in late June 1865.","source":{"title":"Battle of Appomattox Court House","url":"https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House"},"status":"draft"},{"id":"cw-antietam-casualties","kind":"number","sensitive":true,"claim":"Total casualties at the Battle of Antietam","value":22000,"unit":"casualties","approx":true,"context":"September 17, 1862 produced roughly 22,000 killed, wounded and missing, making it the bloodiest single day in American history.","goDeeper":"The battle was tactically a draw, but it gave Lincoln the victory he needed to announce the Emancipation Proclamation.","source":{"title":"Battle of Antietam","url":"https://en.wikipedia.org/wiki/Battle_of_Antietam"},"status":"draft"},{"id":"cw-seceding-states","kind":"number","claim":"Number of states that joined the Confederacy","value":11,"unit":"states","context":"Seven states seceded before Lincoln took office; four more followed after Fort Sumter.","goDeeper":"The western counties of Virginia refused to secede and split off to become the new state of West Virginia in 1863.","source":{"title":"Confederate States of America","url":"https://en.wikipedia.org/wiki/Confederate_States_of_America"},"status":"draft"},{"id":"cw-lincoln-age","kind":"number","claim":"Abraham Lincoln's age when he died","value":56,"unit":"years old","context":"Born February 12, 1809, Lincoln died April 15, 1865, two months past his 56th birthday.","goDeeper":"He was the first American president to be assassinated, and the tallest at 6 feet 4 inches.","source":{"title":"Abraham Lincoln","url":"https://en.wikipedia.org/wiki/Abraham_Lincoln"},"status":"draft"},{"id":"cw-total-deaths","kind":"number","sensitive":true,"claim":"Traditional estimate of total deaths in the Civil War","value":620000,"unit":"deaths","approx":true,"context":"The long-standing figure is about 620,000 dead on both sides. More recent demographic work pushes the estimate as high as 750,000.","goDeeper":"Roughly two-thirds of those deaths came from disease rather than combat.","source":{"title":"American Civil War","url":"https://en.wikipedia.org/wiki/American_Civil_War"},"status":"draft"},{"id":"cw-13th-amendment","kind":"year","claim":"The Thirteenth Amendment abolishing slavery was ratified","value":1865,"context":"Congress passed it in January 1865 and the states completed ratification on December 6, 1865, months after the war ended.","goDeeper":"Mississippi did not symbolically ratify the amendment until 1995, and the paperwork was not filed until 2013.","source":{"title":"Thirteenth Amendment to the United States Constitution","url":"https://en.wikipedia.org/wiki/Thirteenth_Amendment_to_the_United_States_Constitution"},"status":"draft"},{"id":"cw-bull-run","kind":"year","claim":"The First Battle of Bull Run was fought","value":1861,"context":"The first major land battle, on July 21, 1861, ended in a Union rout near Manassas, Virginia.","goDeeper":"Washington civilians rode out with picnic baskets to watch, then got caught in the retreat.","source":{"title":"First Battle of Bull Run","url":"https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run"},"status":"draft"},{"id":"cw-atlanta","kind":"year","claim":"Sherman captured Atlanta","value":1864,"context":"Confederate forces evacuated on September 1-2, 1864 after a summer-long campaign.","goDeeper":"The news almost certainly saved Lincoln's re-election that November, which had looked doubtful all summer.","source":{"title":"Atlanta campaign","url":"https://en.wikipedia.org/wiki/Atlanta_campaign"},"status":"draft"},{"id":"cw-vicksburg","kind":"year","claim":"Vicksburg surrendered to Grant, giving the Union control of the Mississippi","value":1863,"context":"The city fell on July 4, 1863, the day after Gettysburg ended.","goDeeper":"Vicksburg reportedly did not celebrate the Fourth of July again for another eighty years.","source":{"title":"Siege of Vicksburg","url":"https://en.wikipedia.org/wiki/Siege_of_Vicksburg"},"status":"draft"},{"id":"cw-lincoln-elected","kind":"year","claim":"Abraham Lincoln was first elected president","value":1860,"context":"Lincoln won the November 1860 election with under 40 percent of the popular vote in a four-way race.","goDeeper":"He was not even on the ballot in ten Southern states.","source":{"title":"1860 United States presidential election","url":"https://en.wikipedia.org/wiki/1860_United_States_presidential_election"},"status":"draft"},{"id":"cw-ironclads","kind":"year","claim":"The ironclads Monitor and Virginia fought at Hampton Roads","value":1862,"context":"The first battle between ironclad warships took place March 8-9, 1862 and ended inconclusively.","goDeeper":"The engagement made every wooden navy in the world obsolete almost overnight.","source":{"title":"Battle of Hampton Roads","url":"https://en.wikipedia.org/wiki/Battle_of_Hampton_Roads"},"status":"draft"},{"id":"cw-shiloh","kind":"year","claim":"The Battle of Shiloh was fought in Tennessee","value":1862,"context":"Fought April 6-7, 1862, Shiloh shocked both sides with casualties higher than all previous American battles combined.","goDeeper":"Grant was nearly relieved of command afterward for being caught unprepared on the first day.","source":{"title":"Battle of Shiloh","url":"https://en.wikipedia.org/wiki/Battle_of_Shiloh"},"status":"draft"},{"id":"cw-lee-union-offer","kind":"boolean","claim":"Robert E. Lee was offered a senior command in the Union army before he joined the Confederacy","answer":true,"context":"In April 1861 Lee was offered command of the field forces being raised to suppress the rebellion. He declined and resigned when Virginia seceded.","goDeeper":"Lee had spent 32 years in the U.S. Army and had called secession 'nothing but revolution' in a letter that January.","source":{"title":"Robert E. Lee","url":"https://en.wikipedia.org/wiki/Robert_E._Lee"},"status":"draft"},{"id":"cw-emancipation-scope","kind":"boolean","claim":"The Emancipation Proclamation freed every enslaved person in the United States","answer":false,"context":"It applied only to areas still in rebellion. Slavery in the loyal border states was not ended until the Thirteenth Amendment.","goDeeper":"Because it was issued as a war measure against enemy territory, its legal basis was Lincoln's power as commander in chief, not an act of Congress.","source":{"title":"Emancipation Proclamation","url":"https://en.wikipedia.org/wiki/Emancipation_Proclamation"},"status":"draft"},{"id":"cw-grant-command","kind":"boolean","claim":"Ulysses S. Grant commanded all Union armies from the beginning of the war","answer":false,"context":"Grant was made general-in-chief of all Union armies in March 1864, nearly three years into the war. He started it as a colonel of Illinois volunteers.","goDeeper":"Grant had left the army in 1854 under a cloud and was working in his family's leather goods store in Galena, Illinois when the war broke out.","source":{"title":"Ulysses S. Grant","url":"https://en.wikipedia.org/wiki/Ulysses_S._Grant"},"status":"draft"}],"sixties-america":[{"id":"s6-jfk-assassinated","kind":"year","claim":"President John F. Kennedy was assassinated in Dallas","value":1963,"context":"Kennedy was shot on November 22, 1963 while riding in a motorcade through Dealey Plaza.","goDeeper":"Lyndon Johnson was sworn in aboard Air Force One about two hours later, still on the ground in Dallas.","source":{"title":"Assassination of John F. Kennedy","url":"https://en.wikipedia.org/wiki/Assassination_of_John_F._Kennedy"},"status":"draft"},{"id":"s6-moon-landing","kind":"year","claim":"Apollo 11 landed the first humans on the Moon","value":1969,"context":"Armstrong and Aldrin landed on July 20, 1969, eight years after Kennedy set the goal.","goDeeper":"The onboard guidance computer had about 4 kilobytes of usable memory. A modern phone has roughly a million times more.","source":{"title":"Apollo 11","url":"https://en.wikipedia.org/wiki/Apollo_11"},"status":"draft"},{"id":"s6-civil-rights-act","kind":"year","claim":"The Civil Rights Act outlawed segregation in public places","value":1964,"context":"Signed on July 2, 1964, it banned discrimination on the basis of race, colour, religion, sex or national origin.","goDeeper":"It passed only after the longest filibuster in Senate history to that point, running 60 working days.","source":{"title":"Civil Rights Act of 1964","url":"https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964"},"status":"draft"},{"id":"s6-voting-rights-act","kind":"year","claim":"The Voting Rights Act banned literacy tests and other barriers to voting","value":1965,"context":"Signed in August 1965, five months after the march from Selma to Montgomery.","goDeeper":"Black voter registration in Mississippi went from under 7 percent to nearly 60 percent within a few years.","source":{"title":"Voting Rights Act of 1965","url":"https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965"},"status":"draft"},{"id":"s6-mlk-assassinated","kind":"year","claim":"Martin Luther King Jr. was assassinated in Memphis","value":1968,"context":"King was shot on the balcony of the Lorraine Motel on April 4, 1968. He was 39.","goDeeper":"He was in Memphis supporting a strike by the city's sanitation workers, not leading a march.","source":{"title":"Assassination of Martin Luther King Jr.","url":"https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr."},"status":"draft"},{"id":"s6-rfk-assassinated","kind":"year","claim":"Robert F. Kennedy was assassinated in Los Angeles","value":1968,"context":"Shot on June 5, 1968, minutes after winning the California presidential primary. He died the next day.","goDeeper":"Two months earlier he had broken the news of King's death to a crowd in Indianapolis with an unscripted speech, and the city did not riot that night.","source":{"title":"Assassination of Robert F. Kennedy","url":"https://en.wikipedia.org/wiki/Assassination_of_Robert_F._Kennedy"},"status":"draft"},{"id":"s6-woodstock","kind":"year","claim":"The Woodstock festival was held on a dairy farm in New York","value":1969,"context":"Three days in August 1969, on Max Yasgur's farm near Bethel, about 40 miles from the town of Woodstock.","goDeeper":"The organisers gave up collecting tickets on the first day and declared it a free festival. They lost a fortune.","source":{"title":"Woodstock","url":"https://en.wikipedia.org/wiki/Woodstock"},"status":"draft"},{"id":"s6-cuban-missile-crisis","kind":"year","claim":"The Cuban Missile Crisis brought the superpowers to the edge of nuclear war","value":1962,"context":"Thirteen days in October 1962, after American spy planes photographed Soviet missile sites under construction in Cuba.","goDeeper":"A Soviet submarine officer named Vasili Arkhipov refused to agree to launching a nuclear torpedo during the standoff. His veto is why it stayed a crisis.","source":{"title":"Cuban Missile Crisis","url":"https://en.wikipedia.org/wiki/Cuban_Missile_Crisis"},"status":"draft"},{"id":"s6-march-on-washington","kind":"year","claim":"The March on Washington ended with the 'I Have a Dream' speech","value":1963,"context":"Held August 28, 1963, at the Lincoln Memorial.","goDeeper":"The most famous part was improvised. King had the 'dream' passage in his notes but had cut it, then went back to it when Mahalia Jackson called out to him from the platform.","source":{"title":"March on Washington for Jobs and Freedom","url":"https://en.wikipedia.org/wiki/March_on_Washington_for_Jobs_and_Freedom"},"status":"draft"},{"id":"s6-march-crowd","kind":"number","claim":"Size of the crowd at the March on Washington","value":250000,"unit":"people","approx":true,"context":"Estimates run around 250,000, making it one of the largest political gatherings the country had ever seen.","goDeeper":"Organisers had privately worried they might not clear 100,000, and the Kennedy administration feared violence. There was none.","source":{"title":"March on Washington for Jobs and Freedom","url":"https://en.wikipedia.org/wiki/March_on_Washington_for_Jobs_and_Freedom"},"status":"draft"},{"id":"s6-woodstock-crowd","kind":"number","claim":"Number of people who turned up at Woodstock","value":400000,"unit":"people","approx":true,"context":"Around 400,000 arrived, roughly four times what the organisers had planned for.","goDeeper":"The crowd made it briefly one of the largest cities in New York State, with no police force and no plumbing.","source":{"title":"Woodstock","url":"https://en.wikipedia.org/wiki/Woodstock"},"status":"draft"},{"id":"s6-tonkin","kind":"year","claim":"The Gulf of Tonkin Resolution let the president wage war in Vietnam without a declaration","value":1964,"context":"Passed in August 1964 after reported attacks on American destroyers, it gave Johnson near-open authority.","goDeeper":"It passed the House 416 to 0. The second attack it was based on almost certainly never happened.","source":{"title":"Gulf of Tonkin Resolution","url":"https://en.wikipedia.org/wiki/Gulf_of_Tonkin_Resolution"},"status":"draft"},{"id":"s6-tet","kind":"year","claim":"The Tet Offensive turned American opinion against the Vietnam War","value":1968,"context":"A coordinated surprise attack across South Vietnam beginning in late January 1968, during the Tet holiday truce.","goDeeper":"It was a military defeat for the North and a political disaster for the United States, because Americans had been told the war was nearly won.","source":{"title":"Tet Offensive","url":"https://en.wikipedia.org/wiki/Tet_Offensive"},"status":"draft"},{"id":"s6-troop-peak","kind":"number","claim":"Peak number of American troops in Vietnam","value":543000,"unit":"troops","approx":true,"context":"Numbers peaked at roughly 543,000 in 1969 before withdrawals began.","goDeeper":"In 1964 there were about 23,000. The escalation happened inside five years.","source":{"title":"Vietnam War","url":"https://en.wikipedia.org/wiki/Vietnam_War"},"status":"draft"},{"id":"s6-stonewall","kind":"year","claim":"The Stonewall uprising began in Greenwich Village","value":1969,"context":"Patrons of the Stonewall Inn fought back against a police raid in the early hours of June 28, 1969, and the unrest ran for days.","goDeeper":"The first Pride marches, one year later, were held to mark the anniversary.","source":{"title":"Stonewall riots","url":"https://en.wikipedia.org/wiki/Stonewall_riots"},"status":"draft"},{"id":"s6-beatles-sullivan","kind":"year","claim":"The Beatles first played The Ed Sullivan Show","value":1964,"context":"They appeared on February 9, 1964, to an audience estimated around 73 million.","goDeeper":"It came eleven weeks after the Kennedy assassination, and plenty of people who were there have said that was the point.","source":{"title":"The Beatles","url":"https://en.wikipedia.org/wiki/The_Beatles"},"status":"draft"},{"id":"s6-vietnam-us-deaths","kind":"number","claim":"American military deaths in the Vietnam War","value":58000,"unit":"deaths","approx":true,"sensitive":true,"context":"Just over 58,000 American service members died. The Vietnamese dead, military and civilian, numbered in the millions.","goDeeper":"The Vietnam Veterans Memorial lists the names in the order they were lost, not alphabetically, so the wall reads as a timeline.","source":{"title":"Vietnam War casualties","url":"https://en.wikipedia.org/wiki/Vietnam_War_casualties"},"status":"draft"},{"id":"s6-vietnam-ended","kind":"boolean","claim":"The Vietnam War ended during the 1960s","answer":false,"context":"Saigon fell in April 1975. American combat troops did not leave until 1973, and the war ran well past the decade.","goDeeper":"More than half of all American deaths in the war happened after 1967, and the heaviest bombing came in the 1970s.","source":{"title":"Vietnam War","url":"https://en.wikipedia.org/wiki/Vietnam_War"},"status":"draft"},{"id":"s6-kennedy-moon-goal","kind":"boolean","claim":"Kennedy committed the country to landing on the Moon in a speech to Congress in 1961","answer":true,"context":"He asked Congress in May 1961 to commit to landing a man on the Moon and returning him safely before the decade was out.","goDeeper":"At that point the United States had put a single astronaut into space for fifteen minutes, and he had not orbited.","source":{"title":"Space Race","url":"https://en.wikipedia.org/wiki/Space_Race"},"status":"draft"},{"id":"s6-lbj-signed-cra","kind":"boolean","claim":"Lyndon Johnson signed the Civil Rights Act of 1964","answer":true,"context":"Johnson signed it on July 2, 1964, having pushed it through Congress after Kennedy's death.","goDeeper":"Johnson reportedly said signing it would cost the Democrats the South for a generation. It did.","source":{"title":"Civil Rights Act of 1964","url":"https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964"},"status":"draft"}],"ancient-egypt":[{"id":"eg-great-pyramid-built","kind":"year","claim":"The Great Pyramid of Giza was built for the pharaoh Khufu","value":-2560,"approx":true,"context":"Built around 2560 BC, give or take a few decades. It stayed the tallest structure made by humans for nearly 4,000 years.","goDeeper":"The workers left graffiti inside naming their own gangs, with names like 'Friends of Khufu'. They were proud of the job.","source":{"title":"Great Pyramid of Giza","url":"https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"},"status":"draft"},{"id":"eg-tut-tomb-found","kind":"year","claim":"Howard Carter found the tomb of Tutankhamun","value":1922,"context":"Carter reached the sealed doorway in November 1922 after six years of searching the Valley of the Kings.","goDeeper":"Asked whether he could see anything through the first small hole, Carter answered: 'Yes, wonderful things.'","source":{"title":"Tutankhamun","url":"https://en.wikipedia.org/wiki/Tutankhamun"},"status":"draft"},{"id":"eg-rosetta-found","kind":"year","claim":"The Rosetta Stone was found by French soldiers in Egypt","value":1799,"context":"Soldiers in Napoleon's expedition uncovered it while rebuilding a fort near the town of Rashid.","goDeeper":"The British took it two years later as a spoil of war. It has been in the British Museum since 1802.","source":{"title":"Rosetta Stone","url":"https://en.wikipedia.org/wiki/Rosetta_Stone"},"status":"draft"},{"id":"eg-hieroglyphs-deciphered","kind":"year","claim":"Champollion cracked the hieroglyphic script","value":1822,"context":"Jean-Francois Champollion announced his breakthrough in 1822, 23 years after the Rosetta Stone was found.","goDeeper":"Nobody had been able to read hieroglyphs for roughly 1,400 years. An entire civilisation's writing had gone silent.","source":{"title":"Jean-Francois Champollion","url":"https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Champollion"},"status":"draft"},{"id":"eg-cleopatra-died","kind":"year","claim":"Cleopatra died, ending three thousand years of pharaohs","value":-30,"context":"She died in 30 BC after Octavian's forces took Alexandria. Egypt became a Roman province.","goDeeper":"She was the last ruler of the Ptolemaic dynasty, and reportedly the first of them in three centuries who bothered to learn Egyptian.","source":{"title":"Cleopatra","url":"https://en.wikipedia.org/wiki/Cleopatra"},"status":"draft"},{"id":"eg-pyramid-height","kind":"number","claim":"Original height of the Great Pyramid","value":146,"unit":"metres","approx":true,"context":"About 146 metres when finished, roughly 480 feet. Erosion and the loss of its outer casing have taken some metres off.","goDeeper":"The base is level to within a couple of centimetres across more than five acres, achieved without a single modern instrument.","source":{"title":"Great Pyramid of Giza","url":"https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"},"status":"draft"},{"id":"eg-ramesses-reign","kind":"number","claim":"Length of the reign of Ramesses II","value":66,"unit":"years","context":"He ruled for about 66 years in the 13th century BC and lived into his ninetieth year.","goDeeper":"He outlived twelve of his own sons. By the end of his reign, most Egyptians alive had never known another pharaoh.","source":{"title":"Ramesses II","url":"https://en.wikipedia.org/wiki/Ramesses_II"},"status":"draft"},{"id":"eg-kadesh","kind":"year","claim":"The Battle of Kadesh was fought between Egypt and the Hittites","value":-1274,"context":"Fought around 1274 BC, it may have been the largest chariot battle ever, with several thousand chariots.","goDeeper":"It ended in the earliest surviving peace treaty between two great powers. A copy hangs at the United Nations.","source":{"title":"Battle of Kadesh","url":"https://en.wikipedia.org/wiki/Battle_of_Kadesh"},"status":"draft"},{"id":"eg-unification","kind":"year","claim":"Upper and Lower Egypt were unified into one kingdom","value":-3100,"approx":true,"context":"Traditionally dated to about 3100 BC and credited to a king named Narmer.","goDeeper":"The double crown of Egypt was two crowns combined, one for each half of the country, worn together for the next three millennia.","source":{"title":"Narmer","url":"https://en.wikipedia.org/wiki/Narmer"},"status":"draft"},{"id":"eg-hatshepsut","kind":"year","claim":"Hatshepsut began her reign as pharaoh","value":-1479,"approx":true,"context":"She took power around 1479 BC and ruled for roughly two decades, one of very few women to rule Egypt outright.","goDeeper":"Her successor tried to erase her from the record, chiselling her name off monuments. It did not work.","source":{"title":"Hatshepsut","url":"https://en.wikipedia.org/wiki/Hatshepsut"},"status":"draft"},{"id":"eg-alexander","kind":"year","claim":"Alexander the Great took Egypt from the Persians","value":-332,"context":"Egypt surrendered to him in 332 BC, and he founded Alexandria on the coast the following year.","goDeeper":"His general Ptolemy took Egypt after Alexander died, starting the dynasty that ended with Cleopatra 300 years later.","source":{"title":"Alexander the Great","url":"https://en.wikipedia.org/wiki/Alexander_the_Great"},"status":"draft"},{"id":"eg-rosetta-scripts","kind":"number","claim":"Number of scripts carved on the Rosetta Stone","value":3,"unit":"scripts","context":"The same decree appears three times: in hieroglyphs, in demotic Egyptian, and in ancient Greek.","goDeeper":"Scholars could already read the Greek. That is what made the stone a key rather than just another inscription.","source":{"title":"Rosetta Stone","url":"https://en.wikipedia.org/wiki/Rosetta_Stone"},"status":"draft"},{"id":"eg-tut-age","kind":"number","claim":"Tutankhamun's age when he died","value":19,"unit":"years old","approx":true,"context":"He became pharaoh at about nine and died at around nineteen.","goDeeper":"He was a minor king who was largely forgotten, which is exactly why his tomb survived intact while the great pharaohs' were robbed.","source":{"title":"Tutankhamun","url":"https://en.wikipedia.org/wiki/Tutankhamun"},"status":"draft"},{"id":"eg-nile-length","kind":"number","claim":"Length of the Nile","value":6650,"unit":"kilometres","approx":true,"context":"About 6,650 km, or roughly 4,130 miles, running north through eleven countries.","goDeeper":"Egypt is mostly desert. Nearly everyone in the country has always lived within a few miles of that one river.","source":{"title":"Nile","url":"https://en.wikipedia.org/wiki/Nile"},"status":"draft"},{"id":"eg-pyramid-count","kind":"number","claim":"Number of known pyramids in Egypt","value":118,"unit":"pyramids","approx":true,"context":"Around 118 have been identified, though the count shifts as ruined ones are confirmed or reclassified.","goDeeper":"Sudan, just south of Egypt, has considerably more pyramids than Egypt does. They are smaller and much less famous.","source":{"title":"Egyptian pyramids","url":"https://en.wikipedia.org/wiki/Egyptian_pyramids"},"status":"draft"},{"id":"eg-tut-mask-weight","kind":"number","claim":"Weight of Tutankhamun's gold funeral mask","value":10,"unit":"kilograms","approx":true,"context":"About 10 kg of solid gold, roughly 22 pounds, inlaid with lapis lazuli and coloured glass.","goDeeper":"The mask was only the outermost layer. His innermost coffin was another 110 kg of solid gold.","source":{"title":"Mask of Tutankhamun","url":"https://en.wikipedia.org/wiki/Mask_of_Tutankhamun"},"status":"draft"},{"id":"eg-slaves-myth","kind":"boolean","claim":"The pyramids were built by slave labour","answer":false,"context":"The evidence points to paid and conscripted Egyptian workers, housed and fed in purpose-built villages beside the site, not slaves.","goDeeper":"Archaeologists found the workers' bakeries and breweries, and their graves. Some had healed broken bones, meaning someone treated them.","source":{"title":"Great Pyramid of Giza","url":"https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"},"status":"draft"},{"id":"eg-cleopatra-greek","kind":"boolean","claim":"Cleopatra was descended from Greeks, not Egyptians","answer":true,"context":"She belonged to the Ptolemaic line founded by one of Alexander's Macedonian generals, and the family ruled Egypt as Greeks for three centuries.","goDeeper":"She was reportedly the first Ptolemaic ruler to actually learn the Egyptian language, roughly 300 years in.","source":{"title":"Cleopatra","url":"https://en.wikipedia.org/wiki/Cleopatra"},"status":"draft"},{"id":"eg-hieroglyph-phonetic","kind":"boolean","claim":"Hieroglyphs were pure picture-writing with no sounds attached","answer":false,"context":"Most hieroglyphs stand for sounds, not things. That was Champollion's insight and the reason the script could finally be read.","goDeeper":"The assumption that they were purely symbolic is what stalled European scholars for centuries.","source":{"title":"Egyptian hieroglyphs","url":"https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"},"status":"draft"},{"id":"eg-cleopatra-moon","kind":"boolean","claim":"Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid","answer":true,"context":"The pyramid was already about 2,500 years old when she was born. The Moon landing came about 2,000 years after she died.","goDeeper":"Ancient Egypt was ancient to the ancient Egyptians. Cleopatra was a tourist at the pyramids in the same way we are.","source":{"title":"Great Pyramid of Giza","url":"https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"},"status":"draft"}]}};</script>
+<script>
+/* Give or Take -- question engine and UI.
+   No model is called anywhere in this file. Every question is arithmetic on a
+   stored fact: take the true value, step away from it by a fixed amount for the
+   difficulty band, and ask which side of that number the truth falls on. */
+
+(function () {
+  'use strict';
+
+  var DATA = window.GOT_DATA;
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---------- storage ---------- */
+
+  var LS = {
+    get: function (k, dflt) {
+      try { var v = localStorage.getItem('got.' + k); return v === null ? dflt : JSON.parse(v); }
+      catch (e) { return dflt; }
+    },
+    set: function (k, v) {
+      try { localStorage.setItem('got.' + k, JSON.stringify(v)); } catch (e) { /* private mode */ }
+    }
+  };
+
+  var best = LS.get('best', {});
+  var research = LS.get('research', []);
+  var curiosity = LS.get('curiosity', 0);
+
+  /* ---------- helpers ---------- */
+
+  function randInt(lo, hi) { return lo + Math.floor(Math.random() * (hi - lo + 1)); }
+  function randFloat(lo, hi) { return lo + Math.random() * (hi - lo); }
+  function coin() { return Math.random() < 0.5; }
+
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function fmtYear(v) {
+    if (v < 0) return Math.abs(v) + ' BC';
+    if (v < 1000) return 'AD ' + v;
+    return String(v);
+  }
+
+  function fmtNum(fact, v) {
+    var s = (fact.prefix || '') + Math.round(v).toLocaleString('en-US');
+    return fact.unit ? s + ' ' + fact.unit : s;
+  }
+
+  function fmtValue(fact, v) {
+    return fact.kind === 'year' ? fmtYear(v) : fmtNum(fact, v);
+  }
+
+  /* Round to two significant figures so a generated number looks chosen,
+     not computed. 35,217 becomes 35,000. */
+  function niceRound(v) {
+    var a = Math.abs(v);
+    if (a < 20) return Math.round(v);
+    var mag = Math.pow(10, Math.floor(Math.log10(a)) - 1);
+    return Math.round(v / mag) * mag;
+  }
+
+  function isNumeric(f) { return f.kind === 'year' || f.kind === 'number'; }
+  function soften(band) { return band === 'hard' ? 'medium' : 'easy'; }
+
+  var BAND_LABEL = { easy: 'Warming up', medium: 'Getting closer', hard: 'Tight margin' };
+  var BAND_MULT = { easy: 1, medium: 1.5, hard: 2 };
+
+  /* ---------- the number the player is shown ---------- */
+
+  function probeFor(fact, band) {
+    var dir = coin() ? -1 : 1;
+    var p;
+
+    if (fact.kind === 'year') {
+      var mag = band === 'easy' ? randInt(8, 30) : band === 'medium' ? randInt(3, 7) : randInt(1, 2);
+      p = fact.value + dir * mag;
+    } else {
+      var f = band === 'easy' ? randFloat(0.6, 1.6)
+            : band === 'medium' ? randFloat(0.25, 0.5)
+            : randFloat(0.08, 0.18);
+      p = niceRound(fact.value * (1 + dir * f));
+    }
+
+    if (p === fact.value || (fact.kind === 'number' && p <= 0)) {
+      var bump = Math.max(1, Math.round(Math.abs(fact.value) * 0.12));
+      p = fact.value + (dir < 0 ? -bump : bump);
+      if (fact.kind === 'number' && p <= 0) p = fact.value + bump;
+    }
+    return p;
+  }
+
+  /* ---------- question builders ---------- */
+
+  function makeOverUnder(fact, band, mode) {
+    var probe = probeFor(fact, band);
+    var isYear = fact.kind === 'year';
+    var shown = fmtValue(fact, probe);
+    return {
+      mode: mode || 'overunder',
+      band: band,
+      facts: [fact],
+      fact: fact,
+      stem: fact.claim + '.',
+      big: shown,
+      ask: isYear ? 'Before or after?' : 'More or fewer?',
+      options: isYear
+        ? [{ key: 'under', label: 'Before', cls: 'under' }, { key: 'over', label: 'After', cls: 'over' }]
+        : [{ key: 'under', label: 'Fewer', cls: 'under' }, { key: 'over', label: 'More', cls: 'over' }],
+      correct: fact.value > probe ? 'over' : 'under',
+      base: 100
+    };
+  }
+
+  function makeTrueFalse(fact, band) {
+    var statement, truth;
+
+    if (fact.kind === 'boolean') {
+      statement = fact.claim + '.';
+      truth = fact.answer;
+    } else {
+      truth = coin();
+      var shown = truth ? fact.value : probeFor(fact, band);
+      statement = fact.kind === 'year'
+        ? fact.claim + ' in ' + fmtYear(shown) + '.'
+        : fact.claim + ': ' + fmtNum(fact, shown) + '.';
+      truth = (shown === fact.value);
+    }
+
+    return {
+      mode: 'truefalse',
+      band: band,
+      facts: [fact],
+      fact: fact,
+      stem: statement,
+      big: null,
+      ask: 'True or false?',
+      options: [{ key: 'true', label: 'True', cls: 'over' }, { key: 'false', label: 'False', cls: 'under' }],
+      correct: truth ? 'true' : 'false',
+      base: 100
+    };
+  }
+
+  function makeOrder(band, pool, used) {
+    var gap = band === 'easy' ? 10 : band === 'medium' ? 4 : 1;
+    var years = pool.filter(function (f) { return f.kind === 'year' && !used[f.id]; });
+    for (var i = 0; i < years.length; i++) {
+      for (var j = i + 1; j < years.length; j++) {
+        if (Math.abs(years[i].value - years[j].value) >= gap) {
+          var a = years[i], b = years[j];
+          var pair = coin() ? [a, b] : [b, a];
+          var earlier = a.value < b.value ? a : b;
+          return {
+            mode: 'order',
+            band: band,
+            facts: pair,
+            fact: earlier,
+            stem: 'Which of these happened first?',
+            big: null,
+            ask: 'Pick one',
+            options: [
+              { key: pair[0].id, label: pair[0].claim, cls: 'claim' },
+              { key: pair[1].id, label: pair[1].claim, cls: 'claim' }
+            ],
+            stack: true,
+            correct: earlier.id,
+            base: 120
+          };
+        }
+      }
+    }
+    return null;
+  }
+
+  function makeClosest(fact, band) {
+    var span = fact.kind === 'year'
+      ? (band === 'easy' ? 60 : band === 'medium' ? 30 : 14)
+      : Math.max(4, niceRound(Math.abs(fact.value) * (band === 'easy' ? 1.6 : band === 'medium' ? 0.9 : 0.45)));
+
+    var min = Math.round(fact.value - span / 2 + (Math.random() - 0.5) * span * 0.4);
+    var max = min + span;
+    var margin = Math.max(1, Math.round(span * 0.1));
+    if (fact.value - min < margin) min = fact.value - margin;
+    if (max - fact.value < margin) max = fact.value + margin;
+    if (fact.kind === 'number' && min < 0) min = 0;
+
+    var step = fact.kind === 'year' ? 1 : Math.max(1, niceRound((max - min) / 100) || 1);
+
+    return {
+      mode: 'closest',
+      band: band,
+      facts: [fact],
+      fact: fact,
+      stem: fact.claim + '.',
+      big: null,
+      ask: 'Slide to your best guess',
+      slider: { min: min, max: max, step: step, span: span },
+      base: 150
+    };
+  }
+
+  /* ---------- round assembly ---------- */
+
+  var PLAN = [
+    { mode: 'overunder', band: 'easy' },
+    { mode: 'truefalse', band: 'easy' },
+    { mode: 'overunder', band: 'easy' },
+    { mode: 'closest', band: 'medium' },
+    { mode: 'truefalse', band: 'medium' },
+    { mode: 'overunder', band: 'medium' },
+    { mode: 'order', band: 'medium' },
+    { mode: 'truefalse', band: 'hard' },
+    { mode: 'overunder', band: 'hard' },
+    { mode: 'wager', band: 'medium' }
+  ];
+
+  function firstFree(pool, used, pred) {
+    for (var i = 0; i < pool.length; i++) {
+      if (!used[pool[i].id] && pred(pool[i])) return pool[i];
+    }
+    return null;
+  }
+
+  function tryMake(mode, band, pool, used, opening) {
+    var f;
+    /* Tone rule: a body count is never the dial on a slider, never the wager,
+       and never one of the three questions that open a round. */
+    var ok = function (x) { return !(opening && x.sensitive); };
+    var okNum = function (x) { return isNumeric(x) && !x.sensitive; };
+
+    if (mode === 'order') return makeOrder(band, pool, used);
+
+    if (mode === 'closest') {
+      f = firstFree(pool, used, okNum);
+      return f ? makeClosest(f, band) : null;
+    }
+
+    if (mode === 'wager') {
+      f = firstFree(pool, used, okNum);
+      return f ? makeOverUnder(f, band, 'wager') : null;
+    }
+
+    if (mode === 'truefalse') {
+      /* Weighted rather than strict, so the same handful of boolean facts do
+         not turn up in every single round of a category. */
+      var boolFirst = Math.random() < 0.6;
+      var asBool = function (x) { return x.kind === 'boolean' && ok(x); };
+      var asNum = function (x) { return isNumeric(x) && ok(x); };
+      f = boolFirst
+        ? (firstFree(pool, used, asBool) || firstFree(pool, used, asNum))
+        : (firstFree(pool, used, asNum) || firstFree(pool, used, asBool));
+      return f ? makeTrueFalse(f, band) : null;
+    }
+
+    f = firstFree(pool, used, function (x) { return isNumeric(x) && ok(x); });
+    return f ? makeOverUnder(f, band) : null;
+  }
+
+  function buildRound(catId, gentle) {
+    var pool = shuffle(DATA.facts[catId].slice());
+    var used = {};
+    var qs = [];
+
+    for (var i = 0; i < PLAN.length; i++) {
+      var band = gentle ? soften(PLAN[i].band) : PLAN[i].band;
+      var opening = i < 3;
+      var q = tryMake(PLAN[i].mode, band, pool, used, opening)
+           || tryMake('truefalse', band, pool, used, opening)
+           || tryMake('overunder', band, pool, used, opening);
+      if (!q) continue;
+      q.facts.forEach(function (f) { used[f.id] = true; });
+      qs.push(q);
+    }
+
+    return { catId: catId, questions: qs, i: 0, score: 0, streak: 0, results: [], stake: 0 };
+  }
+
+  /* ---------- state ---------- */
+
+  var R = null;
+  var answered = false;
+
+  function show(name) {
+    ['home', 'play', 'results', 'research'].forEach(function (s) {
+      $('screen-' + s).classList.toggle('on', s === name);
+    });
+  }
+
+  /* ---------- home ---------- */
+
+  function renderHome() {
+    var wrap = $('cats');
+    wrap.innerHTML = '';
+
+    DATA.categories.forEach(function (c) {
+      var n = (DATA.facts[c.id] || []).length;
+      var b = best[c.id];
+      var el = document.createElement('button');
+      el.className = 'cat';
+      el.type = 'button';
+      el.innerHTML =
+        '<span class="cat-era">' + c.era + '</span>' +
+        '<span class="cat-title">' + c.title + '</span>' +
+        '<span class="cat-blurb">' + c.blurb + '</span>' +
+        '<span class="cat-meta"><span>' + n + ' facts</span>' +
+        (b ? '<span>best <b>' + b.toLocaleString('en-US') + '</b></span>' : '<span>not played</span>') +
+        '</span>';
+      el.addEventListener('click', function () { startRound(c.id); });
+      wrap.appendChild(el);
+    });
+
+    $('res-count').textContent = String(research.length);
+    $('gentle').checked = !!LS.get('gentle', false);
+  }
+
+  /* ---------- play ---------- */
+
+  function startRound(catId) {
+    R = buildRound(catId, !!$('gentle').checked);
+    answered = false;
+    show('play');
+    renderQuestion();
+  }
+
+  function renderDots() {
+    var d = $('dots');
+    d.innerHTML = '';
+    for (var i = 0; i < R.questions.length; i++) {
+      var s = document.createElement('span');
+      s.className = 'dot';
+      var r = R.results[i];
+      if (r) s.className += r.grade === 'good' ? ' hit' : r.grade === 'part' ? ' part' : ' miss';
+      else if (i === R.i) s.className += ' now';
+      d.appendChild(s);
+    }
+  }
+
+  function renderQuestion() {
+    var q = R.questions[R.i];
+    answered = false;
+
+    renderDots();
+    $('score').textContent = R.score.toLocaleString('en-US');
+    $('band').textContent = q.mode === 'wager' ? 'Final question' : BAND_LABEL[q.band];
+    $('stem').textContent = q.stem;
+
+    var big = $('big');
+    if (q.big) {
+      big.hidden = false;
+      big.textContent = q.big;
+      big.classList.toggle('small', q.big.length > 9);
+    } else {
+      big.hidden = true;
+    }
+
+    $('ask').textContent = q.ask;
+
+    var sw = $('slider-wrap');
+    if (q.mode === 'closest') {
+      sw.hidden = false;
+      var s = $('slider');
+      s.min = q.slider.min; s.max = q.slider.max; s.step = q.slider.step;
+      s.value = Math.round((q.slider.min + q.slider.max) / 2 / q.slider.step) * q.slider.step;
+      $('slider-min').textContent = fmtValue(q.fact, q.slider.min);
+      $('slider-max').textContent = fmtValue(q.fact, q.slider.max);
+      updateSliderVal();
+    } else {
+      sw.hidden = true;
+    }
+
+    renderActions(q);
+  }
+
+  function updateSliderVal() {
+    var q = R.questions[R.i];
+    $('slider-val').textContent = fmtValue(q.fact, Number($('slider').value));
+  }
+
+  function renderActions(q) {
+    var a = $('actions');
+    a.innerHTML = '';
+
+    if (q.mode === 'wager' && R.stake === 0 && !q.staked) {
+      var label = document.createElement('p');
+      label.className = 'stake-label';
+      label.textContent = 'Stake up to half your ' + R.score.toLocaleString('en-US') + ' points';
+      a.appendChild(label);
+
+      var row = document.createElement('div');
+      row.className = 'row';
+      [0, 0.25, 0.5].forEach(function (pct) {
+        var amount = Math.round(R.score * pct);
+        var b = document.createElement('button');
+        b.className = 'ans brass';
+        b.type = 'button';
+        b.innerHTML = pct === 0 ? 'No bet' : (pct * 100) + '%<br>' + amount.toLocaleString('en-US');
+        b.addEventListener('click', function () {
+          R.stake = amount;
+          q.staked = true;
+          renderActions(q);
+        });
+        row.appendChild(b);
+      });
+      a.appendChild(row);
+      return;
+    }
+
+    if (q.mode === 'closest') {
+      var lock = document.createElement('button');
+      lock.className = 'ans brass wide';
+      lock.type = 'button';
+      lock.textContent = 'Lock it in';
+      lock.addEventListener('click', function () { answer(Number($('slider').value)); });
+      a.appendChild(lock);
+      return;
+    }
+
+    var container = document.createElement('div');
+    container.className = q.stack ? 'stack' : 'row';
+    q.options.forEach(function (o) {
+      var b = document.createElement('button');
+      b.className = 'ans ' + (o.cls || '');
+      b.type = 'button';
+      b.textContent = o.label;
+      b.addEventListener('click', function () { answer(o.key); });
+      container.appendChild(b);
+    });
+    a.appendChild(container);
+  }
+
+  /* ---------- answering ---------- */
+
+  function answer(given) {
+    if (answered) return;
+    answered = true;
+
+    var q = R.questions[R.i];
+    var grade, earned = 0, correct = false, offBy = null;
+
+    if (q.mode === 'closest') {
+      offBy = Math.abs(given - q.fact.value);
+      var tol = q.slider.span * 0.4;
+      earned = offBy === 0 ? 150 : Math.max(0, Math.round(150 * (1 - offBy / tol)));
+      correct = earned > 0;
+      grade = offBy === 0 ? 'good' : earned > 0 ? 'part' : 'bad';
+    } else {
+      correct = (given === q.correct);
+      earned = correct ? Math.round(q.base * BAND_MULT[q.band]) : 0;
+      grade = correct ? 'good' : 'bad';
+    }
+
+    /* Streaks: quietly awarded on a sensitive fact, never celebrated. */
+    R.streak = correct ? R.streak + 1 : 0;
+    var bonus = (correct && R.streak > 2) ? Math.min(100, 25 * (R.streak - 2)) : 0;
+    earned += bonus;
+
+    var swing = 0;
+    if (q.mode === 'wager' && R.stake > 0) {
+      swing = correct ? R.stake : -R.stake;
+    }
+
+    R.score = Math.max(0, R.score + earned + swing);
+    R.results[R.i] = {
+      grade: grade, earned: earned, swing: swing, given: given,
+      offBy: offBy, q: q
+    };
+
+    $('score').textContent = R.score.toLocaleString('en-US');
+    renderDots();
+    openSheet(q, R.results[R.i], bonus);
+  }
+
+  /* ---------- reveal ---------- */
+
+  function isSaved(id) {
+    return research.some(function (r) { return r.id === id; });
+  }
+
+  function openSheet(q, res, bonus) {
+    var sheet = $('sheet');
+    var f = q.fact;
+    var verdictText = res.grade === 'good' ? 'Correct'
+                    : res.grade === 'part' ? 'Close' : 'Not this time';
+
+    var total = res.earned + res.swing;
+    var ptsText = (total >= 0 ? '+' : '') + total.toLocaleString('en-US');
+
+    var truthVal;
+    if (q.mode === 'order') {
+      truthVal = fmtYear(q.facts[0].value) + ' &middot; ' + fmtYear(q.facts[1].value);
+    } else if (q.kind === 'boolean' || f.kind === 'boolean') {
+      truthVal = f.answer ? 'True' : 'False';
+    } else {
+      truthVal = fmtValue(f, f.value);
+    }
+
+    var claimLine = q.mode === 'order'
+      ? q.facts[0].claim + ' &mdash; then &mdash; ' + q.facts[1].claim
+      : f.claim;
+
+    var html =
+      '<div class="verdict ' + res.grade + '">' +
+        '<span>' + verdictText +
+          (res.offBy !== null && res.offBy > 0
+            ? ' &middot; off by ' + res.offBy.toLocaleString('en-US') : '') +
+          (bonus && !f.sensitive ? ' &middot; ' + R.streak + ' in a row' : '') +
+        '</span>' +
+        '<span class="pts">' + ptsText + '</span>' +
+      '</div>' +
+      '<div class="truth">' +
+        '<span class="truth-claim">' + claimLine + '</span>' +
+        '<span class="truth-val">' + truthVal + '</span>' +
+      '</div>' +
+      '<p class="context">' + f.context + '</p>' +
+      (f.goDeeper ? '<p class="deeper"><b>Go deeper</b>' + f.goDeeper + '</p>' : '') +
+      '<div class="sheet-links">' +
+        '<a href="' + f.source.url + '" target="_blank" rel="noopener">Read the source</a>' +
+        '<button class="save-btn' + (isSaved(f.id) ? ' saved' : '') + '" id="save-fact" type="button">' +
+          (isSaved(f.id) ? 'Saved &#9733;' : 'Save to list') +
+        '</button>' +
+      '</div>' +
+      '<button class="next-btn" id="next" type="button">' +
+        (R.i === R.questions.length - 1 ? 'See your round' : 'Next question') +
+      '</button>' +
+      '<p class="draft-flag">Unreviewed draft &middot; ' + f.source.title + '</p>';
+
+    sheet.innerHTML = html;
+    sheet.hidden = false;
+    $('sheet-back').hidden = false;
+
+    $('save-fact').addEventListener('click', function () {
+      if (isSaved(f.id)) return;
+      research.push({
+        id: f.id, claim: f.claim,
+        value: q.mode === 'order' ? ''
+          : f.kind === 'boolean' ? (f.answer ? 'True statement' : 'False statement')
+          : fmtValue(f, f.value),
+        source: f.source, cat: R.catId
+      });
+      curiosity += 1;
+      LS.set('research', research);
+      LS.set('curiosity', curiosity);
+      var b = $('save-fact');
+      b.className = 'save-btn saved';
+      b.innerHTML = 'Saved &#9733;';
+      $('res-count').textContent = String(research.length);
+    });
+
+    $('next').addEventListener('click', nextQuestion);
+    $('next').focus();
+  }
+
+  function closeSheet() {
+    $('sheet').hidden = true;
+    $('sheet-back').hidden = true;
+  }
+
+  function nextQuestion() {
+    closeSheet();
+    if (R.i === R.questions.length - 1) { renderResults(); return; }
+    R.i += 1;
+    renderQuestion();
+  }
+
+  /* ---------- results ---------- */
+
+  function renderResults() {
+    var hits = R.results.filter(function (r) { return r.grade === 'good'; }).length;
+    var parts = R.results.filter(function (r) { return r.grade === 'part'; }).length;
+    var prev = best[R.catId] || 0;
+    var beaten = R.score > prev;
+    if (beaten) { best[R.catId] = R.score; LS.set('best', best); }
+
+    var cat = DATA.categories.filter(function (c) { return c.id === R.catId; })[0];
+
+    var html =
+      '<div class="res-head">' +
+        '<p class="kicker">' + cat.title + '</p>' +
+        '<div class="res-score">' + R.score.toLocaleString('en-US') + '</div>' +
+        '<p class="res-sub">' + hits + ' of ' + R.results.length + ' right' +
+          (parts ? ' &middot; ' + parts + ' close' : '') + '</p>' +
+        (beaten
+          ? '<p class="res-best">New best for this period.</p>'
+          : '<p class="res-sub">Best ' + prev.toLocaleString('en-US') + '</p>') +
+      '</div>' +
+      '<h2 class="sec">Everything you just met</h2>' +
+      '<ul class="rlist">' +
+        R.results.map(function (r) {
+          var f = r.q.fact;
+          var mark = r.grade === 'good' ? '&#10003;' : r.grade === 'part' ? '&#8776;' : '&#10007;';
+          var val = f.kind === 'boolean'
+            ? (f.answer ? 'True statement' : 'False statement')
+            : fmtValue(f, f.value);
+          return '<li>' +
+            '<span class="mark ' + r.grade + '">' + mark + '</span>' +
+            '<span class="rc"><span>' + f.claim + '</span>' +
+              '<span class="rv">' + val + '</span></span>' +
+            '<a href="' + f.source.url + '" target="_blank" rel="noopener">source</a>' +
+          '</li>';
+        }).join('') +
+      '</ul>' +
+      '<div class="stack">' +
+        '<button class="next-btn" id="again" type="button">Play this period again</button>' +
+        '<button class="ans wide" id="home-btn" type="button">Choose another period</button>' +
+      '</div>';
+
+    $('results-body').innerHTML = html;
+    show('results');
+    $('results-body').scrollTop = 0;
+    $('again').addEventListener('click', function () { startRound(R.catId); });
+    $('home-btn').addEventListener('click', goHome);
+  }
+
+  /* ---------- research list ---------- */
+
+  function renderResearch() {
+    var html =
+      '<div class="home-head">' +
+        '<p class="kicker">Curiosity ' + curiosity + '</p>' +
+        '<h1 class="wordmark" style="font-size:2.4rem">Research list</h1>' +
+        '<p class="tagline">The facts that caught you, with somewhere to read more.</p>' +
+      '</div>';
+
+    if (!research.length) {
+      html += '<p class="res-empty">Nothing saved yet. Tap &ldquo;Save to list&rdquo; on any question you want to come back to.</p>';
+    } else {
+      html += '<ul class="rlist">' + research.map(function (r) {
+        return '<li><span class="mark part">&#9733;</span>' +
+          '<span class="rc"><span>' + r.claim + '</span><span class="rv">' + r.value + '</span></span>' +
+          '<a href="' + r.source.url + '" target="_blank" rel="noopener">read</a></li>';
+      }).join('') + '</ul>';
+      html += '<button class="ans wide" id="clear-res" type="button">Clear the list</button>';
+    }
+
+    html += '<button class="next-btn" id="back-home" type="button">Back</button>';
+    $('research-body').innerHTML = html;
+    show('research');
+    $('research-body').scrollTop = 0;
+
+    if (research.length) {
+      $('clear-res').addEventListener('click', function () {
+        research = [];
+        LS.set('research', research);
+        $('res-count').textContent = '0';
+        renderResearch();
+      });
+    }
+    $('back-home').addEventListener('click', goHome);
+  }
+
+  function goHome() {
+    closeSheet();
+    renderHome();
+    show('home');
+  }
+
+  /* ---------- wiring ---------- */
+
+  $('quit').addEventListener('click', goHome);
+  $('open-research').addEventListener('click', renderResearch);
+  $('slider').addEventListener('input', updateSliderVal);
+  $('gentle').addEventListener('change', function () { LS.set('gentle', $('gentle').checked); });
+
+  document.addEventListener('keydown', function (e) {
+    if ($('sheet').hidden === false) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); nextQuestion(); }
+      return;
+    }
+    if (!$('screen-play').classList.contains('on') || answered) return;
+    var q = R && R.questions[R.i];
+    if (!q || q.mode === 'closest') return;
+    if (e.key === '1') answer(q.options[0].key);
+    if (e.key === '2') answer(q.options[1].key);
+  });
+
+  renderHome();
+})();
+
+</script>
+</body>
+</html>

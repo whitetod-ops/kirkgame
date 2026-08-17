@@ -68,8 +68,15 @@ ${body}
 copyFileSync('docs/design-map.html', 'dist/design-map.html');
 writeFileSync('dist/.nojekyll', '');
 
+/* Also written to the repository root and committed, so GitHub Pages works on
+   either source setting: "GitHub Actions" deploys dist/, while "Deploy from a
+   branch -> main -> / (root)" serves this file directly with no workflow at
+   all. Generated -- edit src/, then rebuild. */
+copyFileSync('dist/index.html', 'index.html');
+writeFileSync('.nojekyll', '');
+
 const n = Object.values(payload.facts).reduce((a, f) => a + f.length, 0);
 console.log(`built ${categories.length} categories, ${n} facts`);
-for (const f of ['dist/index.html', 'dist/artifact.html', 'dist/design-map.html']) {
+for (const f of ['dist/index.html', 'dist/artifact.html', 'dist/design-map.html', 'index.html']) {
   console.log(`  ${f}  ${(readFileSync(f).length / 1024).toFixed(1)} KB`);
 }
