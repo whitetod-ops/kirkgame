@@ -66,6 +66,7 @@
     {
       "id": "cw-antietam-casualties",
       "kind": "number",
+      "sensitive": true,
       "claim": "Total casualties at the Battle of Antietam",
       "value": 22000,
       "unit": "casualties",
@@ -100,6 +101,7 @@
     {
       "id": "cw-total-deaths",
       "kind": "number",
+      "sensitive": true,
       "claim": "Traditional estimate of total deaths in the Civil War",
       "value": 620000,
       "unit": "deaths",

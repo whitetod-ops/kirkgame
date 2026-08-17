@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "civil-war",
+      "title": "The American Civil War",
+      "era": "19th-century America",
+      "blurb": "Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country."
+    },
+    {
+      "id": "sixties-america",
+      "title": "America in the 1960s",
+      "era": "Postwar America",
+      "blurb": "Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still."
+    },
+    {
+      "id": "ancient-egypt",
+      "title": "Ancient Egypt",
+      "era": "The ancient world",
+      "blurb": "Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation."
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "ancient-egypt",
+  "facts": [
+    {
+      "id": "eg-great-pyramid-built",
+      "kind": "year",
+      "claim": "The Great Pyramid of Giza was built for the pharaoh Khufu",
+      "value": -2560,
+      "approx": true,
+      "context": "Built around 2560 BC, give or take a few decades. It stayed the tallest structure made by humans for nearly 4,000 years.",
+      "goDeeper": "The workers left graffiti inside naming their own gangs, with names like 'Friends of Khufu'. They were proud of the job.",
+      "source": { "title": "Great Pyramid of Giza", "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-tut-tomb-found",
+      "kind": "year",
+      "claim": "Howard Carter found the tomb of Tutankhamun",
+      "value": 1922,
+      "context": "Carter reached the sealed doorway in November 1922 after six years of searching the Valley of the Kings.",
+      "goDeeper": "Asked whether he could see anything through the first small hole, Carter answered: 'Yes, wonderful things.'",
+      "source": { "title": "Tutankhamun", "url": "https://en.wikipedia.org/wiki/Tutankhamun" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-rosetta-found",
+      "kind": "year",
+      "claim": "The Rosetta Stone was found by French soldiers in Egypt",
+      "value": 1799,
+      "context": "Soldiers in Napoleon's expedition uncovered it while rebuilding a fort near the town of Rashid.",
+      "goDeeper": "The British took it two years later as a spoil of war. It has been in the British Museum since 1802.",
+      "source": { "title": "Rosetta Stone", "url": "https://en.wikipedia.org/wiki/Rosetta_Stone" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-hieroglyphs-deciphered",
+      "kind": "year",
+      "claim": "Champollion cracked the hieroglyphic script",
+      "value": 1822,
+      "context": "Jean-Francois Champollion announced his breakthrough in 1822, 23 years after the Rosetta Stone was found.",
+      "goDeeper": "Nobody had been able to read hieroglyphs for roughly 1,400 years. An entire civilisation's writing had gone silent.",
+      "source": { "title": "Jean-Francois Champollion", "url": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Champollion" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-cleopatra-died",
+      "kind": "year",
+      "claim": "Cleopatra died, ending three thousand years of pharaohs",
+      "value": -30,
+      "context": "She died in 30 BC after Octavian's forces took Alexandria. Egypt became a Roman province.",
+      "goDeeper": "She was the last ruler of the Ptolemaic dynasty, and reportedly the first of them in three centuries who bothered to learn Egyptian.",
+      "source": { "title": "Cleopatra", "url": "https://en.wikipedia.org/wiki/Cleopatra" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-pyramid-height",
+      "kind": "number",
+      "claim": "Original height of the Great Pyramid",
+      "value": 146,
+      "unit": "metres",
+      "approx": true,
+      "context": "About 146 metres when finished, roughly 480 feet. Erosion and the loss of its outer casing have taken some metres off.",
+      "goDeeper": "The base is level to within a couple of centimetres across more than five acres, achieved without a single modern instrument.",
+      "source": { "title": "Great Pyramid of Giza", "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-ramesses-reign",
+      "kind": "number",
+      "claim": "Length of the reign of Ramesses II",
+      "value": 66,
+      "unit": "years",
+      "context": "He ruled for about 66 years in the 13th century BC and lived into his ninetieth year.",
+      "goDeeper": "He outlived twelve of his own sons. By the end of his reign, most Egyptians alive had never known another pharaoh.",
+      "source": { "title": "Ramesses II", "url": "https://en.wikipedia.org/wiki/Ramesses_II" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-kadesh",
+      "kind": "year",
+      "claim": "The Battle of Kadesh was fought between Egypt and the Hittites",
+      "value": -1274,
+      "context": "Fought around 1274 BC, it may have been the largest chariot battle ever, with several thousand chariots.",
+      "goDeeper": "It ended in the earliest surviving peace treaty between two great powers. A copy hangs at the United Nations.",
+      "source": { "title": "Battle of Kadesh", "url": "https://en.wikipedia.org/wiki/Battle_of_Kadesh" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-unification",
+      "kind": "year",
+      "claim": "Upper and Lower Egypt were unified into one kingdom",
+      "value": -3100,
+      "approx": true,
+      "context": "Traditionally dated to about 3100 BC and credited to a king named Narmer.",
+      "goDeeper": "The double crown of Egypt was two crowns combined, one for each half of the country, worn together for the next three millennia.",
+      "source": { "title": "Narmer", "url": "https://en.wikipedia.org/wiki/Narmer" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-hatshepsut",
+      "kind": "year",
+      "claim": "Hatshepsut began her reign as pharaoh",
+      "value": -1479,
+      "approx": true,
+      "context": "She took power around 1479 BC and ruled for roughly two decades, one of very few women to rule Egypt outright.",
+      "goDeeper": "Her successor tried to erase her from the record, chiselling her name off monuments. It did not work.",
+      "source": { "title": "Hatshepsut", "url": "https://en.wikipedia.org/wiki/Hatshepsut" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-alexander",
+      "kind": "year",
+      "claim": "Alexander the Great took Egypt from the Persians",
+      "value": -332,
+      "context": "Egypt surrendered to him in 332 BC, and he founded Alexandria on the coast the following year.",
+      "goDeeper": "His general Ptolemy took Egypt after Alexander died, starting the dynasty that ended with Cleopatra 300 years later.",
+      "source": { "title": "Alexander the Great", "url": "https://en.wikipedia.org/wiki/Alexander_the_Great" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-rosetta-scripts",
+      "kind": "number",
+      "claim": "Number of scripts carved on the Rosetta Stone",
+      "value": 3,
+      "unit": "scripts",
+      "context": "The same decree appears three times: in hieroglyphs, in demotic Egyptian, and in ancient Greek.",
+      "goDeeper": "Scholars could already read the Greek. That is what made the stone a key rather than just another inscription.",
+      "source": { "title": "Rosetta Stone", "url": "https://en.wikipedia.org/wiki/Rosetta_Stone" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-tut-age",
+      "kind": "number",
+      "claim": "Tutankhamun's age when he died",
+      "value": 19,
+      "unit": "years old",
+      "approx": true,
+      "context": "He became pharaoh at about nine and died at around nineteen.",
+      "goDeeper": "He was a minor king who was largely forgotten, which is exactly why his tomb survived intact while the great pharaohs' were robbed.",
+      "source": { "title": "Tutankhamun", "url": "https://en.wikipedia.org/wiki/Tutankhamun" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-nile-length",
+      "kind": "number",
+      "claim": "Length of the Nile",
+      "value": 6650,
+      "unit": "kilometres",
+      "approx": true,
+      "context": "About 6,650 km, or roughly 4,130 miles, running north through eleven countries.",
+      "goDeeper": "Egypt is mostly desert. Nearly everyone in the country has always lived within a few miles of that one river.",
+      "source": { "title": "Nile", "url": "https://en.wikipedia.org/wiki/Nile" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-pyramid-count",
+      "kind": "number",
+      "claim": "Number of known pyramids in Egypt",
+      "value": 118,
+      "unit": "pyramids",
+      "approx": true,
+      "context": "Around 118 have been identified, though the count shifts as ruined ones are confirmed or reclassified.",
+      "goDeeper": "Sudan, just south of Egypt, has considerably more pyramids than Egypt does. They are smaller and much less famous.",
+      "source": { "title": "Egyptian pyramids", "url": "https://en.wikipedia.org/wiki/Egyptian_pyramids" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-tut-mask-weight",
+      "kind": "number",
+      "claim": "Weight of Tutankhamun's gold funeral mask",
+      "value": 10,
+      "unit": "kilograms",
+      "approx": true,
+      "context": "About 10 kg of solid gold, roughly 22 pounds, inlaid with lapis lazuli and coloured glass.",
+      "goDeeper": "The mask was only the outermost layer. His innermost coffin was another 110 kg of solid gold.",
+      "source": { "title": "Mask of Tutankhamun", "url": "https://en.wikipedia.org/wiki/Mask_of_Tutankhamun" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-slaves-myth",
+      "kind": "boolean",
+      "claim": "The pyramids were built by slave labour",
+      "answer": false,
+      "context": "The evidence points to paid and conscripted Egyptian workers, housed and fed in purpose-built villages beside the site, not slaves.",
+      "goDeeper": "Archaeologists found the workers' bakeries and breweries, and their graves. Some had healed broken bones, meaning someone treated them.",
+      "source": { "title": "Great Pyramid of Giza", "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-cleopatra-greek",
+      "kind": "boolean",
+      "claim": "Cleopatra was descended from Greeks, not Egyptians",
+      "answer": true,
+      "context": "She belonged to the Ptolemaic line founded by one of Alexander's Macedonian generals, and the family ruled Egypt as Greeks for three centuries.",
+      "goDeeper": "She was reportedly the first Ptolemaic ruler to actually learn the Egyptian language, roughly 300 years in.",
+      "source": { "title": "Cleopatra", "url": "https://en.wikipedia.org/wiki/Cleopatra" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-hieroglyph-phonetic",
+      "kind": "boolean",
+      "claim": "Hieroglyphs were pure picture-writing with no sounds attached",
+      "answer": false,
+      "context": "Most hieroglyphs stand for sounds, not things. That was Champollion's insight and the reason the script could finally be read.",
+      "goDeeper": "The assumption that they were purely symbolic is what stalled European scholars for centuries.",
+      "source": { "title": "Egyptian hieroglyphs", "url": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs" },
+      "status": "draft"
+    },
+    {
+      "id": "eg-cleopatra-moon",
+      "kind": "boolean",
+      "claim": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid",
+      "answer": true,
+      "context": "The pyramid was already about 2,500 years old when she was born. The Moon landing came about 2,000 years after she died.",
+      "goDeeper": "Ancient Egypt was ancient to the ancient Egyptians. Cleopatra was a tourist at the pyramids in the same way we are.",
+      "source": { "title": "Great Pyramid of Giza", "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" },
+      "status": "draft"
+    }
+  ]
+}

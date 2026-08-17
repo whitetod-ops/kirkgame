@@ -1,0 +1,214 @@
+{
+  "id": "sixties-america",
+  "facts": [
+    {
+      "id": "s6-jfk-assassinated",
+      "kind": "year",
+      "claim": "President John F. Kennedy was assassinated in Dallas",
+      "value": 1963,
+      "context": "Kennedy was shot on November 22, 1963 while riding in a motorcade through Dealey Plaza.",
+      "goDeeper": "Lyndon Johnson was sworn in aboard Air Force One about two hours later, still on the ground in Dallas.",
+      "source": { "title": "Assassination of John F. Kennedy", "url": "https://en.wikipedia.org/wiki/Assassination_of_John_F._Kennedy" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-moon-landing",
+      "kind": "year",
+      "claim": "Apollo 11 landed the first humans on the Moon",
+      "value": 1969,
+      "context": "Armstrong and Aldrin landed on July 20, 1969, eight years after Kennedy set the goal.",
+      "goDeeper": "The onboard guidance computer had about 4 kilobytes of usable memory. A modern phone has roughly a million times more.",
+      "source": { "title": "Apollo 11", "url": "https://en.wikipedia.org/wiki/Apollo_11" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-civil-rights-act",
+      "kind": "year",
+      "claim": "The Civil Rights Act outlawed segregation in public places",
+      "value": 1964,
+      "context": "Signed on July 2, 1964, it banned discrimination on the basis of race, colour, religion, sex or national origin.",
+      "goDeeper": "It passed only after the longest filibuster in Senate history to that point, running 60 working days.",
+      "source": { "title": "Civil Rights Act of 1964", "url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-voting-rights-act",
+      "kind": "year",
+      "claim": "The Voting Rights Act banned literacy tests and other barriers to voting",
+      "value": 1965,
+      "context": "Signed in August 1965, five months after the march from Selma to Montgomery.",
+      "goDeeper": "Black voter registration in Mississippi went from under 7 percent to nearly 60 percent within a few years.",
+      "source": { "title": "Voting Rights Act of 1965", "url": "https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-mlk-assassinated",
+      "kind": "year",
+      "claim": "Martin Luther King Jr. was assassinated in Memphis",
+      "value": 1968,
+      "context": "King was shot on the balcony of the Lorraine Motel on April 4, 1968. He was 39.",
+      "goDeeper": "He was in Memphis supporting a strike by the city's sanitation workers, not leading a march.",
+      "source": { "title": "Assassination of Martin Luther King Jr.", "url": "https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr." },
+      "status": "draft"
+    },
+    {
+      "id": "s6-rfk-assassinated",
+      "kind": "year",
+      "claim": "Robert F. Kennedy was assassinated in Los Angeles",
+      "value": 1968,
+      "context": "Shot on June 5, 1968, minutes after winning the California presidential primary. He died the next day.",
+      "goDeeper": "Two months earlier he had broken the news of King's death to a crowd in Indianapolis with an unscripted speech, and the city did not riot that night.",
+      "source": { "title": "Assassination of Robert F. Kennedy", "url": "https://en.wikipedia.org/wiki/Assassination_of_Robert_F._Kennedy" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-woodstock",
+      "kind": "year",
+      "claim": "The Woodstock festival was held on a dairy farm in New York",
+      "value": 1969,
+      "context": "Three days in August 1969, on Max Yasgur's farm near Bethel, about 40 miles from the town of Woodstock.",
+      "goDeeper": "The organisers gave up collecting tickets on the first day and declared it a free festival. They lost a fortune.",
+      "source": { "title": "Woodstock", "url": "https://en.wikipedia.org/wiki/Woodstock" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-cuban-missile-crisis",
+      "kind": "year",
+      "claim": "The Cuban Missile Crisis brought the superpowers to the edge of nuclear war",
+      "value": 1962,
+      "context": "Thirteen days in October 1962, after American spy planes photographed Soviet missile sites under construction in Cuba.",
+      "goDeeper": "A Soviet submarine officer named Vasili Arkhipov refused to agree to launching a nuclear torpedo during the standoff. His veto is why it stayed a crisis.",
+      "source": { "title": "Cuban Missile Crisis", "url": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-march-on-washington",
+      "kind": "year",
+      "claim": "The March on Washington ended with the 'I Have a Dream' speech",
+      "value": 1963,
+      "context": "Held August 28, 1963, at the Lincoln Memorial.",
+      "goDeeper": "The most famous part was improvised. King had the 'dream' passage in his notes but had cut it, then went back to it when Mahalia Jackson called out to him from the platform.",
+      "source": { "title": "March on Washington for Jobs and Freedom", "url": "https://en.wikipedia.org/wiki/March_on_Washington_for_Jobs_and_Freedom" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-march-crowd",
+      "kind": "number",
+      "claim": "Size of the crowd at the March on Washington",
+      "value": 250000,
+      "unit": "people",
+      "approx": true,
+      "context": "Estimates run around 250,000, making it one of the largest political gatherings the country had ever seen.",
+      "goDeeper": "Organisers had privately worried they might not clear 100,000, and the Kennedy administration feared violence. There was none.",
+      "source": { "title": "March on Washington for Jobs and Freedom", "url": "https://en.wikipedia.org/wiki/March_on_Washington_for_Jobs_and_Freedom" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-woodstock-crowd",
+      "kind": "number",
+      "claim": "Number of people who turned up at Woodstock",
+      "value": 400000,
+      "unit": "people",
+      "approx": true,
+      "context": "Around 400,000 arrived, roughly four times what the organisers had planned for.",
+      "goDeeper": "The crowd made it briefly one of the largest cities in New York State, with no police force and no plumbing.",
+      "source": { "title": "Woodstock", "url": "https://en.wikipedia.org/wiki/Woodstock" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-tonkin",
+      "kind": "year",
+      "claim": "The Gulf of Tonkin Resolution let the president wage war in Vietnam without a declaration",
+      "value": 1964,
+      "context": "Passed in August 1964 after reported attacks on American destroyers, it gave Johnson near-open authority.",
+      "goDeeper": "It passed the House 416 to 0. The second attack it was based on almost certainly never happened.",
+      "source": { "title": "Gulf of Tonkin Resolution", "url": "https://en.wikipedia.org/wiki/Gulf_of_Tonkin_Resolution" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-tet",
+      "kind": "year",
+      "claim": "The Tet Offensive turned American opinion against the Vietnam War",
+      "value": 1968,
+      "context": "A coordinated surprise attack across South Vietnam beginning in late January 1968, during the Tet holiday truce.",
+      "goDeeper": "It was a military defeat for the North and a political disaster for the United States, because Americans had been told the war was nearly won.",
+      "source": { "title": "Tet Offensive", "url": "https://en.wikipedia.org/wiki/Tet_Offensive" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-troop-peak",
+      "kind": "number",
+      "claim": "Peak number of American troops in Vietnam",
+      "value": 543000,
+      "unit": "troops",
+      "approx": true,
+      "context": "Numbers peaked at roughly 543,000 in 1969 before withdrawals began.",
+      "goDeeper": "In 1964 there were about 23,000. The escalation happened inside five years.",
+      "source": { "title": "Vietnam War", "url": "https://en.wikipedia.org/wiki/Vietnam_War" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-stonewall",
+      "kind": "year",
+      "claim": "The Stonewall uprising began in Greenwich Village",
+      "value": 1969,
+      "context": "Patrons of the Stonewall Inn fought back against a police raid in the early hours of June 28, 1969, and the unrest ran for days.",
+      "goDeeper": "The first Pride marches, one year later, were held to mark the anniversary.",
+      "source": { "title": "Stonewall riots", "url": "https://en.wikipedia.org/wiki/Stonewall_riots" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-beatles-sullivan",
+      "kind": "year",
+      "claim": "The Beatles first played The Ed Sullivan Show",
+      "value": 1964,
+      "context": "They appeared on February 9, 1964, to an audience estimated around 73 million.",
+      "goDeeper": "It came eleven weeks after the Kennedy assassination, and plenty of people who were there have said that was the point.",
+      "source": { "title": "The Beatles", "url": "https://en.wikipedia.org/wiki/The_Beatles" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-vietnam-us-deaths",
+      "kind": "number",
+      "claim": "American military deaths in the Vietnam War",
+      "value": 58000,
+      "unit": "deaths",
+      "approx": true,
+      "sensitive": true,
+      "context": "Just over 58,000 American service members died. The Vietnamese dead, military and civilian, numbered in the millions.",
+      "goDeeper": "The Vietnam Veterans Memorial lists the names in the order they were lost, not alphabetically, so the wall reads as a timeline.",
+      "source": { "title": "Vietnam War casualties", "url": "https://en.wikipedia.org/wiki/Vietnam_War_casualties" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-vietnam-ended",
+      "kind": "boolean",
+      "claim": "The Vietnam War ended during the 1960s",
+      "answer": false,
+      "context": "Saigon fell in April 1975. American combat troops did not leave until 1973, and the war ran well past the decade.",
+      "goDeeper": "More than half of all American deaths in the war happened after 1967, and the heaviest bombing came in the 1970s.",
+      "source": { "title": "Vietnam War", "url": "https://en.wikipedia.org/wiki/Vietnam_War" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-kennedy-moon-goal",
+      "kind": "boolean",
+      "claim": "Kennedy committed the country to landing on the Moon in a speech to Congress in 1961",
+      "answer": true,
+      "context": "He asked Congress in May 1961 to commit to landing a man on the Moon and returning him safely before the decade was out.",
+      "goDeeper": "At that point the United States had put a single astronaut into space for fifteen minutes, and he had not orbited.",
+      "source": { "title": "Space Race", "url": "https://en.wikipedia.org/wiki/Space_Race" },
+      "status": "draft"
+    },
+    {
+      "id": "s6-lbj-signed-cra",
+      "kind": "boolean",
+      "claim": "Lyndon Johnson signed the Civil Rights Act of 1964",
+      "answer": true,
+      "context": "Johnson signed it on July 2, 1964, having pushed it through Congress after Kennedy's death.",
+      "goDeeper": "Johnson reportedly said signing it would cost the Democrats the South for a generation. It did.",
+      "source": { "title": "Civil Rights Act of 1964", "url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964" },
+      "status": "draft"
+    }
+  ]
+}

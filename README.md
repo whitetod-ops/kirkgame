@@ -10,7 +10,8 @@ The name is the American idiom for an approximate figure: "1865, give or take."
 It names the mechanic, and it tells a player who thinks they are bad at history
 that roughly right is good enough here.
 
-**Status: design only. No game code has been written yet, by request.**
+**Status: playable prototype.** Three categories, 60 facts, solo play.
+`node scripts/build.mjs` then open `dist/give-or-take.html` in a browser.
 
 The full design map — mechanics, scoring, round structure, the fairness problem,
 sudden death, the 100-category plan and the build order — is in
@@ -130,16 +131,49 @@ but only for a PWA the player has actually installed.
 - Facts live in git as one JSON file per category. Pull request review *is* the
   review queue until volume outgrows it.
 
-## What's on disk right now
+## Layout
 
 ```
-data/facts/civil-war.json            20 facts, draft, format reference
-data/facts/american-revolution.json  20 facts, draft, format reference
-docs/design-map.html                 the full design map
+data/categories.json        which categories ship, and in what order
+data/facts/*.json           one file per category -- the source of truth
+src/markup.html             the four screens
+src/styles.css              committed dark theme, mobile-first
+src/game.js                 question engine. No model is called anywhere.
+scripts/validate-facts.mjs  schema, claim length and the tone rule
+scripts/build.mjs           inlines everything into dist/
+scripts/export-for-review.mjs  flattens every fact to CSV for verification
+docs/design-map.html        the full design map
+dist/give-or-take.html      standalone -- open it straight off disk
+dist/artifact.html          page content only, for publishing
 ```
 
-Both fact files are **unreviewed drafts** written to pin down the schema. They
-have not been fact-checked by a human and must not be treated as verified.
+`american-revolution.json` is written but deliberately absent from
+`data/categories.json`, so it does not ship yet. The validator warns about it;
+that warning is expected.
+
+All 80 facts are **unreviewed drafts**. Every one carries a source URL. They
+have not been checked by a human and must not be treated as verified.
+
+### Commands
+
+```
+node scripts/validate-facts.mjs          # exits 1 on any error
+node scripts/build.mjs                   # writes dist/
+node scripts/export-for-review.mjs > review.csv
+```
+
+## How a round is assembled
+
+Ten slots, fixed shape: over/under, true/false, over/under, closest-guess,
+true/false, over/under, which-came-first, true/false, over/under, wager. Bands
+ramp easy -> medium -> hard across them. No fact is used twice in a round.
+"Gentler questions" softens every band one notch.
+
+The tone rule is enforced in three places: a body count is never the dial on a
+closest-guess slider, never the wager question, and never one of the three
+questions that open a round. `scripts/validate-facts.mjs` fails the build if a
+fact whose unit is a body count is not marked `sensitive: true`. Streak bonuses
+are still awarded on a sensitive fact but never celebrated in the reveal.
 
 ## Open questions
 
