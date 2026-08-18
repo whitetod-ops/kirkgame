@@ -11,10 +11,10 @@
   --surface-2: #1F2631;
   --ink: #F0E9DC;
   --ink-soft: #C4BCAB;
-  --muted: #8B8676;
+  --muted: #B3AC9D;
   --rule: #2A313D;
   --over: #4FC0A8;
-  --under: #F0836F;
+  --under: #F4988A;
   --brass: #E3B25B;
 
   --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
@@ -194,8 +194,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .score {
   font-family: var(--mono);
   font-variant-numeric: tabular-nums;
-  font-size: 1rem;
-  color: var(--brass);
+  font-size: 0.82rem;
+  color: var(--muted);
   min-width: 3.5ch;
   text-align: right;
 }
@@ -265,6 +265,23 @@ button { font: inherit; color: inherit; cursor: pointer; }
   font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
 }
 
+.room-btn {
+  min-height: 46px;
+  background: none;
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.room-btn:active { background: var(--surface); }
+.room-btn[disabled] { opacity: 0.35; }
+
+.bank { font-family: var(--mono); font-size: 0.78rem; color: var(--brass); }
+
 .actions {
   flex: 0 0 auto;
   display: flex;
@@ -289,21 +306,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 
 .ans:active { transform: scale(0.98); background: var(--surface-2); }
-.ans.under { border-color: rgba(240,131,111,0.45); color: var(--under); }
+.ans.under { border-color: rgba(244,152,138,0.45); color: var(--under); }
 .ans.over  { border-color: rgba(79,192,168,0.45); color: var(--over); }
 .ans.claim { font-family: var(--body); font-size: 0.95rem; font-weight: 400; text-align: left; }
 .ans.wide { flex: 1 1 100%; }
 .ans.brass { border-color: rgba(227,178,91,0.5); color: var(--brass); }
 .ans[disabled] { opacity: 0.45; }
-
-.stake-label {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-align: center;
-}
 
 /* ---------- reveal sheet ---------- */
 
@@ -495,6 +503,7 @@ h2.sec {
           <input type="checkbox" id="gentle">
           <span>Gentler questions</span>
         </label>
+        <p class="bank" id="bank">0 points banked</p>
         <button class="link-btn" id="open-research" type="button">Research list &middot; <span id="res-count">0</span> saved</button>
         <p class="note">Prototype. These facts are unreviewed drafts with a source on every one &mdash; check them before trusting them.</p>
       </div>
@@ -559,6 +568,12 @@ h2.sec {
   var best = LS.get('best', {});
   var research = LS.get('research', []);
   var curiosity = LS.get('curiosity', 0);
+  var bank = LS.get('bank', 0);
+
+  /* Points are never taken away for being wrong. The only way the bank goes
+     down is a deliberate purchase. That rule is what separates this from a
+     wagering game, and it matters more than any amount of renaming. */
+  var ROOM_COST = 150;
 
   /* ---------- helpers ---------- */
 
@@ -749,7 +764,7 @@ h2.sec {
     { mode: 'order', band: 'medium' },
     { mode: 'truefalse', band: 'hard' },
     { mode: 'overunder', band: 'hard' },
-    { mode: 'wager', band: 'medium' }
+    { mode: 'overunder', band: 'hard' }
   ];
 
   function firstFree(pool, used, pred) {
@@ -761,8 +776,8 @@ h2.sec {
 
   function tryMake(mode, band, pool, used, opening) {
     var f;
-    /* Tone rule: a body count is never the dial on a slider, never the wager,
-       and never one of the three questions that open a round. */
+    /* Tone rule: a body count is never the dial on a closest-guess slider and
+       never one of the three questions that open a round. */
     var ok = function (x) { return !(opening && x.sensitive); };
     var okNum = function (x) { return isNumeric(x) && !x.sensitive; };
 
@@ -771,11 +786,6 @@ h2.sec {
     if (mode === 'closest') {
       f = firstFree(pool, used, okNum);
       return f ? makeClosest(f, band) : null;
-    }
-
-    if (mode === 'wager') {
-      f = firstFree(pool, used, okNum);
-      return f ? makeOverUnder(f, band, 'wager') : null;
     }
 
     if (mode === 'truefalse') {
@@ -810,7 +820,7 @@ h2.sec {
       qs.push(q);
     }
 
-    return { catId: catId, questions: qs, i: 0, score: 0, streak: 0, results: [], stake: 0 };
+    return { catId: catId, questions: qs, i: 0, score: 0, streak: 0, results: [], continued: false };
   }
 
   /* ---------- state ---------- */
@@ -848,6 +858,7 @@ h2.sec {
     });
 
     $('res-count').textContent = String(research.length);
+    $('bank').textContent = bank.toLocaleString('en-US') + ' points banked';
     $('gentle').checked = !!LS.get('gentle', false);
   }
 
@@ -879,7 +890,9 @@ h2.sec {
 
     renderDots();
     $('score').textContent = R.score.toLocaleString('en-US');
-    $('band').textContent = q.mode === 'wager' ? 'Final question' : BAND_LABEL[q.band];
+    $('band').textContent = q.eased ? 'With more room'
+      : R.i === R.questions.length - 1 ? 'Last one'
+      : BAND_LABEL[q.band];
     $('stem').textContent = q.stem;
 
     var big = $('big');
@@ -918,31 +931,6 @@ h2.sec {
     var a = $('actions');
     a.innerHTML = '';
 
-    if (q.mode === 'wager' && R.stake === 0 && !q.staked) {
-      var label = document.createElement('p');
-      label.className = 'stake-label';
-      label.textContent = 'Stake up to half your ' + R.score.toLocaleString('en-US') + ' points';
-      a.appendChild(label);
-
-      var row = document.createElement('div');
-      row.className = 'row';
-      [0, 0.25, 0.5].forEach(function (pct) {
-        var amount = Math.round(R.score * pct);
-        var b = document.createElement('button');
-        b.className = 'ans brass';
-        b.type = 'button';
-        b.innerHTML = pct === 0 ? 'No bet' : (pct * 100) + '%<br>' + amount.toLocaleString('en-US');
-        b.addEventListener('click', function () {
-          R.stake = amount;
-          q.staked = true;
-          renderActions(q);
-        });
-        row.appendChild(b);
-      });
-      a.appendChild(row);
-      return;
-    }
-
     if (q.mode === 'closest') {
       var lock = document.createElement('button');
       lock.className = 'ans brass wide';
@@ -964,6 +952,31 @@ h2.sec {
       container.appendChild(b);
     });
     a.appendChild(container);
+
+    /* A hint bought before committing, never a second guess afterwards. On a
+       two-answer question a retry would simply hand over the answer, so the
+       only honest help is more room: push the number further from the truth.
+       The question gets easier and is worth correspondingly less. */
+    if (q.mode === 'overunder' && !q.eased && q.band !== 'easy') {
+      var room = document.createElement('button');
+      room.className = 'room-btn';
+      room.type = 'button';
+      room.textContent = 'Give me more room \u00b7 ' + ROOM_COST + ' pts';
+      room.disabled = bank < ROOM_COST;
+      room.addEventListener('click', giveRoom);
+      a.appendChild(room);
+    }
+  }
+
+  function giveRoom() {
+    var q = R.questions[R.i];
+    if (q.eased || bank < ROOM_COST) return;
+    bank -= ROOM_COST;
+    LS.set('bank', bank);
+    var nq = makeOverUnder(q.fact, q.band === 'hard' ? 'medium' : 'easy');
+    nq.eased = true;
+    R.questions[R.i] = nq;
+    renderQuestion();
   }
 
   /* ---------- answering ---------- */
@@ -992,16 +1005,8 @@ h2.sec {
     var bonus = (correct && R.streak > 2) ? Math.min(100, 25 * (R.streak - 2)) : 0;
     earned += bonus;
 
-    var swing = 0;
-    if (q.mode === 'wager' && R.stake > 0) {
-      swing = correct ? R.stake : -R.stake;
-    }
-
-    R.score = Math.max(0, R.score + earned + swing);
-    R.results[R.i] = {
-      grade: grade, earned: earned, swing: swing, given: given,
-      offBy: offBy, q: q
-    };
+    R.score = R.score + earned;
+    R.results[R.i] = { grade: grade, earned: earned, given: given, offBy: offBy, q: q };
 
     $('score').textContent = R.score.toLocaleString('en-US');
     renderDots();
@@ -1020,8 +1025,7 @@ h2.sec {
     var verdictText = res.grade === 'good' ? 'Correct'
                     : res.grade === 'part' ? 'Close' : 'Not this time';
 
-    var total = res.earned + res.swing;
-    var ptsText = (total >= 0 ? '+' : '') + total.toLocaleString('en-US');
+    var ptsText = '+' + res.earned.toLocaleString('en-US');
 
     var truthVal;
     if (q.mode === 'order') {
@@ -1096,8 +1100,43 @@ h2.sec {
   function nextQuestion() {
     closeSheet();
     if (R.i === R.questions.length - 1) { renderResults(); return; }
+    if (R.i === 4 && !R.continued) { openBreak(); return; }
     R.i += 1;
     renderQuestion();
+  }
+
+  function bumpPull(key) {
+    var p = LS.get('pull', { yes: 0, no: 0 });
+    p[key] += 1;
+    LS.set('pull', p);
+  }
+
+  /* Halfway. Whether people choose to carry on is the most informative single
+     thing this prototype can report, so it is asked out loud and counted. */
+  function openBreak() {
+    var sheet = $('sheet');
+    sheet.innerHTML =
+      '<div class="verdict"><span>Five down</span>' +
+      '<span class="pts">' + R.score.toLocaleString('en-US') + '</span></div>' +
+      '<p class="context">Five more in this period, and the margins get tighter. ' +
+      'Or stop here &mdash; everything you have scored is already yours.</p>' +
+      '<button class="next-btn" id="go-on" type="button">Five more</button>' +
+      '<button class="ans wide" id="stop-here" type="button">Stop here</button>';
+    sheet.hidden = false;
+    $('sheet-back').hidden = false;
+    $('go-on').addEventListener('click', function () {
+      R.continued = true;
+      bumpPull('yes');
+      closeSheet();
+      R.i += 1;
+      renderQuestion();
+    });
+    $('stop-here').addEventListener('click', function () {
+      bumpPull('no');
+      closeSheet();
+      renderResults();
+    });
+    $('go-on').focus();
   }
 
   /* ---------- results ---------- */
@@ -1105,6 +1144,8 @@ h2.sec {
   function renderResults() {
     var hits = R.results.filter(function (r) { return r.grade === 'good'; }).length;
     var parts = R.results.filter(function (r) { return r.grade === 'part'; }).length;
+    bank += R.score;
+    LS.set('bank', bank);
     var prev = best[R.catId] || 0;
     var beaten = R.score > prev;
     if (beaten) { best[R.catId] = R.score; LS.set('best', best); }
@@ -1201,7 +1242,7 @@ h2.sec {
 
   document.addEventListener('keydown', function (e) {
     if ($('sheet').hidden === false) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); nextQuestion(); }
+      if ((e.key === 'Enter' || e.key === ' ') && $('next')) { e.preventDefault(); nextQuestion(); }
       return;
     }
     if (!$('screen-play').classList.contains('on') || answered) return;

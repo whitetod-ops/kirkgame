@@ -6,10 +6,10 @@
   --surface-2: #1F2631;
   --ink: #F0E9DC;
   --ink-soft: #C4BCAB;
-  --muted: #8B8676;
+  --muted: #B3AC9D;
   --rule: #2A313D;
   --over: #4FC0A8;
-  --under: #F0836F;
+  --under: #F4988A;
   --brass: #E3B25B;
 
   --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
@@ -189,8 +189,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .score {
   font-family: var(--mono);
   font-variant-numeric: tabular-nums;
-  font-size: 1rem;
-  color: var(--brass);
+  font-size: 0.82rem;
+  color: var(--muted);
   min-width: 3.5ch;
   text-align: right;
 }
@@ -260,6 +260,23 @@ button { font: inherit; color: inherit; cursor: pointer; }
   font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
 }
 
+.room-btn {
+  min-height: 46px;
+  background: none;
+  border: 1px dashed var(--rule);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.room-btn:active { background: var(--surface); }
+.room-btn[disabled] { opacity: 0.35; }
+
+.bank { font-family: var(--mono); font-size: 0.78rem; color: var(--brass); }
+
 .actions {
   flex: 0 0 auto;
   display: flex;
@@ -284,21 +301,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 
 .ans:active { transform: scale(0.98); background: var(--surface-2); }
-.ans.under { border-color: rgba(240,131,111,0.45); color: var(--under); }
+.ans.under { border-color: rgba(244,152,138,0.45); color: var(--under); }
 .ans.over  { border-color: rgba(79,192,168,0.45); color: var(--over); }
 .ans.claim { font-family: var(--body); font-size: 0.95rem; font-weight: 400; text-align: left; }
 .ans.wide { flex: 1 1 100%; }
 .ans.brass { border-color: rgba(227,178,91,0.5); color: var(--brass); }
 .ans[disabled] { opacity: 0.45; }
-
-.stake-label {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-align: center;
-}
 
 /* ---------- reveal sheet ---------- */
 

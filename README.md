@@ -54,15 +54,23 @@ that is the difference between a feasible project and an impossible one.
 
 ## Rules summary
 
-- **A round is 10 questions** from one category, roughly three minutes.
+- **A round is 10 questions** from one category, roughly three minutes, with a
+  break after five that asks whether you want five more. Whether people say yes
+  is the most informative number this prototype produces; it is counted locally.
 - **Bands ramp:** Q1–3 easy (shown number 8–30 years off the truth), Q4–7 medium
-  (3–7), Q8–9 hard (1–2), Q10 wager.
+  (3–7), Q8–9 hard (1–2), Q10 hardest.
 - **Points:** over/under and true/false 100, came-first 120, closest 0–150 graded
   by distance. Band multiplier ×1.0 / ×1.5 / ×2.0. Streak bonus +25 per
   consecutive correct past two, capped +100. Clean round ≈ 2,000.
-- **Wrong answers cost nothing.** Only the wager can lose points, capped at 50%
-  of the round score. Penalties teach people to answer only when safe, which is
-  the opposite of the point.
+- **No wagering, and points are never deducted.** There is no stake, no bet and
+  no way to lose what you have scored. A wrong answer earns zero and resets the
+  streak multiplier — it never takes anything back. That single rule, not the
+  vocabulary, is what separates this from a betting game.
+- **Points bank across rounds** and are spent on help, never on answers. The one
+  spend is *Give me more room*: before you commit, push the shown number further
+  from the truth. The question gets easier and is worth correspondingly less.
+  A second-chance retry is deliberately absent — on a two-answer question it
+  would simply hand over the answer.
 - **Relaxed pacing by default.** The timer is opt-in, and forced on only in
   sudden death.
 - **Two currencies.** Score is what you knew and is competitive. Curiosity is
