@@ -91,6 +91,123 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .cats { display: flex; flex-direction: column; gap: 0.75rem; }
 
+/* ---------- mode chooser ---------- */
+
+.modes { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.mode-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--over);
+  border-radius: 4px;
+  padding: 1.1rem 1.15rem;
+  min-height: var(--tap);
+  transition: background 0.15s, transform 0.1s;
+}
+
+.mode-btn:active { background: var(--surface-2); transform: scale(0.99); }
+.mode-btn + .mode-btn { border-left-color: var(--brass); }
+.mode-name { font-family: var(--display); font-size: 1.5rem; line-height: 1.1; }
+.mode-sub { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
+
+/* ---------- setting up a table ---------- */
+
+.players { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.player-row {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr 44px;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.player-n { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+
+.name-input {
+  min-height: 52px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.05rem;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+}
+
+.name-input::placeholder { color: var(--muted); }
+
+.drop-btn {
+  width: 44px; height: 44px;
+  background: none; border: 0;
+  color: var(--muted); font-size: 1.3rem;
+  border-radius: 50%;
+}
+
+/* ---------- handoff ---------- */
+
+#screen-handoff .scrollable { justify-content: center; text-align: center; gap: 0.9rem; }
+
+.handoff-to {
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 15vw, 4rem);
+  line-height: 1;
+  color: var(--brass);
+}
+
+.handoff-sub { color: var(--ink-soft); font-size: 1rem; }
+
+/* ---------- stakes ---------- */
+
+.stake-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.stakes { display: flex; gap: 6px; }
+
+.stake {
+  flex: 1 1 0;
+  min-height: 46px;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.stake.on { border-color: var(--brass); color: var(--brass); background: rgba(227,178,91,0.08); }
+.stake:active { transform: scale(0.97); }
+
+/* ---------- standings ---------- */
+
+.standings { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+
+.standings li {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr auto;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.standings .pos { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+.standings .who { font-family: var(--display); font-size: 1.45rem; }
+.standings .pts { font-family: var(--mono); font-size: 1.05rem; color: var(--brass); font-variant-numeric: tabular-nums; }
+.standings li.lead .who { color: var(--brass); }
+.standings li.lead .pos::after { content: " \2605"; color: var(--brass); }
+
+
 .era-head {
   margin: 1rem 0 0;
   padding-bottom: 0.45rem;

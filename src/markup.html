@@ -8,7 +8,16 @@
         <p class="tagline">Pick a period you care about. Ten easy questions. Nobody needs the exact year.</p>
       </header>
 
-      <div class="cats" id="cats"></div>
+      <div class="modes">
+        <button class="mode-btn" id="mode-solo" type="button">
+          <span class="mode-name">Play on your own</span>
+          <span class="mode-sub">One period, ten questions, about three minutes. Works with no signal.</span>
+        </button>
+        <button class="mode-btn" id="mode-together" type="button">
+          <span class="mode-name">Play together</span>
+          <span class="mode-sub">Two to six people, one phone. Everyone picks a period and takes turns.</span>
+        </button>
+      </div>
 
       <div class="home-foot">
         <label class="switch">
@@ -22,9 +31,13 @@
     </div>
   </section>
 
+  <section class="screen" id="screen-setup"><div class="scrollable" id="setup-body"></div></section>
+  <section class="screen" id="screen-pick"><div class="scrollable" id="pick-body"></div></section>
+  <section class="screen" id="screen-handoff"><div class="scrollable" id="handoff-body"></div></section>
+
   <section class="screen" id="screen-play">
     <div class="topbar">
-      <button class="icon-btn" id="quit" type="button" aria-label="Leave this round">&times;</button>
+      <button class="icon-btn" id="quit" type="button" aria-label="Leave this game">&times;</button>
       <div class="dots" id="dots"></div>
       <div class="score" id="score" aria-label="Score">0</div>
     </div>
@@ -39,6 +52,7 @@
     <div class="actions" id="actions"></div>
   </section>
 
+  <section class="screen" id="screen-standings"><div class="scrollable" id="standings-body"></div></section>
   <section class="screen" id="screen-results"><div class="scrollable" id="results-body"></div></section>
   <section class="screen" id="screen-research"><div class="scrollable" id="research-body"></div></section>
 

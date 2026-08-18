@@ -10,8 +10,50 @@ The name is the American idiom for an approximate figure: "1865, give or take."
 It names the mechanic, and it tells a player who thinks they are bad at history
 that roughly right is good enough here.
 
-**Status: playable prototype.** Fourteen categories, 280 facts, solo play.
+**Status: playable prototype.** Fourteen categories, 280 facts, two modes.
 `node scripts/build.mjs` then open `dist/index.html` in a browser.
+
+## Two ways to play
+
+**On your own.** One period, ten questions, roughly three minutes. No stakes, no
+network, no accounts. Everything is inlined into a single HTML file, and a
+service worker keeps it playable with no signal once it has been opened once —
+Add to Home Screen and it works on a plane.
+
+**Together.** Two to six people, one phone, passed around. Each player chooses
+one period; within that block everyone answers one question each. The starting
+player shifts every block so nobody always goes first.
+
+| Players | Blocks | Questions per block | Total |
+| --- | --- | --- | --- |
+| 2 | 2 | 4 | 8 |
+| 3 | 3 | 4 | 12 |
+| 4 | 4 | 4 | 16 |
+| 5 | 4 | 5 | 20 |
+| 6 | 4 | 6 | 24 |
+
+Blocks are capped at four so a big table still finishes, and a block is never
+shorter than four questions so a small one is not over in a minute.
+
+### Stakes, and why they cannot wipe you out
+
+Before answering, a player commits **25, 50, 75 or 100 percent of the
+question** — not of their score. Right, they take what they committed. Wrong,
+they take nothing. Betting a share of your *score* compounds: bet everything
+once, lose, and every later bet is a percentage of zero. You are mathematically
+dead with most of the game still to play, and Jeopardy's runaway condition
+(a leader on more than double second place cannot be caught) arrives early and
+often. Sharing out the question instead keeps the same four-button decision
+with none of that.
+
+**The last question of the last block is the exception**, and there the stake is
+a share of your score — doubled or lost. That is Final Jeopardy, and it works
+for one reason: nothing comes after it, so nobody has to sit at zero.
+
+There is no speed bonus and there never will be. Kahoot's is its most criticised
+feature: four seconds of hesitation can cost hundreds of points, which punishes
+slower readers and anyone anxious. Sitting a nine-year-old next to a
+seventy-five-year-old rules it out.
 
 The full design map — mechanics, scoring, round structure, the fairness problem,
 sudden death, the 100-category plan and the build order — is in
@@ -144,7 +186,8 @@ but only for a PWA the player has actually installed.
 ```
 data/categories.json        which categories ship, and in what order
 data/facts/*.json           one file per category -- the source of truth
-src/markup.html             the four screens
+src/markup.html             every screen
+src/pwa/                    manifest, service worker and generated icons
 src/styles.css              committed dark theme, mobile-first
 src/game.js                 question engine. No model is called anywhere.
 scripts/validate-facts.mjs  schema, claim length and the tone rule
@@ -154,6 +197,7 @@ docs/design-map.html        the full design map
 dist/index.html             the game, standalone and offline-capable
 dist/artifact.html          page content only, for publishing as an artifact
 dist/design-map.html        the design map, served next to the game
+sw.js, manifest.webmanifest, icon-*.png   generated; committed for Pages
 .github/workflows/pages.yml validates, builds and deploys on push to main
 ```
 

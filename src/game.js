@@ -244,23 +244,54 @@
       qs.push(q);
     }
 
-    return { catId: catId, questions: qs, i: 0, score: 0, streak: 0, results: [], continued: false };
+    return { catId: catId, questions: qs, i: 0, score: 0, streak: 0, results: [], continued: false, multi: false };
+  }
+
+  /* Blocks are what a table plays: one period, one question each. Same
+     generator as a solo round, just a different number of slots. */
+  function buildBlock(catId, n, usedGlobal, gentle) {
+    var pool = shuffle(DATA.facts[catId].slice());
+    var used = {};
+    Object.keys(usedGlobal).forEach(function (k) { used[k] = true; });
+
+    var modes = [];
+    for (var i = 0; i < n; i++) modes.push(i % 2 === 0 ? 'overunder' : 'truefalse');
+    if (n >= 4) modes[Math.floor(n / 2)] = 'order';
+
+    var qs = [];
+    for (var j = 0; j < n; j++) {
+      var band = j < Math.ceil(n / 3) ? 'easy' : j < Math.ceil(n * 2 / 3) ? 'medium' : 'hard';
+      if (gentle) band = soften(band);
+      var q = tryMake(modes[j], band, pool, used, j === 0)
+           || tryMake('truefalse', band, pool, used, j === 0)
+           || tryMake('overunder', band, pool, used, j === 0);
+      if (!q) continue;
+      q.facts.forEach(function (f) { used[f.id] = true; usedGlobal[f.id] = true; });
+      qs.push(q);
+    }
+    return qs;
   }
 
   /* ---------- state ---------- */
 
-  var R = null;
+  var R = null;   /* the questions in play right now */
+  var M = null;   /* the table, when more than one person is playing */
   var answered = false;
 
+  /* Each question is worth this before the band multiplier. A player commits a
+     share of the question's value, never a share of their score -- so a bad call
+     costs the question, never the game. */
+  var Q_BASE = 200;
+
   function show(name) {
-    ['home', 'play', 'results', 'research'].forEach(function (s) {
+    ['home', 'setup', 'pick', 'handoff', 'play', 'standings', 'results', 'research'].forEach(function (s) {
       $('screen-' + s).classList.toggle('on', s === name);
     });
   }
 
   /* ---------- home ---------- */
 
-  function categoryCard(c) {
+  function categoryCard(c, onPick) {
     var n = (DATA.facts[c.id] || []).length;
     var b = best[c.id];
     var el = document.createElement('button');
@@ -273,17 +304,20 @@
       '<span class="cat-meta"><span>' + n + ' facts</span>' +
       (b ? '<span>best <b>' + b.toLocaleString('en-US') + '</b></span>' : '<span>not played</span>') +
       '</span>';
-    el.addEventListener('click', function () { startRound(c.id); });
+    el.addEventListener('click', function () { onPick(c.id); });
     return el;
   }
 
   function renderHome() {
-    var wrap = $('cats');
-    wrap.innerHTML = '';
+    $('res-count').textContent = String(research.length);
+    $('bank').textContent = bank.toLocaleString('en-US') + ' points banked';
+    $('gentle').checked = !!LS.get('gentle', false);
+  }
 
-    /* Grouped by era in the order data/categories.json lists them, so the file
-       controls both grouping and sequence. A flat list stops being browsable
-       somewhere around a dozen entries, and the plan runs to a hundred. */
+  /* Grouped by era in the order data/categories.json lists them, so that file
+     controls both grouping and sequence. A flat list stops being browsable
+     somewhere around a dozen entries, and the plan runs to a hundred. */
+  function renderPick(heading, sub, onPick) {
     var order = [];
     var groups = {};
     DATA.categories.forEach(function (c) {
@@ -291,22 +325,216 @@
       groups[c.era].push(c);
     });
 
+    var body = $('pick-body');
+    body.innerHTML =
+      '<div class="home-head">' +
+        '<p class="kicker">' + sub + '</p>' +
+        '<h1 class="wordmark" style="font-size:2.4rem">' + heading + '</h1>' +
+      '</div>' +
+      '<div class="cats" id="pick-cats"></div>' +
+      '<button class="ans wide" id="pick-back" type="button">Back</button>';
+
+    var wrap = $('pick-cats');
     order.forEach(function (era) {
       var h = document.createElement('h2');
       h.className = 'era-head';
       h.textContent = era;
       wrap.appendChild(h);
-      groups[era].forEach(function (c) { wrap.appendChild(categoryCard(c)); });
+      groups[era].forEach(function (c) { wrap.appendChild(categoryCard(c, onPick)); });
     });
 
-    $('res-count').textContent = String(research.length);
-    $('bank').textContent = bank.toLocaleString('en-US') + ' points banked';
-    $('gentle').checked = !!LS.get('gentle', false);
+    $('pick-back').addEventListener('click', goHome);
+    show('pick');
+    body.scrollTop = 0;
+  }
+
+  /* ---------- the table ---------- */
+
+  function renderSetup() {
+    var saved = LS.get('players', ['', '']);
+    var names = saved.length >= 2 ? saved.slice(0, 6) : ['', ''];
+
+    function draw() {
+      var body = $('setup-body');
+      body.innerHTML =
+        '<div class="home-head">' +
+          '<p class="kicker">Two to six players, one phone</p>' +
+          '<h1 class="wordmark" style="font-size:2.4rem">Who is playing?</h1>' +
+          '<p class="tagline">Everyone gets to choose a period, and everyone answers the same number of questions.</p>' +
+        '</div>' +
+        '<div class="players" id="players"></div>' +
+        '<button class="ans wide" id="add-player" type="button">Add another player</button>' +
+        '<button class="next-btn" id="start-table" type="button">Start</button>' +
+        '<button class="ans wide" id="setup-back" type="button">Back</button>';
+
+      var list = $('players');
+      names.forEach(function (nm, i) {
+        var row = document.createElement('div');
+        row.className = 'player-row';
+        row.innerHTML =
+          '<span class="player-n">' + (i + 1) + '</span>' +
+          '<input class="name-input" type="text" maxlength="14" placeholder="Name" ' +
+            'autocomplete="off" autocapitalize="words" value="' + nm.replace(/"/g, '&quot;') + '">' +
+          (names.length > 2 ? '<button class="drop-btn" type="button" aria-label="Remove player">&times;</button>' : '<span></span>');
+        var input = row.querySelector('input');
+        input.addEventListener('input', function () { names[i] = input.value; });
+        var drop = row.querySelector('.drop-btn');
+        if (drop) drop.addEventListener('click', function () { names.splice(i, 1); draw(); });
+        list.appendChild(row);
+      });
+
+      $('add-player').disabled = names.length >= 6;
+      $('add-player').addEventListener('click', function () {
+        if (names.length < 6) { names.push(''); draw(); }
+      });
+      $('setup-back').addEventListener('click', goHome);
+      $('start-table').addEventListener('click', function () {
+        var clean = names.map(function (n, i) { return (n || '').trim() || ('Player ' + (i + 1)); });
+        if (clean.length < 2) return;
+        LS.set('players', clean);
+        startTable(clean);
+      });
+    }
+
+    draw();
+    show('setup');
+    $('setup-body').scrollTop = 0;
+  }
+
+  function startTable(names) {
+    var n = names.length;
+    M = {
+      players: names.map(function (nm) { return { name: nm, score: 0 }; }),
+      blocks: Math.min(n, 4),          /* one block each, capped so a big table still ends */
+      blockLen: Math.max(4, n),        /* at least four questions, or one per player */
+      block: 0,
+      used: {},
+      facts: [],
+      stakePct: 0.5
+    };
+    beginBlock();
+  }
+
+  function whoseTurn(i) {
+    /* The starting player shifts each block, so nobody always answers first. */
+    return M.players[(M.block + i) % M.players.length];
+  }
+
+  function beginBlock() {
+    var picker = M.players[M.block % M.players.length];
+    renderPick(picker.name + ', choose a period',
+      'Block ' + (M.block + 1) + ' of ' + M.blocks,
+      function (catId) {
+        R = {
+          catId: catId,
+          questions: buildBlock(catId, M.blockLen, M.used, !!$('gentle').checked),
+          i: 0, score: 0, streak: 0, results: [], multi: true
+        };
+        handoff();
+      });
+  }
+
+  function handoff() {
+    var p = whoseTurn(R.i);
+    var cat = DATA.categories.filter(function (c) { return c.id === R.catId; })[0];
+    $('handoff-body').innerHTML =
+      '<p class="kicker">Question ' + (R.i + 1) + ' of ' + R.questions.length +
+        ' &middot; ' + cat.title + '</p>' +
+      '<div class="handoff-to">' + p.name + '</div>' +
+      '<p class="handoff-sub">Pass the phone along, then tap when you have it.</p>' +
+      '<button class="next-btn" id="take-turn" type="button">I&rsquo;m ready</button>';
+    show('handoff');
+    $('take-turn').addEventListener('click', function () {
+      M.stakePct = 0.5;
+      show('play');
+      renderQuestion();
+    });
+    $('take-turn').focus();
+  }
+
+  function isLastOfGame() {
+    return M && M.block === M.blocks - 1 && R.i === R.questions.length - 1;
+  }
+
+  function questionValue(q) { return Math.round(Q_BASE * BAND_MULT[q.band]); }
+
+  function endBlock() {
+    M.facts = M.facts.concat(R.results.map(function (r) { return r.q.fact; }));
+    M.block += 1;
+    if (M.block >= M.blocks) { renderFinal(); return; }
+    renderStandings();
+  }
+
+  function standingsList() {
+    var ranked = M.players.slice().sort(function (a, b) { return b.score - a.score; });
+    var top = ranked[0].score;
+    return '<ul class="standings">' + ranked.map(function (p, i) {
+      return '<li class="' + (p.score === top && top > 0 ? 'lead' : '') + '">' +
+        '<span class="pos">' + (i + 1) + '</span>' +
+        '<span class="who">' + p.name + '</span>' +
+        '<span class="pts">' + p.score.toLocaleString('en-US') + '</span></li>';
+    }).join('') + '</ul>';
+  }
+
+  function factRoll(facts) {
+    return '<ul class="rlist">' + facts.map(function (f) {
+      var val = f.kind === 'boolean'
+        ? (f.answer ? 'True statement' : 'False statement')
+        : fmtValue(f, f.value);
+      return '<li><span class="mark part">&middot;</span>' +
+        '<span class="rc"><span>' + f.claim + '</span><span class="rv">' + val + '</span></span>' +
+        '<a href="' + f.source.url + '" target="_blank" rel="noopener">source</a></li>';
+    }).join('') + '</ul>';
+  }
+
+  function renderStandings() {
+    var next = M.players[M.block % M.players.length];
+    $('standings-body').innerHTML =
+      '<div class="home-head">' +
+        '<p class="kicker">Block ' + M.block + ' of ' + M.blocks + ' done</p>' +
+        '<h1 class="wordmark" style="font-size:2.4rem">Standings</h1>' +
+      '</div>' +
+      standingsList() +
+      '<h2 class="sec">What that block turned up</h2>' +
+      factRoll(R.results.map(function (r) { return r.q.fact; })) +
+      '<button class="next-btn" id="next-block" type="button">' + next.name + ' picks next</button>' +
+      '<button class="ans wide" id="stand-quit" type="button">Stop here</button>';
+    show('standings');
+    $('standings-body').scrollTop = 0;
+    $('next-block').addEventListener('click', beginBlock);
+    $('stand-quit').addEventListener('click', renderFinal);
+  }
+
+  function renderFinal() {
+    var ranked = M.players.slice().sort(function (a, b) { return b.score - a.score; });
+    var facts = M.facts.concat(R && R.results ? R.results.map(function (r) { return r.q.fact; }) : []);
+    var seen = {}, unique = [];
+    facts.forEach(function (f) { if (f && !seen[f.id]) { seen[f.id] = 1; unique.push(f); } });
+
+    $('results-body').innerHTML =
+      '<div class="home-head">' +
+        '<p class="kicker">Game over</p>' +
+        '<h1 class="wordmark" style="font-size:2.6rem">' + ranked[0].name + ' wins</h1>' +
+      '</div>' +
+      standingsList() +
+      '<h2 class="sec">Everything the table met</h2>' +
+      factRoll(unique) +
+      '<div class="stack">' +
+        '<button class="next-btn" id="again-table" type="button">Play again</button>' +
+        '<button class="ans wide" id="home-btn" type="button">Back to the start</button>' +
+      '</div>';
+    show('results');
+    $('results-body').scrollTop = 0;
+    $('again-table').addEventListener('click', function () {
+      startTable(M.players.map(function (p) { return p.name; }));
+    });
+    $('home-btn').addEventListener('click', goHome);
   }
 
   /* ---------- play ---------- */
 
   function startRound(catId) {
+    M = null;
     R = buildRound(catId, !!$('gentle').checked);
     answered = false;
     show('play');
@@ -331,10 +559,18 @@
     answered = false;
 
     renderDots();
-    $('score').textContent = R.score.toLocaleString('en-US');
-    $('band').textContent = q.eased ? 'With more room'
-      : R.i === R.questions.length - 1 ? 'Last one'
-      : BAND_LABEL[q.band];
+
+    if (R.multi) {
+      var me = whoseTurn(R.i);
+      $('score').textContent = me.score.toLocaleString('en-US');
+      $('band').textContent = me.name + ' \u00b7 ' +
+        (isLastOfGame() ? 'Last question of the game' : BAND_LABEL[q.band]);
+    } else {
+      $('score').textContent = R.score.toLocaleString('en-US');
+      $('band').textContent = q.eased ? 'With more room'
+        : R.i === R.questions.length - 1 ? 'Last one'
+        : BAND_LABEL[q.band];
+    }
     $('stem').textContent = q.stem;
 
     var big = $('big');
@@ -355,6 +591,34 @@
     var a = $('actions');
     a.innerHTML = '';
 
+    /* A stake is a share of the question, not of your score, so a bad call
+       costs you the question and never the game. The one exception is the very
+       last question, where an all-in has nothing after it to spoil. */
+    if (R.multi) {
+      var me = whoseTurn(R.i);
+      var last = isLastOfGame();
+      var pool = last ? me.score : questionValue(q);
+
+      var lab = document.createElement('p');
+      lab.className = 'stake-label';
+      lab.textContent = last
+        ? 'All or nothing \u2014 how much of your ' + me.score.toLocaleString('en-US') + ' rides on this?'
+        : 'How much of this question do you want?';
+      a.appendChild(lab);
+
+      var stakes = document.createElement('div');
+      stakes.className = 'stakes';
+      [0.25, 0.5, 0.75, 1].forEach(function (pct) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'stake' + (M.stakePct === pct ? ' on' : '');
+        b.innerHTML = (pct * 100) + '%<br>' + Math.round(pool * pct).toLocaleString('en-US');
+        b.addEventListener('click', function () { M.stakePct = pct; renderActions(q); });
+        stakes.appendChild(b);
+      });
+      a.appendChild(stakes);
+    }
+
     var container = document.createElement('div');
     container.className = q.stack ? 'stack' : 'row';
     q.options.forEach(function (o) {
@@ -371,7 +635,7 @@
        two-answer question a retry would simply hand over the answer, so the
        only honest help is more room: push the number further from the truth.
        The question gets easier and is worth correspondingly less. */
-    if (q.mode === 'overunder' && !q.eased && q.band !== 'easy') {
+    if (!R.multi && q.mode === 'overunder' && !q.eased && q.band !== 'easy') {
       var room = document.createElement('button');
       room.className = 'room-btn';
       room.type = 'button';
@@ -401,8 +665,22 @@
 
     var q = R.questions[R.i];
     var correct = (given === q.correct);
-    var earned = correct ? Math.round(q.base * BAND_MULT[q.band]) : 0;
     var grade = correct ? 'good' : 'bad';
+
+    if (R.multi) {
+      var me = whoseTurn(R.i);
+      var last = isLastOfGame();
+      var stake = Math.round((last ? me.score : questionValue(q)) * M.stakePct);
+      var delta = correct ? stake : (last ? -stake : 0);
+      me.score = Math.max(0, me.score + delta);
+      R.results[R.i] = { grade: grade, earned: delta, given: given, q: q, who: me.name };
+      $('score').textContent = me.score.toLocaleString('en-US');
+      renderDots();
+      openSheet(q, R.results[R.i], 0);
+      return;
+    }
+
+    var earned = correct ? Math.round(q.base * BAND_MULT[q.band]) : 0;
 
     /* Streaks: quietly awarded on a sensitive fact, never celebrated. */
     R.streak = correct ? R.streak + 1 : 0;
@@ -426,9 +704,10 @@
   function openSheet(q, res, bonus) {
     var sheet = $('sheet');
     var f = q.fact;
-    var verdictText = res.grade === 'good' ? 'Correct' : 'Not this time';
+    var verdictText = (res.who ? res.who + ' \u2014 ' : '') +
+      (res.grade === 'good' ? 'Correct' : 'Not this time');
 
-    var ptsText = '+' + res.earned.toLocaleString('en-US');
+    var ptsText = (res.earned >= 0 ? '+' : '') + res.earned.toLocaleString('en-US');
 
     var truthVal;
     if (q.mode === 'order') {
@@ -463,7 +742,9 @@
         '</button>' +
       '</div>' +
       '<button class="next-btn" id="next" type="button">' +
-        (R.i === R.questions.length - 1 ? 'See your round' : 'Next question') +
+        (R.i !== R.questions.length - 1
+          ? (R.multi ? 'Next player' : 'Next question')
+          : (R.multi ? 'See the standings' : 'See your round')) +
       '</button>' +
       '<p class="draft-flag">Unreviewed draft &middot; ' + f.source.title + '</p>';
 
@@ -500,6 +781,14 @@
 
   function nextQuestion() {
     closeSheet();
+
+    if (R.multi) {
+      if (R.i === R.questions.length - 1) { endBlock(); return; }
+      R.i += 1;
+      handoff();
+      return;
+    }
+
     if (R.i === R.questions.length - 1) { renderResults(); return; }
     if (R.i === 4 && !R.continued) { openBreak(); return; }
     R.i += 1;
@@ -628,6 +917,7 @@
 
   function goHome() {
     closeSheet();
+    M = null;
     renderHome();
     show('home');
   }
@@ -636,6 +926,10 @@
 
   $('quit').addEventListener('click', goHome);
   $('open-research').addEventListener('click', renderResearch);
+  $('mode-solo').addEventListener('click', function () {
+    renderPick('Choose a period', 'Playing on your own', startRound);
+  });
+  $('mode-together').addEventListener('click', renderSetup);
   $('gentle').addEventListener('change', function () { LS.set('gentle', $('gentle').checked); });
 
   document.addEventListener('keydown', function (e) {

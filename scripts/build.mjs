@@ -6,6 +6,7 @@
    No dependencies. Run: node scripts/build.mjs */
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, copyFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join } from 'node:path';
 
 const index = JSON.parse(readFileSync('data/categories.json', 'utf8'));
@@ -42,7 +43,10 @@ writeFileSync('dist/index.html',
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0E1116">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>Give or Take</title>
 ${FONTS}
 <style>
@@ -51,6 +55,13 @@ ${css}
 </head>
 <body>
 ${body}
+<script>
+/* Registered only over https, so opening the file straight off disk stays a
+   plain page with no worker and no surprises. */
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+}
+</script>
 </body>
 </html>
 `);
@@ -68,6 +79,18 @@ ${body}
 copyFileSync('docs/design-map.html', 'dist/design-map.html');
 writeFileSync('dist/.nojekyll', '');
 
+/* Installable, and playable with no signal once it has been opened once. The
+   cache name carries a hash of the built page, so a new build supersedes the
+   old one instead of players being stuck on it. */
+const build = createHash('sha256').update(readFileSync('dist/index.html')).digest('hex').slice(0, 8);
+for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png']) {
+  copyFileSync(`src/pwa/${f}`, `dist/${f}`);
+  copyFileSync(`src/pwa/${f}`, f);
+}
+const sw = readFileSync('src/pwa/sw.js', 'utf8').replace('__BUILD__', build);
+writeFileSync('dist/sw.js', sw);
+writeFileSync('sw.js', sw);
+
 /* Also written to the repository root and committed, so GitHub Pages works on
    either source setting: "GitHub Actions" deploys dist/, while "Deploy from a
    branch -> main -> / (root)" serves this file directly with no workflow at
@@ -77,6 +100,7 @@ writeFileSync('.nojekyll', '');
 
 const n = Object.values(payload.facts).reduce((a, f) => a + f.length, 0);
 console.log(`built ${categories.length} categories, ${n} facts`);
+console.log(`  service worker cache: give-or-take-${build}`);
 for (const f of ['dist/index.html', 'dist/artifact.html', 'dist/design-map.html', 'index.html']) {
   console.log(`  ${f}  ${(readFileSync(f).length / 1024).toFixed(1)} KB`);
 }
