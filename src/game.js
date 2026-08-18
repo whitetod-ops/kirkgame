@@ -292,25 +292,43 @@
 
   /* ---------- home ---------- */
 
+  function categoryCard(c) {
+    var n = (DATA.facts[c.id] || []).length;
+    var b = best[c.id];
+    var el = document.createElement('button');
+    el.className = 'cat';
+    el.type = 'button';
+    el.innerHTML =
+      '<span class="cat-era">' + (c.when || c.era) + '</span>' +
+      '<span class="cat-title">' + c.title + '</span>' +
+      '<span class="cat-blurb">' + c.blurb + '</span>' +
+      '<span class="cat-meta"><span>' + n + ' facts</span>' +
+      (b ? '<span>best <b>' + b.toLocaleString('en-US') + '</b></span>' : '<span>not played</span>') +
+      '</span>';
+    el.addEventListener('click', function () { startRound(c.id); });
+    return el;
+  }
+
   function renderHome() {
     var wrap = $('cats');
     wrap.innerHTML = '';
 
+    /* Grouped by era in the order data/categories.json lists them, so the file
+       controls both grouping and sequence. A flat list stops being browsable
+       somewhere around a dozen entries, and the plan runs to a hundred. */
+    var order = [];
+    var groups = {};
     DATA.categories.forEach(function (c) {
-      var n = (DATA.facts[c.id] || []).length;
-      var b = best[c.id];
-      var el = document.createElement('button');
-      el.className = 'cat';
-      el.type = 'button';
-      el.innerHTML =
-        '<span class="cat-era">' + c.era + '</span>' +
-        '<span class="cat-title">' + c.title + '</span>' +
-        '<span class="cat-blurb">' + c.blurb + '</span>' +
-        '<span class="cat-meta"><span>' + n + ' facts</span>' +
-        (b ? '<span>best <b>' + b.toLocaleString('en-US') + '</b></span>' : '<span>not played</span>') +
-        '</span>';
-      el.addEventListener('click', function () { startRound(c.id); });
-      wrap.appendChild(el);
+      if (!groups[c.era]) { groups[c.era] = []; order.push(c.era); }
+      groups[c.era].push(c);
+    });
+
+    order.forEach(function (era) {
+      var h = document.createElement('h2');
+      h.className = 'era-head';
+      h.textContent = era;
+      wrap.appendChild(h);
+      groups[era].forEach(function (c) { wrap.appendChild(categoryCard(c)); });
     });
 
     $('res-count').textContent = String(research.length);
