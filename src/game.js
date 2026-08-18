@@ -181,45 +181,18 @@
     return null;
   }
 
-  function makeClosest(fact, band) {
-    var span = fact.kind === 'year'
-      ? (band === 'easy' ? 60 : band === 'medium' ? 30 : 14)
-      : Math.max(4, niceRound(Math.abs(fact.value) * (band === 'easy' ? 1.6 : band === 'medium' ? 0.9 : 0.45)));
-
-    var min = Math.round(fact.value - span / 2 + (Math.random() - 0.5) * span * 0.4);
-    var max = min + span;
-    var margin = Math.max(1, Math.round(span * 0.1));
-    if (fact.value - min < margin) min = fact.value - margin;
-    if (max - fact.value < margin) max = fact.value + margin;
-    if (fact.kind === 'number' && min < 0) min = 0;
-
-    var step = fact.kind === 'year' ? 1 : Math.max(1, niceRound((max - min) / 100) || 1);
-
-    return {
-      mode: 'closest',
-      band: band,
-      facts: [fact],
-      fact: fact,
-      stem: fact.claim + '.',
-      big: null,
-      ask: 'Slide to your best guess',
-      slider: { min: min, max: max, step: step, span: span },
-      base: 150
-    };
-  }
-
   /* ---------- round assembly ---------- */
 
   var PLAN = [
     { mode: 'overunder', band: 'easy' },
     { mode: 'truefalse', band: 'easy' },
     { mode: 'overunder', band: 'easy' },
-    { mode: 'closest', band: 'medium' },
     { mode: 'truefalse', band: 'medium' },
     { mode: 'overunder', band: 'medium' },
+    { mode: 'truefalse', band: 'medium' },
     { mode: 'order', band: 'medium' },
-    { mode: 'truefalse', band: 'hard' },
     { mode: 'overunder', band: 'hard' },
+    { mode: 'truefalse', band: 'hard' },
     { mode: 'overunder', band: 'hard' }
   ];
 
@@ -232,17 +205,12 @@
 
   function tryMake(mode, band, pool, used, opening) {
     var f;
-    /* Tone rule: a body count is never the dial on a closest-guess slider and
-       never one of the three questions that open a round. */
+    /* Tone rule: a body count is never one of the three questions that open a
+       round. Casualty facts are asked plainly, in the middle of a round, and
+       never used as the light opening the game leads with. */
     var ok = function (x) { return !(opening && x.sensitive); };
-    var okNum = function (x) { return isNumeric(x) && !x.sensitive; };
 
     if (mode === 'order') return makeOrder(band, pool, used);
-
-    if (mode === 'closest') {
-      f = firstFree(pool, used, okNum);
-      return f ? makeClosest(f, band) : null;
-    }
 
     if (mode === 'truefalse') {
       /* Weighted rather than strict, so the same handful of boolean facts do
@@ -352,7 +320,7 @@
       var s = document.createElement('span');
       s.className = 'dot';
       var r = R.results[i];
-      if (r) s.className += r.grade === 'good' ? ' hit' : r.grade === 'part' ? ' part' : ' miss';
+      if (r) s.className += r.grade === 'good' ? ' hit' : ' miss';
       else if (i === R.i) s.className += ' now';
       d.appendChild(s);
     }
@@ -380,40 +348,12 @@
 
     $('ask').textContent = q.ask;
 
-    var sw = $('slider-wrap');
-    if (q.mode === 'closest') {
-      sw.hidden = false;
-      var s = $('slider');
-      s.min = q.slider.min; s.max = q.slider.max; s.step = q.slider.step;
-      s.value = Math.round((q.slider.min + q.slider.max) / 2 / q.slider.step) * q.slider.step;
-      $('slider-min').textContent = fmtValue(q.fact, q.slider.min);
-      $('slider-max').textContent = fmtValue(q.fact, q.slider.max);
-      updateSliderVal();
-    } else {
-      sw.hidden = true;
-    }
-
     renderActions(q);
-  }
-
-  function updateSliderVal() {
-    var q = R.questions[R.i];
-    $('slider-val').textContent = fmtValue(q.fact, Number($('slider').value));
   }
 
   function renderActions(q) {
     var a = $('actions');
     a.innerHTML = '';
-
-    if (q.mode === 'closest') {
-      var lock = document.createElement('button');
-      lock.className = 'ans brass wide';
-      lock.type = 'button';
-      lock.textContent = 'Lock it in';
-      lock.addEventListener('click', function () { answer(Number($('slider').value)); });
-      a.appendChild(lock);
-      return;
-    }
 
     var container = document.createElement('div');
     container.className = q.stack ? 'stack' : 'row';
@@ -460,19 +400,9 @@
     answered = true;
 
     var q = R.questions[R.i];
-    var grade, earned = 0, correct = false, offBy = null;
-
-    if (q.mode === 'closest') {
-      offBy = Math.abs(given - q.fact.value);
-      var tol = q.slider.span * 0.4;
-      earned = offBy === 0 ? 150 : Math.max(0, Math.round(150 * (1 - offBy / tol)));
-      correct = earned > 0;
-      grade = offBy === 0 ? 'good' : earned > 0 ? 'part' : 'bad';
-    } else {
-      correct = (given === q.correct);
-      earned = correct ? Math.round(q.base * BAND_MULT[q.band]) : 0;
-      grade = correct ? 'good' : 'bad';
-    }
+    var correct = (given === q.correct);
+    var earned = correct ? Math.round(q.base * BAND_MULT[q.band]) : 0;
+    var grade = correct ? 'good' : 'bad';
 
     /* Streaks: quietly awarded on a sensitive fact, never celebrated. */
     R.streak = correct ? R.streak + 1 : 0;
@@ -480,7 +410,7 @@
     earned += bonus;
 
     R.score = R.score + earned;
-    R.results[R.i] = { grade: grade, earned: earned, given: given, offBy: offBy, q: q };
+    R.results[R.i] = { grade: grade, earned: earned, given: given, q: q };
 
     $('score').textContent = R.score.toLocaleString('en-US');
     renderDots();
@@ -496,8 +426,7 @@
   function openSheet(q, res, bonus) {
     var sheet = $('sheet');
     var f = q.fact;
-    var verdictText = res.grade === 'good' ? 'Correct'
-                    : res.grade === 'part' ? 'Close' : 'Not this time';
+    var verdictText = res.grade === 'good' ? 'Correct' : 'Not this time';
 
     var ptsText = '+' + res.earned.toLocaleString('en-US');
 
@@ -517,8 +446,6 @@
     var html =
       '<div class="verdict ' + res.grade + '">' +
         '<span>' + verdictText +
-          (res.offBy !== null && res.offBy > 0
-            ? ' &middot; off by ' + res.offBy.toLocaleString('en-US') : '') +
           (bonus && !f.sensitive ? ' &middot; ' + R.streak + ' in a row' : '') +
         '</span>' +
         '<span class="pts">' + ptsText + '</span>' +
@@ -617,7 +544,6 @@
 
   function renderResults() {
     var hits = R.results.filter(function (r) { return r.grade === 'good'; }).length;
-    var parts = R.results.filter(function (r) { return r.grade === 'part'; }).length;
     bank += R.score;
     LS.set('bank', bank);
     var prev = best[R.catId] || 0;
@@ -630,8 +556,7 @@
       '<div class="res-head">' +
         '<p class="kicker">' + cat.title + '</p>' +
         '<div class="res-score">' + R.score.toLocaleString('en-US') + '</div>' +
-        '<p class="res-sub">' + hits + ' of ' + R.results.length + ' right' +
-          (parts ? ' &middot; ' + parts + ' close' : '') + '</p>' +
+        '<p class="res-sub">' + hits + ' of ' + R.results.length + ' right</p>' +
         (beaten
           ? '<p class="res-best">New best for this period.</p>'
           : '<p class="res-sub">Best ' + prev.toLocaleString('en-US') + '</p>') +
@@ -640,7 +565,7 @@
       '<ul class="rlist">' +
         R.results.map(function (r) {
           var f = r.q.fact;
-          var mark = r.grade === 'good' ? '&#10003;' : r.grade === 'part' ? '&#8776;' : '&#10007;';
+          var mark = r.grade === 'good' ? '&#10003;' : '&#10007;';
           var val = f.kind === 'boolean'
             ? (f.answer ? 'True statement' : 'False statement')
             : fmtValue(f, f.value);
@@ -711,7 +636,6 @@
 
   $('quit').addEventListener('click', goHome);
   $('open-research').addEventListener('click', renderResearch);
-  $('slider').addEventListener('input', updateSliderVal);
   $('gentle').addEventListener('change', function () { LS.set('gentle', $('gentle').checked); });
 
   document.addEventListener('keydown', function (e) {
@@ -721,7 +645,7 @@
     }
     if (!$('screen-play').classList.contains('on') || answered) return;
     var q = R && R.questions[R.i];
-    if (!q || q.mode === 'closest') return;
+    if (!q) return;
     if (e.key === '1') answer(q.options[0].key);
     if (e.key === '2') answer(q.options[1].key);
   });

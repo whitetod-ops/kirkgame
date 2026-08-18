@@ -39,17 +39,16 @@ The engine derives questions at run time. That single fact yields:
 - over/under at three difficulty bands (`before or after 1870?` / `1867?`)
 - a true/false (`assassinated in 1865 — true or false?`)
 - a which-came-first pairing against any other year fact in the category
-- a closest-guess slider
 
-One authored line, five-plus questions, three difficulties. At 100 categories
+One authored line, four-plus questions, three difficulties. At 100 categories
 that is the difference between a feasible project and an impossible one.
 
 ### Fact kinds
 
 | `kind` | Required fields | Generates |
 | --- | --- | --- |
-| `year` | `value` (negative for BC) | over/under, true/false, came-first, closest |
-| `number` | `value`, `unit`, optional `prefix`, `approx` | over/under, true/false, closest |
+| `year` | `value` (negative for BC) | over/under, true/false, came-first |
+| `number` | `value`, `unit`, optional `prefix`, `approx` | over/under, true/false |
 | `boolean` | `answer` | true/false |
 
 ## Rules summary
@@ -59,8 +58,8 @@ that is the difference between a feasible project and an impossible one.
   is the most informative number this prototype produces; it is counted locally.
 - **Bands ramp:** Q1–3 easy (shown number 8–30 years off the truth), Q4–7 medium
   (3–7), Q8–9 hard (1–2), Q10 hardest.
-- **Points:** over/under and true/false 100, came-first 120, closest 0–150 graded
-  by distance. Band multiplier ×1.0 / ×1.5 / ×2.0. Streak bonus +25 per
+- **Points:** over/under and true/false 100, came-first 120. Band multiplier
+  ×1.0 / ×1.5 / ×2.0. Streak bonus +25 per
   consecutive correct past two, capped +100. Clean round ≈ 2,000.
 - **No wagering, and points are never deducted.** There is no stake, no bet and
   no way to lose what you have scored. A wrong answer earns zero and resets the
@@ -71,6 +70,7 @@ that is the difference between a feasible project and an impossible one.
   from the truth. The question gets easier and is worth correspondingly less.
   A second-chance retry is deliberately absent — on a two-answer question it
   would simply hand over the answer.
+- **Three formats, all binary.** Over/under, true/false, and which-came-first.
 - **Relaxed pacing by default.** The timer is opt-in, and forced on only in
   sudden death.
 - **Two currencies.** Score is what you knew and is competitive. Curiosity is
@@ -190,16 +190,20 @@ A Pages site is readable by anyone with the URL.
 
 ## How a round is assembled
 
-Ten slots, fixed shape: over/under, true/false, over/under, closest-guess,
-true/false, over/under, which-came-first, true/false, over/under, wager. Bands
-ramp easy -> medium -> hard across them. No fact is used twice in a round.
-"Gentler questions" softens every band one notch.
+Ten slots, fixed shape, alternating so no two adjacent questions share a format:
+over/under, true/false, over/under, true/false, over/under, true/false,
+which-came-first, over/under, true/false, over/under. Bands ramp easy -> medium
+-> hard across them. No fact is used twice in a round. "Gentler questions"
+softens every band one notch.
 
-The tone rule is enforced in three places: a body count is never the dial on a
-closest-guess slider, never the wager question, and never one of the three
-questions that open a round. `scripts/validate-facts.mjs` fails the build if a
-fact whose unit is a body count is not marked `sensitive: true`. Streak bonuses
-are still awarded on a sensitive fact but never celebrated in the reveal.
+Every question is binary. There is no continuous-estimate format: a slider was
+built and removed, both because it did not feel good and because it broke the
+rule that this game only ever asks a two-answer question.
+
+The tone rule: a body count is never one of the three questions that open a
+round. `scripts/validate-facts.mjs` fails the build if a fact whose unit is a
+body count is not marked `sensitive: true`. Streak bonuses are still awarded on
+a sensitive fact but never celebrated in the reveal.
 
 ## Open questions
 

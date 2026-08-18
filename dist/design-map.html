@@ -456,14 +456,14 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow">Design map &middot; version 0.2 &middot; a Kirk Ogren game &middot; nothing built yet</p>
+    <p class="eyebrow">Design map &middot; version 0.3 &middot; a Kirk Ogren game &middot; prototype live</p>
     <h1>Give or Take</h1>
     <p class="thesis">A history quiz that runs on over/under bets, built so that losing a question makes you want to go read about it.</p>
     <div class="decided">
       <span class="chip"><b>Solo</b> first, multiplayer designed in</span>
       <span class="chip"><b>Relaxed</b> pacing, timer optional</span>
-      <span class="chip"><b>Wager</b> round, capped at 50%</span>
-      <span class="chip"><b>10</b> categories now, <b>100</b> mapped</span>
+      <span class="chip"><b>No wagering</b> &mdash; points are never lost</span>
+      <span class="chip"><b>14</b> categories live, <b>100</b> mapped</span>
       <span class="chip"><b>Installable web app</b>, mobile first</span>
       <span class="chip">Facts in <b>git</b>, database at phase 4</span>
     </div>
@@ -499,17 +499,16 @@
   <b>"status"</b>: "draft"   <i>&larr; nothing reaches players unreviewed</i>
 }</pre>
 
-    <p>The engine derives the questions at run time. One authored fact yields at least five:</p>
+    <p>The engine derives the questions at run time. One authored fact yields at least four:</p>
 
     <ul class="derived">
       <li><span class="mode">Over / under</span><span>Lincoln was assassinated. Before or after <strong>1870</strong>? &mdash; the easy band</span></li>
       <li><span class="mode">Over / under</span><span>Before or after <strong>1867</strong>? &mdash; the hard band, same fact</span></li>
       <li><span class="mode">True / false</span><span>Lincoln was assassinated in <strong>1865</strong>. True or false?</span></li>
       <li><span class="mode">Came first</span><span>Which happened first: Lincoln's assassination, or Lee's surrender at Appomattox?</span></li>
-      <li><span class="mode">Closest guess</span><span>Slide to the year. Points scale with how close you land.</span></li>
     </ul>
 
-    <p>Writing one line of data gets you five questions across three difficulty levels. At 100 categories that is the difference between a feasible project and an impossible one.</p>
+    <p>Writing one line of data gets you four questions across three difficulty levels. At 100 categories that is the difference between a feasible project and an impossible one.</p>
   </section>
 
   <section>
@@ -580,12 +579,13 @@
           <tr><td class="num">1&ndash;3</td><td class="band-easy">Easy</td><td class="num">8&ndash;30 years off</td><td>Anyone who knows the era wins these</td></tr>
           <tr><td class="num">4&ndash;7</td><td class="band-med">Medium</td><td class="num">3&ndash;7 years off</td><td>You need the decade right</td></tr>
           <tr><td class="num">8&ndash;9</td><td class="band-hard">Hard</td><td class="num">1&ndash;2 years off</td><td>You need the actual year</td></tr>
-          <tr><td class="num">10</td><td><strong>Wager</strong></td><td class="num">player's choice</td><td>Stake up to half your round</td></tr>
+          <tr><td class="num">10</td><td class="band-hard">Hard</td><td class="num">1&ndash;2 years off</td><td>The last one, and the tightest</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p>Formats are mixed through the round so it never feels like ten of the same thing. All four need zero authored wrong answers.</p>
+    <p>There is also a break after question five that asks whether you want five more. Whether people say yes is the single most informative number this prototype produces, so it is asked out loud and counted.</p>
+    <p>Formats alternate through the round so it never feels like ten of the same thing. All three need zero authored wrong answers.</p>
 
     <div class="scroll">
       <table>
@@ -597,7 +597,6 @@
           <tr><td>Over / under</td><td class="num">100</td><td>The signature mode. Roughly half of every round.</td></tr>
           <tr><td>True / false</td><td class="num">100</td><td>Carries the non-numeric facts &mdash; people, places, misconceptions.</td></tr>
           <tr><td>Which came first</td><td class="num">120</td><td>Generated free from any two year facts in the category.</td></tr>
-          <tr><td>Closest guess</td><td class="num">0&ndash;150</td><td>Graded by distance. A near miss still scores.</td></tr>
         </tbody>
       </table>
     </div>
@@ -609,13 +608,14 @@
           <tbody>
             <tr><td>Band multiplier</td><td class="num">&times;1.0 easy &nbsp; &times;1.5 medium &nbsp; &times;2.0 hard</td></tr>
             <tr><td>Streak bonus</td><td class="num">+25 per consecutive correct past two, capped +100</td></tr>
-            <tr><td>Wager</td><td class="num">stake up to 50% of the round, doubled or lost</td></tr>
-            <tr><td>Wrong answer</td><td class="num">0 &mdash; never negative, outside the wager</td></tr>
+            <tr><td>Wrong answer</td><td class="num">0 &mdash; and the streak resets, but nothing is taken back</td></tr>
+            <tr><td>Points</td><td class="num">bank across rounds; spent only on help, never on answers</td></tr>
             <tr><td>Clean round</td><td class="num">&asymp; 2,000</td></tr>
           </tbody>
         </table>
       </div>
-      <p><strong>No penalties is a deliberate stance.</strong> The product goal is curiosity. Docking points for a wrong guess teaches people to answer only when safe, which is the opposite of what this game is for. The wager is the single exception, and it is opt-in by size.</p>
+      <p><strong>Nothing is ever deducted, and that rule is the whole point.</strong> No stake, no bet, no way to lose what you have scored. A wrong answer earns zero and resets the streak multiplier; it never takes anything back. That, rather than the vocabulary, is what separates this from a betting game.</p>
+      <p>The one thing points buy is <em class="term">Give me more room</em>: before committing, push the shown number further from the truth. The question gets easier and scores at the softer band, so the help pays for itself. A second-chance retry is deliberately absent &mdash; on a two-answer question it would simply hand over the answer.</p>
     </div>
   </section>
 
