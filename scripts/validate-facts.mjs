@@ -63,7 +63,11 @@ for (const file of readdirSync(FACTS_DIR).filter((f) => f.endsWith('.json')).sor
       sensitive++;
       if (f.kind !== 'number') warnings.push(`${file} [${f.id}]: sensitive on a non-numeric fact has no effect`);
     }
-    if (f.kind !== 'number' && BODY_COUNT.test(f.claim)) {
+    /* Proper nouns that merely contain the word are not body counts. Without
+       this the Black Death category warns on almost every entry, which trains
+       everyone to ignore the warnings that matter. */
+    const claimSansNames = f.claim.replace(/Black Death|Great Plague|Death Valley/gi, '');
+    if (f.kind !== 'number' && BODY_COUNT.test(claimSansNames)) {
       warnings.push(`${file} [${f.id}]: claim mentions death -- check a human is happy with the framing`);
     }
   }

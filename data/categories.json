@@ -1,23 +1,33 @@
 {
   "version": 1,
   "categories": [
-    {
-      "id": "civil-war",
-      "title": "The American Civil War",
-      "era": "19th-century America",
-      "blurb": "Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country."
-    },
-    {
-      "id": "sixties-america",
-      "title": "America in the 1960s",
-      "era": "Postwar America",
-      "blurb": "Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still."
-    },
-    {
-      "id": "ancient-egypt",
-      "title": "Ancient Egypt",
-      "era": "The ancient world",
-      "blurb": "Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation."
-    }
+    { "id": "american-revolution", "title": "The American Revolution", "era": "Founding America",
+      "blurb": "Lexington, the Declaration, Valley Forge, Yorktown. Thirteen colonies deciding to leave." },
+    { "id": "lewis-and-clark", "title": "Lewis and Clark", "era": "19th-century America",
+      "blurb": "Eight thousand miles into country no American had mapped, and back again." },
+    { "id": "civil-war", "title": "The American Civil War", "era": "19th-century America",
+      "blurb": "Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country." },
+    { "id": "lincoln", "title": "Abraham Lincoln", "era": "19th-century America",
+      "blurb": "Log cabin to Ford's Theatre, by way of a patent, a beard and 272 words at Gettysburg." },
+    { "id": "roaring-twenties", "title": "The Twenties and Prohibition", "era": "Modern America",
+      "blurb": "Speakeasies, Capone, the Charleston, Lindbergh, and a crash at the end of it." },
+    { "id": "wwii-europe", "title": "World War II in Europe", "era": "The World Wars",
+      "blurb": "Poland to Dunkirk to Stalingrad to Normandy. Six years that decided the century." },
+    { "id": "civil-rights-movement", "title": "The Civil Rights Movement", "era": "Postwar America",
+      "blurb": "Montgomery, Little Rock, Birmingham, Selma. A decade of people refusing to move." },
+    { "id": "sixties-america", "title": "America in the 1960s", "era": "Postwar America",
+      "blurb": "Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still." },
+    { "id": "titanic", "title": "The Titanic", "era": "Discovery and disaster",
+      "blurb": "Two hours forty minutes, 1,500 dead, and a wreck nobody found for 73 years." },
+    { "id": "vikings", "title": "The Vikings", "era": "Medieval world",
+      "blurb": "Lindisfarne to Newfoundland. Raiders, traders, farmers and startlingly good sailors." },
+    { "id": "black-death", "title": "The Black Death", "era": "Medieval world",
+      "blurb": "The deadliest pandemic on record, and what it did to Europe afterwards." },
+    { "id": "pompeii", "title": "Pompeii and Vesuvius", "era": "Ancient Rome",
+      "blurb": "A Roman town stopped mid-sentence in AD 79, and dug up seventeen centuries later." },
+    { "id": "ancient-greece", "title": "Ancient Greece", "era": "The ancient world",
+      "blurb": "Marathon, Thermopylae, the Parthenon, and the invention of arguing in public." },
+    { "id": "ancient-egypt", "title": "Ancient Egypt", "era": "The ancient world",
+      "blurb": "Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation." }
   ]
 }

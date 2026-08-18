@@ -10,7 +10,7 @@ The name is the American idiom for an approximate figure: "1865, give or take."
 It names the mechanic, and it tells a player who thinks they are bad at history
 that roughly right is good enough here.
 
-**Status: playable prototype.** Three categories, 60 facts, solo play.
+**Status: playable prototype.** Fourteen categories, 280 facts, solo play.
 `node scripts/build.mjs` then open `dist/index.html` in a browser.
 
 The full design map — mechanics, scoring, round structure, the fairness problem,
