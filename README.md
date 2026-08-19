@@ -37,9 +37,25 @@ shorter than four questions so a small one is not over in a minute.
 
 ### Stakes, and why they cannot wipe you out
 
-Before answering, a player commits **25, 50, 75 or 100 percent of the
-question** — not of their score. Right, they take what they committed. Wrong,
-they take nothing. Betting a share of your *score* compounds: bet everything
+Everyone starts on **200**. That never changes the rankings, since everyone gets
+it, but it guarantees a player who has had a rotten game still has something to
+wager on the final question — without it, their comeback does not exist.
+
+Before answering, a player commits **25, 50 or 100 percent of the question** —
+not of their score. Three targets are easier to hit than four on a phone, and
+dropping 75 rather than 100 keeps the button that takes the whole question. It
+also keeps every figure round; 75% of a medium question would read 225.
+
+**The back half of the game is worth double.** That is Double Jeopardy, and it
+is here for the same reason: a bad opening block should not settle the evening,
+and whoever is behind at the turn needs a real route back.
+
+| Question | Blocks 1–2 | Blocks 3–4 |
+| --- | --- | --- |
+| Easy | 50 / 100 / 200 | 100 / 200 / 400 |
+| Medium | 75 / 150 / 300 | 150 / 300 / 600 |
+| Hard | 100 / 200 / 400 | 200 / 400 / 800 | Right, they take what they committed. Wrong,
+A wrong call takes nothing. Betting a share of your *score* compounds: bet everything
 once, lose, and every later bet is a percentage of zero. You are mathematically
 dead with most of the game still to play, and Jeopardy's runaway condition
 (a leader on more than double second place cannot be caught) arrives early and

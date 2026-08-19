@@ -278,10 +278,22 @@
   var M = null;   /* the table, when more than one person is playing */
   var answered = false;
 
-  /* Each question is worth this before the band multiplier. A player commits a
-     share of the question's value, never a share of their score -- so a bad call
-     costs the question, never the game. */
+  /* Each question is worth this before the band and block multipliers. A player
+     commits a share of the question's value, never a share of their score -- so
+     a bad call costs the question, never the game. */
   var Q_BASE = 200;
+
+  /* Everyone starts with this. It never changes the rankings, since everyone
+     gets it, but it guarantees that a player who has had a rotten game still
+     has something to wager on the final question. Without it their comeback
+     does not exist. */
+  var Q_START = 200;
+
+  /* 25 / 50 / 100. Three targets are easier to hit than four on a phone, and
+     dropping 75 rather than 100 keeps the button that takes the whole question
+     -- which is the one worth having. It also keeps every figure round: a
+     medium question at 75% would read 225. */
+  var STAKES = [0.25, 0.5, 1];
 
   function show(name) {
     ['home', 'setup', 'pick', 'handoff', 'play', 'standings', 'results', 'research'].forEach(function (s) {
@@ -404,7 +416,7 @@
   function startTable(names) {
     var n = names.length;
     M = {
-      players: names.map(function (nm) { return { name: nm, score: 0 }; }),
+      players: names.map(function (nm) { return { name: nm, score: Q_START }; }),
       blocks: Math.min(n, 4),          /* one block each, capped so a big table still ends */
       blockLen: Math.max(4, n),        /* at least four questions, or one per player */
       block: 0,
@@ -439,7 +451,8 @@
     var cat = DATA.categories.filter(function (c) { return c.id === R.catId; })[0];
     $('handoff-body').innerHTML =
       '<p class="kicker">Question ' + (R.i + 1) + ' of ' + R.questions.length +
-        ' &middot; ' + cat.title + '</p>' +
+        ' &middot; ' + cat.title +
+        (blockMultiplier() > 1 ? ' &middot; double points' : '') + '</p>' +
       '<div class="handoff-to">' + p.name + '</div>' +
       '<p class="handoff-sub">Pass the phone along, then tap when you have it.</p>' +
       '<button class="next-btn" id="take-turn" type="button">I&rsquo;m ready</button>';
@@ -456,7 +469,14 @@
     return M && M.block === M.blocks - 1 && R.i === R.questions.length - 1;
   }
 
-  function questionValue(q) { return Math.round(Q_BASE * BAND_MULT[q.band]); }
+  /* The back half of the game is worth double, which is Double Jeopardy and it
+     is there for the same reason: a bad opening block should not settle the
+     evening, and whoever is behind at the turn needs a real route back. */
+  function blockMultiplier() { return M.block >= Math.ceil(M.blocks / 2) ? 2 : 1; }
+
+  function questionValue(q) {
+    return Math.round(Q_BASE * BAND_MULT[q.band] * blockMultiplier());
+  }
 
   function endBlock() {
     M.facts = M.facts.concat(R.results.map(function (r) { return r.q.fact; }));
@@ -608,7 +628,7 @@
 
       var stakes = document.createElement('div');
       stakes.className = 'stakes';
-      [0.25, 0.5, 0.75, 1].forEach(function (pct) {
+      STAKES.forEach(function (pct) {
         var b = document.createElement('button');
         b.type = 'button';
         b.className = 'stake' + (M.stakePct === pct ? ' on' : '');
