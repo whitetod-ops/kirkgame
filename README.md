@@ -54,13 +54,15 @@ and whoever is behind at the turn needs a real route back.
 | --- | --- | --- |
 | Easy | 50 / 100 / 200 | 100 / 200 / 400 |
 | Medium | 75 / 150 / 300 | 150 / 300 / 600 |
-| Hard | 100 / 200 / 400 | 200 / 400 / 800 | Right, they take what they committed. Wrong,
-A wrong call takes nothing. Betting a share of your *score* compounds: bet everything
-once, lose, and every later bet is a percentage of zero. You are mathematically
-dead with most of the game still to play, and Jeopardy's runaway condition
-(a leader on more than double second place cannot be caught) arrives early and
-often. Sharing out the question instead keeps the same four-button decision
-with none of that.
+| Hard | 100 / 200 / 400 | 200 / 400 / 800 |
+
+Right, a player takes what they committed. Wrong, they take nothing — their
+score does not fall. Betting a share of your *score* would compound instead:
+go all in once, lose, and every later bet is a percentage of zero. You are
+mathematically dead with most of the game still to play, and Jeopardy's runaway
+condition (a leader on more than double second place cannot be caught) arrives
+early and often. Sharing out the question keeps the identical decision with none
+of that.
 
 **The last question of the last block is the exception**, and there the stake is
 a share of your score — doubled or lost. That is Final Jeopardy, and it works
