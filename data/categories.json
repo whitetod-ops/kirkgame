@@ -98,6 +98,13 @@
       "era": "The twentieth century",
       "when": "1941-1945",
       "blurb": "Pearl Harbor to the surrender in Tokyo Bay."
+    },
+    {
+      "id": "great-depression",
+      "title": "The Great Depression",
+      "era": "The twentieth century",
+      "when": "1930-1939",
+      "blurb": "The Dust Bowl, the fireside chats and the long climb back."
     }
   ]
 }
