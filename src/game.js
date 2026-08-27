@@ -115,11 +115,21 @@
     obscure:   { easy: [6, 14], medium: [3, 8], hard: [2, 4] }
   };
 
-  /* Proportional bands for larger counts and quantities. */
+  /* Proportional bands for larger counts and quantities.
+
+     A quantity has a plausible range the way a date has a cluster, and the
+     old easy band reached 2.6 times the truth -- straight out of it. Todd
+     marked five of these in one sitting: "too many" on 878,800 evacuated
+     from Dunkirk, "too high" on 70,200,000 Soviet deaths (more than the
+     entire war worldwide), "too long" on a 991-day bus boycott, and an
+     over/under asking whether Martin Luther King was more or fewer than
+     101 years old when he died.
+
+     Every figure he rejected was at 2.6x. Easy now tops out near 1.5x. */
   var FRACTION = {
-    household: { easy: [0.25, 0.5], medium: [0.12, 0.2], hard: [0.05, 0.08] },
-    familiar:  { easy: [0.6, 1.6], medium: [0.25, 0.5], hard: [0.08, 0.18] },
-    obscure:   { easy: [1.2, 3], medium: [0.5, 1], hard: [0.2, 0.4] }
+    household: { easy: [0.15, 0.30], medium: [0.08, 0.15], hard: [0.04, 0.08] },
+    familiar:  { easy: [0.25, 0.50], medium: [0.12, 0.25], hard: [0.06, 0.12] },
+    obscure:   { easy: [0.40, 0.80], medium: [0.20, 0.40], hard: [0.10, 0.20] }
   };
 
   function medianGap(pool) {
@@ -289,7 +299,7 @@
         var frac = randFloat(fr[0], fr[1]);
         /* Downward, a fraction at or above 1 lands on zero and the guard
            below then flips the direction it was meant to preserve. */
-        if (dir < 0) frac = Math.min(frac, 0.8);
+        if (dir < 0) frac = Math.min(frac, 0.6);
         p = niceRound(fact.value * (1 + dir * frac));
       }
     }

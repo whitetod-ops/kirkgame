@@ -1,38 +1,103 @@
 {
   "version": 1,
   "categories": [
-    { "id": "american-revolution", "title": "The American Revolution", "era": "America before 1900", "when": "1765-1791",
-      "blurb": "Lexington, the Declaration, Valley Forge, Yorktown. Thirteen colonies deciding to leave." },
-    { "id": "lewis-and-clark", "title": "Lewis and Clark", "era": "America before 1900", "when": "1803-1806",
-      "blurb": "Eight thousand miles into country no American had mapped, and back again." },
-    { "id": "civil-war", "title": "The American Civil War", "era": "America before 1900", "when": "1861-1865",
-      "blurb": "Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country." },
-    { "id": "lincoln", "title": "Abraham Lincoln", "era": "America before 1900", "when": "1809-1865",
-      "blurb": "Log cabin to Ford's Theatre, by way of a patent, a beard and 272 words at Gettysburg." },
-
-    { "id": "titanic", "title": "The Titanic", "era": "The twentieth century", "when": "1912",
-      "blurb": "Two hours forty minutes, 1,500 dead, and a wreck nobody found for 73 years." },
-    { "id": "roaring-twenties", "title": "The Twenties and Prohibition", "era": "The twentieth century", "when": "1920-1933",
-      "blurb": "Speakeasies, Capone, the Charleston, Lindbergh, and a crash at the end of it." },
-    { "id": "wwii-europe", "title": "World War II in Europe", "era": "The twentieth century", "when": "1939-1945",
-      "blurb": "Poland to Dunkirk to Stalingrad to Normandy. Six years that decided the century." },
-    { "id": "civil-rights-movement", "title": "The Civil Rights Movement", "era": "The twentieth century", "when": "1954-1968",
-      "blurb": "Montgomery, Little Rock, Birmingham, Selma. A decade of people refusing to move." },
-    { "id": "sixties-america", "title": "America in the 1960s", "era": "The twentieth century", "when": "1960-1969",
-      "blurb": "Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still." },
-
-    { "id": "vikings", "title": "The Vikings", "era": "The medieval world", "when": "793-1066",
-      "blurb": "Lindisfarne to Newfoundland. Raiders, traders, farmers and startlingly good sailors." },
-    { "id": "black-death", "title": "The Black Death", "era": "The medieval world", "when": "1347-1351",
-      "blurb": "The deadliest pandemic on record, and what it did to Europe afterwards." },
-
-    { "id": "ancient-rome", "title": "Ancient Rome", "era": "The ancient world", "when": "753 BC - AD 476",
-      "blurb": "Kings, the Republic, Caesar, the emperors, the legions and the arena. A thousand years of it." },
-    { "id": "ancient-egypt", "title": "Ancient Egypt", "era": "The ancient world", "when": "3100-30 BC",
-      "blurb": "Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation." },
-    { "id": "ancient-greece", "title": "Ancient Greece", "era": "The ancient world", "when": "776-146 BC",
-      "blurb": "Marathon, Thermopylae, the Parthenon, and the invention of arguing in public." },
-    { "id": "pompeii", "title": "Pompeii and Vesuvius", "era": "The ancient world", "when": "AD 79",
-      "blurb": "A Roman town stopped mid-sentence in AD 79, and dug up seventeen centuries later." }
+    {
+      "id": "american-revolution",
+      "title": "The American Revolution",
+      "era": "America before 1900",
+      "when": "1765-1791",
+      "blurb": "Lexington, the Declaration, Valley Forge, Yorktown. Thirteen colonies deciding to leave."
+    },
+    {
+      "id": "lewis-and-clark",
+      "title": "Lewis and Clark",
+      "era": "America before 1900",
+      "when": "1803-1806",
+      "blurb": "Eight thousand miles into country no American had mapped, and back again."
+    },
+    {
+      "id": "civil-war",
+      "title": "The American Civil War",
+      "era": "America before 1900",
+      "when": "1861-1865",
+      "blurb": "Secession, Sumter, Antietam, Emancipation, Appomattox. Four years that remade the country."
+    },
+    {
+      "id": "lincoln",
+      "title": "Abraham Lincoln",
+      "era": "America before 1900",
+      "when": "1809-1865",
+      "blurb": "Log cabin to Ford's Theatre, by way of a patent, a beard and 272 words at Gettysburg."
+    },
+    {
+      "id": "titanic",
+      "title": "The Titanic",
+      "era": "The twentieth century",
+      "when": "1912",
+      "blurb": "Two hours forty minutes, 1,500 dead, and a wreck nobody found for 73 years."
+    },
+    {
+      "id": "roaring-twenties",
+      "title": "The Twenties and Prohibition",
+      "era": "The twentieth century",
+      "when": "1920-1933",
+      "blurb": "Speakeasies, Capone, the Charleston, Lindbergh, and a crash at the end of it."
+    },
+    {
+      "id": "wwii-europe",
+      "title": "World War II in Europe",
+      "era": "The twentieth century",
+      "when": "1939-1945",
+      "blurb": "Poland to Dunkirk to Stalingrad to Normandy. Six years that decided the century."
+    },
+    {
+      "id": "civil-rights-movement",
+      "title": "The Civil Rights Movement",
+      "era": "The twentieth century",
+      "when": "1954-1968",
+      "blurb": "Montgomery, Little Rock, Birmingham, Selma. A decade of people refusing to move."
+    },
+    {
+      "id": "sixties-america",
+      "title": "America in the 1960s",
+      "era": "The twentieth century",
+      "when": "1960-1969",
+      "blurb": "Kennedy, King, the Moon, Vietnam, Woodstock. A decade that would not sit still."
+    },
+    {
+      "id": "vikings",
+      "title": "The Vikings",
+      "era": "The medieval world",
+      "when": "793-1066",
+      "blurb": "Lindisfarne to Newfoundland. Raiders, traders, farmers and startlingly good sailors."
+    },
+    {
+      "id": "ancient-rome",
+      "title": "Ancient Rome",
+      "era": "The ancient world",
+      "when": "753 BC - AD 476",
+      "blurb": "Kings, the Republic, Caesar, the emperors, the legions and the arena. A thousand years of it."
+    },
+    {
+      "id": "ancient-egypt",
+      "title": "Ancient Egypt",
+      "era": "The ancient world",
+      "when": "3100-30 BC",
+      "blurb": "Pyramids, pharaohs, hieroglyphs and Cleopatra. Three thousand years of one civilisation."
+    },
+    {
+      "id": "ancient-greece",
+      "title": "Ancient Greece",
+      "era": "The ancient world",
+      "when": "776-146 BC",
+      "blurb": "Marathon, Thermopylae, the Parthenon, and the invention of arguing in public."
+    },
+    {
+      "id": "pompeii",
+      "title": "Pompeii and Vesuvius",
+      "era": "The ancient world",
+      "when": "AD 79",
+      "blurb": "A Roman town stopped mid-sentence in AD 79, and dug up seventeen centuries later."
+    }
   ]
 }
