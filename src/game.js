@@ -261,8 +261,14 @@
          thirty, step by whole units instead. */
       if (Math.abs(fact.value) <= 30) {
         var step = STEP[fame][useBand];
-        p = fact.value + dir * randInt(step[0], step[1]);
-        if (p <= 0) p = fact.value + randInt(step[0], step[1]);
+        /* The step also has to stay small relative to the value itself.
+           Rome's seven hills stepped by five and asked "more or fewer than
+           two?", which nobody has to think about -- the phrase IS the fact. */
+        var cap = Math.max(1, Math.round(Math.abs(fact.value) *
+          (useBand === 'easy' ? 0.45 : useBand === 'medium' ? 0.25 : 0.15)));
+        var lo2 = Math.min(step[0], cap);
+        p = fact.value + dir * randInt(lo2, Math.max(lo2, Math.min(step[1], cap)));
+        if (p <= 0) p = fact.value + randInt(lo2, Math.max(lo2, Math.min(step[1], cap)));
       } else {
         var fr = FRACTION[fame][useBand];
         var frac = randFloat(fr[0], fr[1]);

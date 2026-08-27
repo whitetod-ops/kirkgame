@@ -1,0 +1,231 @@
+{
+  "id": "ancient-rome",
+  "facts": [
+    {
+      "id": "ro-founded",
+      "kind": "year",
+      "claim": "Rome was founded, according to Roman tradition",
+      "value": -753,
+      "approx": true,
+      "context": "Tradition put the founding at 753 BC and credited it to Romulus. The date is legendary rather than documented, and there were villages on the hills before it.",
+      "goDeeper": "Romans numbered their years from that date: AUC, ab urbe condita, 'from the founding of the city'.",
+      "source": { "title": "Founding of Rome", "url": "https://en.wikipedia.org/wiki/Founding_of_Rome" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-republic-founded",
+      "kind": "year",
+      "claim": "Romans threw out their last king and founded the Republic",
+      "value": -509,
+      "approx": true,
+      "context": "The overthrow of Tarquin the Proud is traditionally dated to 509 BC. Like the founding, the date is traditional and historians treat it with caution.",
+      "goDeeper": "The Republic ran for roughly 480 years before Augustus, nearly twice as long as the United States has existed so far.",
+      "source": { "title": "Roman Republic", "url": "https://en.wikipedia.org/wiki/Roman_Republic" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-hannibal-alps",
+      "kind": "year",
+      "claim": "Hannibal marched an army with elephants over the Alps into Italy",
+      "value": -218,
+      "context": "He crossed in 218 BC at the start of the Second Punic War and beat Roman armies in Italy for the next fifteen years without ever taking the city.",
+      "goDeeper": "He set out with about 37 elephants. Almost none of them survived their first winter in Italy.",
+      "source": { "title": "Hannibal", "url": "https://en.wikipedia.org/wiki/Hannibal" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-rubicon",
+      "kind": "year",
+      "claim": "Caesar crossed the Rubicon with his army and began a civil war",
+      "value": -49,
+      "context": "In January 49 BC he led a legion across the small river marking the northern edge of Italy, which no general was permitted to do under arms.",
+      "goDeeper": "The Rubicon is a stream so minor that scholars argued for centuries about which watercourse it actually was.",
+      "source": { "title": "Rubicon", "url": "https://en.wikipedia.org/wiki/Rubicon" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-caesar-assassinated",
+      "kind": "year",
+      "claim": "Julius Caesar was assassinated",
+      "value": -44,
+      "context": "A group of senators stabbed him in Rome on the Ides of March, March 15, in 44 BC.",
+      "goDeeper": "He had been made dictator for life about a month earlier. The plot was meant to save the Republic and it finished it off instead.",
+      "source": { "title": "Assassination of Julius Caesar", "url": "https://en.wikipedia.org/wiki/Assassination_of_Julius_Caesar" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-augustus-emperor",
+      "kind": "year",
+      "claim": "Augustus became the first Roman emperor",
+      "value": -27,
+      "context": "The Senate handed Octavian the name Augustus in 27 BC, seventeen years after Caesar was killed. Historians date the empire from there.",
+      "goDeeper": "He never used the word emperor. His title was princeps, 'first citizen', and he kept every form of the Republic while holding all of its power.",
+      "source": { "title": "Augustus", "url": "https://en.wikipedia.org/wiki/Augustus" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-great-fire",
+      "kind": "year",
+      "claim": "The Great Fire burned through much of the city of Rome",
+      "value": 64,
+      "context": "The fire started near the Circus Maximus in July AD 64 and burned for six days, damaging or flattening ten of the city's fourteen districts.",
+      "goDeeper": "Nero rebuilt with wider streets and brick, and took a large slice of the burnt centre for a palace with its own artificial lake.",
+      "source": { "title": "Great Fire of Rome", "url": "https://en.wikipedia.org/wiki/Great_Fire_of_Rome" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-colosseum-opened",
+      "kind": "year",
+      "claim": "The Colosseum opened in Rome",
+      "value": 80,
+      "context": "Begun under Vespasian and finished under his son Titus, it opened in AD 80 with a hundred days of games.",
+      "goDeeper": "Its actual name was the Flavian Amphitheatre. 'Colosseum' came from the colossal bronze statue of Nero that stood beside it.",
+      "source": { "title": "Colosseum", "url": "https://en.wikipedia.org/wiki/Colosseum" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-hadrians-wall",
+      "kind": "year",
+      "claim": "Work began on Hadrian's Wall across northern Britain",
+      "value": 122,
+      "approx": true,
+      "context": "Building started around AD 122 on the emperor Hadrian's orders and took roughly six years. The exact start year is an estimate.",
+      "goDeeper": "It ran 73 miles from coast to coast, and it was not the frontier for long: a second wall went up further north twenty years later.",
+      "source": { "title": "Hadrian's Wall", "url": "https://en.wikipedia.org/wiki/Hadrian%27s_Wall" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-christianity-legal",
+      "kind": "year",
+      "claim": "Constantine's Edict of Milan made Christianity legal across the empire",
+      "value": 313,
+      "context": "The agreement of AD 313 ended official persecution and granted freedom of worship to Christians and to everyone else.",
+      "goDeeper": "Christianity did not become the official religion of the empire until AD 380, under Theodosius, nearly seventy years later.",
+      "source": { "title": "Edict of Milan", "url": "https://en.wikipedia.org/wiki/Edict_of_Milan" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-sack-of-rome",
+      "kind": "year",
+      "claim": "The Visigoths under Alaric sacked the city of Rome",
+      "value": 410,
+      "context": "Rome was entered and looted over three days in August AD 410, the first time a foreign army had got inside the city in 800 years.",
+      "goDeeper": "Rome was not even the capital by then. The western emperor was sitting safely behind the marshes at Ravenna while it happened.",
+      "source": { "title": "Sack of Rome (410)", "url": "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-western-empire-ends",
+      "kind": "year",
+      "claim": "The last emperor in the west was deposed, the traditional end of the Roman Empire",
+      "value": 476,
+      "context": "Romulus Augustulus was pushed off the throne by the commander Odoacer in AD 476. The date is a convenient marker rather than a sudden collapse.",
+      "goDeeper": "The eastern half carried on from Constantinople for another thousand years, calling itself Roman the entire time.",
+      "source": { "title": "Fall of the Western Roman Empire", "url": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-seven-hills",
+      "kind": "number",
+      "claim": "Number of hills the city of Rome was built on",
+      "value": 7,
+      "unit": "hills",
+      "context": "Seven, traditionally: the Palatine, Capitoline, Aventine, Caelian, Esquiline, Quirinal and Viminal.",
+      "goDeeper": "The emperors lived on the Palatine, which is where the English word 'palace' comes from.",
+      "source": { "title": "Seven hills of Rome", "url": "https://en.wikipedia.org/wiki/Seven_hills_of_Rome" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-legion-size",
+      "kind": "number",
+      "claim": "Soldiers in a Roman legion at full strength",
+      "value": 5000,
+      "unit": "soldiers",
+      "approx": true,
+      "context": "Roughly 5,000 men in ten cohorts. The figure moved about over the centuries and legions were very often under strength.",
+      "goDeeper": "A legionary signed on for 25 years and was paid off at the end with cash or a plot of land, which is close to the empire's version of a pension.",
+      "source": { "title": "Roman legion", "url": "https://en.wikipedia.org/wiki/Roman_legion" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-vomitorium",
+      "kind": "boolean",
+      "claim": "A vomitorium was a room where Roman diners went to throw up between courses",
+      "answer": false,
+      "context": "A vomitorium is the passageway that lets a crowd pour out of an amphitheatre. The name is about spilling people into the street, not about vomiting.",
+      "goDeeper": "The banquet version is barely a century old, and it has outlived every attempt to correct it.",
+      "source": { "title": "Vomitorium", "url": "https://en.wikipedia.org/wiki/Vomitorium" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-nero-fiddle",
+      "kind": "boolean",
+      "claim": "Nero played the fiddle while Rome burned",
+      "answer": false,
+      "context": "The fiddle was not invented for another 1,400 years, and Tacitus records that Nero was at Antium, 30 miles away, when the fire broke out.",
+      "goDeeper": "Suetonius, writing fifty years later, says he sang about the fall of Troy. Tacitus reports the same story and calls it a rumour.",
+      "source": { "title": "Great Fire of Rome", "url": "https://en.wikipedia.org/wiki/Great_Fire_of_Rome" },
+      "status": "draft",
+      "fame": "household"
+    },
+    {
+      "id": "ro-caesarean-section",
+      "kind": "boolean",
+      "claim": "The caesarean section is named after the birth of Julius Caesar",
+      "answer": false,
+      "context": "His mother Aurelia lived for decades afterwards, which the operation did not allow for at the time. The name most likely comes from the Latin caedere, to cut.",
+      "goDeeper": "Roman law did require the procedure in some cases, but as a burial rule rather than as surgery meant to save anyone.",
+      "source": { "title": "Caesarean section", "url": "https://en.wikipedia.org/wiki/Caesarean_section" },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "ro-et-tu-brute",
+      "kind": "boolean",
+      "claim": "Caesar's last words were 'Et tu, Brute?'",
+      "answer": false,
+      "context": "That line is Shakespeare's. Suetonius reports that Caesar said nothing at the end, though some claimed he said in Greek, 'you too, child?'",
+      "goDeeper": "The play was written about 1,600 years after the event, and most of the popular picture of Caesar comes from it rather than from Rome.",
+      "source": { "title": "Et tu, Brute?", "url": "https://en.wikipedia.org/wiki/Et_tu,_Brute%3F" },
+      "status": "draft",
+      "fame": "household"
+    },
+    {
+      "id": "ro-gladiator-volunteers",
+      "kind": "boolean",
+      "claim": "Some Roman gladiators were free men who volunteered for the arena",
+      "answer": true,
+      "context": "Most were enslaved or condemned, but free volunteers signed contracts for the pay and the fame, and a successful fighter could be released with a wooden sword.",
+      "goDeeper": "A star gladiator was a marketing property. His name went on oil lamps and cups the way an athlete's goes on a shoe today.",
+      "source": { "title": "Gladiator", "url": "https://en.wikipedia.org/wiki/Gladiator" },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "ro-insulae",
+      "kind": "boolean",
+      "claim": "Most people in the city of Rome lived in rented apartment blocks",
+      "answer": true,
+      "context": "The insulae were blocks of flats several storeys high with shops on the ground floor. Only the wealthy had a house to themselves.",
+      "goDeeper": "They were notorious for catching fire and for falling down, and Augustus capped their height at about 70 feet.",
+      "source": { "title": "Insula (building)", "url": "https://en.wikipedia.org/wiki/Insula_(building)" },
+      "status": "draft",
+      "fame": "obscure"
+    }
+  ]
+}
