@@ -910,6 +910,7 @@
     var q = R.questions[R.i];
     var correct = (given === q.correct);
     var grade = correct ? 'good' : 'bad';
+    logPlay(q, correct);
 
     if (R.multi) {
       var me = whoseTurn(R.i);
@@ -1128,6 +1129,82 @@
     $('home-btn').addEventListener('click', goHome);
   }
 
+  /* ---------- what players actually knew ----------
+
+     Fame -- how widely known a fact already is -- currently comes from one
+     person guessing on behalf of everyone. The answer rate measures it
+     instead: a fact 94% of players place correctly is household, and one
+     sitting at 50% is nobody-knows, because 50% is what guessing looks like.
+
+     There is nowhere to send this yet, and deliberately so: solo play is a
+     file with no server, which is exactly why it works on a plane. It is
+     kept locally so the first players' answers still exist when there is
+     somewhere to put them, instead of being thrown away.
+
+     Nothing here identifies a person. Fact id, question shape, right or
+     wrong. It never leaves the device unless someone exports it. */
+
+  var PLAY_CAP = 4000;
+  var plays = LS.get('plays', []);
+
+  function logPlay(q, correct) {
+    var f = q.fact || (q.facts && q.facts[0]);
+    if (!f) return;
+
+    /* How far the shown number sat from the truth. This is the other half of
+       the measurement: 90% correct at two years out means something very
+       different from 90% correct at thirty. */
+    var off = null;
+    if (q.mode === 'overunder' && isNumeric(f) && typeof q.big === 'string') {
+      off = Math.abs(probeShown(q) - f.value);
+    }
+
+    plays.push({
+      id: f.id,
+      cat: R.catId,
+      mode: q.mode,
+      band: q.band,
+      fame: fameOf(f),
+      off: off,
+      anchored: !!q.anchor,
+      ok: correct ? 1 : 0,
+      t: Date.now()
+    });
+    /* Bounded, oldest first, so a heavy player cannot fill their own storage. */
+    if (plays.length > PLAY_CAP) plays = plays.slice(plays.length - PLAY_CAP);
+    LS.set('plays', plays);
+  }
+
+  /* The probe is rendered, not stored, so read it back off the question. */
+  function probeShown(q) {
+    var f = q.fact;
+    if (f.kind === 'year') {
+      var m = /(-?\d+)/.exec(q.big);
+      if (!m) return f.value;
+      return /BC/.test(q.big) ? -Math.abs(+m[1]) : +m[1];
+    }
+    var n = String(q.big).replace(/[^0-9.-]/g, '');
+    return n === '' ? f.value : +n;
+  }
+
+  function playSummary() {
+    var by = {};
+    for (var i = 0; i < plays.length; i++) {
+      var p = plays[i];
+      if (!by[p.id]) by[p.id] = { id: p.id, cat: p.cat, n: 0, ok: 0 };
+      by[p.id].n++;
+      by[p.id].ok += p.ok;
+    }
+    return Object.keys(by).map(function (k) {
+      var b = by[k];
+      b.rate = Math.round(b.ok / b.n * 100);
+      /* Only a suggestion, and only once there is enough of it to mean
+         anything. Under thirty answers this is noise wearing a number. */
+      b.suggests = b.n < 30 ? null : b.rate >= 85 ? 'household' : b.rate <= 58 ? 'obscure' : 'familiar';
+      return b;
+    }).sort(function (a, b) { return b.n - a.n; });
+  }
+
   /* ---------- research list ---------- */
 
   function renderResearch() {
@@ -1149,10 +1226,36 @@
       html += '<button class="ans wide" id="clear-res" type="button">Clear the list</button>';
     }
 
+    if (plays.length) {
+      var sum = playSummary();
+      var ready = sum.filter(function (x) { return x.suggests; }).length;
+      html += '<p class="res-empty" style="margin-top:1.4rem">' +
+        plays.length + ' answers recorded on this device, across ' + sum.length + ' facts. ' +
+        (ready ? ready + ' have enough answers to say how well known they are.'
+               : 'None yet has the 30 answers needed to say anything.') +
+        '</p>';
+      html += '<button class="ans wide" id="copy-plays" type="button">Copy the play data</button>';
+    }
+
     html += '<button class="next-btn" id="back-home" type="button">Back</button>';
     $('research-body').innerHTML = html;
     show('research');
     $('research-body').scrollTop = 0;
+
+    if (plays.length) {
+      $('copy-plays').addEventListener('click', function () {
+        var text = JSON.stringify({ exported: new Date().toISOString(),
+          answers: plays, by_fact: playSummary() }, null, 2);
+        var b = $('copy-plays');
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(
+            function () { b.textContent = 'Copied'; },
+            function () { b.textContent = 'Could not copy'; });
+        } else {
+          b.textContent = 'Not available here';
+        }
+      });
+    }
 
     if (research.length) {
       $('clear-res').addEventListener('click', function () {
