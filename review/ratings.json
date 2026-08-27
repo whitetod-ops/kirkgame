@@ -2,8 +2,8 @@
  "reviewer": "Todd",
  "generated": "2026-08-27",
  "counts": {
-  "rated": 215,
-  "with_reasoning": 29,
+  "rated": 267,
+  "with_reasoning": 34,
   "bad_questions": 27
  },
  "examples": [
@@ -7437,6 +7437,1807 @@
    "questions": [
     {
      "text": "The Dust Bowl was made far worse by the way the Plains had been farmed. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-marathon",
+   "category": "Ancient Greece",
+   "claim": "The Athenians defeated the Persians at Marathon",
+   "stated_answer": "490 BC",
+   "context": "A heavily outnumbered Athenian force beat the invading Persians in 490 BC.",
+   "go_deeper": "The modern marathon distance comes from the legend of a runner carrying news to Athens, a story no contemporary source records.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Athenians defeated the Persians at Marathon. — 494 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Athenians defeated the Persians at Marathon. — 480 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Athenians defeated the Persians at Marathon. — 508 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Athenians defeated the Persians at Marathon. — 432 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Athenians defeated the Persians at Marathon in 490 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-thermopylae",
+   "category": "Ancient Greece",
+   "claim": "Leonidas and his Spartans held the pass at Thermopylae",
+   "stated_answer": "480 BC",
+   "context": "A Greek force delayed the Persian army for three days in 480 BC before being outflanked.",
+   "go_deeper": "The 300 Spartans were not alone; several thousand other Greeks fought there, and around 1,100 stayed to the end.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae. — 490 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae. — 476 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae. — 472 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae. — 432 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae. — 508 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Leonidas and his Spartans held the pass at Thermopylae in 480 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-salamis",
+   "category": "Ancient Greece",
+   "claim": "The Greek fleet destroyed the Persian navy at Salamis",
+   "stated_answer": "480 BC",
+   "context": "Fought weeks after Thermopylae, in the narrow straits near Athens.",
+   "go_deeper": "Themistocles had persuaded Athens to spend a silver windfall on warships instead of dividing it among citizens.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis. — 490 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis. — 476 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis. — 472 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis. — 432 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis. — 508 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Greek fleet destroyed the Persian navy at Salamis in 480 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-first-olympics",
+   "category": "Ancient Greece",
+   "claim": "The first recorded Olympic Games were held at Olympia",
+   "stated_answer": "776 BC",
+   "context": "Traditionally dated to 776 BC and held every four years thereafter.",
+   "go_deeper": "The Games ran for roughly 1,200 years before a Roman emperor suppressed them as a pagan festival.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 778 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 774 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 769 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 783 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 806 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia. — 746 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first recorded Olympic Games were held at Olympia in 776 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-parthenon",
+   "category": "Ancient Greece",
+   "claim": "The Parthenon was completed on the Athenian Acropolis",
+   "stated_answer": "432 BC",
+   "context": "Construction ran from 447 to about 432 BC, during the height of Athenian power.",
+   "go_deeper": "It survived largely intact for over 2,000 years until 1687, when a Venetian shell hit the gunpowder stored inside.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Parthenon was completed on the Athenian Acropolis. — 433 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Parthenon was completed on the Athenian Acropolis. — 431 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Parthenon was completed on the Athenian Acropolis. — 399 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Parthenon was completed on the Athenian Acropolis. — 480 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Parthenon was completed on the Athenian Acropolis in 432 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-peloponnesian",
+   "category": "Ancient Greece",
+   "claim": "The Peloponnesian War between Athens and Sparta began",
+   "stated_answer": "431 BC",
+   "context": "A 27-year conflict that ended with Athens defeated and stripped of its empire.",
+   "go_deeper": "Thucydides, who fought in it and was exiled for losing a command, wrote the history that still defines it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Peloponnesian War between Athens and Sparta began. — 432 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Peloponnesian War between Athens and Sparta began. — 430 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Peloponnesian War between Athens and Sparta began. — 399 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Peloponnesian War between Athens and Sparta began. — 480 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Peloponnesian War between Athens and Sparta began in 431 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-socrates-death",
+   "category": "Ancient Greece",
+   "claim": "Socrates was executed in Athens",
+   "stated_answer": "399 BC",
+   "context": "Condemned for impiety and corrupting the young, and made to drink hemlock.",
+   "go_deeper": "He wrote nothing. Everything we have comes through his students, chiefly Plato.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Socrates was executed in Athens. — 431 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Socrates was executed in Athens. — 386 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Socrates was executed in Athens. — 373 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Socrates was executed in Athens. — 361 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Socrates was executed in Athens in 399 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-democracy",
+   "category": "Ancient Greece",
+   "claim": "Cleisthenes established the reforms that founded Athenian democracy",
+   "stated_answer": "508 BC",
+   "context": "His reforms of 508-507 BC reorganised Athens around citizen assemblies rather than noble families.",
+   "go_deeper": "Citizenship excluded women, enslaved people and foreigners, so perhaps 10 to 20 percent of residents could vote.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "Cleisthenes established the reforms that founded Athenian democracy. — 515 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleisthenes established the reforms that founded Athenian democracy. — 490 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleisthenes established the reforms that founded Athenian democracy. — 522 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleisthenes established the reforms that founded Athenian democracy. — 530 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleisthenes established the reforms that founded Athenian democracy in 508 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-alexander-death",
+   "category": "Ancient Greece",
+   "claim": "Alexander the Great died in Babylon",
+   "stated_answer": "323 BC",
+   "context": "He died at 32, having conquered from Greece to the Indus in about a decade.",
+   "go_deeper": "His empire was carved up by his generals within a few years of his death.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Alexander the Great died in Babylon. — 325 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon. — 321 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon. — 316 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon. — 330 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon. — 353 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon. — 293 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great died in Babylon in 323 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-corinth",
+   "category": "Ancient Greece",
+   "claim": "Rome sacked Corinth, ending Greek independence",
+   "stated_answer": "146 BC",
+   "context": "The destruction of Corinth in 146 BC brought Greece firmly under Roman control.",
+   "go_deeper": "The Romans absorbed Greek art, religion and philosophy so thoroughly that Horace said captive Greece took Rome captive.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 148 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 144 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 139 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 153 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 176 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence. — 116 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome sacked Corinth, ending Greek independence in 146 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-city-states",
+   "category": "Ancient Greece",
+   "claim": "Number of independent Greek city-states at their height",
+   "stated_answer": "1,000 city-states",
+   "context": "Around a thousand poleis are known across the Greek world, most of them tiny.",
+   "go_deeper": "They shared a language and gods but fought each other constantly. Unity came only under outside conquest.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Number of independent Greek city-states at their height. — 880 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height. — 1,120 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height. — 1,250 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height. — 750 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height. — 500 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height. — 1,500 city-states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of independent Greek city-states at their height: 1,000 city-states. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-parthenon-columns",
+   "category": "Ancient Greece",
+   "claim": "Columns along the long side of the Parthenon",
+   "stated_answer": "17 columns",
+   "context": "Seventeen along each flank and eight across each end.",
+   "go_deeper": "Almost no line in the building is truly straight; the columns bulge and lean inward to correct for how the eye sees them.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Columns along the long side of the Parthenon. — 15 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon. — 19 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon. — 21 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon. — 13 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon. — 10 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon. — 24 columns — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Columns along the long side of the Parthenon: 17 columns. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-athens-population",
+   "category": "Ancient Greece",
+   "claim": "Estimated population of Athens at its fifth-century peak",
+   "stated_answer": "300,000 people",
+   "context": "Perhaps 250,000 to 300,000 in Athens and Attica, of whom around 30,000 to 40,000 were voting citizens.",
+   "go_deeper": "A large share of the population was enslaved, and the silver mines that funded the fleet were worked by them.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 264,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 336,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 375,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 225,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 150,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak. — 450,000 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated population of Athens at its fifth-century peak: 300,000 people. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-theatre-capacity",
+   "category": "Ancient Greece",
+   "claim": "Capacity of the theatre at Epidaurus",
+   "stated_answer": "14,000 seats",
+   "context": "About 14,000 seats, built in the fourth century BC and still used today.",
+   "go_deeper": "Its acoustics are famous: a coin dropped on the stage floor can be heard from the back row.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 12,320 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 15,680 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 17,500 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 10,500 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 7,000 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus. — 21,000 seats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Capacity of the theatre at Epidaurus: 14,000 seats. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-olympics-women",
+   "category": "Ancient Greece",
+   "claim": "Married women were barred from watching the ancient Olympics",
+   "stated_answer": "True",
+   "context": "Married women were forbidden to attend the games at Olympia, on pain of death by some accounts.",
+   "go_deeper": "Women could nonetheless win the chariot race as owners of the team. Cynisca of Sparta did so twice.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Married women were barred from watching the ancient Olympics. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-statues-white",
+   "category": "Ancient Greece",
+   "claim": "Greek marble statues were originally left plain white",
+   "stated_answer": "False",
+   "context": "They were painted in strong colours. Traces of pigment survive and can be revealed under ultraviolet light.",
+   "go_deeper": "The white ideal comes from Renaissance and 18th-century taste, looking at statues whose paint had long since weathered off.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Greek marble statues were originally left plain white. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-spartan-boys",
+   "category": "Ancient Greece",
+   "claim": "Spartan boys were taken from their families for military training",
+   "stated_answer": "True",
+   "context": "The agoge began at about age seven and continued into adulthood.",
+   "go_deeper": "Sparta was unusual in educating girls physically too, on the reasoning that strong mothers bore strong sons.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Spartan boys were taken from their families for military training. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-antikythera",
+   "category": "Ancient Greece",
+   "claim": "The Greeks built a geared mechanical device for predicting astronomical events",
+   "stated_answer": "True",
+   "context": "The Antikythera mechanism, recovered from a shipwreck in 1901, used dozens of bronze gears to track the sun, moon and planets.",
+   "go_deeper": "Nothing of comparable mechanical complexity is known again for over a thousand years.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Greeks built a geared mechanical device for predicting astronomical events. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-earth-round",
+   "category": "Ancient Greece",
+   "claim": "Greek scholars knew the Earth was a sphere and measured its size",
+   "stated_answer": "True",
+   "context": "Eratosthenes calculated the Earth's circumference in the third century BC, within a few percent of the true figure.",
+   "go_deeper": "He did it using shadows at noon in two Egyptian cities and some careful geometry.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Greek scholars knew the Earth was a sphere and measured its size. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gr-alphabet-vowels",
+   "category": "Ancient Greece",
+   "claim": "The Greek alphabet was the first to write vowels as separate letters",
+   "stated_answer": "True",
+   "context": "Adapted from Phoenician, which wrote only consonants, with unused signs repurposed for vowel sounds.",
+   "go_deeper": "Every European alphabet in use today descends from that adaptation.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Greek alphabet was the first to write vowels as separate letters. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-first-world-series",
+   "category": "Baseball's History",
+   "claim": "The first modern World Series was played, between Boston and Pittsburgh",
+   "stated_answer": "1903",
+   "context": "Boston beat Pittsburgh five games to three in 1903, in a best-of-nine series arranged between the two rival leagues.",
+   "go_deeper": "There was no World Series at all the following year: the New York Giants refused to play a team from what they still called a minor league.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The first modern World Series was played, between Boston and Pittsburgh. — 1901 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first modern World Series was played, between Boston and Pittsburgh. — 1908 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first modern World Series was played, between Boston and Pittsburgh. — 1899 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first modern World Series was played, between Boston and Pittsburgh. — 1897 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first modern World Series was played, between Boston and Pittsburgh in 1903. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-take-me-out",
+   "category": "Baseball's History",
+   "claim": "'Take Me Out to the Ball Game' was written",
+   "stated_answer": "1908",
+   "context": "Jack Norworth wrote the words and Albert Von Tilzer the tune in 1908, and it became the song a ballpark sings in the seventh inning.",
+   "go_deeper": "Neither man had been to a major league game when they wrote it. Norworth did not see one until 1940, thirty-two years later.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "'Take Me Out to the Ball Game' was written. — 1903 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "'Take Me Out to the Ball Game' was written. — 1910 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "'Take Me Out to the Ball Game' was written. — 1912 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "'Take Me Out to the Ball Game' was written. — 1914 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "'Take Me Out to the Ball Game' was written in 1908. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-black-sox",
+   "category": "Baseball's History",
+   "claim": "White Sox players conspired to throw the World Series in the Black Sox scandal",
+   "stated_answer": "1919",
+   "context": "Eight Chicago players took money from gamblers to lose the 1919 series to Cincinnati. The story broke the following September.",
+   "go_deeper": "A jury acquitted all eight in 1921. Baseball's new commissioner banned every one of them for life the next day anyway.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "White Sox players conspired to throw the World Series in the Black Sox scandal. — 1918 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "White Sox players conspired to throw the World Series in the Black Sox scandal. — 1920 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "White Sox players conspired to throw the World Series in the Black Sox scandal in 1919. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-negro-national-league",
+   "category": "Baseball's History",
+   "claim": "Rube Foster founded the Negro National League",
+   "stated_answer": "1920",
+   "context": "Foster, a former pitcher and manager, gathered eight club owners at a Kansas City YMCA in February 1920 and organised Black professional baseball into a league of its own.",
+   "go_deeper": "His slogan was 'we are the ship, all else the sea'. Black teams had been barnstorming for thirty years; what they had never had was a schedule and a pennant to play for.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Rube Foster founded the Negro National League. — 1919 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rube Foster founded the Negro National League. — 1921 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rube Foster founded the Negro National League. — 1927 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rube Foster founded the Negro National League in 1920. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-ruth-sixty",
+   "category": "Baseball's History",
+   "claim": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years",
+   "stated_answer": "1927",
+   "context": "Ruth hit his sixtieth on the second-to-last day of the 1927 season, more than any other entire team in the American League managed that year.",
+   "go_deeper": "He had already remade the sport once. The entire American League hit 240 home runs in 1919; eight years later Ruth hit a quarter of that total by himself.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years. — 1925 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years. — 1920 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years in 1927. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-called-shot",
+   "category": "Baseball's History",
+   "claim": "Babe Ruth hit his supposed called shot in the World Series",
+   "stated_answer": "1932",
+   "context": "In game three against the Cubs at Wrigley Field, Ruth pointed at something before hitting a home run to centre field. What he was pointing at has been argued about ever since.",
+   "go_deeper": "Ruth himself told the story differently on different occasions, and the pitcher, Charlie Root, denied to his death that it ever happened.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Babe Ruth hit his supposed called shot in the World Series. — 1927 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit his supposed called shot in the World Series. — 1934 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit his supposed called shot in the World Series. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit his supposed called shot in the World Series. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth hit his supposed called shot in the World Series in 1932. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-gehrig-speech",
+   "category": "Baseball's History",
+   "claim": "Lou Gehrig gave his farewell speech at Yankee Stadium",
+   "stated_answer": "1939",
+   "context": "On 4 July 1939, forced out of the game by the illness that now carries his name, he told a packed stadium he considered himself the luckiest man on the face of the earth.",
+   "go_deeper": "It was a busy year for firsts: the Hall of Fame opened in Cooperstown that summer, and the first televised major league game came seven weeks after the speech.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Lou Gehrig gave his farewell speech at Yankee Stadium. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lou Gehrig gave his farewell speech at Yankee Stadium. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lou Gehrig gave his farewell speech at Yankee Stadium. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lou Gehrig gave his farewell speech at Yankee Stadium. — 1947 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lou Gehrig gave his farewell speech at Yankee Stadium in 1939. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-robinson-debut",
+   "category": "Baseball's History",
+   "claim": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers",
+   "stated_answer": "1947",
+   "context": "Robinson played first base at Ebbets Field on 15 April 1947, ending sixty years of an unwritten ban, and was named Rookie of the Year that season.",
+   "go_deeper": "Larry Doby integrated the American League eleven weeks later, and had to do it with far less notice taken. Almost nobody remembers his name.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers. — 1951 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers in 1947. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-shot-heard",
+   "category": "Baseball's History",
+   "claim": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants",
+   "stated_answer": "1951",
+   "context": "Thomson's ninth-inning home run off Ralph Branca finished a playoff against the Dodgers that the Giants had been thirteen games behind in August.",
+   "go_deeper": "The on-deck batter was a twenty-year-old rookie named Willie Mays, who said later he was praying he would not have to bat.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants. — 1947 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants. — 1953 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants. — 1954 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants. — 1956 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants in 1951. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-strike-cancels-series",
+   "category": "Baseball's History",
+   "claim": "A players' strike cancelled the World Series",
+   "stated_answer": "1994",
+   "context": "The players walked out in August over a proposed salary cap, and the season was abandoned in September with no champion crowned.",
+   "go_deeper": "It was the first time since 1904 that no World Series was played, and the only time a labour dispute has managed it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "A players' strike cancelled the World Series. — 1991 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "A players' strike cancelled the World Series. — 2004 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "A players' strike cancelled the World Series. — 1988 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "A players' strike cancelled the World Series. — 1986 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "A players' strike cancelled the World Series in 1994. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-red-sox-curse",
+   "category": "Baseball's History",
+   "claim": "The Red Sox won the World Series, ending an 86-year wait",
+   "stated_answer": "2004",
+   "context": "Boston had not won since 1918, the drought superstition blamed on selling Babe Ruth to the Yankees. They swept the Cardinals in four games.",
+   "go_deeper": "To get there they came back from three games down against the Yankees, which no team in the history of the sport had ever done.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Red Sox won the World Series, ending an 86-year wait. — 1994 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Red Sox won the World Series, ending an 86-year wait. — 2007 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Red Sox won the World Series, ending an 86-year wait. — 2010 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Red Sox won the World Series, ending an 86-year wait. — 2012 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Red Sox won the World Series, ending an 86-year wait in 2004. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-ruth-career-hr",
+   "category": "Baseball's History",
+   "claim": "Babe Ruth's career home runs",
+   "stated_answer": "714 home runs",
+   "context": "Ruth finished with 714, a record that lasted from 1935 until Hank Aaron passed it in 1974.",
+   "go_deeper": "He started out as a pitcher, and a very good one: he won 94 games on the mound and once ran off 29 consecutive scoreless innings in World Series play.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Babe Ruth's career home runs. — 628 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs. — 800 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs. — 892 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs. — 536 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs. — 357 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs. — 1,071 home runs — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Babe Ruth's career home runs: 714 home runs. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-dimaggio-streak",
+   "category": "Baseball's History",
+   "claim": "Games in Joe DiMaggio's hitting streak",
+   "stated_answer": "56 games",
+   "context": "DiMaggio hit safely in 56 straight games between May and July of 1941. The longest anyone has managed since is Pete Rose's 44, in 1978.",
+   "go_deeper": "The streak ended in Cleveland on two backhanded stops by the third baseman. DiMaggio then hit in sixteen more games in a row.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 49 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 63 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 70 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 42 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 28 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak. — 84 games — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Games in Joe DiMaggio's hitting streak: 56 games. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-base-distance",
+   "category": "Baseball's History",
+   "claim": "Distance between the bases on a major league field",
+   "stated_answer": "90 feet",
+   "context": "Ninety feet, fixed in the rules of the 1850s and never altered since.",
+   "go_deeper": "The pitching distance has been moved more than once, most recently out to 60 feet 6 inches in 1893. The 90 feet has never had to be touched.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Distance between the bases on a major league field. — 83 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field. — 97 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field. — 103 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field. — 76 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field. — 63 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field. — 117 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance between the bases on a major league field: 90 feet. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-doubleday",
+   "category": "Baseball's History",
+   "claim": "Abner Doubleday invented baseball at Cooperstown",
+   "stated_answer": "False",
+   "context": "A commission set up by a sporting goods magnate announced it in 1907. Doubleday was a West Point cadet that year, never mentioned baseball in his life, and the game grew out of older English bat-and-ball games.",
+   "go_deeper": "The story was useful because it made baseball American rather than borrowed. The Hall of Fame was built in Cooperstown anyway.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Abner Doubleday invented baseball at Cooperstown. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "bb-first-black-player",
+   "category": "Baseball's History",
+   "claim": "Jackie Robinson was the first Black player in major league baseball",
+   "stated_answer": "False",
+   "context": "Moses Fleetwood Walker caught for Toledo of the American Association in 1884, and his brother Weldy played there too. The colour line closed behind them a few years later and stayed shut for sixty years.",
+   "go_deeper": "Which is what Robinson actually did: not enter a game that had always been closed, but reopen one that had been deliberately shut.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Jackie Robinson was the first Black player in major league baseball. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-greenland",
+   "category": "The Vikings",
+   "claim": "Erik the Red led settlers to Greenland",
+   "stated_answer": "AD 985",
+   "context": "Erik, exiled from Iceland, established Norse colonies in Greenland around 985.",
+   "go_deeper": "He called it Greenland to attract settlers, which may be the earliest recorded property marketing.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Erik the Red led settlers to Greenland. — AD 984 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Erik the Red led settlers to Greenland. — AD 988 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Erik the Red led settlers to Greenland. — AD 983 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Erik the Red led settlers to Greenland. — AD 981 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Erik the Red led settlers to Greenland in AD 985. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-great-army",
+   "category": "The Vikings",
+   "claim": "The Great Heathen Army landed in England",
+   "stated_answer": "AD 865",
+   "context": "A large Norse force arrived in East Anglia in 865, intent on conquest rather than raiding.",
+   "go_deeper": "Within a decade it had destroyed three of the four English kingdoms. Only Wessex held.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Great Heathen Army landed in England. — AD 864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Heathen Army landed in England. — AD 866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Heathen Army landed in England. — AD 874 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Heathen Army landed in England in AD 865. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-longship-speed",
+   "category": "The Vikings",
+   "claim": "Top speed of a Viking longship under sail",
+   "stated_answer": "15 knots",
+   "context": "Reconstructions have reached about 15 knots, quick even by later standards.",
+   "go_deeper": "The shallow draught mattered more than the speed: a longship could sail up a river and land on a beach.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Top speed of a Viking longship under sail. — 13 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail. — 17 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail. — 19 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail. — 11 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail. — 8 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail. — 22 knots — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Top speed of a Viking longship under sail: 15 knots. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-crew",
+   "category": "The Vikings",
+   "claim": "Typical crew of a large Viking longship",
+   "stated_answer": "60 men",
+   "context": "Larger warships carried perhaps 60 to 70 men, with oars for when the wind failed.",
+   "go_deeper": "The biggest recorded ships were far larger, but most raids used vessels of this size.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Typical crew of a large Viking longship. — 53 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship. — 67 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship. — 75 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship. — 45 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship. — 30 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship. — 90 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Typical crew of a large Viking longship: 60 men. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-danelaw",
+   "category": "The Vikings",
+   "claim": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw",
+   "stated_answer": "AD 878",
+   "context": "After Alfred's victory at Edington, a treaty divided England, leaving the north and east under Danish law.",
+   "go_deeper": "Hundreds of English place names ending in -by and -thorpe are still Norse.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw. — AD 874 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw. — AD 880 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw. — AD 881 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw. — AD 883 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw. — AD 866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw in AD 878. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-normandy",
+   "category": "The Vikings",
+   "claim": "The Norse leader Rollo was granted the land that became Normandy",
+   "stated_answer": "AD 911",
+   "context": "The Frankish king ceded territory around Rouen to Rollo in 911 to stop the raiding.",
+   "go_deeper": "'Normandy' simply means the land of the Northmen.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy. — AD 878 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy. — AD 924 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy. — AD 937 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy. — AD 951 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy. — AD 874 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Norse leader Rollo was granted the land that became Normandy in AD 911. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-oseberg",
+   "category": "The Vikings",
+   "claim": "The Oseberg ship burial was excavated in Norway",
+   "stated_answer": "1904",
+   "context": "A remarkably preserved ninth-century ship containing the burial of two women.",
+   "go_deeper": "Who they were is still unknown; the richness of the grave suggests very high status.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1902 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1906 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1911 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1897 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1874 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway. — 1934 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Oseberg ship burial was excavated in Norway in 1904. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-constantinople",
+   "category": "The Vikings",
+   "claim": "The Varangian Guard was formed from Norse warriors in Constantinople",
+   "stated_answer": "AD 988",
+   "context": "The Byzantine emperor Basil II formed an elite guard of Norse and Rus fighters around 988.",
+   "go_deeper": "Norse traders had reached Byzantium down the rivers of Russia; some carved graffiti into the Hagia Sophia.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Varangian Guard was formed from Norse warriors in Constantinople. — AD 985 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Varangian Guard was formed from Norse warriors in Constantinople. — AD 989 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Varangian Guard was formed from Norse warriors in Constantinople. — AD 990 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Varangian Guard was formed from Norse warriors in Constantinople. — 1021 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Varangian Guard was formed from Norse warriors in Constantinople in AD 988. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-jorvik",
+   "category": "The Vikings",
+   "claim": "Norse forces captured York, which they called Jorvik",
+   "stated_answer": "AD 866",
+   "context": "Taken in 866, York became the capital of a Norse kingdom lasting almost a century.",
+   "go_deeper": "Excavations at Coppergate found timber houses, workshops and even preserved leather boots.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse forces captured York, which they called Jorvik. — AD 865 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse forces captured York, which they called Jorvik. — AD 867 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse forces captured York, which they called Jorvik. — AD 874 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse forces captured York, which they called Jorvik in AD 866. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-horned-helmets",
+   "category": "The Vikings",
+   "claim": "Vikings wore horned helmets into battle",
+   "stated_answer": "False",
+   "context": "No horned helmet has ever been found in a Viking grave. The image comes from a 19th-century costume designer for Wagner's operas.",
+   "go_deeper": "Horns on a helmet would be a gift to an opponent in a fight.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Vikings wore horned helmets into battle. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-columbus",
+   "category": "The Vikings",
+   "claim": "Norse sailors reached North America before Columbus",
+   "stated_answer": "True",
+   "context": "Confirmed by the excavated settlement at L'Anse aux Meadows, precisely dated to 1021.",
+   "go_deeper": "They did not stay. The sagas describe conflict with people already living there.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse sailors reached North America before Columbus. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-farmers",
+   "category": "The Vikings",
+   "claim": "Most Norse people were farmers rather than raiders",
+   "stated_answer": "True",
+   "context": "Raiding was seasonal work for a minority. The great majority farmed, fished and traded.",
+   "go_deeper": "'Viking' was originally something you did, not something you were.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Most Norse people were farmers rather than raiders. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-women-rights",
+   "category": "The Vikings",
+   "claim": "Norse women could own property and seek divorce",
+   "stated_answer": "True",
+   "context": "Norse law allowed women to own land, inherit and initiate divorce — unusual in early medieval Europe.",
+   "go_deeper": "A woman buried at Birka with weapons and gaming pieces was confirmed by DNA in 2017 to be female.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse women could own property and seek divorce. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-runes",
+   "category": "The Vikings",
+   "claim": "The Norse had a written alphabet of their own",
+   "stated_answer": "True",
+   "context": "The runic alphabet, or futhark, was carved into stone, wood and bone across Scandinavia.",
+   "go_deeper": "Thousands of runestones survive in Sweden alone, many raised as memorials rather than records.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Norse had a written alphabet of their own. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-weekdays",
+   "category": "The Vikings",
+   "claim": "Four English weekday names come from Norse gods",
+   "stated_answer": "True",
+   "context": "Tuesday, Wednesday, Thursday and Friday derive from Tyr, Odin (Woden), Thor and Frigg.",
+   "go_deeper": "The Norse influence on English runs deeper than vocabulary: 'they', 'them' and 'their' are Norse too.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Four English weekday names come from Norse gods. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-hygiene",
+   "category": "The Vikings",
+   "claim": "Norse men were noted by contemporaries for grooming and bathing",
+   "stated_answer": "True",
+   "context": "English writers complained that Danish settlers combed their hair and bathed weekly, making them too attractive to local women.",
+   "go_deeper": "Combs are among the most common objects found on Viking-age sites.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse men were noted by contemporaries for grooming and bathing. — True or false?",
      "verdict": "ok",
      "why": null
     }
