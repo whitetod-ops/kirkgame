@@ -867,25 +867,31 @@ h2.sec {
 
     if (fact.kind === 'year' && pool) {
       var near = neighbours(fact, pool, used);
+      var spanUnit = medianGap(pool) || 3;
 
-      /* Ancient Egypt is not one spread of dates, it is two: the pharaohs,
-         then the archaeologists who dug them up three thousand years later.
-         Reaching across that chasm produces "was Hatshepsut before 1822?",
-         which nobody has to think about. So the probe is capped -- relative
-         both to how tightly the category clusters and to how isolated this
-         particular fact is. */
+      /* Do not cross a cluster boundary.
+
+         A category's dates clump. Rome sits in three clumps -- the late
+         Republic, the early Empire, the fall -- and a probe from one clump
+         against a fact in another is not a question. Todd marked six of them
+         one at a time and wrote the same thing every time: "too far off",
+         "not in context".
+
+         His marks and the data agree on where the line falls. Rome's median
+         consecutive gap is 91 years. Every distance he rejected was 169 or
+         more; every distance he left alone was 97 or less. One and a half
+         times the median gap separates those two sets exactly -- and it
+         scales itself: two years in the Revolution, ninety-one in Rome. */
       if (near.length) {
-        /* The ceiling is measured from this fact's own close neighbours, not
-           from the whole file. Ancient Egypt's median gap is inflated by the
-           three-thousand-year chasm between the pharaohs and the archaeologists
-           who dug them up, so a file-wide median licensed exactly the jump it
-           was meant to forbid. */
-        var localGap = near[0].d || 3;
         var ceiling = plausibleOnly
-          ? Math.max(5, localGap * 3)
-          : Math.max(10, localGap * 6);
-        var kept = near.filter(function (n) { return n.d <= ceiling; });
-        if (kept.length) near = kept;
+          ? Math.max(5, spanUnit * 0.8)
+          : Math.max(10, spanUnit * 1.5);
+        /* If nothing survives, anchor to nothing. Falling back to the full
+           list here was the leak: Hannibal has no neighbour inside the
+           ceiling, so the filter emptied and the old code handed back the
+           very 509 BC it had just excluded. An isolated fact gets a computed
+           probe close to itself instead. */
+        near = near.filter(function (n) { return n.d <= ceiling; });
       }
 
       /* Choose the side FIRST, then find a probe on it. Picking the nearest
@@ -917,7 +923,11 @@ h2.sec {
            usual multiple. At the edge of a timeline there is nothing to
            measure against, and four times the gap put the founding of Rome
            against 2461 BC -- a date with no meaning to anyone. */
-        var unit = near.length ? near[0].d : (medianGap(pool) || 3);
+        /* Whichever is smaller: the nearest real neighbour, or the category's
+           own typical gap. The nearest alone reaches too far for an isolated
+           fact -- Hannibal's closest neighbour is 169 years away, and
+           multiplying that compounds the very problem the ceiling prevents. */
+        var unit = Math.min(near.length ? near[0].d : spanUnit, spanUnit);
         var EDGE = { easy: 1.2, medium: 0.8, hard: 0.4 };
         var reach = Math.max(1, Math.round(unit * EDGE[useBand]));
         p = fact.value + (wantLater ? reach : -reach);
