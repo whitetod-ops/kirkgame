@@ -1,10 +1,9 @@
 {
  "reviewer": "Todd",
  "generated": "2026-08-27",
- "note": "Exported from the Fact Review Desk. Regenerate by exporting the taste profile from the desk and saving it here.",
  "counts": {
-  "rated": 167,
-  "with_reasoning": 23,
+  "rated": 215,
+  "with_reasoning": 29,
   "bad_questions": 27
  },
  "examples": [
@@ -5919,6 +5918,1525 @@
     },
     {
      "text": "American and Soviet spacecraft docked with each other in orbit for the first time in 1975. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-moonwalkers",
+   "category": "The Space Race",
+   "claim": "People who have walked on the Moon",
+   "stated_answer": "12 people",
+   "context": "Twelve men walked on the Moon, two at a time, across six landings between 1969 and 1972.",
+   "go_deeper": "All twelve were American, all were military or civilian test pilots bar one geologist, and the last of them left in December 1972.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "People who have walked on the Moon. — 10 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon. — 14 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon. — 15 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon. — 9 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon. — 7 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon. — 17 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who have walked on the Moon: 12 people. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-11-crew",
+   "category": "The Space Race",
+   "claim": "Astronauts who flew the Apollo 11 mission",
+   "stated_answer": "3 astronauts",
+   "context": "Armstrong, Aldrin and Collins launched together on 16 July 1969. Two landed; one stayed in orbit.",
+   "go_deeper": "Michael Collins was on the far side of the Moon, out of radio contact with anyone alive, at the moment the other two touched down.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Astronauts who flew the Apollo 11 mission. — 2 astronauts — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Astronauts who flew the Apollo 11 mission. — 4 astronauts — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Astronauts who flew the Apollo 11 mission: 3 astronauts. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-11-days",
+   "category": "The Space Race",
+   "claim": "Days the Apollo 11 mission lasted, launch to splashdown",
+   "stated_answer": "8 days",
+   "context": "Eight days and three hours, from the launch on 16 July 1969 to the splashdown in the Pacific on 24 July.",
+   "go_deeper": "Almost all of it was travel. The two men were on the surface for less than a day, and outside the lander for about two and a half hours.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 7 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 9 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 10 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 6 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 4 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown. — 12 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Apollo 11 mission lasted, launch to splashdown: 8 days. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-saturn-v-height",
+   "category": "The Space Race",
+   "claim": "Height of the Saturn V rocket that launched the Moon missions",
+   "stated_answer": "363 feet",
+   "context": "The Saturn V stood 363 feet tall on the pad, fully stacked.",
+   "go_deeper": "That is taller than the Statue of Liberty on her pedestal, and the first stage burned through roughly 13 tons of fuel every second.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 319 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 407 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 454 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 272 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 182 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions. — 544 feet — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Height of the Saturn V rocket that launched the Moon missions: 363 feet. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-laika-returned",
+   "category": "The Space Race",
+   "claim": "Laika, the first dog to orbit the Earth, came home safely",
+   "stated_answer": "False",
+   "context": "Laika flew on Sputnik 2 in November 1957 in a capsule with no way of coming back down.",
+   "go_deeper": "The Soviet Union said for decades that she had lived several days. In 2002 a scientist on the programme revealed she had died of overheating within hours.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Laika, the first dog to orbit the Earth, came home safely. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-great-wall",
+   "category": "The Space Race",
+   "claim": "The Great Wall of China is the only human-made structure visible from the Moon",
+   "stated_answer": "False",
+   "context": "It is not visible from the Moon, and astronauts say it is hard to pick out even from low orbit.",
+   "go_deeper": "From the Moon the Earth is a bright marble a couple of inches across at arm's length. No human-made thing shows up at all.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Great Wall of China is the only human-made structure visible from the Moon. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-space-pen",
+   "category": "The Space Race",
+   "claim": "NASA spent millions developing a pen that would write in zero gravity",
+   "stated_answer": "False",
+   "context": "Paul Fisher developed the space pen privately, at his own expense, and NASA then bought them for a few dollars each.",
+   "go_deeper": "The punchline of the story is wrong too. The Soviets bought the same pens, and both sides had used pencils before that.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "NASA spent millions developing a pen that would write in zero gravity. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-armstrong-line",
+   "category": "The Space Race",
+   "claim": "Armstrong meant to say 'one small step for a man', and the 'a' is not there in the recording",
+   "stated_answer": "True",
+   "context": "Armstrong always said he intended the article, which is what makes the line mean anything; it cannot be heard on the transmission.",
+   "go_deeper": "He said he hoped history would grant him the missing letter. NASA's own transcript prints it in brackets.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Armstrong meant to say 'one small step for a man', and the 'a' is not there in the recording. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-first-woman",
+   "category": "The Space Race",
+   "claim": "The Soviet Union put the first woman in space",
+   "stated_answer": "True",
+   "context": "Valentina Tereshkova flew alone aboard Vostok 6 in June 1963, and spent nearly three days in orbit.",
+   "go_deeper": "She had been recruited as a parachutist rather than a pilot, and twenty years passed before an American woman, Sally Ride, flew in 1983.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Soviet Union put the first woman in space. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-11-quarantine",
+   "category": "The Space Race",
+   "claim": "The Apollo 11 crew was put in quarantine after getting back to Earth",
+   "stated_answer": "True",
+   "context": "Nobody knew whether anything harmful had come back with them, so the three were sealed away for about three weeks and released on 10 August 1969.",
+   "go_deeper": "They spent the first stretch in a converted airstream trailer, and the President welcomed them home by talking to them through its window.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Apollo 11 crew was put in quarantine after getting back to Earth. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-pearl-harbor",
+   "category": "The War in the Pacific",
+   "claim": "Japan attacked the American fleet at Pearl Harbor",
+   "stated_answer": "1941",
+   "context": "The attack came on the morning of Sunday 7 December 1941, and Congress declared war the next day.",
+   "go_deeper": "The whole thing was over in about ninety minutes, and the officer who led the first wave, Mitsuo Fuchida, later became a Christian evangelist and spent years touring the United States.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Japan attacked the American fleet at Pearl Harbor. — 1940 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Japan attacked the American fleet at Pearl Harbor. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Japan attacked the American fleet at Pearl Harbor in 1941. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-doolittle-raid",
+   "category": "The War in the Pacific",
+   "claim": "American bombers flew off an aircraft carrier to strike Tokyo",
+   "stated_answer": "1942",
+   "context": "Sixteen B-25s took off from the deck of the Hornet on 18 April 1942 and bombed Tokyo and four other cities.",
+   "go_deeper": "The bombers were far too big to land back on a carrier, so the crews flew on to China and bailed out or crash-landed in the dark, and most of them got home.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American bombers flew off an aircraft carrier to strike Tokyo. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American bombers flew off an aircraft carrier to strike Tokyo. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American bombers flew off an aircraft carrier to strike Tokyo in 1942. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-bataan-surrender",
+   "category": "The War in the Pacific",
+   "claim": "American and Filipino prisoners were marched up the Bataan peninsula",
+   "stated_answer": "1942",
+   "context": "After the surrender of Bataan in April 1942, tens of thousands of prisoners were forced to walk north through tropical heat.",
+   "go_deeper": "The Japanese had planned for perhaps 25,000 prisoners and received roughly three times that number, with nothing ready to feed or move them.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American and Filipino prisoners were marched up the Bataan peninsula. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Filipino prisoners were marched up the Bataan peninsula. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Filipino prisoners were marched up the Bataan peninsula in 1942. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-midway",
+   "category": "The War in the Pacific",
+   "claim": "The American fleet broke the Japanese attack at Midway",
+   "stated_answer": "1942",
+   "context": "Four Japanese aircraft carriers were lost across a few hours of fighting on 4 June 1942.",
+   "go_deeper": "American codebreakers had read enough of the Japanese naval code to work out where the blow was coming, and the fleet was waiting.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The American fleet broke the Japanese attack at Midway. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American fleet broke the Japanese attack at Midway. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American fleet broke the Japanese attack at Midway in 1942. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-yamamoto-intercept",
+   "category": "The War in the Pacific",
+   "claim": "American fighters ambushed the admiral who had planned Pearl Harbor",
+   "stated_answer": "1943",
+   "context": "P-38s flew a long-range intercept over the Solomon Islands on 18 April 1943 and brought Isoroku Yamamoto's aircraft down.",
+   "go_deeper": "His itinerary had come out of a decoded Japanese signal, and the intercept fell exactly one year to the day after the Doolittle Raid.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American fighters ambushed the admiral who had planned Pearl Harbor. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American fighters ambushed the admiral who had planned Pearl Harbor. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American fighters ambushed the admiral who had planned Pearl Harbor. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American fighters ambushed the admiral who had planned Pearl Harbor in 1943. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-macarthur-return",
+   "category": "The War in the Pacific",
+   "claim": "MacArthur waded ashore in the Philippines, making good on his promise to return",
+   "stated_answer": "1944",
+   "context": "He came ashore at Leyte on 20 October 1944, two and a half years after leaving the islands under orders.",
+   "go_deeper": "The famous photograph was not staged that first time: the landing craft could not get close enough to the beach, so he had no choice but to wade.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "MacArthur waded ashore in the Philippines, making good on his promise to return. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "MacArthur waded ashore in the Philippines, making good on his promise to return. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "MacArthur waded ashore in the Philippines, making good on his promise to return in 1944. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-iwo-jima-flag",
+   "category": "The War in the Pacific",
+   "claim": "The flag was raised on Mount Suribachi on Iwo Jima",
+   "stated_answer": "1945",
+   "context": "Six men put the flag up on the morning of 23 February 1945, four days into the landing.",
+   "go_deeper": "It was the second flag of that morning; the first was judged too small to be seen from the beaches, so a bigger one was carried up, and that is the one Joe Rosenthal photographed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The flag was raised on Mount Suribachi on Iwo Jima. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The flag was raised on Mount Suribachi on Iwo Jima. — 1946 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The flag was raised on Mount Suribachi on Iwo Jima. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The flag was raised on Mount Suribachi on Iwo Jima in 1945. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-okinawa",
+   "category": "The War in the Pacific",
+   "claim": "American forces landed on Okinawa",
+   "stated_answer": "1945",
+   "context": "The landings began on 1 April 1945 and the fighting ran on for 82 days, the longest battle of the Pacific campaign.",
+   "go_deeper": "Okinawa was the one Pacific battle fought across an island with a large civilian population living on it, and how it went shaped every argument in Washington about how to end the war.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American forces landed on Okinawa. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American forces landed on Okinawa. — 1946 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American forces landed on Okinawa. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American forces landed on Okinawa in 1945. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-hiroshima",
+   "category": "The War in the Pacific",
+   "claim": "An atomic bomb was dropped on Hiroshima",
+   "stated_answer": "1945",
+   "context": "A single aircraft dropped the bomb on the morning of 6 August 1945.",
+   "go_deeper": "The crew had flown from Tinian, some 1,500 miles away, and it was the weather report that morning that settled on Hiroshima rather than another city on the target list.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "An atomic bomb was dropped on Hiroshima. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An atomic bomb was dropped on Hiroshima. — 1946 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An atomic bomb was dropped on Hiroshima in 1945. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-surrender-missouri",
+   "category": "The War in the Pacific",
+   "claim": "Japan signed the surrender aboard the USS Missouri in Tokyo Bay",
+   "stated_answer": "1945",
+   "context": "The instrument of surrender was signed on the battleship's deck on 2 September 1945.",
+   "go_deeper": "The ceremony took about twenty-three minutes, and the flag displayed for it had been carried into Tokyo Bay by Commodore Perry's squadron in 1853.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Japan signed the surrender aboard the USS Missouri in Tokyo Bay. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Japan signed the surrender aboard the USS Missouri in Tokyo Bay. — 1946 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Japan signed the surrender aboard the USS Missouri in Tokyo Bay. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Japan signed the surrender aboard the USS Missouri in Tokyo Bay in 1945. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-pearl-ships",
+   "category": "The War in the Pacific",
+   "claim": "American ships sunk or damaged at Pearl Harbor",
+   "stated_answer": "19 ships",
+   "context": "About 19 ships were sunk or damaged, including all eight battleships that were in the harbour that morning.",
+   "go_deeper": "All but three of them were raised, repaired and sent back to sea, and several were in Tokyo Bay for the surrender.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 17 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 21 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 23 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 15 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 12 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor. — 26 ships — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American ships sunk or damaged at Pearl Harbor: 19 ships. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-bomb-interval",
+   "category": "The War in the Pacific",
+   "claim": "Days between the atomic bombings of Hiroshima and Nagasaki",
+   "stated_answer": "3 days",
+   "context": "Hiroshima was bombed on 6 August 1945 and Nagasaki three days later, on 9 August.",
+   "go_deeper": "Nagasaki was not the city chosen when that aircraft took off; cloud over Kokura sent it on to the second name on the list.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Days between the atomic bombings of Hiroshima and Nagasaki. — 2 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days between the atomic bombings of Hiroshima and Nagasaki. — 4 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days between the atomic bombings of Hiroshima and Nagasaki: 3 days. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-bataan-miles",
+   "category": "The War in the Pacific",
+   "claim": "Miles prisoners were marched after the surrender at Bataan",
+   "stated_answer": "65 miles",
+   "context": "The march covered roughly 65 miles up the peninsula, and the men were packed into rail cars for the last stretch.",
+   "go_deeper": "Filipino villagers along the road threw food to the column knowing they could be punished for it, and a great many did it anyway.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 52 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 78 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 91 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 39 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 26 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan. — 117 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Miles prisoners were marched after the surrender at Bataan: 65 miles. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-iwo-jima-days",
+   "category": "The War in the Pacific",
+   "claim": "Days the fighting on Iwo Jima lasted",
+   "stated_answer": "36 days",
+   "context": "The battle ran 36 days, from the landing on 19 February 1945 to the island being declared secure on 26 March.",
+   "go_deeper": "The photograph everyone knows was taken on the fifth day, with a month of the battle still ahead of the men in it.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 32 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 40 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 45 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 27 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 18 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted. — 54 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the fighting on Iwo Jima lasted: 36 days. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-no-warning",
+   "category": "The War in the Pacific",
+   "claim": "Nobody saw the Pearl Harbor attack coming until the first bombs fell",
+   "stated_answer": "False",
+   "context": "A radar station on Oahu picked up the incoming aircraft about an hour ahead and phoned it in; the duty officer took it for a flight of American bombers expected from California.",
+   "go_deeper": "An American destroyer had already sunk a Japanese midget submarine outside the harbour entrance more than an hour before the first bomb dropped.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Nobody saw the Pearl Harbor attack coming until the first bombs fell. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-carriers-lost",
+   "category": "The War in the Pacific",
+   "claim": "The Pacific fleet's aircraft carriers were sunk at Pearl Harbor",
+   "stated_answer": "False",
+   "context": "Not one carrier was there. Two were at sea delivering aircraft to Wake and Midway, and the third was at San Diego.",
+   "go_deeper": "The Pacific turned out to be a carrier war rather than a battleship war, so the ships that decided it were precisely the ones the attack missed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Pacific fleet's aircraft carriers were sunk at Pearl Harbor. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-mainland-invasion",
+   "category": "The War in the Pacific",
+   "claim": "Japan's war plan called for an invasion of the American mainland",
+   "stated_answer": "False",
+   "context": "The aim was to take the oil and rubber of Southeast Asia and hold a defensive ring until the United States agreed to terms, not to occupy it.",
+   "go_deeper": "The mainland was shelled twice by submarines and later reached by paper balloons riding the jet stream, but no landing was ever on the drawing board.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Japan's war plan called for an invasion of the American mainland. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-aleutians",
+   "category": "The War in the Pacific",
+   "claim": "Japanese troops occupied American soil during the war",
+   "stated_answer": "True",
+   "context": "Japan took Attu and Kiska in Alaska's Aleutian Islands in June 1942 and held them for about a year.",
+   "go_deeper": "When American and Canadian troops finally stormed Kiska in August 1943 the island was empty: the garrison had slipped away by ship under two weeks of fog.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Japanese troops occupied American soil during the war. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-internment",
+   "category": "The War in the Pacific",
+   "claim": "The United States moved people of Japanese descent, most of them citizens, into camps",
+   "stated_answer": "True",
+   "context": "Executive Order 9066, signed in February 1942, led to about 120,000 people being removed from the West Coast; around two-thirds were American citizens.",
+   "go_deeper": "Congress formally apologised and paid reparations in 1988, more than forty years after the camps closed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The United States moved people of Japanese descent, most of them citizens, into camps. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "pw-onoda",
+   "category": "The War in the Pacific",
+   "claim": "A Japanese soldier was still fighting in the jungle decades after the surrender",
+   "stated_answer": "True",
+   "context": "Hiroo Onoda held out in the Philippines until 1974, when his former commanding officer flew out and formally relieved him of his orders.",
+   "go_deeper": "He had spent thirty years reading the leaflets announcing the surrender as enemy propaganda, and came home to Japan still in his uniform with his rifle in working order.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "A Japanese soldier was still fighting in the jungle decades after the surrender. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-dust-bowl-begins",
+   "category": "The Great Depression",
+   "claim": "Drought settled over the southern Plains and the Dust Bowl began",
+   "stated_answer": "1930",
+   "context": "The rains failed across Kansas, Oklahoma and Texas in 1930, and ploughed-up land that had once been grass started to blow away.",
+   "go_deeper": "The dust reached far beyond the farms it came from: storms in 1934 dropped Plains soil on Chicago, Washington and ships out in the Atlantic.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began. — 1929 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began. — 1928 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Drought settled over the southern Plains and the Dust Bowl began in 1930. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-bonus-army",
+   "category": "The Great Depression",
+   "claim": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington",
+   "stated_answer": "1932",
+   "context": "Thousands of unemployed First World War veterans camped in the capital asking for their service bonus early, and the Army cleared the camp in July 1932.",
+   "go_deeper": "The officers who carried out the eviction included Douglas MacArthur, Dwight Eisenhower and George Patton, all three of whom would command in the next war.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington. — 1930 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington. — 1931 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops drove the Bonus Army of jobless veterans out of their camp in Washington in 1932. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-fdr-elected",
+   "category": "The Great Depression",
+   "claim": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office",
+   "stated_answer": "1932",
+   "context": "Roosevelt carried 42 of the 48 states in November 1932, though he did not take office until the following March.",
+   "go_deeper": "That four-month wait was the last of its kind: the Twentieth Amendment moved the inauguration to January so a stricken country never had to wait again.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office. — 1931 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office. — 1930 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Franklin Roosevelt was elected president, turning Herbert Hoover out of office in 1932. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-bank-holiday",
+   "category": "The Great Depression",
+   "claim": "Roosevelt closed every bank in the country for four days",
+   "stated_answer": "1933",
+   "context": "Two days after taking office in March 1933 he shut the banks nationwide, and only those inspected and judged sound were allowed to open again.",
+   "go_deeper": "It worked as much by nerve as by law: when the doors opened, people queued to put their money back in rather than to take it out.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Roosevelt closed every bank in the country for four days. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt closed every bank in the country for four days. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt closed every bank in the country for four days. — 1930 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt closed every bank in the country for four days. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt closed every bank in the country for four days in 1933. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-fireside-chat",
+   "category": "The Great Depression",
+   "claim": "Roosevelt spoke straight to the country by radio in the first fireside chat",
+   "stated_answer": "1933",
+   "context": "On 12 March 1933 he explained the banking crisis to people sitting in their own front rooms, the first of some thirty such broadcasts.",
+   "go_deeper": "He wrote them for the ear rather than the hall, in short common words, and opened by calling the audience his friends.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Roosevelt spoke straight to the country by radio in the first fireside chat. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt spoke straight to the country by radio in the first fireside chat. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt spoke straight to the country by radio in the first fireside chat. — 1930 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt spoke straight to the country by radio in the first fireside chat. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Roosevelt spoke straight to the country by radio in the first fireside chat in 1933. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-black-sunday",
+   "category": "The Great Depression",
+   "claim": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black",
+   "stated_answer": "1935",
+   "context": "On 14 April 1935 a wall of dust rolled across the southern Plains and blotted out the sun in the middle of the day.",
+   "go_deeper": "A reporter who watched it coming wrote the phrase dust bowl in his copy the next day, and the name stuck to the whole region and the whole decade.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "who cares",
+   "questions": [
+    {
+     "text": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black. — 1937 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The worst dust storm of the Dust Bowl turned a Sunday afternoon black in 1935. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-social-security",
+   "category": "The Great Depression",
+   "claim": "The Social Security Act created old-age pensions for American workers",
+   "stated_answer": "1935",
+   "context": "Signed in August 1935, it set up retirement payments funded by a tax on wages, alongside unemployment insurance.",
+   "go_deeper": "The first monthly cheque went out in 1940 to Ida May Fuller of Vermont for $22.54; she lived to 100 and collected for 35 years.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Social Security Act created old-age pensions for American workers. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Social Security Act created old-age pensions for American workers. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Social Security Act created old-age pensions for American workers. — 1937 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Social Security Act created old-age pensions for American workers. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Social Security Act created old-age pensions for American workers in 1935. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-hoover-dam",
+   "category": "The Great Depression",
+   "claim": "Hoover Dam was finished and handed over to the federal government",
+   "stated_answer": "1936",
+   "context": "The dam on the Colorado River was completed on 1 March 1936, more than two years ahead of its schedule.",
+   "go_deeper": "Around 21,000 men worked on it, many arriving in the desert with their families and nowhere at all to live, so a whole town was built to hold them.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Hoover Dam was finished and handed over to the federal government. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hoover Dam was finished and handed over to the federal government. — 1937 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hoover Dam was finished and handed over to the federal government. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hoover Dam was finished and handed over to the federal government. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hoover Dam was finished and handed over to the federal government in 1936. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-flint-strike",
+   "category": "The Great Depression",
+   "claim": "Strikers sat inside General Motors plants in Flint until the company recognised their union",
+   "stated_answer": "1937",
+   "context": "Workers occupied the factories from the end of December 1936 and stayed inside for 44 days, until GM agreed in February 1937 to bargain with the United Auto Workers.",
+   "go_deeper": "Sitting down inside the plant rather than picketing outside it made replacement workers useless, and union membership across the country multiplied in the years that followed.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "who cares",
+   "questions": [
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union. — 1938 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Strikers sat inside General Motors plants in Flint until the company recognised their union in 1937. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-grapes-of-wrath",
+   "category": "The Great Depression",
+   "claim": "John Steinbeck published The Grapes of Wrath",
+   "stated_answer": "1939",
+   "context": "His novel about a tenant family driven off their land and heading west came out in April 1939 and was the best-selling book of the year.",
+   "go_deeper": "It was banned from libraries and burned in parts of California and Oklahoma for the picture it painted, and it won the Pulitzer Prize the year after.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "John Steinbeck published The Grapes of Wrath. — 1937 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Steinbeck published The Grapes of Wrath. — 1940 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Steinbeck published The Grapes of Wrath. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Steinbeck published The Grapes of Wrath. — 1936 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Steinbeck published The Grapes of Wrath. — 1935 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Steinbeck published The Grapes of Wrath in 1939. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-unemployment-peak",
+   "category": "The Great Depression",
+   "claim": "Share of American workers with no job at the worst of the Depression",
+   "stated_answer": "25 percent",
+   "context": "Unemployment reached roughly a quarter of the workforce in 1933, and was still in double figures at the end of the decade.",
+   "go_deeper": "The figure counts only those actively looking for work, so it hides the millions more on short hours or scratching a living from odd jobs.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 23 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 27 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 29 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 21 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 18 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression. — 32 percent — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Share of American workers with no job at the worst of the Depression: 25 percent. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-banks-failed",
+   "category": "The Great Depression",
+   "claim": "American banks that failed in the first years of the Depression",
+   "stated_answer": "9,000 banks",
+   "context": "Close to 9,000 banks went under between 1930 and 1933, and the people whose savings were inside them had no insurance to fall back on.",
+   "go_deeper": "That is what made a queue outside a bank so dangerous: a rumour could empty a perfectly sound one in a morning, because nobody wanted to be last in line.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American banks that failed in the first years of the Depression. — 7,200 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression. — 10,800 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression. — 12,600 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression. — 5,400 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression. — 3,600 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression. — 16,200 banks — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American banks that failed in the first years of the Depression: 9,000 banks. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-ccc-men",
+   "category": "The Great Depression",
+   "claim": "Young men who worked in the Civilian Conservation Corps",
+   "stated_answer": "3,000,000 men",
+   "context": "About three million passed through the camps between 1933 and 1942, planting trees, fighting fires and building the trails and shelters in the parks.",
+   "go_deeper": "The pay was $30 a month and $25 of it went straight home to the man's family, which was as much the point of the scheme as the trees were.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "who cares",
+   "questions": [
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 2,400,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 3,600,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 4,200,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 1,800,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 1,200,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps. — 5,400,000 men — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Young men who worked in the Civilian Conservation Corps: 3,000,000 men. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-minimum-wage",
+   "category": "The Great Depression",
+   "claim": "The first federal minimum wage, set in 1938, for an hour's work",
+   "stated_answer": "25 cents",
+   "context": "The Fair Labor Standards Act put a floor of 25 cents an hour under most wages, rising to 40 cents over the following seven years.",
+   "go_deeper": "The same law capped the ordinary working week at 44 hours and set a minimum age for most jobs, ending legal child labour across a great many trades.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 21 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 29 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 31 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 19 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 14 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work. — 36 cents — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The first federal minimum wage, set in 1938, for an hour's work: 25 cents. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-broker-suicides",
+   "category": "The Great Depression",
+   "claim": "The 1929 crash set off a wave of suicides among ruined Wall Street traders",
+   "stated_answer": "False",
+   "context": "The image of brokers jumping from windows is largely legend: the suicide rate in New York rose only slightly, and there was no epidemic of leaps from Wall Street buildings.",
+   "go_deeper": "Newspapers printed the rumours as fact within days, and the picture stuck so hard that it now stands in for the whole crash.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "not appropriate",
+   "questions": [
+    {
+     "text": "The 1929 crash set off a wave of suicides among ruined Wall Street traders. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-prohibition-through-thirties",
+   "category": "The Great Depression",
+   "claim": "Prohibition stayed the law of the land through the whole of the 1930s",
+   "stated_answer": "False",
+   "context": "It was repealed in December 1933, less than a year into Roosevelt's first term, so most of the decade was legally wet.",
+   "go_deeper": "Hard times made the case: breweries and distilleries meant jobs and wages at a moment when almost nothing else was hiring.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Prohibition stayed the law of the land through the whole of the 1930s. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-new-deal-ended-it",
+   "category": "The Great Depression",
+   "claim": "The New Deal ended the Depression",
+   "stated_answer": "False",
+   "context": "Unemployment fell a long way from its 1933 peak but stayed in double figures for the rest of the decade, and the economy only came fully back with war production in the 1940s.",
+   "go_deeper": "Economists still argue about how much the New Deal helped; almost none of them argue that it finished the job.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "The New Deal ended the Depression. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "gd-dust-bowl-ploughing",
+   "category": "The Great Depression",
+   "claim": "The Dust Bowl was made far worse by the way the Plains had been farmed",
+   "stated_answer": "True",
+   "context": "High wheat prices and new tractors had turned over millions of acres of deep-rooted prairie grass, so when the drought came there was nothing left holding the soil down.",
+   "go_deeper": "One government answer was a shelterbelt of more than 200 million trees planted from Texas up to the Canadian border, to slow the wind across open fields.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "once again not interesting",
+   "questions": [
+    {
+     "text": "The Dust Bowl was made far worse by the way the Plains had been farmed. — True or false?",
      "verdict": "ok",
      "why": null
     }
