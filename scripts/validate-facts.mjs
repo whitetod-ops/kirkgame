@@ -79,6 +79,32 @@ for (const file of readdirSync(FACTS_DIR).filter((f) => f.endsWith('.json')).sor
       warnings.push(`${file} [${f.id}]: claim mentions death -- check a human is happy with the framing`);
     }
   }
+
+  /* Two things that make a whole category unplayable rather than merely hard.
+
+     A true/false round is only a question if guessing does not win. Myth
+     corrections drift true because the interesting Norse facts happen to be
+     the surprising-but-true ones, and a file at six true to one false pays a
+     player 86% for never reading the question. */
+  const bools = doc.facts.filter((f) => f.kind === 'boolean');
+  if (bools.length >= 4) {
+    const t = bools.filter((f) => f.answer === true).length;
+    const share = Math.max(t, bools.length - t) / bools.length;
+    if (share >= 0.75) {
+      warnings.push(`${file}: booleans run ${t} true / ${bools.length - t} false -- ` +
+        `always answering ${t > bools.length - t ? 'true' : 'false'} wins ${Math.round(share * 100)}% of them`);
+    }
+  }
+
+  /* And a category needs at least one date the player already holds. Without
+     an anchor to reason from, every over/under is a coin flip: nobody knows
+     whether the Great Heathen Army landed in 865 or 874, but plenty of people
+     know 1066, and a question asked against 1066 is answerable. */
+  const years = doc.facts.filter((f) => f.kind === 'year');
+  if (years.length >= 4 && !years.some((f) => f.fame === 'household')) {
+    warnings.push(`${file}: no year fact is marked fame "household" -- ` +
+      `nothing here for a player to reason from, so every date question is a guess`);
+  }
 }
 
 for (const w of warnings) console.log(`warn  ${w}`);
