@@ -1,8 +1,11 @@
 {
  "reviewer": "Todd",
  "generated": "2026-08-27",
+ "note": "Exported from the Fact Review Desk. Regenerate by exporting the taste profile from the desk and saving it here.",
  "counts": {
-  "rated": 51
+  "rated": 167,
+  "with_reasoning": 23,
+  "bad_questions": 27
  },
  "examples": [
   {
@@ -108,7 +111,7 @@
      "why": null
     },
     {
-     "text": "Cornwallis surrendered his army at Yorktown. — 1775 — Before or after?",
+     "text": "Cornwallis surrendered his army at Yorktown. — 1776 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -184,7 +187,7 @@
      "why": null
     },
     {
-     "text": "The Boston Tea Party took place. — 1765 — Before or after?",
+     "text": "The Boston Tea Party took place. — 1771 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -207,7 +210,7 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "The Boston Massacre occurred. — 1765 — Before or after?",
+     "text": "The Boston Massacre occurred. — 1769 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -217,17 +220,12 @@
      "why": null
     },
     {
+     "text": "The Boston Massacre occurred. — 1765 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
      "text": "The Boston Massacre occurred. — 1775 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "The Boston Massacre occurred. — 1776 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "The Boston Massacre occurred. — 1766 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -250,7 +248,12 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Number of men who signed the Declaration of Independence. — 34 signers — More or fewer?",
+     "text": "Number of men who signed the Declaration of Independence. — 45 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 67 signers — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -260,17 +263,17 @@
      "why": null
     },
     {
-     "text": "Number of men who signed the Declaration of Independence. — 112 signers — More or fewer?",
+     "text": "Number of men who signed the Declaration of Independence. — 34 signers — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Number of men who signed the Declaration of Independence. — 11 signers — More or fewer?",
+     "text": "Number of men who signed the Declaration of Independence. — 22 signers — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Number of men who signed the Declaration of Independence. — 224 signers — More or fewer?",
+     "text": "Number of men who signed the Declaration of Independence. — 101 signers — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -293,7 +296,7 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Parliament passed the Stamp Act. — 1763 — Before or after?",
+     "text": "Parliament passed the Stamp Act. — 1764 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -303,22 +306,12 @@
      "why": null
     },
     {
+     "text": "Parliament passed the Stamp Act. — 1763 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
      "text": "Parliament passed the Stamp Act. — 1773 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Parliament passed the Stamp Act. — 1761 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Parliament passed the Stamp Act. — 1759 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Parliament passed the Stamp Act. — 1776 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -518,11 +511,6 @@
      "why": null
     },
     {
-     "text": "The United States Constitution was signed in Philadelphia. — 1791 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
      "text": "The United States Constitution was signed in Philadelphia in 1787. — True or false?",
      "verdict": "ok",
      "why": null
@@ -542,6 +530,11 @@
    "questions": [
     {
      "text": "George Washington was inaugurated as the first president. — 1787 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington was inaugurated as the first president. — 1790 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -590,11 +583,6 @@
     },
     {
      "text": "The Bill of Rights was ratified. — 1787 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "The Bill of Rights was ratified. — 1783 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -884,17 +872,22 @@
    "reason_about_the_fact": "once again no over questions on the date",
    "questions": [
     {
-     "text": "Distance covered by the expedition, out and back. — 6,560 miles — More or fewer?",
+     "text": "Distance covered by the expedition, out and back. — 7,040 miles — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Distance covered by the expedition, out and back. — 9,440 miles — More or fewer?",
+     "text": "Distance covered by the expedition, out and back. — 8,960 miles — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Distance covered by the expedition, out and back. — 12,000 miles — More or fewer?",
+     "text": "Distance covered by the expedition, out and back. — 10,000 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 6,000 miles — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -904,12 +897,7 @@
      "why": null
     },
     {
-     "text": "Distance covered by the expedition, out and back. — 1,600 miles — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Distance covered by the expedition, out and back. — 20,800 miles — More or fewer?",
+     "text": "Distance covered by the expedition, out and back. — 12,000 miles — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -932,7 +920,12 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Amount Jefferson requested from Congress to fund the expedition. — $1,500 dollars — More or fewer?",
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $2,000 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $3,000 dollars — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -942,17 +935,17 @@
      "why": null
     },
     {
-     "text": "Amount Jefferson requested from Congress to fund the expedition. — $5,000 dollars — More or fewer?",
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $1,500 dollars — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Amount Jefferson requested from Congress to fund the expedition. — $500 dollars — More or fewer?",
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $1,000 dollars — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Amount Jefferson requested from Congress to fund the expedition. — $10,000 dollars — More or fewer?",
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $4,500 dollars — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -975,17 +968,22 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Animal species new to science described by the expedition. — 100 species — More or fewer?",
+     "text": "Animal species new to science described by the expedition. — 107 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Animal species new to science described by the expedition. — 144 species — More or fewer?",
+     "text": "Animal species new to science described by the expedition. — 137 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Animal species new to science described by the expedition. — 183 species — More or fewer?",
+     "text": "Animal species new to science described by the expedition. — 152 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 92 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -995,12 +993,7 @@
      "why": null
     },
     {
-     "text": "Animal species new to science described by the expedition. — 24 species — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Animal species new to science described by the expedition. — 317 species — More or fewer?",
+     "text": "Animal species new to science described by the expedition. — 183 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1023,17 +1016,22 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Plant species new to science described by the expedition. — 146 species — More or fewer?",
+     "text": "Plant species new to science described by the expedition. — 157 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Plant species new to science described by the expedition. — 210 species — More or fewer?",
+     "text": "Plant species new to science described by the expedition. — 199 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Plant species new to science described by the expedition. — 267 species — More or fewer?",
+     "text": "Plant species new to science described by the expedition. — 222 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 134 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1043,12 +1041,7 @@
      "why": null
     },
     {
-     "text": "Plant species new to science described by the expedition. — 36 species — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Plant species new to science described by the expedition. — 463 species — More or fewer?",
+     "text": "Plant species new to science described by the expedition. — 267 species — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1267,11 +1260,6 @@
     },
     {
      "text": "Thomas Jefferson became president. — 1803 — Before or after?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Thomas Jefferson became president. — 1799 — Before or after?",
      "verdict": "ok",
      "why": null
     },
@@ -1501,17 +1489,22 @@
    "reason_about_the_fact": "question 41 words is terrible",
    "questions": [
     {
-     "text": "Length of the Gettysburg Address. — 223 words — More or fewer?",
+     "text": "Length of the Gettysburg Address. — 239 words — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Length of the Gettysburg Address. — 321 words — More or fewer?",
+     "text": "Length of the Gettysburg Address. — 305 words — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Length of the Gettysburg Address. — 408 words — More or fewer?",
+     "text": "Length of the Gettysburg Address. — 340 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 204 words — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1521,12 +1514,7 @@
      "why": null
     },
     {
-     "text": "Length of the Gettysburg Address. — 54 words — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Length of the Gettysburg Address. — 707 words — More or fewer?",
+     "text": "Length of the Gettysburg Address. — 408 words — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1663,17 +1651,22 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Abraham Lincoln's age when he died. — 46 years old — More or fewer?",
+     "text": "Abraham Lincoln's age when he died. — 49 years old — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Abraham Lincoln's age when he died. — 66 years old — More or fewer?",
+     "text": "Abraham Lincoln's age when he died. — 63 years old — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Abraham Lincoln's age when he died. — 84 years old — More or fewer?",
+     "text": "Abraham Lincoln's age when he died. — 70 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 42 years old — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1683,12 +1676,7 @@
      "why": null
     },
     {
-     "text": "Abraham Lincoln's age when he died. — 11 years old — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Abraham Lincoln's age when he died. — 146 years old — More or fewer?",
+     "text": "Abraham Lincoln's age when he died. — 84 years old — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1711,17 +1699,22 @@
    "reason_about_the_fact": null,
    "questions": [
     {
-     "text": "Traditional estimate of total deaths in the Civil War. — 508,400 deaths — More or fewer?",
+     "text": "Traditional estimate of total deaths in the Civil War. — 545,600 deaths — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Traditional estimate of total deaths in the Civil War. — 731,600 deaths — More or fewer?",
+     "text": "Traditional estimate of total deaths in the Civil War. — 694,400 deaths — More or fewer?",
      "verdict": "ok",
      "why": null
     },
     {
-     "text": "Traditional estimate of total deaths in the Civil War. — 930,000 deaths — More or fewer?",
+     "text": "Traditional estimate of total deaths in the Civil War. — 775,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 465,000 deaths — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1731,12 +1724,7 @@
      "why": null
     },
     {
-     "text": "Traditional estimate of total deaths in the Civil War. — 124,000 deaths — More or fewer?",
-     "verdict": "ok",
-     "why": null
-    },
-    {
-     "text": "Traditional estimate of total deaths in the Civil War. — 1,612,000 deaths — More or fewer?",
+     "text": "Traditional estimate of total deaths in the Civil War. — 930,000 deaths — More or fewer?",
      "verdict": "ok",
      "why": null
     },
@@ -1803,6 +1791,4134 @@
     },
     {
      "text": "The First Battle of Bull Run was fought in 1861. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-atlanta",
+   "category": "The American Civil War",
+   "claim": "Sherman captured Atlanta",
+   "stated_answer": "1864",
+   "context": "Confederate forces evacuated on September 1-2, 1864 after a summer-long campaign.",
+   "go_deeper": "The news almost certainly saved Lincoln's re-election that November, which had looked doubtful all summer.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Sherman captured Atlanta. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sherman captured Atlanta. — 1865 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sherman captured Atlanta. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sherman captured Atlanta in 1864. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-vicksburg",
+   "category": "The American Civil War",
+   "claim": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi",
+   "stated_answer": "1863",
+   "context": "The city fell on July 4, 1863, the day after Gettysburg ended.",
+   "go_deeper": "Vicksburg reportedly did not celebrate the Fourth of July again for another eighty years.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi in 1863. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-lincoln-elected",
+   "category": "The American Civil War",
+   "claim": "Abraham Lincoln was first elected president",
+   "stated_answer": "1860",
+   "context": "Lincoln won the November 1860 election with under 40 percent of the popular vote in a four-way race.",
+   "go_deeper": "He was not even on the ballot in ten Southern states.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Abraham Lincoln was first elected president. — 1859 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was first elected president. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was first elected president. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was first elected president in 1860. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-ironclads",
+   "category": "The American Civil War",
+   "claim": "The ironclads Monitor and Virginia fought at Hampton Roads",
+   "stated_answer": "1862",
+   "context": "The first battle between ironclad warships took place March 8-9, 1862 and ended inconclusively.",
+   "go_deeper": "The engagement made every wooden navy in the world obsolete almost overnight.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The ironclads Monitor and Virginia fought at Hampton Roads. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The ironclads Monitor and Virginia fought at Hampton Roads. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The ironclads Monitor and Virginia fought at Hampton Roads. — 1860 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The ironclads Monitor and Virginia fought at Hampton Roads in 1862. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-shiloh",
+   "category": "The American Civil War",
+   "claim": "The Battle of Shiloh was fought in Tennessee",
+   "stated_answer": "1862",
+   "context": "Fought April 6-7, 1862, Shiloh shocked both sides with casualties higher than all previous American battles combined.",
+   "go_deeper": "Grant was nearly relieved of command afterward for being caught unprepared on the first day.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Battle of Shiloh was fought in Tennessee. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Shiloh was fought in Tennessee. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Shiloh was fought in Tennessee. — 1860 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Shiloh was fought in Tennessee in 1862. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-lee-union-offer",
+   "category": "The American Civil War",
+   "claim": "Robert E. Lee was offered a senior command in the Union army before he joined the Confederacy",
+   "stated_answer": "True",
+   "context": "In April 1861 Lee was offered command of the field forces being raised to suppress the rebellion. He declined and resigned when Virginia seceded.",
+   "go_deeper": "Lee had spent 32 years in the U.S. Army and had called secession 'nothing but revolution' in a letter that January.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Robert E. Lee was offered a senior command in the Union army before he joined the Confederacy. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-emancipation-scope",
+   "category": "The American Civil War",
+   "claim": "The Emancipation Proclamation freed every enslaved person in the United States",
+   "stated_answer": "False",
+   "context": "It applied only to areas still in rebellion. Slavery in the loyal border states was not ended until the Thirteenth Amendment.",
+   "go_deeper": "Because it was issued as a war measure against enemy territory, its legal basis was Lincoln's power as commander in chief, not an act of Congress.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Emancipation Proclamation freed every enslaved person in the United States. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-grant-command",
+   "category": "The American Civil War",
+   "claim": "Ulysses S. Grant commanded all Union armies from the beginning of the war",
+   "stated_answer": "False",
+   "context": "Grant was made general-in-chief of all Union armies in March 1864, nearly three years into the war. He started it as a colonel of Illinois volunteers.",
+   "go_deeper": "Grant had left the army in 1854 under a cloud and was working in his family's leather goods store in Galena, Illinois when the war broke out.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Ulysses S. Grant commanded all Union armies from the beginning of the war. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-lindisfarne",
+   "category": "The Vikings",
+   "claim": "The raid on Lindisfarne opened the Viking Age in Britain",
+   "stated_answer": "AD 793",
+   "context": "Norse raiders sacked the monastery on Lindisfarne in 793, shocking Christian Europe.",
+   "go_deeper": "Monasteries were targets because they were rich, coastal and undefended.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 783 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 828 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 758 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 643 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain. — AD 943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The raid on Lindisfarne opened the Viking Age in Britain in AD 793. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-vinland",
+   "category": "The Vikings",
+   "claim": "Norse sailors established a settlement in North America",
+   "stated_answer": "1021",
+   "context": "Tree-ring dating of wood at L'Anse aux Meadows in Newfoundland gives an exact year of 1021.",
+   "go_deeper": "That is 471 years before Columbus, and it is the only confirmed Norse site in the Americas.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse sailors established a settlement in North America. — AD 988 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse sailors established a settlement in North America. — 1034 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse sailors established a settlement in North America. — 1047 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse sailors established a settlement in North America. — 1066 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse sailors established a settlement in North America. — AD 985 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse sailors established a settlement in North America in 1021. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-hastings",
+   "category": "The Vikings",
+   "claim": "The Viking Age is usually said to end with the Norman Conquest",
+   "stated_answer": "1066",
+   "context": "1066 saw both the defeat of Harald Hardrada at Stamford Bridge and William's victory at Hastings.",
+   "go_deeper": "William's Normans were themselves descended from Norse settlers in France.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Viking Age is usually said to end with the Norman Conquest. — 1021 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Viking Age is usually said to end with the Norman Conquest. — 1079 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Viking Age is usually said to end with the Norman Conquest. — 1092 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Viking Age is usually said to end with the Norman Conquest. — 1106 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Viking Age is usually said to end with the Norman Conquest in 1066. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "vk-iceland",
+   "category": "The Vikings",
+   "claim": "Norse settlers began colonising Iceland",
+   "stated_answer": "AD 874",
+   "context": "Traditional settlement date is around 874, when Ingolfr Arnarson founded Reykjavik.",
+   "go_deeper": "Iceland's parliament, the Althing, was founded in 930 and is among the oldest still sitting.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Norse settlers began colonising Iceland. — AD 866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse settlers began colonising Iceland. — AD 878 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse settlers began colonising Iceland. — AD 877 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse settlers began colonising Iceland. — AD 879 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Norse settlers began colonising Iceland in AD 874. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-founded",
+   "category": "Ancient Rome",
+   "claim": "Rome was founded, according to Roman tradition",
+   "stated_answer": "753 BC",
+   "context": "Tradition put the founding at 753 BC and credited it to Romulus. The date is legendary rather than documented, and there were villages on the hills before it.",
+   "go_deeper": "Romans numbered their years from that date: AUC, ab urbe condita, 'from the founding of the city'.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Rome was founded, according to Roman tradition. — 755 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition. — 751 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition. — 746 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition. — 760 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition. — 783 BC — Before or after?",
+     "verdict": "bad",
+     "why": "not in context"
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition. — 723 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rome was founded, according to Roman tradition in 753 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-republic-founded",
+   "category": "Ancient Rome",
+   "claim": "Romans threw out their last king and founded the Republic",
+   "stated_answer": "509 BC",
+   "context": "The overthrow of Tarquin the Proud is traditionally dated to 509 BC. Like the founding, the date is traditional and historians treat it with caution.",
+   "go_deeper": "The Republic ran for roughly 480 years before Augustus, nearly twice as long as the United States has existed so far.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 519 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 499 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 474 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 544 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 659 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic. — 359 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Romans threw out their last king and founded the Republic in 509 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-hannibal-alps",
+   "category": "Ancient Rome",
+   "claim": "Hannibal marched an army with elephants over the Alps into Italy",
+   "stated_answer": "218 BC",
+   "context": "He crossed in 218 BC at the start of the Second Punic War and beat Roman armies in Italy for the next fifteen years without ever taking the city.",
+   "go_deeper": "He set out with about 37 elephants. Almost none of them survived their first winter in Italy.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 220 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 216 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 211 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 225 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 248 BC — Before or after?",
+     "verdict": "bad",
+     "why": "too far off"
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy. — 188 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hannibal marched an army with elephants over the Alps into Italy in 218 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-rubicon",
+   "category": "Ancient Rome",
+   "claim": "Caesar crossed the Rubicon with his army and began a civil war",
+   "stated_answer": "49 BC",
+   "context": "In January 49 BC he led a legion across the small river marking the northern edge of Italy, which no general was permitted to do under arms.",
+   "go_deeper": "The Rubicon is a stream so minor that scholars argued for centuries about which watercourse it actually was.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war. — 51 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war. — 44 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war. — 53 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war. — 27 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war. — 55 BC — Before or after?",
+     "verdict": "bad",
+     "why": "too far off"
+    },
+    {
+     "text": "Caesar crossed the Rubicon with his army and began a civil war in 49 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-caesar-assassinated",
+   "category": "Ancient Rome",
+   "claim": "Julius Caesar was assassinated",
+   "stated_answer": "44 BC",
+   "context": "A group of senators stabbed him in Rome on the Ides of March, March 15, in 44 BC.",
+   "go_deeper": "He had been made dictator for life about a month earlier. The plot was meant to save the Republic and it finished it off instead.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Julius Caesar was assassinated. — 49 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Julius Caesar was assassinated. — 42 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Julius Caesar was assassinated. — 27 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Julius Caesar was assassinated. — 50 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Julius Caesar was assassinated in 44 BC. — True or false?",
+     "verdict": "bad",
+     "why": "too far off"
+    }
+   ]
+  },
+  {
+   "id": "ro-augustus-emperor",
+   "category": "Ancient Rome",
+   "claim": "Augustus became the first Roman emperor",
+   "stated_answer": "27 BC",
+   "context": "The Senate handed Octavian the name Augustus in 27 BC, seventeen years after Caesar was killed. Historians date the empire from there.",
+   "go_deeper": "He never used the word emperor. His title was princeps, 'first citizen', and he kept every form of the Republic while holding all of its power.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Augustus became the first Roman emperor. — 44 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Augustus became the first Roman emperor. — 20 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Augustus became the first Roman emperor. — AD 64 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Augustus became the first Roman emperor. — 49 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Augustus became the first Roman emperor. — 47 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Augustus became the first Roman emperor in 27 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-great-fire",
+   "category": "Ancient Rome",
+   "claim": "The Great Fire burned through much of the city of Rome",
+   "stated_answer": "AD 64",
+   "context": "The fire started near the Circus Maximus in July AD 64 and burned for six days, damaging or flattening ten of the city's fourteen districts.",
+   "go_deeper": "Nero rebuilt with wider streets and brick, and took a large slice of the burnt centre for a palace with its own artificial lake.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — AD 58 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — AD 79 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — AD 80 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — AD 52 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — 27 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome. — AD 122 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Fire burned through much of the city of Rome in AD 64. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-colosseum-opened",
+   "category": "Ancient Rome",
+   "claim": "The Colosseum opened in Rome",
+   "stated_answer": "AD 80",
+   "context": "Begun under Vespasian and finished under his son Titus, it opened in AD 80 with a hundred days of games.",
+   "go_deeper": "Its actual name was the Flavian Amphitheatre. 'Colosseum' came from the colossal bronze statue of Nero that stood beside it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Colosseum opened in Rome. — AD 79 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Colosseum opened in Rome. — AD 81 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Colosseum opened in Rome. — AD 122 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Colosseum opened in Rome. — AD 64 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Colosseum opened in Rome. — 27 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Colosseum opened in Rome in AD 80. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-hadrians-wall",
+   "category": "Ancient Rome",
+   "claim": "Work began on Hadrian's Wall across northern Britain",
+   "stated_answer": "AD 122",
+   "context": "Building started around AD 122 on the emperor Hadrian's orders and took roughly six years. The exact start year is an estimate.",
+   "go_deeper": "It ran 73 miles from coast to coast, and it was not the frontier for long: a second wall went up further north twenty years later.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain. — AD 80 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain. — AD 139 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain. — AD 156 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain. — AD 172 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain. — AD 79 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Work began on Hadrian's Wall across northern Britain in AD 122. — True or false?",
+     "verdict": "bad",
+     "why": "too far off"
+    }
+   ]
+  },
+  {
+   "id": "ro-christianity-legal",
+   "category": "Ancient Rome",
+   "claim": "Constantine's Edict of Milan made Christianity legal across the empire",
+   "stated_answer": "AD 313",
+   "context": "The agreement of AD 313 ended official persecution and granted freedom of worship to Christians and to everyone else.",
+   "go_deeper": "Christianity did not become the official religion of the empire until AD 380, under Theodosius, nearly seventy years later.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Constantine's Edict of Milan made Christianity legal across the empire. — AD 277 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Constantine's Edict of Milan made Christianity legal across the empire. — AD 410 — Before or after?",
+     "verdict": "bad",
+     "why": "too late"
+    },
+    {
+     "text": "Constantine's Edict of Milan made Christianity legal across the empire. — AD 240 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Constantine's Edict of Milan made Christianity legal across the empire. — AD 204 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Constantine's Edict of Milan made Christianity legal across the empire in AD 313. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-sack-of-rome",
+   "category": "Ancient Rome",
+   "claim": "The Visigoths under Alaric sacked the city of Rome",
+   "stated_answer": "AD 410",
+   "context": "Rome was entered and looted over three days in August AD 410, the first time a foreign army had got inside the city in 800 years.",
+   "go_deeper": "Rome was not even the capital by then. The western emperor was sitting safely behind the marshes at Ravenna while it happened.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Visigoths under Alaric sacked the city of Rome. — AD 384 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Visigoths under Alaric sacked the city of Rome. — AD 476 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Visigoths under Alaric sacked the city of Rome. — AD 357 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Visigoths under Alaric sacked the city of Rome. — AD 313 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Visigoths under Alaric sacked the city of Rome in AD 410. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-western-empire-ends",
+   "category": "Ancient Rome",
+   "claim": "The last emperor in the west was deposed, the traditional end of the Roman Empire",
+   "stated_answer": "AD 476",
+   "context": "Romulus Augustulus was pushed off the throne by the commander Odoacer in AD 476. The date is a convenient marker rather than a sudden collapse.",
+   "go_deeper": "The eastern half carried on from Constantinople for another thousand years, calling itself Roman the entire time.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The last emperor in the west was deposed, the traditional end of the Roman Empire. — AD 410 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The last emperor in the west was deposed, the traditional end of the Roman Empire. — AD 502 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The last emperor in the west was deposed, the traditional end of the Roman Empire. — AD 529 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The last emperor in the west was deposed, the traditional end of the Roman Empire. — AD 555 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The last emperor in the west was deposed, the traditional end of the Roman Empire in AD 476. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-seven-hills",
+   "category": "Ancient Rome",
+   "claim": "Number of hills the city of Rome was built on",
+   "stated_answer": "7 hills",
+   "context": "Seven, traditionally: the Palatine, Capitoline, Aventine, Caelian, Esquiline, Quirinal and Viminal.",
+   "go_deeper": "The emperors lived on the Palatine, which is where the English word 'palace' comes from.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Number of hills the city of Rome was built on. — 6 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on. — 8 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on. — 9 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on. — 5 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on. — 4 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on. — 10 hills — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of hills the city of Rome was built on: 7 hills. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-legion-size",
+   "category": "Ancient Rome",
+   "claim": "Soldiers in a Roman legion at full strength",
+   "stated_answer": "5,000 soldiers",
+   "context": "Roughly 5,000 men in ten cohorts. The figure moved about over the centuries and legions were very often under strength.",
+   "go_deeper": "A legionary signed on for 25 years and was paid off at the end with cash or a plot of land, which is close to the empire's version of a pension.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 4,400 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 5,600 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 6,250 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 3,750 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 2,500 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength. — 7,500 soldiers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soldiers in a Roman legion at full strength: 5,000 soldiers. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-vomitorium",
+   "category": "Ancient Rome",
+   "claim": "A vomitorium was a room where Roman diners went to throw up between courses",
+   "stated_answer": "False",
+   "context": "A vomitorium is the passageway that lets a crowd pour out of an amphitheatre. The name is about spilling people into the street, not about vomiting.",
+   "go_deeper": "The banquet version is barely a century old, and it has outlived every attempt to correct it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "A vomitorium was a room where Roman diners went to throw up between courses. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-nero-fiddle",
+   "category": "Ancient Rome",
+   "claim": "Nero played the fiddle while Rome burned",
+   "stated_answer": "False",
+   "context": "The fiddle was not invented for another 1,400 years, and Tacitus records that Nero was at Antium, 30 miles away, when the fire broke out.",
+   "go_deeper": "Suetonius, writing fifty years later, says he sang about the fall of Troy. Tacitus reports the same story and calls it a rumour.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Nero played the fiddle while Rome burned. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-caesarean-section",
+   "category": "Ancient Rome",
+   "claim": "The caesarean section is named after the birth of Julius Caesar",
+   "stated_answer": "False",
+   "context": "His mother Aurelia lived for decades afterwards, which the operation did not allow for at the time. The name most likely comes from the Latin caedere, to cut.",
+   "go_deeper": "Roman law did require the procedure in some cases, but as a burial rule rather than as surgery meant to save anyone.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The caesarean section is named after the birth of Julius Caesar. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-et-tu-brute",
+   "category": "Ancient Rome",
+   "claim": "Caesar's last words were 'Et tu, Brute?'",
+   "stated_answer": "False",
+   "context": "That line is Shakespeare's. Suetonius reports that Caesar said nothing at the end, though some claimed he said in Greek, 'you too, child?'",
+   "go_deeper": "The play was written about 1,600 years after the event, and most of the popular picture of Caesar comes from it rather than from Rome.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Caesar's last words were 'Et tu, Brute?'. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-gladiator-volunteers",
+   "category": "Ancient Rome",
+   "claim": "Some Roman gladiators were free men who volunteered for the arena",
+   "stated_answer": "True",
+   "context": "Most were enslaved or condemned, but free volunteers signed contracts for the pay and the fame, and a successful fighter could be released with a wooden sword.",
+   "go_deeper": "A star gladiator was a marketing property. His name went on oil lamps and cups the way an athlete's goes on a shoe today.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Some Roman gladiators were free men who volunteered for the arena. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ro-insulae",
+   "category": "Ancient Rome",
+   "claim": "Most people in the city of Rome lived in rented apartment blocks",
+   "stated_answer": "True",
+   "context": "The insulae were blocks of flats several storeys high with shops on the ground floor. Only the wealthy had a house to themselves.",
+   "go_deeper": "They were notorious for catching fire and for falling down, and Augustus capped their height at about 70 feet.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Most people in the city of Rome lived in rented apartment blocks. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-great-pyramid-built",
+   "category": "Ancient Egypt",
+   "claim": "The Great Pyramid of Giza was built for the pharaoh Khufu",
+   "stated_answer": "2560 BC",
+   "context": "Built around 2560 BC, give or take a few decades. It stayed the tallest structure made by humans for nearly 4,000 years.",
+   "go_deeper": "The workers left graffiti inside naming their own gangs, with names like 'Friends of Khufu'. They were proud of the job.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Great Pyramid of Giza was built for the pharaoh Khufu. — 3100 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Pyramid of Giza was built for the pharaoh Khufu. — 2344 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Pyramid of Giza was built for the pharaoh Khufu. — 2128 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Pyramid of Giza was built for the pharaoh Khufu. — 1912 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Great Pyramid of Giza was built for the pharaoh Khufu in 2560 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-tut-tomb-found",
+   "category": "Ancient Egypt",
+   "claim": "Howard Carter found the tomb of Tutankhamun",
+   "stated_answer": "1922",
+   "context": "Carter reached the sealed doorway in November 1922 after six years of searching the Valley of the Kings.",
+   "go_deeper": "Asked whether he could see anything through the first small hole, Carter answered: 'Yes, wonderful things.'",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Howard Carter found the tomb of Tutankhamun. — 1822 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Howard Carter found the tomb of Tutankhamun. — 1962 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Howard Carter found the tomb of Tutankhamun. — 2002 — Before or after?",
+     "verdict": "bad",
+     "why": "unreasonable"
+    },
+    {
+     "text": "Howard Carter found the tomb of Tutankhamun. — 2042 — Before or after?",
+     "verdict": "bad",
+     "why": "26 years in future?"
+    },
+    {
+     "text": "Howard Carter found the tomb of Tutankhamun in 1922. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-rosetta-found",
+   "category": "Ancient Egypt",
+   "claim": "The Rosetta Stone was found by French soldiers in Egypt",
+   "stated_answer": "1799",
+   "context": "Soldiers in Napoleon's expedition uncovered it while rebuilding a fort near the town of Rashid.",
+   "go_deeper": "The British took it two years later as a spoil of war. It has been in the British Museum since 1802.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Rosetta Stone was found by French soldiers in Egypt. — 1790 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Rosetta Stone was found by French soldiers in Egypt. — 1822 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Rosetta Stone was found by French soldiers in Egypt. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Rosetta Stone was found by French soldiers in Egypt. — 1771 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Rosetta Stone was found by French soldiers in Egypt in 1799. — True or false?",
+     "verdict": "bad",
+     "why": "unreasonable"
+    }
+   ]
+  },
+  {
+   "id": "eg-hieroglyphs-deciphered",
+   "category": "Ancient Egypt",
+   "claim": "Champollion cracked the hieroglyphic script",
+   "stated_answer": "1822",
+   "context": "Jean-Francois Champollion announced his breakthrough in 1822, 23 years after the Rosetta Stone was found.",
+   "go_deeper": "Nobody had been able to read hieroglyphs for roughly 1,400 years. An entire civilisation's writing had gone silent.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Champollion cracked the hieroglyphic script. — 1799 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Champollion cracked the hieroglyphic script. — 1831 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Champollion cracked the hieroglyphic script. — 1840 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Champollion cracked the hieroglyphic script. — 1922 — Before or after?",
+     "verdict": "bad",
+     "why": "unreasonable"
+    },
+    {
+     "text": "Champollion cracked the hieroglyphic script in 1822. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-cleopatra-died",
+   "category": "Ancient Egypt",
+   "claim": "Cleopatra died, ending three thousand years of pharaohs",
+   "stated_answer": "30 BC",
+   "context": "She died in 30 BC after Octavian's forces took Alexandria. Egypt became a Roman province.",
+   "go_deeper": "She was the last ruler of the Ptolemaic dynasty, and reportedly the first of them in three centuries who bothered to learn Egyptian.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Cleopatra died, ending three thousand years of pharaohs. — 332 BC — Before or after?",
+     "verdict": "bad",
+     "why": "unreasonable"
+    },
+    {
+     "text": "Cleopatra died, ending three thousand years of pharaohs. — AD 91 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleopatra died, ending three thousand years of pharaohs. — AD 212 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleopatra died, ending three thousand years of pharaohs. — AD 332 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cleopatra died, ending three thousand years of pharaohs in 30 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-pyramid-height",
+   "category": "Ancient Egypt",
+   "claim": "Original height of the Great Pyramid",
+   "stated_answer": "146 metres",
+   "context": "About 146 metres when finished, roughly 480 feet. Erosion and the loss of its outer casing have taken some metres off.",
+   "go_deeper": "The base is level to within a couple of centimetres across more than five acres, achieved without a single modern instrument.",
+   "rating_of_the_fact": null,
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Original height of the Great Pyramid. — 128 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Original height of the Great Pyramid. — 164 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Original height of the Great Pyramid. — 182 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Original height of the Great Pyramid. — 110 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Original height of the Great Pyramid. — 73 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Original height of the Great Pyramid. — 219 metres — More or fewer?",
+     "verdict": "bad",
+     "why": "too far off"
+    },
+    {
+     "text": "Original height of the Great Pyramid: 146 metres. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-ramesses-reign",
+   "category": "Ancient Egypt",
+   "claim": "Length of the reign of Ramesses II",
+   "stated_answer": "66 years",
+   "context": "He ruled for about 66 years in the 13th century BC and lived into his ninetieth year.",
+   "go_deeper": "He outlived twelve of his own sons. By the end of his reign, most Egyptians alive had never known another pharaoh.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Length of the reign of Ramesses II. — 58 years — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the reign of Ramesses II. — 74 years — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the reign of Ramesses II. — 82 years — More or fewer?",
+     "verdict": "bad",
+     "why": "huh?  in those days"
+    },
+    {
+     "text": "Length of the reign of Ramesses II. — 50 years — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the reign of Ramesses II. — 33 years — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the reign of Ramesses II. — 99 years — More or fewer?",
+     "verdict": "bad",
+     "why": "huh?"
+    },
+    {
+     "text": "Length of the reign of Ramesses II: 66 years. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-kadesh",
+   "category": "Ancient Egypt",
+   "claim": "The Battle of Kadesh was fought between Egypt and the Hittites",
+   "stated_answer": "1274 BC",
+   "context": "Fought around 1274 BC, it may have been the largest chariot battle ever, with several thousand chariots.",
+   "go_deeper": "It ended in the earliest surviving peace treaty between two great powers. A copy hangs at the United Nations.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Battle of Kadesh was fought between Egypt and the Hittites. — 1479 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Kadesh was fought between Egypt and the Hittites. — 1192 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Kadesh was fought between Egypt and the Hittites. — 1110 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Kadesh was fought between Egypt and the Hittites. — 1028 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Kadesh was fought between Egypt and the Hittites in 1274 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-unification",
+   "category": "Ancient Egypt",
+   "claim": "Upper and Lower Egypt were unified into one kingdom",
+   "stated_answer": "3100 BC",
+   "context": "Traditionally dated to about 3100 BC and credited to a king named Narmer.",
+   "go_deeper": "The double crown of Egypt was two crowns combined, one for each half of the country, worn together for the next three millennia.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Upper and Lower Egypt were unified into one kingdom. — 3316 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Upper and Lower Egypt were unified into one kingdom. — 2560 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Upper and Lower Egypt were unified into one kingdom. — 3532 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Upper and Lower Egypt were unified into one kingdom. — 3748 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Upper and Lower Egypt were unified into one kingdom in 3100 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-hatshepsut",
+   "category": "Ancient Egypt",
+   "claim": "Hatshepsut began her reign as pharaoh",
+   "stated_answer": "1479 BC",
+   "context": "She took power around 1479 BC and ruled for roughly two decades, one of very few women to rule Egypt outright.",
+   "go_deeper": "Her successor tried to erase her from the record, chiselling her name off monuments. It did not work.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Hatshepsut began her reign as pharaoh. — 1561 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hatshepsut began her reign as pharaoh. — 1274 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hatshepsut began her reign as pharaoh. — 1643 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hatshepsut began her reign as pharaoh. — 1725 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hatshepsut began her reign as pharaoh in 1479 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-alexander",
+   "category": "Ancient Egypt",
+   "claim": "Alexander the Great took Egypt from the Persians",
+   "stated_answer": "332 BC",
+   "context": "Egypt surrendered to him in 332 BC, and he founded Alexandria on the coast the following year.",
+   "go_deeper": "His general Ptolemy took Egypt after Alexander died, starting the dynasty that ended with Cleopatra 300 years later.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Alexander the Great took Egypt from the Persians. — 453 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great took Egypt from the Persians. — 30 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great took Egypt from the Persians. — 574 BC — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexander the Great took Egypt from the Persians. — 694 BC — Before or after?",
+     "verdict": "bad",
+     "why": "too far off"
+    },
+    {
+     "text": "Alexander the Great took Egypt from the Persians in 332 BC. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-rosetta-scripts",
+   "category": "Ancient Egypt",
+   "claim": "Number of scripts carved on the Rosetta Stone",
+   "stated_answer": "3 scripts",
+   "context": "The same decree appears three times: in hieroglyphs, in demotic Egyptian, and in ancient Greek.",
+   "go_deeper": "Scholars could already read the Greek. That is what made the stone a key rather than just another inscription.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Number of scripts carved on the Rosetta Stone. — 2 scripts — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of scripts carved on the Rosetta Stone. — 4 scripts — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of scripts carved on the Rosetta Stone: 3 scripts. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-tut-age",
+   "category": "Ancient Egypt",
+   "claim": "Tutankhamun's age when he died",
+   "stated_answer": "19 years old",
+   "context": "He became pharaoh at about nine and died at around nineteen.",
+   "go_deeper": "He was a minor king who was largely forgotten, which is exactly why his tomb survived intact while the great pharaohs' were robbed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Tutankhamun's age when he died. — 17 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died. — 21 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died. — 23 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died. — 15 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died. — 12 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died. — 26 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Tutankhamun's age when he died: 19 years old. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-nile-length",
+   "category": "Ancient Egypt",
+   "claim": "Length of the Nile",
+   "stated_answer": "6,650 kilometres",
+   "context": "About 6,650 km, or roughly 4,130 miles, running north through eleven countries.",
+   "go_deeper": "Egypt is mostly desert. Nearly everyone in the country has always lived within a few miles of that one river.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Length of the Nile. — 5,852 kilometres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Nile. — 7,448 kilometres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Nile. — 8,312 kilometres — More or fewer?",
+     "verdict": "bad",
+     "why": "too big"
+    },
+    {
+     "text": "Length of the Nile. — 4,988 kilometres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Nile. — 3,325 kilometres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Nile. — 9,975 kilometres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Nile: 6,650 kilometres. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "eg-pyramid-count",
+   "category": "Ancient Egypt",
+   "claim": "Number of known pyramids in Egypt",
+   "stated_answer": "118 pyramids",
+   "context": "Around 118 have been identified, though the count shifts as ruined ones are confirmed or reclassified.",
+   "go_deeper": "Sudan, just south of Egypt, has considerably more pyramids than Egypt does. They are smaller and much less famous.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Number of known pyramids in Egypt. — 104 pyramids — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of known pyramids in Egypt. — 132 pyramids — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of known pyramids in Egypt. — 148 pyramids — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of known pyramids in Egypt. — 88 pyramids — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of known pyramids in Egypt. — 59 pyramids — More or fewer?",
+     "verdict": "bad",
+     "why": "too few"
+    },
+    {
+     "text": "Number of known pyramids in Egypt. — 177 pyramids — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of known pyramids in Egypt: 118 pyramids. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-invasion-poland",
+   "category": "World War II in Europe",
+   "claim": "Germany invaded Poland, beginning the war in Europe",
+   "stated_answer": "1939",
+   "context": "The invasion began on 1 September 1939; Britain and France declared war two days later.",
+   "go_deeper": "The Soviet Union invaded Poland from the east sixteen days later, under a secret clause of the Nazi-Soviet pact.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Germany invaded Poland, beginning the war in Europe. — 1938 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded Poland, beginning the war in Europe. — 1940 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded Poland, beginning the war in Europe. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded Poland, beginning the war in Europe in 1939. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-dunkirk",
+   "category": "World War II in Europe",
+   "claim": "British and Allied troops were evacuated from Dunkirk",
+   "stated_answer": "1940",
+   "context": "Some 338,000 men were lifted from the beaches between 26 May and 4 June 1940.",
+   "go_deeper": "Hundreds of civilian boats crossed the Channel to help, many crewed by their owners.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "British and Allied troops were evacuated from Dunkirk. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "British and Allied troops were evacuated from Dunkirk. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "British and Allied troops were evacuated from Dunkirk in 1940. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-britain",
+   "category": "World War II in Europe",
+   "claim": "The Battle of Britain was fought in the skies over England",
+   "stated_answer": "1940",
+   "context": "The RAF held off the Luftwaffe between July and October 1940, preventing a German invasion.",
+   "go_deeper": "It was the first major campaign fought entirely by air forces.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Battle of Britain was fought in the skies over England. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Britain was fought in the skies over England. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Britain was fought in the skies over England in 1940. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-barbarossa",
+   "category": "World War II in Europe",
+   "claim": "Germany invaded the Soviet Union",
+   "stated_answer": "1941",
+   "context": "Operation Barbarossa opened on 22 June 1941 along a front of nearly 2,900 km.",
+   "go_deeper": "It was the largest land invasion in history, and it broke the pact the two powers had signed less than two years earlier.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Germany invaded the Soviet Union. — 1940 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded the Soviet Union. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded the Soviet Union. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded the Soviet Union. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany invaded the Soviet Union in 1941. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-stalingrad",
+   "category": "World War II in Europe",
+   "claim": "The German Sixth Army surrendered at Stalingrad",
+   "stated_answer": "1943",
+   "context": "The surrender at the end of January 1943 marked the turning point of the war in the east.",
+   "go_deeper": "Of roughly 91,000 Germans taken prisoner there, only about 5,000 ever returned home.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The German Sixth Army surrendered at Stalingrad. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The German Sixth Army surrendered at Stalingrad. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The German Sixth Army surrendered at Stalingrad. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The German Sixth Army surrendered at Stalingrad. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The German Sixth Army surrendered at Stalingrad in 1943. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-dday",
+   "category": "World War II in Europe",
+   "claim": "Allied forces landed in Normandy on D-Day",
+   "stated_answer": "1944",
+   "context": "The landings began on 6 June 1944 across five beaches.",
+   "go_deeper": "The invasion had been postponed by a day because of weather; the next window would have been two weeks later.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Allied forces landed in Normandy on D-Day. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied forces landed in Normandy on D-Day. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied forces landed in Normandy on D-Day. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied forces landed in Normandy on D-Day in 1944. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-ve-day",
+   "category": "World War II in Europe",
+   "claim": "Germany surrendered, ending the war in Europe",
+   "stated_answer": "1945",
+   "context": "The unconditional surrender took effect on 8 May 1945.",
+   "go_deeper": "The war in the Pacific continued for another three months.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Germany surrendered, ending the war in Europe. — 1944 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany surrendered, ending the war in Europe. — 1946 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany surrendered, ending the war in Europe. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Germany surrendered, ending the war in Europe in 1945. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-bulge",
+   "category": "World War II in Europe",
+   "claim": "The Battle of the Bulge began in the Ardennes",
+   "stated_answer": "1944",
+   "context": "A surprise German offensive launched on 16 December 1944 through wooded, snowbound country.",
+   "go_deeper": "It was the costliest single battle for American forces in the entire war.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Battle of the Bulge began in the Ardennes. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of the Bulge began in the Ardennes. — 1945 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of the Bulge began in the Ardennes. — 1941 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of the Bulge began in the Ardennes in 1944. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-dday-troops",
+   "category": "World War II in Europe",
+   "claim": "Allied troops landed in Normandy on the first day",
+   "stated_answer": "156,000 troops",
+   "context": "About 156,000 came ashore or landed by air on 6 June 1944.",
+   "go_deeper": "Nearly 7,000 vessels took part, the largest seaborne invasion ever mounted.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 137,280 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 174,720 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 195,000 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 117,000 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 78,000 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day. — 234,000 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Allied troops landed in Normandy on the first day: 156,000 troops. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-dunkirk-rescued",
+   "category": "World War II in Europe",
+   "claim": "Troops evacuated from the beaches at Dunkirk",
+   "stated_answer": "338,000 troops",
+   "context": "About 338,000 British and Allied soldiers were taken off between 26 May and 4 June 1940.",
+   "go_deeper": "Churchill had expected perhaps 45,000 to be saved. He still called it a deliverance, not a victory.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 297,440 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 378,560 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 422,500 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 253,500 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 169,000 troops — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk. — 507,000 troops — More or fewer?",
+     "verdict": "bad",
+     "why": "too many"
+    },
+    {
+     "text": "Troops evacuated from the beaches at Dunkirk: 338,000 troops. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-soviet-deaths",
+   "category": "World War II in Europe",
+   "claim": "Soviet deaths in the Second World War",
+   "stated_answer": "27,000,000 deaths",
+   "context": "Around 27 million Soviet citizens died, military and civilian, more than any other nation.",
+   "go_deeper": "Roughly two-thirds of the total were civilians.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Soviet deaths in the Second World War. — 23,760,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soviet deaths in the Second World War. — 30,240,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soviet deaths in the Second World War. — 33,750,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soviet deaths in the Second World War. — 20,250,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soviet deaths in the Second World War. — 13,500,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Soviet deaths in the Second World War. — 40,500,000 deaths — More or fewer?",
+     "verdict": "bad",
+     "why": "too high"
+    },
+    {
+     "text": "Soviet deaths in the Second World War: 27,000,000 deaths. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-blitz-deaths",
+   "category": "World War II in Europe",
+   "claim": "Civilians killed in Britain during the Blitz",
+   "stated_answer": "43,000 deaths",
+   "context": "About 43,000 British civilians died in the bombing between September 1940 and May 1941.",
+   "go_deeper": "London was bombed on 57 consecutive nights at the start of the campaign.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 37,840 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 48,160 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 53,750 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 32,250 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 21,500 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz. — 64,500 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Civilians killed in Britain during the Blitz: 43,000 deaths. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-leningrad-siege",
+   "category": "World War II in Europe",
+   "claim": "Days the siege of Leningrad lasted",
+   "stated_answer": "872 days",
+   "context": "The city was encircled for 872 days, from September 1941 to January 1944.",
+   "go_deeper": "Supplies came across frozen Lake Ladoga by truck, on a route the city called the Road of Life.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Days the siege of Leningrad lasted. — 767 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the siege of Leningrad lasted. — 977 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the siege of Leningrad lasted. — 1,090 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the siege of Leningrad lasted. — 654 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the siege of Leningrad lasted. — 436 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the siege of Leningrad lasted. — 1,308 days — More or fewer?",
+     "verdict": "bad",
+     "why": "too many"
+    },
+    {
+     "text": "Days the siege of Leningrad lasted: 872 days. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-enigma",
+   "category": "World War II in Europe",
+   "claim": "Bletchley Park's codebreakers first broke into German naval Enigma traffic",
+   "stated_answer": "1941",
+   "context": "Breakthroughs in 1941, helped by captured material, opened up naval Enigma.",
+   "go_deeper": "The work stayed secret until the 1970s, so those who did it could not be publicly credited for thirty years.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Bletchley Park's codebreakers first broke into German naval Enigma traffic. — 1940 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bletchley Park's codebreakers first broke into German naval Enigma traffic. — 1942 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bletchley Park's codebreakers first broke into German naval Enigma traffic. — 1943 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bletchley Park's codebreakers first broke into German naval Enigma traffic. — 1939 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Bletchley Park's codebreakers first broke into German naval Enigma traffic in 1941. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-us-entry",
+   "category": "World War II in Europe",
+   "claim": "Germany declared war on the United States, not the other way round",
+   "stated_answer": "True",
+   "context": "Hitler declared war on the US on 11 December 1941, four days after Pearl Harbor. Congress then reciprocated.",
+   "go_deeper": "He was not obliged to. The Tripartite Pact only required Germany to act if Japan were attacked.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Germany declared war on the United States, not the other way round. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-eastern-front",
+   "category": "World War II in Europe",
+   "claim": "Most German army losses in the war happened on the Eastern Front",
+   "stated_answer": "True",
+   "context": "Around three-quarters of German military casualties were sustained fighting the Soviet Union.",
+   "go_deeper": "The Eastern Front was the largest theatre of land warfare in history.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Most German army losses in the war happened on the Eastern Front. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-churchill-pm",
+   "category": "World War II in Europe",
+   "claim": "Churchill was Prime Minister when Britain declared war in 1939",
+   "stated_answer": "False",
+   "context": "Neville Chamberlain declared war. Churchill became Prime Minister in May 1940, eight months later.",
+   "go_deeper": "He took office on the same day Germany invaded France and the Low Countries.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Churchill was Prime Minister when Britain declared war in 1939. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-radar",
+   "category": "World War II in Europe",
+   "claim": "Britain had a working radar early-warning network before the Battle of Britain",
+   "stated_answer": "True",
+   "context": "The Chain Home stations were operating from 1938 and gave the RAF warning of incoming raids.",
+   "go_deeper": "Radar let a smaller force be in the right place. Without it the numbers alone would probably have told.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Britain had a working radar early-warning network before the Battle of Britain. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-women-work",
+   "category": "World War II in Europe",
+   "claim": "British women were conscripted for war work",
+   "stated_answer": "True",
+   "context": "From December 1941 unmarried women aged 20 to 30 could be called up for the services, industry or land work.",
+   "go_deeper": "Britain was the first country to conscript women, and by 1943 around 90 percent of single women were in war work.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "British women were conscripted for war work. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "we-italy-side",
+   "category": "World War II in Europe",
+   "claim": "Italy changed sides during the war",
+   "stated_answer": "True",
+   "context": "Mussolini was deposed in July 1943 and Italy surrendered in September, then declared war on Germany in October.",
+   "go_deeper": "German forces occupied the north and the fighting up the Italian peninsula continued until 1945.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Italy changed sides during the war. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-brown",
+   "category": "The Civil Rights Movement",
+   "claim": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education",
+   "stated_answer": "1954",
+   "context": "Decided unanimously in May 1954, overturning the 'separate but equal' doctrine.",
+   "go_deeper": "The ruling did not set a deadline, and many districts resisted for more than a decade.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education. — 1953 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education. — 1955 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education. — 1957 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education in 1954. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-montgomery",
+   "category": "The Civil Rights Movement",
+   "claim": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott",
+   "stated_answer": "1955",
+   "context": "Parks was arrested on 1 December 1955; the boycott began four days later.",
+   "go_deeper": "She was a trained NAACP secretary, not a woman who happened to be tired. The act was deliberate.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott. — 1954 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott. — 1957 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott in 1955. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-boycott-days",
+   "category": "The Civil Rights Movement",
+   "claim": "Days the Montgomery bus boycott lasted",
+   "stated_answer": "381 days",
+   "context": "It ran for 381 days, ending in December 1956 after the Supreme Court struck down bus segregation.",
+   "go_deeper": "Around 40,000 Black commuters walked, carpooled or took Black-owned taxis for over a year.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 335 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 427 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 476 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 286 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 190 days — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted. — 572 days — More or fewer?",
+     "verdict": "bad",
+     "why": "too long"
+    },
+    {
+     "text": "Days the Montgomery bus boycott lasted: 381 days. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-little-rock",
+   "category": "The Civil Rights Movement",
+   "claim": "The Little Rock Nine desegregated Central High School under federal escort",
+   "stated_answer": "1957",
+   "context": "Eisenhower sent the 101st Airborne to Arkansas in September 1957 to enforce the court order.",
+   "go_deeper": "The governor had used the National Guard to block the students. The president federalised it and sent it home.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Little Rock Nine desegregated Central High School under federal escort. — 1954 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Little Rock Nine desegregated Central High School under federal escort. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Little Rock Nine desegregated Central High School under federal escort. — 1955 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Little Rock Nine desegregated Central High School under federal escort. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Little Rock Nine desegregated Central High School under federal escort in 1957. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-freedom-rides",
+   "category": "The Civil Rights Movement",
+   "claim": "The Freedom Rides tested desegregation on interstate buses",
+   "stated_answer": "1961",
+   "context": "Integrated groups rode buses into the South in 1961 to test rulings that were being ignored.",
+   "go_deeper": "A bus was firebombed in Anniston, Alabama, and riders were beaten while police stayed away.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Freedom Rides tested desegregation on interstate buses. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Freedom Rides tested desegregation on interstate buses. — 1963 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Freedom Rides tested desegregation on interstate buses. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Freedom Rides tested desegregation on interstate buses. — 1957 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Freedom Rides tested desegregation on interstate buses in 1961. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-birmingham",
+   "category": "The Civil Rights Movement",
+   "claim": "The Birmingham campaign brought police dogs and fire hoses onto national television",
+   "stated_answer": "1963",
+   "context": "Spring 1963 protests met with dogs and high-pressure hoses, including against schoolchildren.",
+   "go_deeper": "The images shifted national opinion sharply and helped force the Civil Rights Act through Congress.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Birmingham campaign brought police dogs and fire hoses onto national television. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Birmingham campaign brought police dogs and fire hoses onto national television. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Birmingham campaign brought police dogs and fire hoses onto national television. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Birmingham campaign brought police dogs and fire hoses onto national television. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Birmingham campaign brought police dogs and fire hoses onto national television in 1963. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-letter-birmingham",
+   "category": "The Civil Rights Movement",
+   "claim": "King wrote his Letter from Birmingham Jail",
+   "stated_answer": "1963",
+   "context": "Written in April 1963 in response to white clergymen who called the protests unwise and untimely.",
+   "go_deeper": "He began it in the margins of a newspaper, having no writing paper in the cell.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "King wrote his Letter from Birmingham Jail. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "King wrote his Letter from Birmingham Jail. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "King wrote his Letter from Birmingham Jail. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "King wrote his Letter from Birmingham Jail. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "King wrote his Letter from Birmingham Jail in 1963. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-selma",
+   "category": "The Civil Rights Movement",
+   "claim": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday",
+   "stated_answer": "1965",
+   "context": "State troopers assaulted marchers leaving Selma on 7 March 1965.",
+   "go_deeper": "The Voting Rights Act was signed five months later.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday. — 1963 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday in 1965. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-selma-distance",
+   "category": "The Civil Rights Movement",
+   "claim": "Distance of the Selma to Montgomery march",
+   "stated_answer": "54 miles",
+   "context": "About 54 miles along Highway 80, completed on the third attempt over five days.",
+   "go_deeper": "The final march was federally protected, and around 25,000 people arrived at the state capitol.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Distance of the Selma to Montgomery march. — 43 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march. — 65 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march. — 76 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march. — 32 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march. — 22 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march. — 97 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance of the Selma to Montgomery march: 54 miles. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-fair-housing",
+   "category": "The Civil Rights Movement",
+   "claim": "The Fair Housing Act banned discrimination in the sale and rental of housing",
+   "stated_answer": "1968",
+   "context": "Signed in April 1968, a week after King's assassination.",
+   "go_deeper": "It had been stalled in Congress for two years. His death broke the deadlock.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Fair Housing Act banned discrimination in the sale and rental of housing. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Fair Housing Act banned discrimination in the sale and rental of housing. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Fair Housing Act banned discrimination in the sale and rental of housing. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Fair Housing Act banned discrimination in the sale and rental of housing. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Fair Housing Act banned discrimination in the sale and rental of housing in 1968. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-loving",
+   "category": "The Civil Rights Movement",
+   "claim": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia",
+   "stated_answer": "1967",
+   "context": "The unanimous ruling invalidated such laws in the sixteen states that still had them.",
+   "go_deeper": "Richard and Mildred Loving had been sentenced to a year in prison, suspended on condition they leave Virginia.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia. — 1964 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia in 1967. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-king-nobel",
+   "category": "The Civil Rights Movement",
+   "claim": "Martin Luther King Jr. received the Nobel Peace Prize",
+   "stated_answer": "1964",
+   "context": "Awarded at 35, making him the youngest recipient at that time.",
+   "go_deeper": "He gave the entire prize money, about $54,000, to the movement.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Martin Luther King Jr. received the Nobel Peace Prize. — 1963 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. received the Nobel Peace Prize. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. received the Nobel Peace Prize. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. received the Nobel Peace Prize. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. received the Nobel Peace Prize in 1964. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-king-age-death",
+   "category": "The Civil Rights Movement",
+   "claim": "Martin Luther King Jr.'s age when he was killed",
+   "stated_answer": "39 years old",
+   "context": "He was 39, having led the movement nationally for twelve years since Montgomery.",
+   "go_deeper": "He was 26 when the bus boycott began.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 34 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 44 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 49 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 29 years old — More or fewer?",
+     "verdict": "bad",
+     "why": "out of context"
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 20 years old — More or fewer?",
+     "verdict": "bad",
+     "why": "out of context"
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed. — 58 years old — More or fewer?",
+     "verdict": "bad",
+     "why": "out o f context"
+    },
+    {
+     "text": "Martin Luther King Jr.'s age when he was killed: 39 years old. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-mlk-holiday",
+   "category": "The Civil Rights Movement",
+   "claim": "Martin Luther King Jr. Day was first observed as a federal holiday",
+   "stated_answer": "1986",
+   "context": "Signed into law in 1983 and first observed in January 1986.",
+   "go_deeper": "It was not observed in all fifty states until 2000.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 1984 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 1988 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 1993 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 1979 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 1956 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday. — 2016 — Before or after?",
+     "verdict": "bad",
+     "why": "out of context"
+    },
+    {
+     "text": "Martin Luther King Jr. Day was first observed as a federal holiday in 1986. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-parks-first",
+   "category": "The Civil Rights Movement",
+   "claim": "Rosa Parks was the first person arrested for refusing to give up a bus seat in Montgomery",
+   "stated_answer": "False",
+   "context": "Claudette Colvin, aged 15, was arrested for the same act nine months earlier. Organisers chose Parks as the test case.",
+   "go_deeper": "Colvin was one of four plaintiffs in Browder v. Gayle, the case that actually ended bus segregation.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Rosa Parks was the first person arrested for refusing to give up a bus seat in Montgomery. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-dream-improvised",
+   "category": "The Civil Rights Movement",
+   "claim": "The most famous passage of the 'I Have a Dream' speech was not in the prepared text",
+   "stated_answer": "True",
+   "context": "King had used the dream passage before and cut it from the draft. He returned to it from memory at the podium.",
+   "go_deeper": "Mahalia Jackson called out 'Tell them about the dream, Martin' from behind him.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The most famous passage of the 'I Have a Dream' speech was not in the prepared text. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-nonviolence-only",
+   "category": "The Civil Rights Movement",
+   "claim": "The movement was united behind nonviolent tactics",
+   "stated_answer": "False",
+   "context": "Nonviolence was central to King and the SCLC, but figures such as Malcolm X and later the Black Panthers argued for self-defence and different aims.",
+   "go_deeper": "The disagreement was strategic and public, and it sharpened after 1965.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The movement was united behind nonviolent tactics. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-women-leaders",
+   "category": "The Civil Rights Movement",
+   "claim": "Women organised much of the movement's day-to-day work",
+   "stated_answer": "True",
+   "context": "Ella Baker, Septima Clark, Diane Nash, Jo Ann Robinson and Fannie Lou Hamer were central to organising and strategy.",
+   "go_deeper": "Robinson mimeographed 35,000 leaflets overnight to launch the Montgomery boycott.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Women organised much of the movement's day-to-day work. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cr-fbi",
+   "category": "The Civil Rights Movement",
+   "claim": "The FBI conducted surveillance of Martin Luther King Jr.",
+   "stated_answer": "True",
+   "context": "The Bureau wiretapped him for years and sent an anonymous letter urging him to kill himself.",
+   "go_deeper": "The Church Committee documented this in 1975, and the surveillance tapes are sealed until 2027.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The FBI conducted surveillance of Martin Luther King Jr.. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-sank",
+   "category": "The Titanic",
+   "claim": "The Titanic struck an iceberg and sank on her maiden voyage",
+   "stated_answer": "1912",
+   "context": "She hit the iceberg late on 14 April 1912 and sank in the early hours of the 15th.",
+   "go_deeper": "The voyage was only four days old when she went down.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Titanic struck an iceberg and sank on her maiden voyage. — 1911 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Titanic struck an iceberg and sank on her maiden voyage. — 1913 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Titanic struck an iceberg and sank on her maiden voyage in 1912. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-wreck-found",
+   "category": "The Titanic",
+   "claim": "The wreck of the Titanic was located on the sea floor",
+   "stated_answer": "1985",
+   "context": "Found by a joint expedition led by Robert Ballard in September 1985, 73 years after the sinking.",
+   "go_deeper": "The search was partly cover for a secret US Navy mission to survey two sunken nuclear submarines.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The wreck of the Titanic was located on the sea floor. — 1980 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The wreck of the Titanic was located on the sea floor. — 1997 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The wreck of the Titanic was located on the sea floor. — 1975 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The wreck of the Titanic was located on the sea floor. — 1971 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The wreck of the Titanic was located on the sea floor in 1985. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-deaths",
+   "category": "The Titanic",
+   "claim": "People who died when the Titanic sank",
+   "stated_answer": "1,500 deaths",
+   "context": "Roughly 1,500 of about 2,220 aboard died. Exact figures still vary between sources.",
+   "go_deeper": "Most died of cold rather than drowning; the water was around minus two degrees Celsius.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "People who died when the Titanic sank. — 1,320 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who died when the Titanic sank. — 1,680 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who died when the Titanic sank. — 1,875 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who died when the Titanic sank. — 1,125 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who died when the Titanic sank. — 750 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People who died when the Titanic sank. — 2,250 deaths — More or fewer?",
+     "verdict": "bad",
+     "why": "too high"
+    },
+    {
+     "text": "People who died when the Titanic sank: 1,500 deaths. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-aboard",
+   "category": "The Titanic",
+   "claim": "People aboard the Titanic when she sailed",
+   "stated_answer": "2,220 people",
+   "context": "About 2,220 passengers and crew, well below her capacity of roughly 3,300.",
+   "go_deeper": "A national coal strike had cancelled other sailings, so she carried passengers transferred from other ships.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "People aboard the Titanic when she sailed. — 1,954 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed. — 2,486 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed. — 2,775 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed. — 1,665 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed. — 1,110 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed. — 3,330 people — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "People aboard the Titanic when she sailed: 2,220 people. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-lifeboats",
+   "category": "The Titanic",
+   "claim": "Lifeboats carried by the Titanic",
+   "stated_answer": "20 lifeboats",
+   "context": "Twenty, with room for about 1,178 people — roughly half those aboard.",
+   "go_deeper": "That was more than British regulations required. The rules were based on ship tonnage, not passenger numbers, and were badly out of date.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Lifeboats carried by the Titanic. — 18 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic. — 22 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic. — 24 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic. — 16 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic. — 13 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic. — 27 lifeboats — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lifeboats carried by the Titanic: 20 lifeboats. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-length",
+   "category": "The Titanic",
+   "claim": "Length of the Titanic",
+   "stated_answer": "269 metres",
+   "context": "About 269 metres, or 882 feet — among the largest moving objects yet built.",
+   "go_deeper": "A modern cruise ship like Icon of the Seas is longer and roughly five times her tonnage.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Length of the Titanic. — 237 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic. — 301 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic. — 336 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic. — 202 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic. — 134 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic. — 404 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Titanic: 269 metres. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-time-to-sink",
+   "category": "The Titanic",
+   "claim": "Time between striking the iceberg and going under",
+   "stated_answer": "160 minutes",
+   "context": "About two hours forty minutes, from 11:40pm to 2:20am.",
+   "go_deeper": "Her designer Thomas Andrews inspected the damage and gave her about two hours. He was close.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Time between striking the iceberg and going under. — 141 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under. — 179 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under. — 200 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under. — 120 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under. — 80 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under. — 240 minutes — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Time between striking the iceberg and going under: 160 minutes. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-depth",
+   "category": "The Titanic",
+   "claim": "Depth at which the Titanic wreck lies",
+   "stated_answer": "3,800 metres",
+   "context": "About 3,800 metres down, roughly 12,500 feet, off Newfoundland.",
+   "go_deeper": "That is deeper than most submarines can go; reaching it needs a purpose-built submersible.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Depth at which the Titanic wreck lies. — 3,344 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies. — 4,256 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies. — 4,750 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies. — 2,850 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies. — 1,900 metres — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies. — 5,700 metres — More or fewer?",
+     "verdict": "bad",
+     "why": "too extreme"
+    },
+    {
+     "text": "Depth at which the Titanic wreck lies: 3,800 metres. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-compartments",
+   "category": "The Titanic",
+   "claim": "Watertight compartments in the Titanic's hull",
+   "stated_answer": "16 compartments",
+   "context": "Sixteen. She could stay afloat with four flooded. The iceberg opened five.",
+   "go_deeper": "The bulkheads did not extend high enough, so water spilled from one compartment into the next like an ice-cube tray.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 14 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 18 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 20 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 12 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 9 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull. — 23 compartments — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Watertight compartments in the Titanic's hull: 16 compartments. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-carpathia",
+   "category": "The Titanic",
+   "claim": "Hours the Carpathia took to reach the survivors",
+   "stated_answer": "4 hours",
+   "context": "The Carpathia picked up the distress call and arrived at about 4am, some four hours later.",
+   "go_deeper": "Her captain shut off heating to the cabins to squeeze extra speed out of the engines.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Hours the Carpathia took to reach the survivors. — 3 hours — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hours the Carpathia took to reach the survivors. — 5 hours — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hours the Carpathia took to reach the survivors. — 6 hours — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hours the Carpathia took to reach the survivors. — 2 hours — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Hours the Carpathia took to reach the survivors: 4 hours. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ti-built",
+   "category": "The Titanic",
+   "claim": "The Titanic was launched at the Harland and Wolff yard in Belfast",
+   "stated_answer": "1911",
+   "context": "Launched 31 May 1911, then fitted out for nearly a year before her maiden voyage.",
+   "go_deeper": "She was launched without engines, funnels or interiors — just a hull, sliding into the water on tallow and soap.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Titanic was launched at the Harland and Wolff yard in Belfast. — 1910 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Titanic was launched at the Harland and Wolff yard in Belfast. — 1912 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Titanic was launched at the Harland and Wolff yard in Belfast in 1911. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-speakeasies",
+   "category": "The Twenties and Prohibition",
+   "claim": "Estimated speakeasies operating in New York City at Prohibition's height",
+   "stated_answer": "30,000 speakeasies",
+   "context": "Estimates ran from 20,000 to 100,000, none of them reliable for obvious reasons.",
+   "go_deeper": "The city had far more illegal bars under Prohibition than it had legal saloons before it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 26,400 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 33,600 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 37,500 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 22,500 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 15,000 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height. — 45,000 speakeasies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Estimated speakeasies operating in New York City at Prohibition's height: 30,000 speakeasies. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-dow-peak",
+   "category": "The Twenties and Prohibition",
+   "claim": "Peak of the Dow Jones average before the 1929 crash",
+   "stated_answer": "381 points",
+   "context": "It closed at 381.17 on 3 September 1929.",
+   "go_deeper": "By July 1932 it had fallen to 41, a decline of about 89 percent.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 335 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 427 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 476 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 286 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 190 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash. — 572 points — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Peak of the Dow Jones average before the 1929 crash: 381 points. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-empire-state",
+   "category": "The Twenties and Prohibition",
+   "claim": "The Empire State Building opened in New York",
+   "stated_answer": "1931",
+   "context": "Completed in just over a year and opened in May 1931, at the start of the Depression.",
+   "go_deeper": "It stood largely empty for years and was nicknamed the Empty State Building.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Empire State Building opened in New York. — 1929 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Empire State Building opened in New York. — 1932 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Empire State Building opened in New York. — 1933 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Empire State Building opened in New York. — 1927 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Empire State Building opened in New York in 1931. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-harlem",
+   "category": "The Twenties and Prohibition",
+   "claim": "The Harlem Renaissance flourished during the 1920s",
+   "stated_answer": "True",
+   "context": "A concentration of Black literature, music and art centred on Harlem, with Langston Hughes, Zora Neale Hurston and Duke Ellington among its figures.",
+   "go_deeper": "It was fed by the Great Migration, which brought some six million Black Americans north over several decades.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Harlem Renaissance flourished during the 1920s. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-drinking-illegal",
+   "category": "The Twenties and Prohibition",
+   "claim": "Drinking alcohol was itself a crime under Prohibition",
+   "stated_answer": "False",
+   "context": "The Eighteenth Amendment banned manufacture, sale and transport. Consumption and private possession of alcohol bought beforehand were not offences.",
+   "go_deeper": "Wealthy households stocked cellars before the deadline and drank legally for years.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Drinking alcohol was itself a crime under Prohibition. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-flappers",
+   "category": "The Twenties and Prohibition",
+   "claim": "The flapper style was widely condemned at the time",
+   "stated_answer": "True",
+   "context": "Short hair, raised hemlines, smoking and dancing in public drew heavy criticism from press and pulpit.",
+   "go_deeper": "The look is now shorthand for the decade, which rather obscures how transgressive it was meant to be.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The flapper style was widely condemned at the time. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-prohibition-worked",
+   "category": "The Twenties and Prohibition",
+   "claim": "Alcohol consumption fell during Prohibition",
+   "stated_answer": "True",
+   "context": "Consumption dropped sharply at first and remained below pre-1920 levels for years, though it recovered from its low point.",
+   "go_deeper": "Deaths from cirrhosis fell too. The policy is usually remembered purely as a failure, which is not quite the whole picture.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Alcohol consumption fell during Prohibition. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-scopes",
+   "category": "The Twenties and Prohibition",
+   "claim": "A Tennessee teacher was prosecuted in 1925 for teaching evolution",
+   "stated_answer": "True",
+   "context": "John Scopes was convicted and fined $100 in a trial that drew national radio coverage.",
+   "go_deeper": "The conviction was later overturned on a technicality, and the law itself stayed on the books until 1967.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "A Tennessee teacher was prosecuted in 1925 for teaching evolution. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "rt-credit",
+   "category": "The Twenties and Prohibition",
+   "claim": "Buying goods on instalment credit became widespread in the 1920s",
+   "stated_answer": "True",
+   "context": "Cars, radios and appliances were increasingly bought on time payments, a new habit for most households.",
+   "go_deeper": "By 1929 a substantial share of consumer durables was bought on credit, which made the bust that followed considerably worse.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Buying goods on instalment credit became widespread in the 1920s. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-sputnik",
+   "category": "The Space Race",
+   "claim": "The Soviet Union launched Sputnik, the first artificial satellite",
+   "stated_answer": "1957",
+   "context": "Sputnik 1 went up on 4 October 1957 and circled the Earth every 96 minutes.",
+   "go_deeper": "It was a polished metal ball about the size of a beach ball, and its radio beeps could be picked up on amateur sets in American back gardens.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Soviet Union launched Sputnik, the first artificial satellite. — 1956 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Soviet Union launched Sputnik, the first artificial satellite. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Soviet Union launched Sputnik, the first artificial satellite. — 1955 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Soviet Union launched Sputnik, the first artificial satellite. — 1962 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Soviet Union launched Sputnik, the first artificial satellite in 1957. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-gagarin",
+   "category": "The Space Race",
+   "claim": "Yuri Gagarin became the first human being to fly in space",
+   "stated_answer": "1961",
+   "context": "Gagarin made a single orbit aboard Vostok 1 on 12 April 1961, and was back on the ground 108 minutes later.",
+   "go_deeper": "He did not land inside his spacecraft. He ejected at about 23,000 feet and came down by parachute, which the Soviets kept quiet for years because the record rules required a pilot to land with his craft.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Yuri Gagarin became the first human being to fly in space. — 1957 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Yuri Gagarin became the first human being to fly in space. — 1962 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Yuri Gagarin became the first human being to fly in space. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Yuri Gagarin became the first human being to fly in space. — 1960 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Yuri Gagarin became the first human being to fly in space in 1961. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-glenn",
+   "category": "The Space Race",
+   "claim": "John Glenn became the first American to orbit the Earth",
+   "stated_answer": "1962",
+   "context": "Glenn flew three orbits aboard Friendship 7 on 20 February 1962.",
+   "go_deeper": "He went back to space in 1998 aboard the shuttle Discovery, aged 77.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "John Glenn became the first American to orbit the Earth. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Glenn became the first American to orbit the Earth. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Glenn became the first American to orbit the Earth. — 1957 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Glenn became the first American to orbit the Earth. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "John Glenn became the first American to orbit the Earth in 1962. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-leonov-spacewalk",
+   "category": "The Space Race",
+   "claim": "Alexei Leonov left his capsule for the first spacewalk",
+   "stated_answer": "1965",
+   "context": "Leonov spent about twelve minutes outside Voskhod 2 on 18 March 1965, on a tether.",
+   "go_deeper": "His suit ballooned in the vacuum until he could not bend it, and he had to bleed air out of it to get back through the airlock.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk. — 1962 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk. — 1961 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk. — 1963 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Alexei Leonov left his capsule for the first spacewalk in 1965. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-1",
+   "category": "The Space Race",
+   "claim": "The Apollo 1 crew was lost in a fire during a launch-pad test",
+   "stated_answer": "1967",
+   "context": "Fire swept the sealed capsule during a rehearsal on 27 January 1967, and the three men aboard did not survive.",
+   "go_deeper": "The hatch opened inward and could not be shifted in time. Every Apollo hatch built afterwards swung outward and could be opened in seconds.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Apollo 1 crew was lost in a fire during a launch-pad test. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Apollo 1 crew was lost in a fire during a launch-pad test. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Apollo 1 crew was lost in a fire during a launch-pad test. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Apollo 1 crew was lost in a fire during a launch-pad test. — 1962 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Apollo 1 crew was lost in a fire during a launch-pad test in 1967. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-8",
+   "category": "The Space Race",
+   "claim": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon",
+   "stated_answer": "1968",
+   "context": "Borman, Lovell and Anders orbited the Moon ten times over Christmas 1968 and came home without landing.",
+   "go_deeper": "Anders' photograph of the Earth rising over the lunar horizon is often credited with helping start the modern environmental movement.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon. — 1970 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon. — 1965 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 8 carried the first people to leave Earth orbit and circle the Moon in 1968. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-armstrong-walk",
+   "category": "The Space Race",
+   "claim": "Neil Armstrong became the first person to walk on the Moon",
+   "stated_answer": "1969",
+   "context": "Armstrong stepped off the ladder late on 20 July 1969, with Buzz Aldrin following about twenty minutes later.",
+   "go_deeper": "The lander touched down with roughly 25 seconds of fuel to spare, because Armstrong had flown on past a boulder field looking for smooth ground.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Neil Armstrong became the first person to walk on the Moon. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Neil Armstrong became the first person to walk on the Moon. — 1970 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Neil Armstrong became the first person to walk on the Moon. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Neil Armstrong became the first person to walk on the Moon in 1969. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-13",
+   "category": "The Space Race",
+   "claim": "An oxygen tank burst on Apollo 13 on its way to the Moon",
+   "stated_answer": "1970",
+   "context": "The tank ruptured two days out, on 13 April 1970. The landing was abandoned and the crew got home four days later.",
+   "go_deeper": "They shut the command module down and used the lunar lander as a lifeboat: a craft built to keep two men alive for two days kept three alive for four.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon. — 1971 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon. — 1972 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon. — 1967 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "An oxygen tank burst on Apollo 13 on its way to the Moon in 1970. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-17",
+   "category": "The Space Race",
+   "claim": "Apollo 17 made the last crewed landing on the Moon",
+   "stated_answer": "1972",
+   "context": "Cernan and Schmitt spent three days on the surface in December 1972 and lifted off on the 14th.",
+   "go_deeper": "Schmitt was a geologist, the only working scientist ever to reach the Moon, and nobody has been back since.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon. — 1970 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon. — 1973 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon. — 1975 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon. — 1968 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Apollo 17 made the last crewed landing on the Moon in 1972. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "sr-apollo-soyuz",
+   "category": "The Space Race",
+   "claim": "American and Soviet spacecraft docked with each other in orbit for the first time",
+   "stated_answer": "1975",
+   "context": "An Apollo and a Soyuz joined up on 17 July 1975 and the two commanders shook hands through the hatch.",
+   "go_deeper": "The crews swapped meals and gifts and stayed docked for nearly two days. The mission is usually taken as the point where the race stopped being a race.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time. — 1972 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time. — 1976 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time. — 1977 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time. — 1970 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time. — 1969 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "American and Soviet spacecraft docked with each other in orbit for the first time in 1975. — True or false?",
      "verdict": "ok",
      "why": null
     }
