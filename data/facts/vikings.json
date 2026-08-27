@@ -1,85 +1,273 @@
 {
   "id": "vikings",
   "facts": [
-    { "id": "vk-lindisfarne", "kind": "year", "claim": "The raid on Lindisfarne opened the Viking Age in Britain", "value": 793,
+    {
+      "id": "vk-lindisfarne",
+      "kind": "year",
+      "claim": "The raid on Lindisfarne opened the Viking Age in Britain",
+      "value": 793,
       "context": "Norse raiders sacked the monastery on Lindisfarne in 793, shocking Christian Europe.",
       "goDeeper": "Monasteries were targets because they were rich, coastal and undefended.",
-      "source": { "title": "Lindisfarne", "url": "https://en.wikipedia.org/wiki/Lindisfarne" }, "status": "draft" },
-    { "id": "vk-vinland", "kind": "year", "claim": "Norse sailors established a settlement in North America", "value": 1021,
+      "source": {
+        "title": "Lindisfarne",
+        "url": "https://en.wikipedia.org/wiki/Lindisfarne"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "vk-vinland",
+      "kind": "year",
+      "claim": "Norse sailors established a settlement in North America",
+      "value": 1021,
       "context": "Tree-ring dating of wood at L'Anse aux Meadows in Newfoundland gives an exact year of 1021.",
       "goDeeper": "That is 471 years before Columbus, and it is the only confirmed Norse site in the Americas.",
-      "source": { "title": "L'Anse aux Meadows", "url": "https://en.wikipedia.org/wiki/L%27Anse_aux_Meadows" }, "status": "draft" },
-    { "id": "vk-hastings", "kind": "year", "claim": "The Viking Age is usually said to end with the Norman Conquest", "value": 1066,
+      "source": {
+        "title": "L'Anse aux Meadows",
+        "url": "https://en.wikipedia.org/wiki/L%27Anse_aux_Meadows"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "vk-hastings",
+      "kind": "year",
+      "claim": "The Viking Age is usually said to end with the Norman Conquest",
+      "value": 1066,
       "context": "1066 saw both the defeat of Harald Hardrada at Stamford Bridge and William's victory at Hastings.",
       "goDeeper": "William's Normans were themselves descended from Norse settlers in France.",
-      "source": { "title": "Viking Age", "url": "https://en.wikipedia.org/wiki/Viking_Age" }, "status": "draft" },
-    { "id": "vk-iceland", "kind": "year", "claim": "Norse settlers began colonising Iceland", "value": 874,
+      "source": {
+        "title": "Viking Age",
+        "url": "https://en.wikipedia.org/wiki/Viking_Age"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "vk-iceland",
+      "kind": "year",
+      "claim": "Norse settlers began colonising Iceland",
+      "value": 874,
       "context": "Traditional settlement date is around 874, when Ingolfr Arnarson founded Reykjavik.",
       "goDeeper": "Iceland's parliament, the Althing, was founded in 930 and is among the oldest still sitting.",
-      "source": { "title": "Settlement of Iceland", "url": "https://en.wikipedia.org/wiki/Settlement_of_Iceland" }, "status": "draft" },
-    { "id": "vk-greenland", "kind": "year", "claim": "Erik the Red led settlers to Greenland", "value": 985,
+      "source": {
+        "title": "Settlement of Iceland",
+        "url": "https://en.wikipedia.org/wiki/Settlement_of_Iceland"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "vk-greenland",
+      "kind": "year",
+      "claim": "Erik the Red led settlers to Greenland",
+      "value": 985,
       "context": "Erik, exiled from Iceland, established Norse colonies in Greenland around 985.",
       "goDeeper": "He called it Greenland to attract settlers, which may be the earliest recorded property marketing.",
-      "source": { "title": "Erik the Red", "url": "https://en.wikipedia.org/wiki/Erik_the_Red" }, "status": "draft" },
-    { "id": "vk-great-army", "kind": "year", "claim": "The Great Heathen Army landed in England", "value": 865,
+      "source": {
+        "title": "Erik the Red",
+        "url": "https://en.wikipedia.org/wiki/Erik_the_Red"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-great-army",
+      "kind": "year",
+      "claim": "The Great Heathen Army landed in England",
+      "value": 865,
       "context": "A large Norse force arrived in East Anglia in 865, intent on conquest rather than raiding.",
       "goDeeper": "Within a decade it had destroyed three of the four English kingdoms. Only Wessex held.",
-      "source": { "title": "Great Heathen Army", "url": "https://en.wikipedia.org/wiki/Great_Heathen_Army" }, "status": "draft" },
-    { "id": "vk-longship-speed", "kind": "number", "claim": "Top speed of a Viking longship under sail", "value": 15, "unit": "knots", "approx": true,
+      "source": {
+        "title": "Great Heathen Army",
+        "url": "https://en.wikipedia.org/wiki/Great_Heathen_Army"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-longship-speed",
+      "kind": "number",
+      "claim": "Top speed of a Viking longship under sail",
+      "value": 15,
+      "unit": "knots",
+      "approx": true,
       "context": "Reconstructions have reached about 15 knots, quick even by later standards.",
       "goDeeper": "The shallow draught mattered more than the speed: a longship could sail up a river and land on a beach.",
-      "source": { "title": "Longship", "url": "https://en.wikipedia.org/wiki/Longship" }, "status": "draft" },
-    { "id": "vk-crew", "kind": "number", "claim": "Typical crew of a large Viking longship", "value": 60, "unit": "men", "approx": true,
+      "source": {
+        "title": "Longship",
+        "url": "https://en.wikipedia.org/wiki/Longship"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-crew",
+      "kind": "number",
+      "claim": "Typical crew of a large Viking longship",
+      "value": 60,
+      "unit": "men",
+      "approx": true,
       "context": "Larger warships carried perhaps 60 to 70 men, with oars for when the wind failed.",
       "goDeeper": "The biggest recorded ships were far larger, but most raids used vessels of this size.",
-      "source": { "title": "Longship", "url": "https://en.wikipedia.org/wiki/Longship" }, "status": "draft" },
-    { "id": "vk-danelaw", "kind": "year", "claim": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw", "value": 878,
+      "source": {
+        "title": "Longship",
+        "url": "https://en.wikipedia.org/wiki/Longship"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-danelaw",
+      "kind": "year",
+      "claim": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw",
+      "value": 878,
       "context": "After Alfred's victory at Edington, a treaty divided England, leaving the north and east under Danish law.",
       "goDeeper": "Hundreds of English place names ending in -by and -thorpe are still Norse.",
-      "source": { "title": "Danelaw", "url": "https://en.wikipedia.org/wiki/Danelaw" }, "status": "draft" },
-    { "id": "vk-normandy", "kind": "year", "claim": "The Norse leader Rollo was granted the land that became Normandy", "value": 911,
+      "source": {
+        "title": "Danelaw",
+        "url": "https://en.wikipedia.org/wiki/Danelaw"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-normandy",
+      "kind": "year",
+      "claim": "The Norse leader Rollo was granted the land that became Normandy",
+      "value": 911,
       "context": "The Frankish king ceded territory around Rouen to Rollo in 911 to stop the raiding.",
       "goDeeper": "'Normandy' simply means the land of the Northmen.",
-      "source": { "title": "Rollo", "url": "https://en.wikipedia.org/wiki/Rollo" }, "status": "draft" },
-    { "id": "vk-oseberg", "kind": "year", "claim": "The Oseberg ship burial was excavated in Norway", "value": 1904,
+      "source": {
+        "title": "Rollo",
+        "url": "https://en.wikipedia.org/wiki/Rollo"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-oseberg",
+      "kind": "year",
+      "claim": "The Oseberg ship burial was excavated in Norway",
+      "value": 1904,
       "context": "A remarkably preserved ninth-century ship containing the burial of two women.",
       "goDeeper": "Who they were is still unknown; the richness of the grave suggests very high status.",
-      "source": { "title": "Oseberg ship", "url": "https://en.wikipedia.org/wiki/Oseberg_ship" }, "status": "draft" },
-    { "id": "vk-constantinople", "kind": "year", "claim": "The Varangian Guard was formed from Norse warriors in Constantinople", "value": 988,
+      "source": {
+        "title": "Oseberg ship",
+        "url": "https://en.wikipedia.org/wiki/Oseberg_ship"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-constantinople",
+      "kind": "year",
+      "claim": "The Varangian Guard was formed from Norse warriors in Constantinople",
+      "value": 988,
       "context": "The Byzantine emperor Basil II formed an elite guard of Norse and Rus fighters around 988.",
       "goDeeper": "Norse traders had reached Byzantium down the rivers of Russia; some carved graffiti into the Hagia Sophia.",
-      "source": { "title": "Varangian Guard", "url": "https://en.wikipedia.org/wiki/Varangian_Guard" }, "status": "draft" },
-    { "id": "vk-jorvik", "kind": "year", "claim": "Norse forces captured York, which they called Jorvik", "value": 866,
+      "source": {
+        "title": "Varangian Guard",
+        "url": "https://en.wikipedia.org/wiki/Varangian_Guard"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-jorvik",
+      "kind": "year",
+      "claim": "Norse forces captured York, which they called Jorvik",
+      "value": 866,
       "context": "Taken in 866, York became the capital of a Norse kingdom lasting almost a century.",
       "goDeeper": "Excavations at Coppergate found timber houses, workshops and even preserved leather boots.",
-      "source": { "title": "Scandinavian York", "url": "https://en.wikipedia.org/wiki/Scandinavian_York" }, "status": "draft" },
-    { "id": "vk-horned-helmets", "kind": "boolean", "claim": "Vikings wore horned helmets into battle", "answer": false,
+      "source": {
+        "title": "Scandinavian York",
+        "url": "https://en.wikipedia.org/wiki/Scandinavian_York"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-horned-helmets",
+      "kind": "boolean",
+      "claim": "Vikings wore horned helmets into battle",
+      "answer": false,
       "context": "No horned helmet has ever been found in a Viking grave. The image comes from a 19th-century costume designer for Wagner's operas.",
       "goDeeper": "Horns on a helmet would be a gift to an opponent in a fight.",
-      "source": { "title": "Horned helmet", "url": "https://en.wikipedia.org/wiki/Horned_helmet" }, "status": "draft" },
-    { "id": "vk-columbus", "kind": "boolean", "claim": "Norse sailors reached North America before Columbus", "answer": true,
+      "source": {
+        "title": "Horned helmet",
+        "url": "https://en.wikipedia.org/wiki/Horned_helmet"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-columbus",
+      "kind": "boolean",
+      "claim": "Norse sailors reached North America before Columbus",
+      "answer": true,
       "context": "Confirmed by the excavated settlement at L'Anse aux Meadows, precisely dated to 1021.",
       "goDeeper": "They did not stay. The sagas describe conflict with people already living there.",
-      "source": { "title": "Norse colonization of North America", "url": "https://en.wikipedia.org/wiki/Norse_colonization_of_North_America" }, "status": "draft" },
-    { "id": "vk-farmers", "kind": "boolean", "claim": "Most Norse people were farmers rather than raiders", "answer": true,
+      "source": {
+        "title": "Norse colonization of North America",
+        "url": "https://en.wikipedia.org/wiki/Norse_colonization_of_North_America"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-farmers",
+      "kind": "boolean",
+      "claim": "Most Norse people were farmers rather than raiders",
+      "answer": true,
       "context": "Raiding was seasonal work for a minority. The great majority farmed, fished and traded.",
       "goDeeper": "'Viking' was originally something you did, not something you were.",
-      "source": { "title": "Vikings", "url": "https://en.wikipedia.org/wiki/Vikings" }, "status": "draft" },
-    { "id": "vk-women-rights", "kind": "boolean", "claim": "Norse women could own property and seek divorce", "answer": true,
+      "source": {
+        "title": "Vikings",
+        "url": "https://en.wikipedia.org/wiki/Vikings"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-women-rights",
+      "kind": "boolean",
+      "claim": "Norse women could own property and seek divorce",
+      "answer": true,
       "context": "Norse law allowed women to own land, inherit and initiate divorce — unusual in early medieval Europe.",
       "goDeeper": "A woman buried at Birka with weapons and gaming pieces was confirmed by DNA in 2017 to be female.",
-      "source": { "title": "Women in the Viking Age", "url": "https://en.wikipedia.org/wiki/Women_in_the_Viking_Age" }, "status": "draft" },
-    { "id": "vk-runes", "kind": "boolean", "claim": "The Norse had a written alphabet of their own", "answer": true,
+      "source": {
+        "title": "Women in the Viking Age",
+        "url": "https://en.wikipedia.org/wiki/Women_in_the_Viking_Age"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-runes",
+      "kind": "boolean",
+      "claim": "The Norse had a written alphabet of their own",
+      "answer": true,
       "context": "The runic alphabet, or futhark, was carved into stone, wood and bone across Scandinavia.",
       "goDeeper": "Thousands of runestones survive in Sweden alone, many raised as memorials rather than records.",
-      "source": { "title": "Runes", "url": "https://en.wikipedia.org/wiki/Runes" }, "status": "draft" },
-    { "id": "vk-weekdays", "kind": "boolean", "claim": "Four English weekday names come from Norse gods", "answer": true,
+      "source": {
+        "title": "Runes",
+        "url": "https://en.wikipedia.org/wiki/Runes"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-weekdays",
+      "kind": "boolean",
+      "claim": "Four English weekday names come from Norse gods",
+      "answer": true,
       "context": "Tuesday, Wednesday, Thursday and Friday derive from Tyr, Odin (Woden), Thor and Frigg.",
       "goDeeper": "The Norse influence on English runs deeper than vocabulary: 'they', 'them' and 'their' are Norse too.",
-      "source": { "title": "Names of the days of the week", "url": "https://en.wikipedia.org/wiki/Names_of_the_days_of_the_week" }, "status": "draft" },
-    { "id": "vk-hygiene", "kind": "boolean", "claim": "Norse men were noted by contemporaries for grooming and bathing", "answer": true,
+      "source": {
+        "title": "Names of the days of the week",
+        "url": "https://en.wikipedia.org/wiki/Names_of_the_days_of_the_week"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "vk-hygiene",
+      "kind": "boolean",
+      "claim": "Norse men were noted by contemporaries for grooming and bathing",
+      "answer": true,
       "context": "English writers complained that Danish settlers combed their hair and bathed weekly, making them too attractive to local women.",
       "goDeeper": "Combs are among the most common objects found on Viking-age sites.",
-      "source": { "title": "Vikings", "url": "https://en.wikipedia.org/wiki/Vikings" }, "status": "draft" }
+      "source": {
+        "title": "Vikings",
+        "url": "https://en.wikipedia.org/wiki/Vikings"
+      },
+      "status": "draft"
+    }
   ]
 }

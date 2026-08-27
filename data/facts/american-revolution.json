@@ -8,7 +8,10 @@
       "value": 1776,
       "context": "Congress voted for independence on July 2 and approved the text of the Declaration on July 4, 1776.",
       "goDeeper": "John Adams expected July 2 to be the date Americans celebrated forever. He was off by two days.",
-      "source": { "title": "United States Declaration of Independence", "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence" },
+      "source": {
+        "title": "United States Declaration of Independence",
+        "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"
+      },
       "status": "draft"
     },
     {
@@ -18,7 +21,10 @@
       "value": 1775,
       "context": "British troops marching to seize colonial arms met militia at Lexington on April 19, 1775.",
       "goDeeper": "No one knows who fired the first shot on Lexington Green, and both sides insisted it was the other.",
-      "source": { "title": "Battles of Lexington and Concord", "url": "https://en.wikipedia.org/wiki/Battles_of_Lexington_and_Concord" },
+      "source": {
+        "title": "Battles of Lexington and Concord",
+        "url": "https://en.wikipedia.org/wiki/Battles_of_Lexington_and_Concord"
+      },
       "status": "draft"
     },
     {
@@ -28,7 +34,10 @@
       "value": 1781,
       "context": "Trapped by American and French troops and a French fleet, Cornwallis surrendered on October 19, 1781.",
       "goDeeper": "The French navy, not the Continental Army, was the decisive factor: it sealed off Cornwallis's only escape route by sea.",
-      "source": { "title": "Siege of Yorktown", "url": "https://en.wikipedia.org/wiki/Siege_of_Yorktown" },
+      "source": {
+        "title": "Siege of Yorktown",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Yorktown"
+      },
       "status": "draft"
     },
     {
@@ -38,7 +47,10 @@
       "value": 1783,
       "context": "Signed September 3, 1783, the treaty recognized American independence and set the new nation's borders.",
       "goDeeper": "Fighting had effectively stopped two years earlier at Yorktown, but the negotiations dragged on through 1782 and 1783.",
-      "source": { "title": "Treaty of Paris (1783)", "url": "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1783)" },
+      "source": {
+        "title": "Treaty of Paris (1783)",
+        "url": "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1783)"
+      },
       "status": "draft"
     },
     {
@@ -48,7 +60,10 @@
       "value": 1773,
       "context": "On December 16, 1773 colonists dumped 342 chests of East India Company tea into Boston Harbor.",
       "goDeeper": "The protest was partly against a tax cut: the Tea Act actually made British tea cheaper, which threatened colonial smugglers.",
-      "source": { "title": "Boston Tea Party", "url": "https://en.wikipedia.org/wiki/Boston_Tea_Party" },
+      "source": {
+        "title": "Boston Tea Party",
+        "url": "https://en.wikipedia.org/wiki/Boston_Tea_Party"
+      },
       "status": "draft"
     },
     {
@@ -58,8 +73,12 @@
       "value": 1770,
       "context": "British soldiers fired into a hostile crowd on March 5, 1770, killing five men.",
       "goDeeper": "John Adams defended the accused soldiers in court, and most were acquitted. He later called it one of his finest services to his country.",
-      "source": { "title": "Boston Massacre", "url": "https://en.wikipedia.org/wiki/Boston_Massacre" },
-      "status": "draft"
+      "source": {
+        "title": "Boston Massacre",
+        "url": "https://en.wikipedia.org/wiki/Boston_Massacre"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-signers",
@@ -69,8 +88,12 @@
       "unit": "signers",
       "context": "Fifty-six delegates signed, most of them on August 2, 1776, not July 4.",
       "goDeeper": "The youngest signer was 26 and the oldest, Benjamin Franklin, was 70.",
-      "source": { "title": "Signing of the United States Declaration of Independence", "url": "https://en.wikipedia.org/wiki/Signing_of_the_United_States_Declaration_of_Independence" },
-      "status": "draft"
+      "source": {
+        "title": "Signing of the United States Declaration of Independence",
+        "url": "https://en.wikipedia.org/wiki/Signing_of_the_United_States_Declaration_of_Independence"
+      },
+      "status": "draft",
+      "fame": "obscure"
     },
     {
       "id": "ar-stamp-act",
@@ -79,8 +102,12 @@
       "value": 1765,
       "context": "The 1765 tax on printed materials triggered the first coordinated colonial resistance and was repealed the following year.",
       "goDeeper": "The phrase 'no taxation without representation' came out of this fight, a decade before any shots were fired.",
-      "source": { "title": "Stamp Act 1765", "url": "https://en.wikipedia.org/wiki/Stamp_Act_1765" },
-      "status": "draft"
+      "source": {
+        "title": "Stamp Act 1765",
+        "url": "https://en.wikipedia.org/wiki/Stamp_Act_1765"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-washington-command",
@@ -89,8 +116,12 @@
       "value": 1775,
       "context": "Congress appointed Washington in June 1775 and he took command outside Boston in July.",
       "goDeeper": "He refused a salary, asking only that his expenses be covered. The final bill came to a sum that raised eyebrows in Congress.",
-      "source": { "title": "George Washington in the American Revolution", "url": "https://en.wikipedia.org/wiki/George_Washington_in_the_American_Revolution" },
-      "status": "draft"
+      "source": {
+        "title": "George Washington in the American Revolution",
+        "url": "https://en.wikipedia.org/wiki/George_Washington_in_the_American_Revolution"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-trenton",
@@ -99,8 +130,12 @@
       "value": 1776,
       "context": "The crossing happened on the night of December 25-26, 1776, and the surprise attack captured most of a Hessian garrison.",
       "goDeeper": "The famous painting of the crossing was made 75 years later by a German artist and gets almost every detail wrong, including the flag.",
-      "source": { "title": "Battle of Trenton", "url": "https://en.wikipedia.org/wiki/Battle_of_Trenton" },
-      "status": "draft"
+      "source": {
+        "title": "Battle of Trenton",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Trenton"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-saratoga",
@@ -109,8 +144,12 @@
       "value": 1777,
       "context": "Burgoyne surrendered his army in October 1777; France signed a formal alliance the following February.",
       "goDeeper": "Benedict Arnold was one of the heroes of Saratoga, three years before he turned traitor.",
-      "source": { "title": "Battles of Saratoga", "url": "https://en.wikipedia.org/wiki/Battles_of_Saratoga" },
-      "status": "draft"
+      "source": {
+        "title": "Battles of Saratoga",
+        "url": "https://en.wikipedia.org/wiki/Battles_of_Saratoga"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-valley-forge",
@@ -119,8 +158,12 @@
       "value": 1777,
       "context": "The army arrived in December 1777 and stayed until June 1778.",
       "goDeeper": "Roughly 2,000 men died there, almost all from disease rather than cold or starvation.",
-      "source": { "title": "Valley Forge", "url": "https://en.wikipedia.org/wiki/Valley_Forge" },
-      "status": "draft"
+      "source": {
+        "title": "Valley Forge",
+        "url": "https://en.wikipedia.org/wiki/Valley_Forge"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-constitution",
@@ -129,8 +172,12 @@
       "value": 1787,
       "context": "Thirty-nine delegates signed on September 17, 1787, after a summer of debate.",
       "goDeeper": "The Constitution replaced the Articles of Confederation, under which the country had no president, no national courts and no power to tax.",
-      "source": { "title": "Constitutional Convention (United States)", "url": "https://en.wikipedia.org/wiki/Constitutional_Convention_(United_States)" },
-      "status": "draft"
+      "source": {
+        "title": "Constitutional Convention (United States)",
+        "url": "https://en.wikipedia.org/wiki/Constitutional_Convention_(United_States)"
+      },
+      "status": "draft",
+      "fame": "household"
     },
     {
       "id": "ar-washington-inaugurated",
@@ -139,7 +186,10 @@
       "value": 1789,
       "context": "Washington took the oath in New York City on April 30, 1789.",
       "goDeeper": "He was elected unanimously by the Electoral College, the only president ever to manage it, and then did it again in 1792.",
-      "source": { "title": "First inauguration of George Washington", "url": "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington" },
+      "source": {
+        "title": "First inauguration of George Washington",
+        "url": "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington"
+      },
       "status": "draft"
     },
     {
@@ -149,8 +199,12 @@
       "value": 1791,
       "context": "The first ten amendments took effect December 15, 1791.",
       "goDeeper": "Twelve amendments were sent to the states. One of the two rejected then was finally ratified in 1992, 203 years later.",
-      "source": { "title": "United States Bill of Rights", "url": "https://en.wikipedia.org/wiki/United_States_Bill_of_Rights" },
-      "status": "draft"
+      "source": {
+        "title": "United States Bill of Rights",
+        "url": "https://en.wikipedia.org/wiki/United_States_Bill_of_Rights"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-common-sense",
@@ -159,8 +213,12 @@
       "value": 1776,
       "context": "The pamphlet appeared in January 1776 and argued for outright independence rather than reconciliation.",
       "goDeeper": "It sold in the hundreds of thousands in a country of about 2.5 million people, making it proportionally one of the best-selling American books ever.",
-      "source": { "title": "Common Sense (pamphlet)", "url": "https://en.wikipedia.org/wiki/Common_Sense_(pamphlet)" },
-      "status": "draft"
+      "source": {
+        "title": "Common Sense (pamphlet)",
+        "url": "https://en.wikipedia.org/wiki/Common_Sense_(pamphlet)"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-colonies",
@@ -170,8 +228,12 @@
       "unit": "colonies",
       "context": "Thirteen British colonies on the Atlantic coast joined the Declaration.",
       "goDeeper": "Britain had other North American colonies, including Quebec, Nova Scotia and the Floridas, that stayed loyal.",
-      "source": { "title": "Thirteen Colonies", "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies" },
-      "status": "draft"
+      "source": {
+        "title": "Thirteen Colonies",
+        "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies"
+      },
+      "status": "draft",
+      "fame": "household"
     },
     {
       "id": "ar-july-4-signing",
@@ -180,8 +242,12 @@
       "answer": false,
       "context": "The text was approved on July 4, but the famous engrossed copy was not signed until August 2, and a few delegates signed even later.",
       "goDeeper": "The document most Americans picture, with Hancock's oversized signature, was written out on parchment weeks after the vote.",
-      "source": { "title": "Signing of the United States Declaration of Independence", "url": "https://en.wikipedia.org/wiki/Signing_of_the_United_States_Declaration_of_Independence" },
-      "status": "draft"
+      "source": {
+        "title": "Signing of the United States Declaration of Independence",
+        "url": "https://en.wikipedia.org/wiki/Signing_of_the_United_States_Declaration_of_Independence"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-paul-revere",
@@ -190,8 +256,12 @@
       "answer": false,
       "context": "The ride was meant to be discreet, with British patrols on the roads. The colonists also still considered themselves British, so the warning was about 'the regulars.'",
       "goDeeper": "Revere was captured that night and never reached Concord. Two other riders, William Dawes and Samuel Prescott, carried the alarm onward.",
-      "source": { "title": "Paul Revere's Midnight Ride", "url": "https://en.wikipedia.org/wiki/Paul_Revere%27s_Midnight_Ride" },
-      "status": "draft"
+      "source": {
+        "title": "Paul Revere's Midnight Ride",
+        "url": "https://en.wikipedia.org/wiki/Paul_Revere%27s_Midnight_Ride"
+      },
+      "status": "draft",
+      "fame": "familiar"
     },
     {
       "id": "ar-arnold",
@@ -200,8 +270,12 @@
       "answer": true,
       "context": "Arnold was one of the ablest field commanders of the early war, badly wounded at Saratoga, before plotting to hand West Point to the British in 1780.",
       "goDeeper": "There is a monument at Saratoga to Arnold's wounded leg, deliberately unnamed, because his leg served the country honorably even if the rest of him did not.",
-      "source": { "title": "Benedict Arnold", "url": "https://en.wikipedia.org/wiki/Benedict_Arnold" },
-      "status": "draft"
+      "source": {
+        "title": "Benedict Arnold",
+        "url": "https://en.wikipedia.org/wiki/Benedict_Arnold"
+      },
+      "status": "draft",
+      "fame": "familiar"
     }
   ]
 }
