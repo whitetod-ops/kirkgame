@@ -136,6 +136,28 @@ export function split(rated, k, rnd) {
 
 /* --------------------------------------------------------------- prompts -- */
 
+/* The rubric call was sending every rated fact with all of its questions --
+   hundreds of kilobytes, most of it silent "good" taps that teach nothing and
+   were the source of the invented rules in the first place. Send everything
+   that carries a reason or a question mark, plus a capped sample of the rest
+   so the ratio of good to poor is still visible. */
+export function rubricSample(train, quiet = 60) {
+  const loud = train.filter((r) => r.reason || (r.questions || []).some((q) => q.verdict === 'bad'));
+  const loudIds = new Set(loud.map((r) => r.id));
+  const rest = train.filter((r) => !loudIds.has(r.id));
+  const byClass = {};
+  for (const r of rest) (byClass[r.rating || 'none'] ||= []).push(r);
+  const sampled = [];
+  for (let i = 0; sampled.length < quiet; i++) {
+    let took = 0;
+    for (const c of Object.keys(byClass)) {
+      if (byClass[c][i] && sampled.length < quiet) { sampled.push(byClass[c][i]); took++; }
+    }
+    if (!took) break;
+  }
+  return { examples: loud.concat(sampled), loud: loud.length, sampled: sampled.length, dropped: rest.length - sampled.length };
+}
+
 export function rubricPrompt(train) {
   const examples = train.map((r) => ({
     claim: r.claim,
@@ -220,7 +242,9 @@ export function extractJson(text) {
 }
 
 async function callAnthropic({ system, user, apiKey, model, maxTokens = 4000 }) {
-  const res = await fetch(model.endpoint, {
+  let res;
+  try {
+    res = await fetch(model.endpoint, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -233,7 +257,16 @@ async function callAnthropic({ system, user, apiKey, model, maxTokens = 4000 }) 
       system,
       messages: [{ role: 'user', content: user }],
     }),
-  });
+      signal: AbortSignal.timeout(180000),
+    });
+  } catch (e) {
+    /* A dropped connection rejects before any status exists, so it carried no
+       retryable flag and the run died on the first blip. ECONNRESET on a large
+       request is ordinary, not fatal. */
+    const err = new Error(`network: ${e.cause?.code || e.code || e.message}`);
+    err.retryable = true;
+    throw err;
+  }
   if (!res.ok) {
     const t = await res.text();
     const err = new Error(`HTTP ${res.status}: ${t.slice(0, 300)}`);
@@ -316,7 +349,10 @@ async function main() {
   mkdirSync(resolve(ROOT, 'review'), { recursive: true });
 
   console.log('\n  Writing the rubric from the training half...');
-  const rp = rubricPrompt(train);
+  const sample = rubricSample(train);
+  console.log(`  ${sample.loud} with a reason or a question mark, plus ${sample.sampled} sampled` +
+              `${sample.dropped ? `, ${sample.dropped} silent ratings not sent` : ''}`);
+  const rp = rubricPrompt(sample.examples);
   const { text: rubric } = await withRetry(() => callAnthropic({ ...rp, apiKey, model, maxTokens: 6000 }));
   writeFileSync(RUBRIC, rubric);
   console.log(`  -> ${RUBRIC}   READ THIS. If it has misunderstood you, correct the file`);
