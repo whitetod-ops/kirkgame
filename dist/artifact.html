@@ -913,8 +913,13 @@ h2.sec {
         /* Nothing real on the side we wanted -- a fact at the end of its
            timeline. Compute one rather than flipping to the only side that
            has neighbours, which is what made the answer constant. */
+        /* Mirror the nearest real neighbour rather than reaching by the
+           usual multiple. At the edge of a timeline there is nothing to
+           measure against, and four times the gap put the founding of Rome
+           against 2461 BC -- a date with no meaning to anyone. */
         var unit = near.length ? near[0].d : (medianGap(pool) || 3);
-        var reach = Math.max(1, Math.round(unit * SPREAD[fame][useBand]));
+        var EDGE = { easy: 1.2, medium: 0.8, hard: 0.4 };
+        var reach = Math.max(1, Math.round(unit * EDGE[useBand]));
         p = fact.value + (wantLater ? reach : -reach);
       }
       if (p === undefined) {
