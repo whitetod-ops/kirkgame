@@ -1,0 +1,1812 @@
+{
+ "reviewer": "Todd",
+ "generated": "2026-08-27",
+ "counts": {
+  "rated": 51
+ },
+ "examples": [
+  {
+   "id": "ar-declaration",
+   "category": "The American Revolution",
+   "claim": "The Continental Congress adopted the Declaration of Independence",
+   "stated_answer": "1776",
+   "context": "Congress voted for independence on July 2 and approved the text of the Declaration on July 4, 1776.",
+   "go_deeper": "John Adams expected July 2 to be the date Americans celebrated forever. He was off by two days.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": "This is a good question that no one would mind answering the only problem the before or after 1806 is bad because everyone knows it was before, the 1783 one is good because people may get confused with the us constitution date",
+   "questions": [
+    {
+     "text": "The Continental Congress adopted the Declaration of Independence. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Congress adopted the Declaration of Independence. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Congress adopted the Declaration of Independence. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Congress adopted the Declaration of Independence. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Congress adopted the Declaration of Independence in 1776. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-lexington-concord",
+   "category": "The American Revolution",
+   "claim": "The battles of Lexington and Concord began the Revolutionary War",
+   "stated_answer": "1775",
+   "context": "British troops marching to seize colonial arms met militia at Lexington on April 19, 1775.",
+   "go_deeper": "No one knows who fired the first shot on Lexington Green, and both sides insisted it was the other.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": "once again good question, but the 1805 question is bad because its too easy",
+   "questions": [
+    {
+     "text": "The battles of Lexington and Concord began the Revolutionary War. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The battles of Lexington and Concord began the Revolutionary War. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The battles of Lexington and Concord began the Revolutionary War. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The battles of Lexington and Concord began the Revolutionary War. — 1770 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The battles of Lexington and Concord began the Revolutionary War in 1775. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-yorktown",
+   "category": "The American Revolution",
+   "claim": "Cornwallis surrendered his army at Yorktown",
+   "stated_answer": "1781",
+   "context": "Trapped by American and French troops and a French fleet, Cornwallis surrendered on October 19, 1781.",
+   "go_deeper": "The French navy, not the Continental Army, was the decisive factor: it sealed off Cornwallis's only escape route by sea.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": "once again the 1811 question is outside the ballpark",
+   "questions": [
+    {
+     "text": "Cornwallis surrendered his army at Yorktown. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cornwallis surrendered his army at Yorktown. — 1783 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cornwallis surrendered his army at Yorktown. — 1787 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cornwallis surrendered his army at Yorktown. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Cornwallis surrendered his army at Yorktown in 1781. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-treaty-paris",
+   "category": "The American Revolution",
+   "claim": "The Treaty of Paris formally ended the Revolutionary War",
+   "stated_answer": "1783",
+   "context": "Signed September 3, 1783, the treaty recognized American independence and set the new nation's borders.",
+   "go_deeper": "Fighting had effectively stopped two years earlier at Yorktown, but the negotiations dragged on through 1782 and 1783.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": "the question of 1813 is way off",
+   "questions": [
+    {
+     "text": "The Treaty of Paris formally ended the Revolutionary War. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Treaty of Paris formally ended the Revolutionary War. — 1787 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Treaty of Paris formally ended the Revolutionary War. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Treaty of Paris formally ended the Revolutionary War. — 1789 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Treaty of Paris formally ended the Revolutionary War in 1783. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-boston-tea-party",
+   "category": "The American Revolution",
+   "claim": "The Boston Tea Party took place",
+   "stated_answer": "1773",
+   "context": "On December 16, 1773 colonists dumped 342 chests of East India Company tea into Boston Harbor.",
+   "go_deeper": "The protest was partly against a tax cut: the Tea Act actually made British tea cheaper, which threatened colonial smugglers.",
+   "rating_of_the_fact": "fair",
+   "how_well_known": null,
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Boston Tea Party took place. — 1770 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Tea Party took place. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Tea Party took place. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Tea Party took place. — 1765 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Tea Party took place in 1773. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-boston-massacre",
+   "category": "The American Revolution",
+   "claim": "The Boston Massacre occurred",
+   "stated_answer": "1770",
+   "context": "British soldiers fired into a hostile crowd on March 5, 1770, killing five men.",
+   "go_deeper": "John Adams defended the accused soldiers in court, and most were acquitted. He later called it one of his finest services to his country.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Boston Massacre occurred. — 1765 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Massacre occurred. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Massacre occurred. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Massacre occurred. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Massacre occurred. — 1766 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Boston Massacre occurred in 1770. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-signers",
+   "category": "The American Revolution",
+   "claim": "Number of men who signed the Declaration of Independence",
+   "stated_answer": "56 signers",
+   "context": "Fifty-six delegates signed, most of them on August 2, 1776, not July 4.",
+   "go_deeper": "The youngest signer was 26 and the oldest, Benjamin Franklin, was 70.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 34 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 78 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 112 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 11 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence. — 224 signers — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of men who signed the Declaration of Independence: 56 signers. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-stamp-act",
+   "category": "The American Revolution",
+   "claim": "Parliament passed the Stamp Act",
+   "stated_answer": "1765",
+   "context": "The 1765 tax on printed materials triggered the first coordinated colonial resistance and was repealed the following year.",
+   "go_deeper": "The phrase 'no taxation without representation' came out of this fight, a decade before any shots were fired.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Parliament passed the Stamp Act. — 1763 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act. — 1770 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act. — 1761 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act. — 1759 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Parliament passed the Stamp Act in 1765. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-washington-command",
+   "category": "The American Revolution",
+   "claim": "George Washington took command of the Continental Army",
+   "stated_answer": "1775",
+   "context": "Congress appointed Washington in June 1775 and he took command outside Boston in July.",
+   "go_deeper": "He refused a salary, asking only that his expenses be covered. The final bill came to a sum that raised eyebrows in Congress.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "George Washington took command of the Continental Army. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington took command of the Continental Army. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington took command of the Continental Army. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington took command of the Continental Army. — 1770 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington took command of the Continental Army in 1775. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-trenton",
+   "category": "The American Revolution",
+   "claim": "Washington crossed the Delaware and attacked Trenton",
+   "stated_answer": "1776",
+   "context": "The crossing happened on the night of December 25-26, 1776, and the surprise attack captured most of a Hessian garrison.",
+   "go_deeper": "The famous painting of the crossing was made 75 years later by a German artist and gets almost every detail wrong, including the flag.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "once again 1806 is kinda late date to be a question",
+   "questions": [
+    {
+     "text": "Washington crossed the Delaware and attacked Trenton. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Washington crossed the Delaware and attacked Trenton. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Washington crossed the Delaware and attacked Trenton. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Washington crossed the Delaware and attacked Trenton. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Washington crossed the Delaware and attacked Trenton in 1776. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-saratoga",
+   "category": "The American Revolution",
+   "claim": "The American victory at Saratoga convinced France to join the war",
+   "stated_answer": "1777",
+   "context": "Burgoyne surrendered his army in October 1777; France signed a formal alliance the following February.",
+   "go_deeper": "Benedict Arnold was one of the heroes of Saratoga, three years before he turned traitor.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The American victory at Saratoga convinced France to join the war. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American victory at Saratoga convinced France to join the war. — 1778 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American victory at Saratoga convinced France to join the war. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American victory at Saratoga convinced France to join the war. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American victory at Saratoga convinced France to join the war. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The American victory at Saratoga convinced France to join the war in 1777. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-valley-forge",
+   "category": "The American Revolution",
+   "claim": "The Continental Army began its winter encampment at Valley Forge",
+   "stated_answer": "1777",
+   "context": "The army arrived in December 1777 and stayed until June 1778.",
+   "go_deeper": "Roughly 2,000 men died there, almost all from disease rather than cold or starvation.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "1807 way too late",
+   "questions": [
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge. — 1776 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge. — 1778 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Continental Army began its winter encampment at Valley Forge in 1777. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-constitution",
+   "category": "The American Revolution",
+   "claim": "The United States Constitution was signed in Philadelphia",
+   "stated_answer": "1787",
+   "context": "Thirty-nine delegates signed on September 17, 1787, after a summer of debate.",
+   "go_deeper": "The Constitution replaced the Articles of Confederation, under which the country had no president, no national courts and no power to tax.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The United States Constitution was signed in Philadelphia. — 1786 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The United States Constitution was signed in Philadelphia. — 1789 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The United States Constitution was signed in Philadelphia. — 1783 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The United States Constitution was signed in Philadelphia. — 1791 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The United States Constitution was signed in Philadelphia in 1787. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-washington-inaugurated",
+   "category": "The American Revolution",
+   "claim": "George Washington was inaugurated as the first president",
+   "stated_answer": "1789",
+   "context": "Washington took the oath in New York City on April 30, 1789.",
+   "go_deeper": "He was elected unanimously by the Electoral College, the only president ever to manage it, and then did it again in 1792.",
+   "rating_of_the_fact": "good",
+   "how_well_known": null,
+   "reason_about_the_fact": "why not dates before the answer, 1800 date is way to late and a lame question",
+   "questions": [
+    {
+     "text": "George Washington was inaugurated as the first president. — 1787 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington was inaugurated as the first president. — 1791 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington was inaugurated as the first president. — 1783 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "George Washington was inaugurated as the first president in 1789. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-bill-of-rights",
+   "category": "The American Revolution",
+   "claim": "The Bill of Rights was ratified",
+   "stated_answer": "1791",
+   "context": "The first ten amendments took effect December 15, 1791.",
+   "go_deeper": "Twelve amendments were sent to the states. One of the two rejected then was finally ratified in 1992, 203 years later.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "once again why not any over questions before that date?",
+   "questions": [
+    {
+     "text": "The Bill of Rights was ratified. — 1789 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Bill of Rights was ratified. — 1792 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Bill of Rights was ratified. — 1793 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Bill of Rights was ratified. — 1787 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Bill of Rights was ratified. — 1783 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Bill of Rights was ratified in 1791. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-common-sense",
+   "category": "The American Revolution",
+   "claim": "Thomas Paine published Common Sense",
+   "stated_answer": "1776",
+   "context": "The pamphlet appeared in January 1776 and argued for outright independence rather than reconciliation.",
+   "go_deeper": "It sold in the hundreds of thousands in a country of about 2.5 million people, making it proportionally one of the best-selling American books ever.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "everyone will know before 1800",
+   "questions": [
+    {
+     "text": "Thomas Paine published Common Sense. — 1775 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Paine published Common Sense. — 1777 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Paine published Common Sense. — 1773 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Paine published Common Sense. — 1781 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Paine published Common Sense in 1776. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-colonies",
+   "category": "The American Revolution",
+   "claim": "Number of colonies that declared independence",
+   "stated_answer": "13 colonies",
+   "context": "Thirteen British colonies on the Atlantic coast joined the Declaration.",
+   "go_deeper": "Britain had other North American colonies, including Quebec, Nova Scotia and the Floridas, that stayed loyal.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": "why dont you have a question with 10 or 12 colonies why is it always over and usually by alot",
+   "questions": [
+    {
+     "text": "Number of colonies that declared independence. — 12 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence. — 14 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence. — 15 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence. — 11 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence. — 9 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence. — 17 colonies — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of colonies that declared independence: 13 colonies. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-july-4-signing",
+   "category": "The American Revolution",
+   "claim": "All the delegates signed the Declaration of Independence together on July 4, 1776",
+   "stated_answer": "False",
+   "context": "The text was approved on July 4, but the famous engrossed copy was not signed until August 2, and a few delegates signed even later.",
+   "go_deeper": "The document most Americans picture, with Hancock's oversized signature, was written out on parchment weeks after the vote.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "All the delegates signed the Declaration of Independence together on July 4, 1776. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-paul-revere",
+   "category": "The American Revolution",
+   "claim": "Paul Revere rode through the countryside shouting 'The British are coming!'",
+   "stated_answer": "False",
+   "context": "The ride was meant to be discreet, with British patrols on the roads. The colonists also still considered themselves British, so the warning was about 'the regulars.'",
+   "go_deeper": "Revere was captured that night and never reached Concord. Two other riders, William Dawes and Samuel Prescott, carried the alarm onward.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Paul Revere rode through the countryside shouting 'The British are coming!'. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "ar-arnold",
+   "category": "The American Revolution",
+   "claim": "Benedict Arnold was a successful American general before he switched sides",
+   "stated_answer": "True",
+   "context": "Arnold was one of the ablest field commanders of the early war, badly wounded at Saratoga, before plotting to hand West Point to the British in 1780.",
+   "go_deeper": "There is a monument at Saratoga to Arnold's wounded leg, deliberately unnamed, because his leg served the country honorably even if the rest of him did not.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Benedict Arnold was a successful American general before he switched sides. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-departure",
+   "category": "Lewis and Clark",
+   "claim": "The Corps of Discovery set out up the Missouri River",
+   "stated_answer": "1804",
+   "context": "The expedition left the St Louis area in May 1804 with about 45 men.",
+   "go_deeper": "Jefferson's instructions were to find a practical water route across the continent. There isn't one.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Corps of Discovery set out up the Missouri River. — 1803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Corps of Discovery set out up the Missouri River. — 1805 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Corps of Discovery set out up the Missouri River in 1804. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-pacific",
+   "category": "Lewis and Clark",
+   "claim": "Lewis and Clark reached the Pacific Ocean",
+   "stated_answer": "1805",
+   "context": "They sighted the Pacific in November 1805, about eighteen months out.",
+   "go_deeper": "Clark wrote 'Ocian in view! O! the joy' — and misspelled it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": "once again the dates are too late around the fact",
+   "questions": [
+    {
+     "text": "Lewis and Clark reached the Pacific Ocean. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lewis and Clark reached the Pacific Ocean. — 1806 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Lewis and Clark reached the Pacific Ocean in 1805. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-return",
+   "category": "Lewis and Clark",
+   "claim": "The expedition returned to St Louis",
+   "stated_answer": "1806",
+   "context": "They arrived back in September 1806, having been given up for dead by many.",
+   "go_deeper": "Jefferson had heard nothing from them for over a year.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "whats with the 1836 question",
+   "questions": [
+    {
+     "text": "The expedition returned to St Louis. — 1805 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The expedition returned to St Louis. — 1807 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The expedition returned to St Louis. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The expedition returned to St Louis in 1806. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-louisiana-purchase",
+   "category": "Lewis and Clark",
+   "claim": "The Louisiana Purchase gave the United States the land the expedition would cross",
+   "stated_answer": "1803",
+   "context": "Bought from France in 1803, roughly doubling the size of the country.",
+   "go_deeper": "Jefferson had already asked Congress to fund the expedition before the purchase was agreed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "once again 1833 bad question",
+   "questions": [
+    {
+     "text": "The Louisiana Purchase gave the United States the land the expedition would cross. — 1802 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Louisiana Purchase gave the United States the land the expedition would cross. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Louisiana Purchase gave the United States the land the expedition would cross. — 1801 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Louisiana Purchase gave the United States the land the expedition would cross. — 1805 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Louisiana Purchase gave the United States the land the expedition would cross in 1803. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-distance",
+   "category": "Lewis and Clark",
+   "claim": "Distance covered by the expedition, out and back",
+   "stated_answer": "8,000 miles",
+   "context": "Roughly 8,000 miles by river, portage, horseback and on foot.",
+   "go_deeper": "They mapped it as they went, and Clark's maps stayed the best available for decades.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "once again no over questions on the date",
+   "questions": [
+    {
+     "text": "Distance covered by the expedition, out and back. — 6,560 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 9,440 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 12,000 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 4,000 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 1,600 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back. — 20,800 miles — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Distance covered by the expedition, out and back: 8,000 miles. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-budget",
+   "category": "Lewis and Clark",
+   "claim": "Amount Jefferson requested from Congress to fund the expedition",
+   "stated_answer": "$2,500 dollars",
+   "context": "He asked for $2,500 in a confidential message in 1803.",
+   "go_deeper": "The final cost came to roughly $40,000, about sixteen times the estimate.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $1,500 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $3,500 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $5,000 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $500 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition. — $10,000 dollars — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Amount Jefferson requested from Congress to fund the expedition: $2,500 dollars. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-animals",
+   "category": "Lewis and Clark",
+   "claim": "Animal species new to science described by the expedition",
+   "stated_answer": "122 species",
+   "context": "About 122 animals and 178 plants previously unknown to American science were recorded.",
+   "go_deeper": "Among them the grizzly bear, the prairie dog and the pronghorn.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Animal species new to science described by the expedition. — 100 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 144 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 183 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 61 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 24 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition. — 317 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Animal species new to science described by the expedition: 122 species. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-plants",
+   "category": "Lewis and Clark",
+   "claim": "Plant species new to science described by the expedition",
+   "stated_answer": "178 species",
+   "context": "Roughly 178 plants unknown to eastern botanists were collected and described.",
+   "go_deeper": "Many pressed specimens survive at the Academy of Natural Sciences in Philadelphia.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Plant species new to science described by the expedition. — 146 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 210 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 267 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 89 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 36 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition. — 463 species — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Plant species new to science described by the expedition: 178 species. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-floyd",
+   "category": "Lewis and Clark",
+   "claim": "Sergeant Charles Floyd became the expedition's only fatality",
+   "stated_answer": "1804",
+   "context": "He died in August 1804, probably of a burst appendix, which nothing then known could have treated.",
+   "go_deeper": "He was the only member lost, on a journey of more than two years through unmapped country.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "too random",
+   "questions": [
+    {
+     "text": "Sergeant Charles Floyd became the expedition's only fatality. — 1803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sergeant Charles Floyd became the expedition's only fatality. — 1805 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sergeant Charles Floyd became the expedition's only fatality in 1804. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-sacagawea-joins",
+   "category": "Lewis and Clark",
+   "claim": "Sacagawea joined the expedition at the Mandan villages",
+   "stated_answer": "1805",
+   "context": "She travelled with the Corps from spring 1805, having given birth that February.",
+   "go_deeper": "Her brother turned out to be a Shoshone chief, which is how the expedition got the horses it needed to cross the Rockies.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "the fact is good questions bad",
+   "questions": [
+    {
+     "text": "Sacagawea joined the expedition at the Mandan villages. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea joined the expedition at the Mandan villages. — 1806 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea joined the expedition at the Mandan villages. — 1803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea joined the expedition at the Mandan villages in 1805. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-sacagawea-age",
+   "category": "Lewis and Clark",
+   "claim": "Sacagawea's approximate age during the expedition",
+   "stated_answer": "17 years old",
+   "context": "She was around 16 or 17, and carried her infant son the entire way.",
+   "go_deeper": "She appears on the US dollar coin issued from 2000, with her son on her back.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 14 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 20 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 21 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 13 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 9 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition. — 25 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Sacagawea's approximate age during the expedition: 17 years old. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-fort-clatsop",
+   "category": "Lewis and Clark",
+   "claim": "The Corps built Fort Clatsop for the winter on the Oregon coast",
+   "stated_answer": "1805",
+   "context": "Built in December 1805 near the mouth of the Columbia, where they waited out the winter.",
+   "go_deeper": "It rained on all but twelve of the 106 days they spent there.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Corps built Fort Clatsop for the winter on the Oregon coast. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Corps built Fort Clatsop for the winter on the Oregon coast. — 1806 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Corps built Fort Clatsop for the winter on the Oregon coast. — 1803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Corps built Fort Clatsop for the winter on the Oregon coast in 1805. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-lewis-age",
+   "category": "Lewis and Clark",
+   "claim": "Meriwether Lewis's age when the expedition set out",
+   "stated_answer": "29 years old",
+   "context": "He was 29; Clark was 33. Lewis had been Jefferson's private secretary.",
+   "go_deeper": "Lewis died in 1809, aged 35, of gunshot wounds on the Natchez Trace. Suicide or murder is still argued.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 27 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 31 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 33 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 25 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 22 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out. — 36 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Meriwether Lewis's age when the expedition set out: 29 years old. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-jefferson-president",
+   "category": "Lewis and Clark",
+   "claim": "Thomas Jefferson became president",
+   "stated_answer": "1801",
+   "context": "He took office in March 1801 and began planning a western expedition almost at once.",
+   "go_deeper": "He had tried to organise similar expeditions three times before, and all three failed to leave.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Thomas Jefferson became president. — 1800 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Jefferson became president. — 1803 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Jefferson became president. — 1799 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Jefferson became president. — 1804 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Thomas Jefferson became president in 1801. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-water-route",
+   "category": "Lewis and Clark",
+   "claim": "The expedition found the water route across the continent it was sent to find",
+   "stated_answer": "False",
+   "context": "There is no such route. The Rockies had to be crossed on horseback and on foot, and the crossing nearly killed them.",
+   "go_deeper": "Finding out that the Northwest Passage did not exist was itself the single most valuable result.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "household",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The expedition found the water route across the continent it was sent to find. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-york",
+   "category": "Lewis and Clark",
+   "claim": "An enslaved man travelled with the expedition for its whole journey",
+   "stated_answer": "True",
+   "context": "York, enslaved by Clark since childhood, made the entire journey and took a full part in it.",
+   "go_deeper": "He voted, on equal terms, on where to make winter camp in 1805. Clark refused him freedom for years afterwards.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "An enslaved man travelled with the expedition for its whole journey. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-first-europeans",
+   "category": "Lewis and Clark",
+   "claim": "Lewis and Clark were the first Europeans to cross North America by land",
+   "stated_answer": "False",
+   "context": "Alexander Mackenzie crossed what is now Canada to the Pacific in 1793, twelve years earlier.",
+   "go_deeper": "Lewis carried a copy of Mackenzie's published account with him.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Lewis and Clark were the first Europeans to cross North America by land. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-vote",
+   "category": "Lewis and Clark",
+   "claim": "The whole party voted on where to spend the winter of 1805",
+   "stated_answer": "True",
+   "context": "Every member voted, including York, an enslaved man, and Sacagawea, a Native woman.",
+   "go_deeper": "Neither would have been allowed to vote anywhere in the United States at the time.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "obscure",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "The whole party voted on where to spend the winter of 1805. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-newfoundland",
+   "category": "Lewis and Clark",
+   "claim": "A dog completed the entire expedition with the Corps",
+   "stated_answer": "True",
+   "context": "Seaman, Lewis's Newfoundland, went the whole way and appears repeatedly in the journals.",
+   "go_deeper": "Lewis bought him for $20, a considerable sum, before setting out.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "A dog completed the entire expedition with the Corps. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "lc-journals",
+   "category": "Lewis and Clark",
+   "claim": "The expedition's journals were published promptly on its return",
+   "stated_answer": "False",
+   "context": "Lewis was meant to prepare them and never did. A narrative appeared in 1814, and the full journals only from 1904.",
+   "go_deeper": "For most of the 19th century the expedition's scientific findings were effectively lost.",
+   "rating_of_the_fact": "poor",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "no one cares",
+   "questions": [
+    {
+     "text": "The expedition's journals were published promptly on its return. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-sumter",
+   "category": "The American Civil War",
+   "claim": "Confederate artillery opened fire on Fort Sumter, starting the Civil War",
+   "stated_answer": "1861",
+   "context": "The bombardment of the federal fort in Charleston Harbor began before dawn on April 12, 1861. The garrison surrendered the next day.",
+   "go_deeper": "Nobody was killed by enemy fire during the battle. The only deaths came from an accidental cannon explosion during the surrender ceremony.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Confederate artillery opened fire on Fort Sumter, starting the Civil War. — 1860 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Confederate artillery opened fire on Fort Sumter, starting the Civil War. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Confederate artillery opened fire on Fort Sumter, starting the Civil War in 1861. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-lincoln-assassination",
+   "category": "The American Civil War",
+   "claim": "Abraham Lincoln was assassinated",
+   "stated_answer": "1865",
+   "context": "John Wilkes Booth shot Lincoln at Ford's Theatre on April 14, 1865. Lincoln died the next morning, five days after Lee's surrender.",
+   "go_deeper": "Booth's original plan was to kidnap Lincoln and ransom him for Confederate prisoners. He only switched to murder after the Confederacy collapsed.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Abraham Lincoln was assassinated. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was assassinated. — 1866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was assassinated. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln was assassinated in 1865. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-gettysburg",
+   "category": "The American Civil War",
+   "claim": "The Battle of Gettysburg was fought",
+   "stated_answer": "1863",
+   "context": "Three days of fighting in Pennsylvania, July 1-3, 1863, ended Lee's second invasion of the North.",
+   "go_deeper": "Lee never again mounted a strategic offensive into Union territory after Gettysburg.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Battle of Gettysburg was fought. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Gettysburg was fought. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Gettysburg was fought. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Battle of Gettysburg was fought in 1863. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-gettysburg-address-words",
+   "category": "The American Civil War",
+   "claim": "Length of the Gettysburg Address",
+   "stated_answer": "272 words",
+   "context": "Lincoln's speech ran about 270 words and took roughly two minutes to deliver.",
+   "go_deeper": "The main speaker that day, Edward Everett, talked for two hours. Almost nobody remembers a word of it.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "question 41 words is terrible",
+   "questions": [
+    {
+     "text": "Length of the Gettysburg Address. — 223 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 321 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 408 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 136 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 54 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address. — 707 words — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Length of the Gettysburg Address: 272 words. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-emancipation-effect",
+   "category": "The American Civil War",
+   "claim": "The Emancipation Proclamation took legal effect",
+   "stated_answer": "1863",
+   "context": "Lincoln issued a preliminary proclamation in September 1862; the final order took effect January 1, 1863.",
+   "go_deeper": "It applied only to territory in rebellion, so it freed nobody in the loyal slave states of Kentucky, Delaware, Maryland or Missouri.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "1865 would be a logical question here",
+   "questions": [
+    {
+     "text": "The Emancipation Proclamation took legal effect. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Emancipation Proclamation took legal effect. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Emancipation Proclamation took legal effect. — 1861 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Emancipation Proclamation took legal effect in 1863. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-appomattox",
+   "category": "The American Civil War",
+   "claim": "Robert E. Lee surrendered to Grant at Appomattox Court House",
+   "stated_answer": "1865",
+   "context": "The surrender took place on April 9, 1865, effectively ending the war in the East.",
+   "go_deeper": "Other Confederate armies kept fighting for weeks. The last significant surrender came in late June 1865.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "now all the questions are under the date",
+   "questions": [
+    {
+     "text": "Robert E. Lee surrendered to Grant at Appomattox Court House. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Robert E. Lee surrendered to Grant at Appomattox Court House. — 1866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Robert E. Lee surrendered to Grant at Appomattox Court House. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Robert E. Lee surrendered to Grant at Appomattox Court House in 1865. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-seceding-states",
+   "category": "The American Civil War",
+   "claim": "Number of states that joined the Confederacy",
+   "stated_answer": "11 states",
+   "context": "Seven states seceded before Lincoln took office; four more followed after Fort Sumter.",
+   "go_deeper": "The western counties of Virginia refused to secede and split off to become the new state of West Virginia in 1863.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": "29 states is stupid",
+   "questions": [
+    {
+     "text": "Number of states that joined the Confederacy. — 9 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy. — 13 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy. — 14 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy. — 8 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy. — 6 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy. — 16 states — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Number of states that joined the Confederacy: 11 states. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-lincoln-age",
+   "category": "The American Civil War",
+   "claim": "Abraham Lincoln's age when he died",
+   "stated_answer": "56 years old",
+   "context": "Born February 12, 1809, Lincoln died April 15, 1865, two months past his 56th birthday.",
+   "go_deeper": "He was the first American president to be assassinated, and the tallest at 6 feet 4 inches.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Abraham Lincoln's age when he died. — 46 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 66 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 84 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 28 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 11 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died. — 146 years old — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Abraham Lincoln's age when he died: 56 years old. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-total-deaths",
+   "category": "The American Civil War",
+   "claim": "Traditional estimate of total deaths in the Civil War",
+   "stated_answer": "620,000 deaths",
+   "context": "The long-standing figure is about 620,000 dead on both sides. More recent demographic work pushes the estimate as high as 750,000.",
+   "go_deeper": "Roughly two-thirds of those deaths came from disease rather than combat.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 508,400 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 731,600 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 930,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 310,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 124,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War. — 1,612,000 deaths — More or fewer?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "Traditional estimate of total deaths in the Civil War: 620,000 deaths. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-13th-amendment",
+   "category": "The American Civil War",
+   "claim": "The Thirteenth Amendment abolishing slavery was ratified",
+   "stated_answer": "1865",
+   "context": "Congress passed it in January 1865 and the states completed ratification on December 6, 1865, months after the war ended.",
+   "go_deeper": "Mississippi did not symbolically ratify the amendment until 1995, and the paperwork was not filed until 2013.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The Thirteenth Amendment abolishing slavery was ratified. — 1864 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Thirteenth Amendment abolishing slavery was ratified. — 1866 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Thirteenth Amendment abolishing slavery was ratified. — 1863 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The Thirteenth Amendment abolishing slavery was ratified in 1865. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  },
+  {
+   "id": "cw-bull-run",
+   "category": "The American Civil War",
+   "claim": "The First Battle of Bull Run was fought",
+   "stated_answer": "1861",
+   "context": "The first major land battle, on July 21, 1861, ended in a Union rout near Manassas, Virginia.",
+   "go_deeper": "Washington civilians rode out with picnic baskets to watch, then got caught in the retreat.",
+   "rating_of_the_fact": "good",
+   "how_well_known": "familiar",
+   "reason_about_the_fact": null,
+   "questions": [
+    {
+     "text": "The First Battle of Bull Run was fought. — 1860 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The First Battle of Bull Run was fought. — 1862 — Before or after?",
+     "verdict": "ok",
+     "why": null
+    },
+    {
+     "text": "The First Battle of Bull Run was fought in 1861. — True or false?",
+     "verdict": "ok",
+     "why": null
+    }
+   ]
+  }
+ ]
+}
