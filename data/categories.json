@@ -84,6 +84,13 @@
       "era": "The twentieth century",
       "when": "1903-2004",
       "blurb": "The Black Sox, Ruth, Robinson and the curse."
+    },
+    {
+      "id": "space-race",
+      "title": "The Space Race",
+      "era": "The twentieth century",
+      "when": "1957-1975",
+      "blurb": "Sputnik to the Moon, and the handshake in orbit."
     }
   ]
 }
