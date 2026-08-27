@@ -1,0 +1,288 @@
+{
+  "id": "baseball-history",
+  "facts": [
+    {
+      "id": "bb-first-world-series",
+      "kind": "year",
+      "claim": "The first modern World Series was played, between Boston and Pittsburgh",
+      "value": 1903,
+      "context": "Boston beat Pittsburgh five games to three in 1903, in a best-of-nine series arranged between the two rival leagues.",
+      "goDeeper": "There was no World Series at all the following year: the New York Giants refused to play a team from what they still called a minor league.",
+      "source": {
+        "title": "1903 World Series",
+        "url": "https://en.wikipedia.org/wiki/1903_World_Series"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-take-me-out",
+      "kind": "year",
+      "claim": "'Take Me Out to the Ball Game' was written",
+      "value": 1908,
+      "context": "Jack Norworth wrote the words and Albert Von Tilzer the tune in 1908, and it became the song a ballpark sings in the seventh inning.",
+      "goDeeper": "Neither man had been to a major league game when they wrote it. Norworth did not see one until 1940, thirty-two years later.",
+      "source": {
+        "title": "Take Me Out to the Ball Game",
+        "url": "https://en.wikipedia.org/wiki/Take_Me_Out_to_the_Ball_Game"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-black-sox",
+      "kind": "year",
+      "claim": "White Sox players conspired to throw the World Series in the Black Sox scandal",
+      "value": 1919,
+      "context": "Eight Chicago players took money from gamblers to lose the 1919 series to Cincinnati. The story broke the following September.",
+      "goDeeper": "A jury acquitted all eight in 1921. Baseball's new commissioner banned every one of them for life the next day anyway.",
+      "source": {
+        "title": "Black Sox Scandal",
+        "url": "https://en.wikipedia.org/wiki/Black_Sox_Scandal"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-negro-national-league",
+      "kind": "year",
+      "claim": "Rube Foster founded the Negro National League",
+      "value": 1920,
+      "context": "Foster, a former pitcher and manager, gathered eight club owners at a Kansas City YMCA in February 1920 and organised Black professional baseball into a league of its own.",
+      "goDeeper": "His slogan was 'we are the ship, all else the sea'. Black teams had been barnstorming for thirty years; what they had never had was a schedule and a pennant to play for.",
+      "source": {
+        "title": "Negro National League (1920-1931)",
+        "url": "https://en.wikipedia.org/wiki/Negro_National_League_(1920%E2%80%931931)"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    },
+    {
+      "id": "bb-ruth-sixty",
+      "kind": "year",
+      "claim": "Babe Ruth hit 60 home runs in a season, a record that stood for 34 years",
+      "value": 1927,
+      "context": "Ruth hit his sixtieth on the second-to-last day of the 1927 season, more than any other entire team in the American League managed that year.",
+      "goDeeper": "He had already remade the sport once. The entire American League hit 240 home runs in 1919; eight years later Ruth hit a quarter of that total by himself.",
+      "source": {
+        "title": "Babe Ruth",
+        "url": "https://en.wikipedia.org/wiki/Babe_Ruth"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-called-shot",
+      "kind": "year",
+      "claim": "Babe Ruth hit his supposed called shot in the World Series",
+      "value": 1932,
+      "context": "In game three against the Cubs at Wrigley Field, Ruth pointed at something before hitting a home run to centre field. What he was pointing at has been argued about ever since.",
+      "goDeeper": "Ruth himself told the story differently on different occasions, and the pitcher, Charlie Root, denied to his death that it ever happened.",
+      "source": {
+        "title": "Babe Ruth's called shot",
+        "url": "https://en.wikipedia.org/wiki/Babe_Ruth%27s_called_shot"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-gehrig-speech",
+      "kind": "year",
+      "claim": "Lou Gehrig gave his farewell speech at Yankee Stadium",
+      "value": 1939,
+      "context": "On 4 July 1939, forced out of the game by the illness that now carries his name, he told a packed stadium he considered himself the luckiest man on the face of the earth.",
+      "goDeeper": "It was a busy year for firsts: the Hall of Fame opened in Cooperstown that summer, and the first televised major league game came seven weeks after the speech.",
+      "source": {
+        "title": "Lou Gehrig",
+        "url": "https://en.wikipedia.org/wiki/Lou_Gehrig"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-robinson-debut",
+      "kind": "year",
+      "claim": "Jackie Robinson broke the major league colour line with the Brooklyn Dodgers",
+      "value": 1947,
+      "context": "Robinson played first base at Ebbets Field on 15 April 1947, ending sixty years of an unwritten ban, and was named Rookie of the Year that season.",
+      "goDeeper": "Larry Doby integrated the American League eleven weeks later, and had to do it with far less notice taken. Almost nobody remembers his name.",
+      "source": {
+        "title": "Jackie Robinson",
+        "url": "https://en.wikipedia.org/wiki/Jackie_Robinson"
+      },
+      "status": "draft",
+      "fame": "household"
+    },
+    {
+      "id": "bb-shot-heard",
+      "kind": "year",
+      "claim": "Bobby Thomson's Shot Heard 'Round the World won the pennant for the Giants",
+      "value": 1951,
+      "context": "Thomson's ninth-inning home run off Ralph Branca finished a playoff against the Dodgers that the Giants had been thirteen games behind in August.",
+      "goDeeper": "The on-deck batter was a twenty-year-old rookie named Willie Mays, who said later he was praying he would not have to bat.",
+      "source": {
+        "title": "Shot Heard 'Round the World (baseball)",
+        "url": "https://en.wikipedia.org/wiki/Shot_Heard_%27Round_the_World_(baseball)"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-strike-cancels-series",
+      "kind": "year",
+      "claim": "A players' strike cancelled the World Series",
+      "value": 1994,
+      "context": "The players walked out in August over a proposed salary cap, and the season was abandoned in September with no champion crowned.",
+      "goDeeper": "It was the first time since 1904 that no World Series was played, and the only time a labour dispute has managed it.",
+      "source": {
+        "title": "1994-95 Major League Baseball strike",
+        "url": "https://en.wikipedia.org/wiki/1994%E2%80%9395_Major_League_Baseball_strike"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-red-sox-curse",
+      "kind": "year",
+      "claim": "The Red Sox won the World Series, ending an 86-year wait",
+      "value": 2004,
+      "context": "Boston had not won since 1918, the drought superstition blamed on selling Babe Ruth to the Yankees. They swept the Cardinals in four games.",
+      "goDeeper": "To get there they came back from three games down against the Yankees, which no team in the history of the sport had ever done.",
+      "source": {
+        "title": "2004 World Series",
+        "url": "https://en.wikipedia.org/wiki/2004_World_Series"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-ruth-career-hr",
+      "kind": "number",
+      "claim": "Babe Ruth's career home runs",
+      "value": 714,
+      "unit": "home runs",
+      "context": "Ruth finished with 714, a record that lasted from 1935 until Hank Aaron passed it in 1974.",
+      "goDeeper": "He started out as a pitcher, and a very good one: he won 94 games on the mound and once ran off 29 consecutive scoreless innings in World Series play.",
+      "source": {
+        "title": "Babe Ruth",
+        "url": "https://en.wikipedia.org/wiki/Babe_Ruth"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-dimaggio-streak",
+      "kind": "number",
+      "claim": "Games in Joe DiMaggio's hitting streak",
+      "value": 56,
+      "unit": "games",
+      "context": "DiMaggio hit safely in 56 straight games between May and July of 1941. The longest anyone has managed since is Pete Rose's 44, in 1978.",
+      "goDeeper": "The streak ended in Cleveland on two backhanded stops by the third baseman. DiMaggio then hit in sixteen more games in a row.",
+      "source": {
+        "title": "Joe DiMaggio",
+        "url": "https://en.wikipedia.org/wiki/Joe_DiMaggio"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-base-distance",
+      "kind": "number",
+      "claim": "Distance between the bases on a major league field",
+      "value": 90,
+      "unit": "feet",
+      "context": "Ninety feet, fixed in the rules of the 1850s and never altered since.",
+      "goDeeper": "The pitching distance has been moved more than once, most recently out to 60 feet 6 inches in 1893. The 90 feet has never had to be touched.",
+      "source": {
+        "title": "Baseball field",
+        "url": "https://en.wikipedia.org/wiki/Baseball_field"
+      },
+      "status": "draft",
+      "fame": "household"
+    },
+    {
+      "id": "bb-doubleday",
+      "kind": "boolean",
+      "claim": "Abner Doubleday invented baseball at Cooperstown",
+      "answer": false,
+      "context": "A commission set up by a sporting goods magnate announced it in 1907. Doubleday was a West Point cadet that year, never mentioned baseball in his life, and the game grew out of older English bat-and-ball games.",
+      "goDeeper": "The story was useful because it made baseball American rather than borrowed. The Hall of Fame was built in Cooperstown anyway.",
+      "source": {
+        "title": "Abner Doubleday",
+        "url": "https://en.wikipedia.org/wiki/Abner_Doubleday"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-first-black-player",
+      "kind": "boolean",
+      "claim": "Jackie Robinson was the first Black player in major league baseball",
+      "answer": false,
+      "context": "Moses Fleetwood Walker caught for Toledo of the American Association in 1884, and his brother Weldy played there too. The colour line closed behind them a few years later and stayed shut for sixty years.",
+      "goDeeper": "Which is what Robinson actually did: not enter a game that had always been closed, but reopen one that had been deliberately shut.",
+      "source": {
+        "title": "Moses Fleetwood Walker",
+        "url": "https://en.wikipedia.org/wiki/Moses_Fleetwood_Walker"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-seventh-inning-stretch",
+      "kind": "boolean",
+      "claim": "The seventh-inning stretch began when President Taft stood up at a game",
+      "answer": false,
+      "context": "The Taft story is set in 1910, but the custom was already being described in print decades earlier, including in an 1869 letter by Harry Wright about Cincinnati crowds rising in the seventh.",
+      "goDeeper": "Taft is on firmer ground with the other tradition: he threw the first presidential ceremonial first pitch, in April 1910.",
+      "source": {
+        "title": "Seventh-inning stretch",
+        "url": "https://en.wikipedia.org/wiki/Seventh-inning_stretch"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-colour-line-unwritten",
+      "kind": "boolean",
+      "claim": "The bar on Black players was never actually written into baseball's rules",
+      "answer": true,
+      "context": "There was no rule to point at. Owners simply agreed among themselves from the late 1880s not to sign Black players, and the agreement held for sixty years without ever being printed.",
+      "goDeeper": "That is exactly why it could be broken by one club acting alone. Branch Rickey did not have to change a rule, only to ignore an understanding.",
+      "source": {
+        "title": "Baseball color line",
+        "url": "https://en.wikipedia.org/wiki/Baseball_color_line"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-satchel-paige-rookie",
+      "kind": "boolean",
+      "claim": "Satchel Paige was the oldest rookie in major league history, at 42",
+      "answer": true,
+      "context": "Cleveland signed him in July 1948, more than twenty years into a career spent in the Negro Leagues, and he went 6-1 and helped them to a pennant.",
+      "goDeeper": "He pitched three shutout innings in a major league game in 1965, aged 59, and remains the oldest man ever to play one.",
+      "source": {
+        "title": "Satchel Paige",
+        "url": "https://en.wikipedia.org/wiki/Satchel_Paige"
+      },
+      "status": "draft",
+      "fame": "familiar"
+    },
+    {
+      "id": "bb-negro-leagues-stats",
+      "kind": "boolean",
+      "claim": "Negro Leagues records now count as official major league statistics",
+      "answer": true,
+      "context": "Major League Baseball recognised seven Negro Leagues seasons of 1920 to 1948 as major league in 2020, and folded their statistics into the record books in 2024.",
+      "goDeeper": "The all-time career batting average record changed hands as a result. It belongs to Josh Gibson, who died three months before Robinson's debut.",
+      "source": {
+        "title": "Negro league baseball",
+        "url": "https://en.wikipedia.org/wiki/Negro_league_baseball"
+      },
+      "status": "draft",
+      "fame": "obscure"
+    }
+  ]
+}
