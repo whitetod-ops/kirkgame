@@ -40,7 +40,12 @@ import { MODELS, estimateCostUsd } from '../lib/aiModels.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RATINGS = resolve(ROOT, 'review/ratings.json');
+/* Two files on purpose. The machine writes its draft to rubric.generated.md
+   every run; rubric.md is the version of record, hand-corrected, and is only
+   ever created here if it does not exist. Overwriting it would destroy the
+   edits that are the whole point of having a human read it. */
 const RUBRIC = resolve(ROOT, 'review/rubric.md');
+const RUBRIC_GEN = resolve(ROOT, 'review/rubric.generated.md');
 const REPORT = resolve(ROOT, 'review/screen-test.json');
 
 /* ------------------------------------------------------------------ args -- */
@@ -353,10 +358,20 @@ async function main() {
   console.log(`  ${sample.loud} with a reason or a question mark, plus ${sample.sampled} sampled` +
               `${sample.dropped ? `, ${sample.dropped} silent ratings not sent` : ''}`);
   const rp = rubricPrompt(sample.examples);
-  const { text: rubric } = await withRetry(() => callAnthropic({ ...rp, apiKey, model, maxTokens: 6000 }));
-  writeFileSync(RUBRIC, rubric);
-  console.log(`  -> ${RUBRIC}   READ THIS. If it has misunderstood you, correct the file`);
-  console.log('     and re-run; the rubric is the thing that gets used, not the ratings.');
+  const { text: draft } = await withRetry(() => callAnthropic({ ...rp, apiKey, model, maxTokens: 6000 }));
+  writeFileSync(RUBRIC_GEN, draft);
+  console.log(`  -> ${RUBRIC_GEN}  (the machine's draft, rewritten every run)`);
+
+  let rubric = draft;
+  if (existsSync(RUBRIC)) {
+    rubric = readFileSync(RUBRIC, 'utf8');
+    console.log(`  -> using ${RUBRIC} instead -- your corrected version, left untouched.`);
+    console.log('     Delete it to fall back to the draft; diff the two to see what changed.');
+  } else {
+    writeFileSync(RUBRIC, draft);
+    console.log(`  -> seeded ${RUBRIC} from the draft. CORRECT THAT FILE where it has`);
+    console.log('     misunderstood you; it is what gets used, and it will not be overwritten.');
+  }
 
   if (opts.rubricOnly) return;
 
