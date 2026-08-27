@@ -5,13 +5,23 @@
    This script measures whether that is true yet, on facts held back from the
    rubric so the answer cannot be memorised.
 
-   ONE NUMBER MATTERS AND IT IS NOT ACCURACY. Todd has rated 90% of facts
-   "good", so a screener that answers "good" every time scores 90% and has
-   learned nothing at all. Every figure below is therefore reported against
-   its majority-class baseline, and the headline metric is balanced accuracy
-   -- the mean of the per-class recalls -- which a constant answer cannot
-   game. A screener that never once predicts "poor" scores 33% balanced on a
-   three-class problem no matter how confident it looks.
+   ONE NUMBER MATTERS AND IT IS NOT ACCURACY. Todd rates most facts "good"
+   and leaves most of those unexplained, so a screener answering "good" every
+   time scores in the eighties and has learned nothing. Every figure is
+   therefore reported against its majority-class baseline, and no headline
+   number is one a constant answer can game.
+
+   The headline is RECALL ON BAD QUESTIONS. His question-level marks are the
+   only signal in this corpus where every single example carries a written
+   reason, and they are what the screener has to reproduce: of the questions
+   he would reject, how many does it catch? Accuracy is useless there -- only
+   3.6% of questions carry a mark, so answering "ok" every time scores 96%
+   and catches nothing at all.
+
+   The first run of this test scored the other half, the half built on
+   silence, and reported 33% -- chance. The rubric it produced had in fact
+   reconstructed the question rules correctly; the test simply was not
+   looking at them.
 
    Read docs/CHECKING.md for the sibling pipeline that checks accuracy. This
    one checks taste, and taste is the thing only a human can supply.
@@ -84,11 +94,22 @@ export function agreement(pairs) {
   return pairs.filter(([t, p]) => t === p).length / pairs.length;
 }
 
-/* Stratified so the holdout is not accidentally all "good". Every class the
-   reviewer used appears in the holdout if it has more than one example. */
+export function flagged(r) {
+  return (r.questions || []).some((q) => q.verdict === 'bad');
+}
+
+/* Stratified on TWO axes: the fact verdict, and whether the reviewer marked
+   any of the fact's generated questions bad.
+
+   The second matters more. Only 3.6% of questions carry a mark, so a holdout
+   drawn at random would contain almost none and measure nothing -- and the
+   question marks are the reviewer's cleanest signal, every one annotated. */
 export function split(rated, k, rnd) {
   const byClass = {};
-  for (const r of rated) (byClass[r.rating || 'none'] ||= []).push(r);
+  for (const r of rated) {
+    const key = (flagged(r) ? 'flag/' : '') + (r.rating || 'none');
+    (byClass[key] ||= []).push(r);
+  }
   for (const list of Object.values(byClass)) {
     for (let i = list.length - 1; i > 0; i--) {
       const j = Math.floor(rnd() * (i + 1));
@@ -135,6 +156,11 @@ export function rubricPrompt(train) {
       '',
       'Write a rubric. Rules:',
       '  1. Weight his REASONS far above his ratings. A rating is one bit; a reason is the mechanism.',
+      '  1b. The questions_he_called_bad entries are the strongest evidence in this file --',
+      '      every one carries a written reason, where most ratings carry none. Build the',
+      '      rules about question quality from those, and do not infer a mechanism for a',
+      '      rating he did not explain. If most "good" verdicts have no reason attached,',
+      '      say that you cannot tell why he approved them rather than inventing a test.',
       '  2. State how many examples support each rule. A rule seen once is a hypothesis, not a rule -- mark it so.',
       '  3. Be concrete enough to apply. "Prefer interesting facts" is useless; name the test.',
       '  4. Say explicitly what you CANNOT infer from this sample.',
@@ -164,8 +190,12 @@ export function predictPrompt(rubric, fact) {
         questions_a_player_gets: fact.questions ? fact.questions.map((q) => q.text) : [],
       }, null, 1),
       '',
-      'Predict what this editor would say.',
+      'Predict what this editor would say. `questions` lists the generated questions in',
+      'order; return one verdict per question, in the same order. Most questions are fine --',
+      'only about one in twenty-five draws a complaint, so do not flag one unless the rubric',
+      'gives you a reason.',
       '{"rating": "good" | "fair" | "poor", "how_well_known": "household" | "familiar" | "obscure",',
+      ' "questions": [{"verdict": "ok" | "bad", "why": "only when bad"}],',
       ' "confidence": "high" | "medium" | "low", "because": "one sentence citing the rubric rule you used"}',
     ].join('\n'),
   };
@@ -305,10 +335,17 @@ async function main() {
     } catch (e) {
       console.log(`  ! ${fact.id}: ${e.message}`);
     }
+    const actualQ = (fact.questions || []).map((q) => q.verdict);
+    const predQ = (pred?.questions || []).map((q) => (q && q.verdict === 'bad' ? 'bad' : 'ok'));
     rows.push({
       id: fact.id, claim: fact.claim, category: fact.category,
       actual_rating: fact.rating, predicted_rating: pred?.rating ?? null,
       actual_fame: fact.how_well_known, predicted_fame: pred?.how_well_known ?? null,
+      questions: (fact.questions || []).map((q, n) => ({
+        text: q.text, actual: q.verdict, predicted: predQ[n] ?? null,
+        his_why: q.why || null, its_why: pred?.questions?.[n]?.why || null,
+      })),
+      q_len_match: predQ.length === actualQ.length,
       confidence: pred?.confidence ?? null, because: pred?.because ?? null,
     });
     process.stdout.write('.');
@@ -332,6 +369,50 @@ async function main() {
   line('Fact rating', qp, qb, majorityBaseline(stats.q));
   line('How well known', fp, fb, majorityBaseline(stats.f));
 
+  /* The question marks are the point. Accuracy is useless here -- 96% of
+     questions carry no mark, so answering "ok" every time scores 96% and
+     catches nothing. Recall is the operational number: of the questions he
+     actually rejected, how many would the screener have caught? */
+  const qq = [];
+  let lenMismatch = 0;
+  for (const r of rows) {
+    if (!r.q_len_match) { lenMismatch++; continue; }
+    for (const q of r.questions) if (q.predicted) qq.push([q.actual, q.predicted]);
+  }
+  const hisBad = qq.filter(([a]) => a === 'bad');
+  const itsBad = qq.filter(([, p]) => p === 'bad');
+  const caught = qq.filter(([a, p]) => a === 'bad' && p === 'bad');
+  const qbal = balancedAccuracy(qq);
+
+  console.log('\n  Bad questions -- the signal he actually gives');
+  console.log(`    questions judged   ${qq.length}${lenMismatch ? `   (${lenMismatch} facts skipped: it returned the wrong number of verdicts)` : ''}`);
+  console.log(`    he marked bad      ${hisBad.length}`);
+  console.log(`    it marked bad      ${itsBad.length}`);
+  console.log(`    RECALL             ${hisBad.length ? Math.round(caught.length / hisBad.length * 100) : 0}%   <- of the ones he rejected, how many it caught`);
+  console.log(`    precision          ${itsBad.length ? Math.round(caught.length / itsBad.length * 100) : 0}%   <- of the ones it flagged, how many he agreed with`);
+  console.log(`    balanced accuracy  ${Math.round(qbal.mean * 100)}%   (always answering "ok" scores 50% here and catches nothing)`);
+
+  const missed = rows.flatMap((r) => (r.q_len_match ? r.questions : [])
+    .filter((q) => q.actual === 'bad' && q.predicted === 'ok')
+    .map((q) => ({ id: r.id, ...q })));
+  if (missed.length) {
+    console.log(`\n  Bad questions it let through (${missed.length}) -- what the rubric still cannot see:`);
+    for (const m of missed.slice(0, 10)) {
+      console.log(`    ${m.text.slice(-58)}`);
+      console.log(`      you said: ${m.his_why || '(no reason)'}`);
+    }
+  }
+  const cried = rows.flatMap((r) => (r.q_len_match ? r.questions : [])
+    .filter((q) => q.actual === 'ok' && q.predicted === 'bad')
+    .map((q) => ({ id: r.id, ...q })));
+  if (cried.length) {
+    console.log(`\n  Questions it flagged that you did not (${cried.length}) -- some may be ones you missed:`);
+    for (const m of cried.slice(0, 6)) {
+      console.log(`    ${m.text.slice(-58)}`);
+      console.log(`      it said: ${(m.its_why || '').slice(0, 76)}`);
+    }
+  }
+
   const wrong = rows.filter((r) => r.actual_rating !== r.predicted_rating || r.actual_fame !== r.predicted_fame);
   if (wrong.length) {
     console.log(`\n  Where it disagreed with you (${wrong.length}) -- these are the ones worth reading:`);
@@ -346,13 +427,20 @@ async function main() {
     trained_on: train.length, held_out: holdout.length,
     fact_rating: { raw: agreement(qp), balanced: qb.mean, baseline: majorityBaseline(stats.q), per_class: qb.perClass },
     how_well_known: { raw: agreement(fp), balanced: fb.mean, baseline: majorityBaseline(stats.f), per_class: fb.perClass },
+    bad_questions: { judged: qq.length, he_marked: hisBad.length, it_marked: itsBad.length,
+                     caught: caught.length, balanced: qbal.mean },
     rows,
   }, null, 2));
 
-  const done = qb.mean >= 0.85 && fb.mean >= 0.85;
-  console.log(`\n  ${done ? 'PASSES' : 'not there yet'} -- the bar is 85% balanced on both.`);
-  console.log(`  ${done ? 'Screening can take over; you move to spot-checking a sample.'
-                        : 'Keep rating, and spread across categories it has not seen.'}`);
+  /* Recall on the bad questions is the bar that matters. A screener that
+     catches most of what he would reject earns its place even if it argues
+     with him about which facts are merely fair. */
+  const recall = hisBad.length ? caught.length / hisBad.length : 0;
+  const done = recall >= 0.7 && qbal.mean >= 0.75;
+  console.log(`\n  ${done ? 'PASSES' : 'not there yet'} -- the bar is 70% recall on bad questions.`);
+  console.log(done
+    ? '  Screening can take over; you move to spot-checking a sample.'
+    : '  The fastest way to move this number is a written reason on every question you reject.');
   console.log(`\n  Full report: ${REPORT}\n`);
 }
 
