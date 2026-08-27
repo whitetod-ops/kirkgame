@@ -108,7 +108,14 @@
     obscure:   { easy: [40, 150], medium: [12, 35], hard: [4, 10] }
   };
 
-  /* Proportional bands for counts and quantities. */
+  /* Whole-unit steps for small counts, where a percentage is absurd. */
+  var STEP = {
+    household: { easy: [2, 4], medium: [1, 2], hard: [1, 1] },
+    familiar:  { easy: [3, 7], medium: [2, 4], hard: [1, 2] },
+    obscure:   { easy: [6, 14], medium: [3, 8], hard: [2, 4] }
+  };
+
+  /* Proportional bands for larger counts and quantities. */
   var FRACTION = {
     household: { easy: [0.25, 0.5], medium: [0.12, 0.2], hard: [0.05, 0.08] },
     familiar:  { easy: [0.6, 1.6], medium: [0.25, 0.5], hard: [0.08, 0.18] },
@@ -144,9 +151,13 @@
       seen[o.value] = 1;
       out.push({ fact: o, d: Math.abs(o.value - fact.value), spent: !!(used && used[o.id]) });
     }
+    /* Distance decides the order and nothing else -- the rank windows below
+       index this array as if it were monotonic in distance, so sorting spent
+       facts to the back would silently widen the easy band as a round went on.
+       Being spent only breaks a tie between two equally distant years. */
     out.sort(function (a, b) {
-      if (a.spent !== b.spent) return a.spent ? 1 : -1;
-      return a.d - b.d;
+      if (a.d !== b.d) return a.d - b.d;
+      return (a.spent ? 1 : 0) - (b.spent ? 1 : 0);
     });
     return out;
   }
@@ -189,22 +200,49 @@
          both to how tightly the category clusters and to how isolated this
          particular fact is. */
       if (near.length) {
-        var gapUnit = medianGap(pool) || 3;
-        var nearest = near[0].d;
+        /* The ceiling is measured from this fact's own close neighbours, not
+           from the whole file. Ancient Egypt's median gap is inflated by the
+           three-thousand-year chasm between the pharaohs and the archaeologists
+           who dug them up, so a file-wide median licensed exactly the jump it
+           was meant to forbid. */
+        var localGap = near[0].d || 3;
         var ceiling = plausibleOnly
-          ? Math.max(5, gapUnit * 2.5, nearest * 4)
-          : Math.max(10, gapUnit * 6, nearest * 8);
+          ? Math.max(5, localGap * 3)
+          : Math.max(10, localGap * 6);
         var kept = near.filter(function (n) { return n.d <= ceiling; });
         if (kept.length) near = kept;
       }
-      if (near.length) {
+
+      /* Choose the side FIRST, then find a probe on it. Picking the nearest
+         neighbour and accepting whichever side it fell on left 29% of year
+         facts with a single possible answer: the Titanic sank in 1912 and its
+         only near neighbour is 1911, so "After" was correct every single time
+         it was ever asked. */
+      var wantLater = coin();
+      var side = near.filter(function (n) {
+        return wantLater ? n.fact.value > fact.value : n.fact.value < fact.value;
+      });
+
+      if (side.length) {
         var win = RANK[fame][useBand];
-        var last = near.length - 1;
+        var last = side.length - 1;
         var lo = Math.min(last, Math.round(win[0] * last));
-        var hi = Math.min(last, Math.max(lo, Math.round(win[1] * last)));
-        anchor = near[randInt(lo, hi)].fact;
+        var hi = Math.min(last, Math.round(win[1] * last));
+        /* Never let a window collapse onto one candidate: in a thin category
+           the hard band rounded to a single index, so the question was
+           identical every time and memorised after one exposure. */
+        if (hi <= lo && last > 0) hi = Math.min(last, lo + 1);
+        anchor = side[randInt(lo, Math.max(lo, hi))].fact;
         p = anchor.value;
       } else {
+        /* Nothing real on the side we wanted -- a fact at the end of its
+           timeline. Compute one rather than flipping to the only side that
+           has neighbours, which is what made the answer constant. */
+        var unit = near.length ? near[0].d : (medianGap(pool) || 3);
+        var reach = Math.max(1, Math.round(unit * SPREAD[fame][useBand]));
+        p = fact.value + (wantLater ? reach : -reach);
+      }
+      if (p === undefined) {
         var gap = medianGap(pool);
         if (gap) {
           p = fact.value + dir * Math.max(1, Math.round(gap * SPREAD[fame][useBand]));
@@ -217,15 +255,30 @@
       var fx2 = FIXED[fame][useBand];
       p = fact.value + dir * randInt(fx2[0], fx2[1]);
     } else {
-      var fr = FRACTION[fame][useBand];
-      var frac = randFloat(fr[0], fr[1]);
-      /* Going down, a fraction of 1 or more drives the probe to zero or
-         below, and the guard underneath then flips it upward. On a small
-         value like "13 colonies" that happened often enough that the answer
-         was almost always "more" -- so cap the downward reach instead of
-         letting the guard silently reverse the direction. */
-      if (dir < 0) frac = Math.min(frac, 0.85);
-      p = niceRound(fact.value * (1 + dir * frac));
+      /* A proportional band is meaningless on a small count. Sixty percent
+         either side of thirteen colonies asks "more or fewer than 3?", which
+         is not a question -- it is a formality with a number in it. Under
+         thirty, step by whole units instead. */
+      if (Math.abs(fact.value) <= 30) {
+        var step = STEP[fame][useBand];
+        p = fact.value + dir * randInt(step[0], step[1]);
+        if (p <= 0) p = fact.value + randInt(step[0], step[1]);
+      } else {
+        var fr = FRACTION[fame][useBand];
+        var frac = randFloat(fr[0], fr[1]);
+        /* Downward, a fraction at or above 1 lands on zero and the guard
+           below then flips the direction it was meant to preserve. */
+        if (dir < 0) frac = Math.min(frac, 0.8);
+        p = niceRound(fact.value * (1 + dir * frac));
+      }
+    }
+
+    /* Units carry limits the arithmetic does not know about. "Percentage of
+       first-class women who survived: 230 percent, more or fewer?" was a live
+       question. */
+    if (fact.kind === 'number' && /percent|%/i.test(fact.unit || '') && p > 100) {
+      p = fact.value + Math.round((100 - fact.value) * randFloat(0.35, 0.9));
+      if (p === fact.value) p = Math.max(1, fact.value - randInt(3, 12));
     }
 
     if (p === fact.value || (fact.kind === 'number' && p <= 0)) {
