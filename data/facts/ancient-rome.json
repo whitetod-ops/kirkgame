@@ -102,6 +102,20 @@
       "fame": "familiar"
     },
     {
+      "id": "ro-vesuvius",
+      "kind": "year",
+      "claim": "Vesuvius erupted and buried the Roman town of Pompeii",
+      "value": 79,
+      "context": "The eruption buried Pompeii and Herculaneum under ash and rock in two days of August AD 79.",
+      "goDeeper": "The ash sealed the towns so completely that loaves of bread were found still in the ovens.",
+      "source": {
+        "title": "Eruption of Mount Vesuvius in AD 79",
+        "url": "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD"
+      },
+      "status": "draft",
+      "fame": "household"
+    },
+    {
       "id": "ro-colosseum-opened",
       "kind": "year",
       "claim": "The Colosseum opened in Rome",
