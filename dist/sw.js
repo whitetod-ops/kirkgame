@@ -1,7 +1,7 @@
 /* Everything the game needs is inlined into one HTML file, so "offline" means
    holding on to that one file. Network first, because a push to main should
    reach players quickly; cache second, because a plane has no network. */
-const CACHE = 'give-or-take-4c12062e';
+const CACHE = 'give-or-take-7ffd4c44';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
