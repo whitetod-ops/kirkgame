@@ -905,7 +905,14 @@ h2.sec {
       p = fact.value + dir * randInt(fx2[0], fx2[1]);
     } else {
       var fr = FRACTION[fame][useBand];
-      p = niceRound(fact.value * (1 + dir * randFloat(fr[0], fr[1])));
+      var frac = randFloat(fr[0], fr[1]);
+      /* Going down, a fraction of 1 or more drives the probe to zero or
+         below, and the guard underneath then flips it upward. On a small
+         value like "13 colonies" that happened often enough that the answer
+         was almost always "more" -- so cap the downward reach instead of
+         letting the guard silently reverse the direction. */
+      if (dir < 0) frac = Math.min(frac, 0.85);
+      p = niceRound(fact.value * (1 + dir * frac));
     }
 
     if (p === fact.value || (fact.kind === 'number' && p <= 0)) {
