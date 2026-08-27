@@ -77,6 +77,13 @@
       "era": "The ancient world",
       "when": "776-146 BC",
       "blurb": "Marathon, Thermopylae, the Parthenon, and the invention of arguing in public."
+    },
+    {
+      "id": "baseball-history",
+      "title": "Baseball's History",
+      "era": "The twentieth century",
+      "when": "1903-2004",
+      "blurb": "The Black Sox, Ruth, Robinson and the curse."
     }
   ]
 }
