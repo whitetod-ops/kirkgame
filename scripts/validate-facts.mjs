@@ -31,6 +31,14 @@ for (const file of readdirSync(FACTS_DIR).filter((f) => f.endsWith('.json')).sor
     seenIds.add(f.id);
 
     if (!['year', 'number', 'boolean'].includes(f.kind)) where(f, `bad kind "${f.kind}"`);
+
+    /* How widely known the fact already is. Optional -- absent means
+       "familiar", the middle. It sets how tight the question has to be:
+       a household date asked against a range everyone can rule out is not
+       a question at all. */
+    if (f.fame !== undefined && !['household', 'familiar', 'obscure'].includes(f.fame)) {
+      where(f, `bad fame "${f.fame}" -- use household, familiar or obscure`);
+    }
     if (typeof f.claim !== 'string' || !f.claim.trim()) where(f, 'missing claim');
     else if (f.claim.length > CLAIM_MAX) where(f, `claim is ${f.claim.length} chars, over the ${CLAIM_MAX} limit`);
 

@@ -77,32 +77,164 @@
 
   /* ---------- the number the player is shown ---------- */
 
-  function probeFor(fact, band) {
+  /* How widely known a fact already is. Absent means 'familiar'. */
+  function fameOf(fact) {
+    var f = fact.fame;
+    return (f === 'household' || f === 'obscure') ? f : 'familiar';
+  }
+
+  /* How far down the list of nearby events to reach, as a proportion of the
+     events actually available. Fixed positions do not work: rank 6 of 15 in
+     the Revolution is a fair easy question, while rank 6 of 9 in Ancient Egypt
+     is always the furthest thing in the file -- and "is Hatshepsut before
+     30 BC?" is not a question, it is a formality. */
+  var RANK = {
+    household: { easy: [0.15, 0.30], medium: [0.05, 0.15], hard: [0, 0.05] },
+    familiar:  { easy: [0.30, 0.55], medium: [0.12, 0.30], hard: [0, 0.12] },
+    obscure:   { easy: [0.45, 0.80], medium: [0.25, 0.45], hard: [0.08, 0.25] }
+  };
+
+  /* Fallback distances, as multiples of the category's own median gap. */
+  var SPREAD = {
+    household: { easy: 1.5, medium: 0.8, hard: 0.4 },
+    familiar:  { easy: 4, medium: 2, hard: 1 },
+    obscure:   { easy: 8, medium: 4, hard: 2 }
+  };
+
+  /* Last-resort fixed offsets, for a category with too few year facts. */
+  var FIXED = {
+    household: { easy: [3, 6], medium: [2, 3], hard: [1, 1] },
+    familiar:  { easy: [8, 30], medium: [3, 7], hard: [1, 2] },
+    obscure:   { easy: [40, 150], medium: [12, 35], hard: [4, 10] }
+  };
+
+  /* Proportional bands for counts and quantities. */
+  var FRACTION = {
+    household: { easy: [0.25, 0.5], medium: [0.12, 0.2], hard: [0.05, 0.08] },
+    familiar:  { easy: [0.6, 1.6], medium: [0.25, 0.5], hard: [0.08, 0.18] },
+    obscure:   { easy: [1.2, 3], medium: [0.5, 1], hard: [0.2, 0.4] }
+  };
+
+  function medianGap(pool) {
+    var ys = [], seen = {};
+    for (var i = 0; i < pool.length; i++) {
+      if (pool[i].kind !== 'year') continue;
+      if (seen[pool[i].value]) continue;
+      seen[pool[i].value] = 1;
+      ys.push(pool[i].value);
+    }
+    if (ys.length < 3) return null;
+    ys.sort(function (a, b) { return a - b; });
+    var gaps = [];
+    for (var j = 1; j < ys.length; j++) gaps.push(ys[j] - ys[j - 1]);
+    gaps.sort(function (a, b) { return a - b; });
+    var m = gaps[Math.floor(gaps.length / 2)];
+    return m > 0 ? m : 1;
+  }
+
+  /* Neighbouring year facts, nearest first, one entry per distinct year.
+     Facts already used in this round are pushed to the back rather than
+     dropped, so a thin category still has something to measure against. */
+  function neighbours(fact, pool, used) {
+    var out = [], seen = {};
+    for (var i = 0; i < pool.length; i++) {
+      var o = pool[i];
+      if (o.kind !== 'year' || o.id === fact.id || o.value === fact.value) continue;
+      if (seen[o.value]) continue;
+      seen[o.value] = 1;
+      out.push({ fact: o, d: Math.abs(o.value - fact.value), spent: !!(used && used[o.id]) });
+    }
+    out.sort(function (a, b) {
+      if (a.spent !== b.spent) return a.spent ? 1 : -1;
+      return a.d - b.d;
+    });
+    return out;
+  }
+
+  /* The number the player is shown, and the real event it came from.
+
+     Difficulty used to be a fixed distance from the truth: easy meant 8 to 30
+     years off. That is broken for anything famous. 1776 asked against 1806 is
+     not a question -- everyone knows the Declaration came first. The probe
+     that works is 1783, because people genuinely confuse the Treaty of Paris
+     with the Constitution.
+
+     So the probe is drawn from the dates of real neighbouring events in the
+     same category, ranked by distance. The Revolution packs 15 events into 26
+     years and yields tight questions on its own; Ancient Egypt spreads 9 across
+     5,022 years and yields wide ones. The category tunes itself. `fame` is the
+     override for the case that density gets wrong -- a household date sitting
+     in a thin file, like the Titanic. */
+  var TIGHTER = { easy: 'medium', medium: 'hard', hard: 'hard' };
+
+  function probeFor(fact, band, pool, used, plausibleOnly) {
+    var fame = fameOf(fact);
     var dir = coin() ? -1 : 1;
+    var anchor = null;
     var p;
 
-    if (fact.kind === 'year') {
-      var mag = band === 'easy' ? randInt(8, 30) : band === 'medium' ? randInt(3, 7) : randInt(1, 2);
-      p = fact.value + dir * mag;
+    /* A true/false statement has to be believable to be a question at all.
+       "Champollion cracked hieroglyphs in 1274 BC" is not a hard question,
+       it is a free point -- so those get a tighter window and a hard ceiling
+       on how far the anchor may sit from the truth. */
+    var useBand = plausibleOnly ? TIGHTER[band] : band;
+
+    if (fact.kind === 'year' && pool) {
+      var near = neighbours(fact, pool, used);
+
+      /* Ancient Egypt is not one spread of dates, it is two: the pharaohs,
+         then the archaeologists who dug them up three thousand years later.
+         Reaching across that chasm produces "was Hatshepsut before 1822?",
+         which nobody has to think about. So the probe is capped -- relative
+         both to how tightly the category clusters and to how isolated this
+         particular fact is. */
+      if (near.length) {
+        var gapUnit = medianGap(pool) || 3;
+        var nearest = near[0].d;
+        var ceiling = plausibleOnly
+          ? Math.max(5, gapUnit * 2.5, nearest * 4)
+          : Math.max(10, gapUnit * 6, nearest * 8);
+        var kept = near.filter(function (n) { return n.d <= ceiling; });
+        if (kept.length) near = kept;
+      }
+      if (near.length) {
+        var win = RANK[fame][useBand];
+        var last = near.length - 1;
+        var lo = Math.min(last, Math.round(win[0] * last));
+        var hi = Math.min(last, Math.max(lo, Math.round(win[1] * last)));
+        anchor = near[randInt(lo, hi)].fact;
+        p = anchor.value;
+      } else {
+        var gap = medianGap(pool);
+        if (gap) {
+          p = fact.value + dir * Math.max(1, Math.round(gap * SPREAD[fame][useBand]));
+        } else {
+          var fx = FIXED[fame][useBand];
+          p = fact.value + dir * randInt(fx[0], fx[1]);
+        }
+      }
+    } else if (fact.kind === 'year') {
+      var fx2 = FIXED[fame][useBand];
+      p = fact.value + dir * randInt(fx2[0], fx2[1]);
     } else {
-      var f = band === 'easy' ? randFloat(0.6, 1.6)
-            : band === 'medium' ? randFloat(0.25, 0.5)
-            : randFloat(0.08, 0.18);
-      p = niceRound(fact.value * (1 + dir * f));
+      var fr = FRACTION[fame][useBand];
+      p = niceRound(fact.value * (1 + dir * randFloat(fr[0], fr[1])));
     }
 
     if (p === fact.value || (fact.kind === 'number' && p <= 0)) {
+      anchor = null;
       var bump = Math.max(1, Math.round(Math.abs(fact.value) * 0.12));
       p = fact.value + (dir < 0 ? -bump : bump);
       if (fact.kind === 'number' && p <= 0) p = fact.value + bump;
     }
-    return p;
+    return { value: p, anchor: anchor };
   }
 
   /* ---------- question builders ---------- */
 
-  function makeOverUnder(fact, band, mode) {
-    var probe = probeFor(fact, band);
+  function makeOverUnder(fact, band, mode, pool, used) {
+    var got = probeFor(fact, band, pool, used);
+    var probe = got.value;
     var isYear = fact.kind === 'year';
     var shown = fmtValue(fact, probe);
     return {
@@ -117,23 +249,30 @@
         ? [{ key: 'under', label: 'Before', cls: 'under' }, { key: 'over', label: 'After', cls: 'over' }]
         : [{ key: 'under', label: 'Fewer', cls: 'under' }, { key: 'over', label: 'More', cls: 'over' }],
       correct: fact.value > probe ? 'over' : 'under',
+      anchor: got.anchor,
       base: 100
     };
   }
 
-  function makeTrueFalse(fact, band) {
-    var statement, truth;
+  function makeTrueFalse(fact, band, pool, used) {
+    var statement, truth, anchor = null;
 
     if (fact.kind === 'boolean') {
       statement = fact.claim + '.';
       truth = fact.answer;
     } else {
       truth = coin();
-      var shown = truth ? fact.value : probeFor(fact, band);
+      var shown = fact.value;
+      if (!truth) {
+        var got = probeFor(fact, band, pool, used, true);
+        shown = got.value;
+        anchor = got.anchor;
+      }
       statement = fact.kind === 'year'
         ? fact.claim + ' in ' + fmtYear(shown) + '.'
         : fact.claim + ': ' + fmtNum(fact, shown) + '.';
       truth = (shown === fact.value);
+      if (truth) anchor = null;
     }
 
     return {
@@ -146,12 +285,16 @@
       ask: 'True or false?',
       options: [{ key: 'true', label: 'True', cls: 'over' }, { key: 'false', label: 'False', cls: 'under' }],
       correct: truth ? 'true' : 'false',
+      anchor: anchor,
       base: 100
     };
   }
 
   function makeOrder(band, pool, used) {
-    var gap = band === 'easy' ? 10 : band === 'medium' ? 4 : 1;
+    /* Ten years apart is a gentle question in the Revolution and a
+       meaningless one in Ancient Egypt, so scale it to the category. */
+    var unit = medianGap(pool) || 3;
+    var gap = Math.max(1, Math.round(unit * (band === 'easy' ? 3 : band === 'medium' ? 1.5 : 0.5)));
     var years = pool.filter(function (f) { return f.kind === 'year' && !used[f.id]; });
     for (var i = 0; i < years.length; i++) {
       for (var j = i + 1; j < years.length; j++) {
@@ -221,11 +364,11 @@
       f = boolFirst
         ? (firstFree(pool, used, asBool) || firstFree(pool, used, asNum))
         : (firstFree(pool, used, asNum) || firstFree(pool, used, asBool));
-      return f ? makeTrueFalse(f, band) : null;
+      return f ? makeTrueFalse(f, band, pool, used) : null;
     }
 
     f = firstFree(pool, used, function (x) { return isNumeric(x) && ok(x); });
-    return f ? makeOverUnder(f, band) : null;
+    return f ? makeOverUnder(f, band, null, pool, used) : null;
   }
 
   function buildRound(catId, gentle) {
@@ -754,6 +897,12 @@
         '<span class="truth-val">' + truthVal + '</span>' +
       '</div>' +
       '<p class="context">' + f.context + '</p>' +
+      /* When the number shown was a real event rather than a generated offset,
+         say so. The player learns the fact they were measured against too. */
+      (q.anchor
+        ? '<p class="anchor">The year you were weighed against, <b>' +
+            fmtYear(q.anchor.value) + '</b>: ' + q.anchor.claim + '.</p>'
+        : '') +
       (f.goDeeper ? '<p class="deeper"><b>Go deeper</b>' + f.goDeeper + '</p>' : '') +
       '<div class="sheet-links">' +
         '<a href="' + f.source.url + '" target="_blank" rel="noopener">Read the source</a>' +

@@ -520,6 +520,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .save-btn.saved { color: var(--brass); border-color: rgba(227,178,91,0.5); }
 
+.anchor {
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-left: 2px solid var(--rule);
+  padding-left: 0.7rem;
+}
+
 .next-btn {
   min-height: var(--tap);
   background: var(--ink);
