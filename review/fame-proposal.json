@@ -1,0 +1,2531 @@
+{
+ "generated": "2026-08-27",
+ "total": 280,
+ "counts": {
+  "household": 20,
+  "obscure": 163,
+  "familiar": 97
+ },
+ "facts": [
+  {
+   "id": "ar-declaration",
+   "claim": "The Continental Congress adopted the Declaration of Independence",
+   "value": "1776",
+   "category": "american-revolution",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1776 is the most widely known date in American history"
+  },
+  {
+   "id": "ar-lexington-concord",
+   "claim": "The battles of Lexington and Concord began the Revolutionary War",
+   "value": "1775",
+   "category": "american-revolution",
+   "fame": "household",
+   "confidence": "medium",
+   "why": "Most place the war's start at 1775 or very near it"
+  },
+  {
+   "id": "ar-yorktown",
+   "claim": "Cornwallis surrendered his army at Yorktown",
+   "value": "1781",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Surrender is taught; the year is not retained"
+  },
+  {
+   "id": "ar-treaty-paris",
+   "claim": "The Treaty of Paris formally ended the Revolutionary War",
+   "value": "1783",
+   "category": "american-revolution",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Major treaty that almost nobody can date"
+  },
+  {
+   "id": "ar-boston-tea-party",
+   "claim": "The Boston Tea Party took place",
+   "value": "1773",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "Event universally known; guesses cluster loosely near 1776"
+  },
+  {
+   "id": "ar-boston-massacre",
+   "claim": "The Boston Massacre occurred",
+   "value": "1770",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Name known from school, date not"
+  },
+  {
+   "id": "ar-signers",
+   "claim": "Number of men who signed the Declaration of Independence",
+   "value": "56 signers",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Fifty-six is trivia-known but far from universal"
+  },
+  {
+   "id": "ar-stamp-act",
+   "claim": "Parliament passed the Stamp Act",
+   "value": "1765",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Heard of in school; year rarely retained"
+  },
+  {
+   "id": "ar-washington-command",
+   "claim": "George Washington took command of the Continental Army",
+   "value": "1775",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Known that he led the army, not when he took command"
+  },
+  {
+   "id": "ar-trenton",
+   "claim": "Washington crossed the Delaware and attacked Trenton",
+   "value": "1776",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The painting is famous; the crossing's year less so"
+  },
+  {
+   "id": "ar-saratoga",
+   "claim": "The American victory at Saratoga convinced France to join the war",
+   "value": "1777",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Turning-point battle known by name only"
+  },
+  {
+   "id": "ar-valley-forge",
+   "claim": "The Continental Army began its winter encampment at Valley Forge",
+   "value": "1777",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Winter camp is famous, the year is not"
+  },
+  {
+   "id": "ar-constitution",
+   "claim": "The United States Constitution was signed in Philadelphia",
+   "value": "1787",
+   "category": "american-revolution",
+   "fame": "household",
+   "confidence": "low",
+   "why": "1787 is drilled in school, but many conflate it with 1776"
+  },
+  {
+   "id": "ar-washington-inaugurated",
+   "claim": "George Washington was inaugurated as the first president",
+   "value": "1789",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Few can date the first inauguration"
+  },
+  {
+   "id": "ar-bill-of-rights",
+   "claim": "The Bill of Rights was ratified",
+   "value": "1791",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Amendments known, ratification year not"
+  },
+  {
+   "id": "ar-common-sense",
+   "claim": "Thomas Paine published Common Sense",
+   "value": "1776",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Pamphlet known by name; publication year not"
+  },
+  {
+   "id": "ar-colonies",
+   "claim": "Number of colonies that declared independence",
+   "value": "13 colonies",
+   "category": "american-revolution",
+   "fame": "household",
+   "confidence": "high",
+   "why": "Thirteen colonies is on the flag"
+  },
+  {
+   "id": "ar-july-4-signing",
+   "claim": "All the delegates signed the Declaration of Independence together on July 4, 1776",
+   "value": "false",
+   "category": "american-revolution",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The correction to the July 4 myth is not widely known"
+  },
+  {
+   "id": "ar-paul-revere",
+   "claim": "Paul Revere rode through the countryside shouting 'The British are coming!'",
+   "value": "false",
+   "category": "american-revolution",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most still believe the shouted-warning version"
+  },
+  {
+   "id": "ar-arnold",
+   "claim": "Benedict Arnold was a successful American general before he switched sides",
+   "value": "true",
+   "category": "american-revolution",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Arnold known as traitor; his earlier record less so"
+  },
+  {
+   "id": "eg-great-pyramid-built",
+   "claim": "The Great Pyramid of Giza was built for the pharaoh Khufu",
+   "value": "-2560",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Third-millennium BC date with no public anchor"
+  },
+  {
+   "id": "eg-tut-tomb-found",
+   "claim": "Howard Carter found the tomb of Tutankhamun",
+   "value": "1922",
+   "category": "ancient-egypt",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Discovery famous, 1922 rarely recalled"
+  },
+  {
+   "id": "eg-rosetta-found",
+   "claim": "The Rosetta Stone was found by French soldiers in Egypt",
+   "value": "1799",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Stone is known; its discovery year is not"
+  },
+  {
+   "id": "eg-hieroglyphs-deciphered",
+   "claim": "Champollion cracked the hieroglyphic script",
+   "value": "1822",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Champollion is a specialist's name"
+  },
+  {
+   "id": "eg-cleopatra-died",
+   "claim": "Cleopatra died, ending three thousand years of pharaohs",
+   "value": "-30",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Cleopatra famous, BC dating unfamiliar"
+  },
+  {
+   "id": "eg-pyramid-height",
+   "claim": "Original height of the Great Pyramid",
+   "value": "146 metres",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Specific metric measurement"
+  },
+  {
+   "id": "eg-ramesses-reign",
+   "claim": "Length of the reign of Ramesses II",
+   "value": "66 years",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Reign length known only to enthusiasts"
+  },
+  {
+   "id": "eg-kadesh",
+   "claim": "The Battle of Kadesh was fought between Egypt and the Hittites",
+   "value": "-1274",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Battle unknown to a general American audience"
+  },
+  {
+   "id": "eg-unification",
+   "claim": "Upper and Lower Egypt were unified into one kingdom",
+   "value": "-3100",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Ancient date with no cultural anchor"
+  },
+  {
+   "id": "eg-hatshepsut",
+   "claim": "Hatshepsut began her reign as pharaoh",
+   "value": "-1479",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Reign start date is specialist knowledge"
+  },
+  {
+   "id": "eg-alexander",
+   "claim": "Alexander the Great took Egypt from the Persians",
+   "value": "-332",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Date of the Egyptian conquest not generally known"
+  },
+  {
+   "id": "eg-rosetta-scripts",
+   "claim": "Number of scripts carved on the Rosetta Stone",
+   "value": "3 scripts",
+   "category": "ancient-egypt",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Three scripts is the point of the stone, often taught"
+  },
+  {
+   "id": "eg-tut-age",
+   "claim": "Tutankhamun's age when he died",
+   "value": "19 years old",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Boy king known; exact age at death not"
+  },
+  {
+   "id": "eg-nile-length",
+   "claim": "Length of the Nile",
+   "value": "6650 kilometres",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Specific length, and in kilometres"
+  },
+  {
+   "id": "eg-pyramid-count",
+   "claim": "Number of known pyramids in Egypt",
+   "value": "118 pyramids",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Almost nobody knows the total"
+  },
+  {
+   "id": "eg-tut-mask-weight",
+   "claim": "Weight of Tutankhamun's gold funeral mask",
+   "value": "10 kilograms",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Specific weight of a museum object"
+  },
+  {
+   "id": "eg-slaves-myth",
+   "claim": "The pyramids were built by slave labour",
+   "value": "false",
+   "category": "ancient-egypt",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The paid-workers correction has had wide coverage"
+  },
+  {
+   "id": "eg-cleopatra-greek",
+   "claim": "Cleopatra was descended from Greeks, not Egyptians",
+   "value": "true",
+   "category": "ancient-egypt",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Popular trivia item, though not universal"
+  },
+  {
+   "id": "eg-hieroglyph-phonetic",
+   "claim": "Hieroglyphs were pure picture-writing with no sounds attached",
+   "value": "false",
+   "category": "ancient-egypt",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Requires knowing hieroglyphs encode sounds"
+  },
+  {
+   "id": "eg-cleopatra-moon",
+   "claim": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid",
+   "value": "true",
+   "category": "ancient-egypt",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Viral factoid many have seen online"
+  },
+  {
+   "id": "gr-marathon",
+   "claim": "The Athenians defeated the Persians at Marathon",
+   "value": "-490",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Battle known via the race; 490 BC not pinnable"
+  },
+  {
+   "id": "gr-thermopylae",
+   "claim": "Leonidas and his Spartans held the pass at Thermopylae",
+   "value": "-480",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Famous through film, but the BC date is not known"
+  },
+  {
+   "id": "gr-salamis",
+   "claim": "The Greek fleet destroyed the Persian navy at Salamis",
+   "value": "-480",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Naval battle unknown to most Americans"
+  },
+  {
+   "id": "gr-first-olympics",
+   "claim": "The first recorded Olympic Games were held at Olympia",
+   "value": "-776",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "776 BC is taught occasionally, rarely retained"
+  },
+  {
+   "id": "gr-parthenon",
+   "claim": "The Parthenon was completed on the Athenian Acropolis",
+   "value": "-432",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Building famous, completion date not"
+  },
+  {
+   "id": "gr-peloponnesian",
+   "claim": "The Peloponnesian War between Athens and Sparta began",
+   "value": "-431",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "War known by name only, if that"
+  },
+  {
+   "id": "gr-socrates-death",
+   "claim": "Socrates was executed in Athens",
+   "value": "-399",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Socrates famous; 399 BC is specialist"
+  },
+  {
+   "id": "gr-democracy",
+   "claim": "Cleisthenes established the reforms that founded Athenian democracy",
+   "value": "-508",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Cleisthenes is unknown to most Americans"
+  },
+  {
+   "id": "gr-alexander-death",
+   "claim": "Alexander the Great died in Babylon",
+   "value": "-323",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Alexander famous, his death year is not"
+  },
+  {
+   "id": "gr-corinth",
+   "claim": "Rome sacked Corinth, ending Greek independence",
+   "value": "-146",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Sack of Corinth unknown to the general public"
+  },
+  {
+   "id": "gr-city-states",
+   "claim": "Number of independent Greek city-states at their height",
+   "value": "1000 city-states",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Count of city-states is a scholarly estimate"
+  },
+  {
+   "id": "gr-parthenon-columns",
+   "claim": "Columns along the long side of the Parthenon",
+   "value": "17 columns",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Architectural detail"
+  },
+  {
+   "id": "gr-athens-population",
+   "claim": "Estimated population of Athens at its fifth-century peak",
+   "value": "300000 people",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Ancient demography estimate"
+  },
+  {
+   "id": "gr-theatre-capacity",
+   "claim": "Capacity of the theatre at Epidaurus",
+   "value": "14000 seats",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Site-specific figure"
+  },
+  {
+   "id": "gr-olympics-women",
+   "claim": "Married women were barred from watching the ancient Olympics",
+   "value": "true",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Rule about married spectators is little known"
+  },
+  {
+   "id": "gr-statues-white",
+   "claim": "Greek marble statues were originally left plain white",
+   "value": "false",
+   "category": "ancient-greece",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The painted-statues correction has circulated widely"
+  },
+  {
+   "id": "gr-spartan-boys",
+   "claim": "Spartan boys were taken from their families for military training",
+   "value": "true",
+   "category": "ancient-greece",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Spartan military upbringing is common knowledge"
+  },
+  {
+   "id": "gr-antikythera",
+   "claim": "The Greeks built a geared mechanical device for predicting astronomical events",
+   "value": "true",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Antikythera mechanism known mainly to enthusiasts"
+  },
+  {
+   "id": "gr-earth-round",
+   "claim": "Greek scholars knew the Earth was a sphere and measured its size",
+   "value": "true",
+   "category": "ancient-greece",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Widely taught that Greeks knew Earth was round"
+  },
+  {
+   "id": "gr-alphabet-vowels",
+   "claim": "The Greek alphabet was the first to write vowels as separate letters",
+   "value": "true",
+   "category": "ancient-greece",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Writing-system history is specialist"
+  },
+  {
+   "id": "bd-arrived-europe",
+   "claim": "The Black Death reached Europe through Sicilian ports",
+   "value": "1347",
+   "category": "black-death",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Plague known as a 1300s event; year not pinned"
+  },
+  {
+   "id": "bd-england",
+   "claim": "The plague reached England",
+   "value": "1348",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "English arrival date is a specialist detail"
+  },
+  {
+   "id": "bd-europe-deaths",
+   "claim": "Estimated deaths in Europe from the Black Death",
+   "value": "25000000 deaths",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Absolute death toll rarely cited"
+  },
+  {
+   "id": "bd-europe-percent",
+   "claim": "Share of Europe's population killed by the Black Death",
+   "value": "40 percent",
+   "category": "black-death",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "People recall a third of Europe, so the fraction is roughly held"
+  },
+  {
+   "id": "bd-quarantine",
+   "claim": "Venice's colony at Ragusa imposed the first recorded quarantine",
+   "value": "1377",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Ragusa quarantine unknown to most"
+  },
+  {
+   "id": "bd-bacterium",
+   "claim": "Alexandre Yersin identified the bacterium that causes plague",
+   "value": "1894",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Yersin and the 1890s are specialist knowledge"
+  },
+  {
+   "id": "bd-great-plague-london",
+   "claim": "The Great Plague of London killed roughly a quarter of the city",
+   "value": "1665",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "1665 is British schooling, not American"
+  },
+  {
+   "id": "bd-eyam",
+   "claim": "The village of Eyam quarantined itself to stop the plague spreading",
+   "value": "1665",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Eyam is barely known outside Britain"
+  },
+  {
+   "id": "bd-justinian",
+   "claim": "The Plague of Justinian struck the Byzantine Empire",
+   "value": "541",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Sixth-century plague unknown to most"
+  },
+  {
+   "id": "bd-wages",
+   "claim": "England passed the Statute of Labourers to hold wages at pre-plague levels",
+   "value": "1351",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Statute of Labourers is specialist"
+  },
+  {
+   "id": "bd-peasants-revolt",
+   "claim": "The Peasants' Revolt broke out in England",
+   "value": "1381",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "English revolt unfamiliar to Americans"
+  },
+  {
+   "id": "bd-incubation",
+   "claim": "Typical days between infection with bubonic plague and first symptoms",
+   "value": "4 days",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Clinical detail"
+  },
+  {
+   "id": "bd-population-recovery",
+   "claim": "Years it took Europe's population to return to pre-plague levels",
+   "value": "200 years",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Demographic recovery estimate"
+  },
+  {
+   "id": "bd-rats-only",
+   "claim": "The Black Death spread only through rats and their fleas",
+   "value": "false",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The rats-only story is still what most people believe"
+  },
+  {
+   "id": "bd-beak-masks",
+   "claim": "The beaked plague-doctor mask dates from the Black Death itself",
+   "value": "false",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most assume the beaked mask is medieval"
+  },
+  {
+   "id": "bd-ring-a-roses",
+   "claim": "The rhyme 'Ring a Ring o' Roses' is a proven reference to the plague",
+   "value": "false",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The myth is better known than the debunking"
+  },
+  {
+   "id": "bd-still-exists",
+   "claim": "Plague still infects people today",
+   "value": "true",
+   "category": "black-death",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Occasional plague cases make the news"
+  },
+  {
+   "id": "bd-persecution",
+   "claim": "Jewish communities were blamed and attacked during the Black Death",
+   "value": "true",
+   "category": "black-death",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Pogroms during the plague are commonly taught"
+  },
+  {
+   "id": "bd-name",
+   "claim": "People at the time called it the Black Death",
+   "value": "false",
+   "category": "black-death",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Few know the name was applied later"
+  },
+  {
+   "id": "bd-art",
+   "claim": "The plague reshaped European art toward images of death",
+   "value": "true",
+   "category": "black-death",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The death-imagery link is broadly plausible and taught"
+  },
+  {
+   "id": "cr-brown",
+   "claim": "The Supreme Court ruled school segregation unconstitutional in Brown v. Board of Education",
+   "value": "1954",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "Brown is household; the 1954 date itself is shakier"
+  },
+  {
+   "id": "cr-montgomery",
+   "claim": "Rosa Parks refused to give up her seat, starting the Montgomery bus boycott",
+   "value": "1955",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "Rosa Parks is household, the year is not"
+  },
+  {
+   "id": "cr-boycott-days",
+   "claim": "Days the Montgomery bus boycott lasted",
+   "value": "381 days",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Exact duration is specialist"
+  },
+  {
+   "id": "cr-little-rock",
+   "claim": "The Little Rock Nine desegregated Central High School under federal escort",
+   "value": "1957",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Little Rock Nine known, year not"
+  },
+  {
+   "id": "cr-greensboro",
+   "claim": "Four students began the Greensboro lunch counter sit-in",
+   "value": "1960",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Sit-ins known generally, the year not"
+  },
+  {
+   "id": "cr-freedom-rides",
+   "claim": "The Freedom Rides tested desegregation on interstate buses",
+   "value": "1961",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Freedom Rides known by name only"
+  },
+  {
+   "id": "cr-birmingham",
+   "claim": "The Birmingham campaign brought police dogs and fire hoses onto national television",
+   "value": "1963",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Images famous, year not pinned"
+  },
+  {
+   "id": "cr-letter-birmingham",
+   "claim": "King wrote his Letter from Birmingham Jail",
+   "value": "1963",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Letter widely assigned in school; year not"
+  },
+  {
+   "id": "cr-selma",
+   "claim": "Marchers were attacked crossing the Edmund Pettus Bridge on Bloody Sunday",
+   "value": "1965",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Bloody Sunday known; 1965 not widely held"
+  },
+  {
+   "id": "cr-selma-distance",
+   "claim": "Distance of the Selma to Montgomery march",
+   "value": "54 miles",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Specific mileage"
+  },
+  {
+   "id": "cr-fair-housing",
+   "claim": "The Fair Housing Act banned discrimination in the sale and rental of housing",
+   "value": "1968",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Act less known than the 1964 and 1965 laws"
+  },
+  {
+   "id": "cr-loving",
+   "claim": "The Supreme Court struck down bans on interracial marriage in Loving v. Virginia",
+   "value": "1967",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Loving known via the film; the year is not"
+  },
+  {
+   "id": "cr-king-nobel",
+   "claim": "Martin Luther King Jr. received the Nobel Peace Prize",
+   "value": "1964",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Known that he won it; when is not"
+  },
+  {
+   "id": "cr-king-age-death",
+   "claim": "Martin Luther King Jr.'s age when he was killed",
+   "value": "39 years old",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Age 39 is a known line but not universal"
+  },
+  {
+   "id": "cr-mlk-holiday",
+   "claim": "Martin Luther King Jr. Day was first observed as a federal holiday",
+   "value": "1986",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most have no idea when the holiday started"
+  },
+  {
+   "id": "cr-parks-first",
+   "claim": "Rosa Parks was the first person arrested for refusing to give up a bus seat in Montgomery",
+   "value": "false",
+   "category": "civil-rights-movement",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Claudette Colvin is not widely known"
+  },
+  {
+   "id": "cr-dream-improvised",
+   "claim": "The most famous passage of the 'I Have a Dream' speech was not in the prepared text",
+   "value": "true",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The improvisation story circulates fairly widely"
+  },
+  {
+   "id": "cr-nonviolence-only",
+   "claim": "The movement was united behind nonviolent tactics",
+   "value": "false",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Malcolm X and Black Power are broadly known"
+  },
+  {
+   "id": "cr-women-leaders",
+   "claim": "Women organised much of the movement's day-to-day work",
+   "value": "true",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Broadly plausible and increasingly taught"
+  },
+  {
+   "id": "cr-fbi",
+   "claim": "The FBI conducted surveillance of Martin Luther King Jr.",
+   "value": "true",
+   "category": "civil-rights-movement",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "FBI surveillance of King is well publicised"
+  },
+  {
+   "id": "cw-sumter",
+   "claim": "Confederate artillery opened fire on Fort Sumter, starting the Civil War",
+   "value": "1861",
+   "category": "civil-war",
+   "fame": "household",
+   "confidence": "medium",
+   "why": "Nearly everyone places the war's start in 1861"
+  },
+  {
+   "id": "cw-lincoln-assassination",
+   "claim": "Abraham Lincoln was assassinated",
+   "value": "1865",
+   "category": "civil-war",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1865 is standard American knowledge"
+  },
+  {
+   "id": "cw-gettysburg",
+   "claim": "The Battle of Gettysburg was fought",
+   "value": "1863",
+   "category": "civil-war",
+   "fame": "household",
+   "confidence": "low",
+   "why": "Many say 1863; others only know the 1860s"
+  },
+  {
+   "id": "cw-gettysburg-address-words",
+   "claim": "Length of the Gettysburg Address",
+   "value": "272 words",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Word count is trivia-level detail"
+  },
+  {
+   "id": "cw-emancipation-effect",
+   "claim": "The Emancipation Proclamation took legal effect",
+   "value": "1863",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Proclamation known; the effective date is not"
+  },
+  {
+   "id": "cw-appomattox",
+   "claim": "Robert E. Lee surrendered to Grant at Appomattox Court House",
+   "value": "1865",
+   "category": "civil-war",
+   "fame": "household",
+   "confidence": "medium",
+   "why": "The war ending in 1865 is widely known"
+  },
+  {
+   "id": "cw-antietam-casualties",
+   "claim": "Total casualties at the Battle of Antietam",
+   "value": "22000 casualties",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Casualty figures are specialist"
+  },
+  {
+   "id": "cw-seceding-states",
+   "claim": "Number of states that joined the Confederacy",
+   "value": "11 states",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Eleven is not a number most people hold"
+  },
+  {
+   "id": "cw-lincoln-age",
+   "claim": "Abraham Lincoln's age when he died",
+   "value": "56 years old",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Age at death rarely known"
+  },
+  {
+   "id": "cw-total-deaths",
+   "claim": "Traditional estimate of total deaths in the Civil War",
+   "value": "620000 deaths",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "620,000 is cited often but not widely held"
+  },
+  {
+   "id": "cw-13th-amendment",
+   "claim": "The Thirteenth Amendment abolishing slavery was ratified",
+   "value": "1865",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Amendment known; ratification year not"
+  },
+  {
+   "id": "cw-bull-run",
+   "claim": "The First Battle of Bull Run was fought",
+   "value": "1861",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Battle name known from school, date not"
+  },
+  {
+   "id": "cw-atlanta",
+   "claim": "Sherman captured Atlanta",
+   "value": "1864",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Sherman's campaign known vaguely, year not"
+  },
+  {
+   "id": "cw-vicksburg",
+   "claim": "Vicksburg surrendered to Grant, giving the Union control of the Mississippi",
+   "value": "1863",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Campaign is not widely known outside buffs"
+  },
+  {
+   "id": "cw-lincoln-elected",
+   "claim": "Abraham Lincoln was first elected president",
+   "value": "1860",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "1860 is commonly taught, but recall is unreliable"
+  },
+  {
+   "id": "cw-ironclads",
+   "claim": "The ironclads Monitor and Virginia fought at Hampton Roads",
+   "value": "1862",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Monitor and Merrimack named in school; year not"
+  },
+  {
+   "id": "cw-shiloh",
+   "claim": "The Battle of Shiloh was fought in Tennessee",
+   "value": "1862",
+   "category": "civil-war",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Battle known to buffs only"
+  },
+  {
+   "id": "cw-lee-union-offer",
+   "claim": "Robert E. Lee was offered a senior command in the Union army before he joined the Confederacy",
+   "value": "true",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Often mentioned in popular accounts of Lee"
+  },
+  {
+   "id": "cw-emancipation-scope",
+   "claim": "The Emancipation Proclamation freed every enslaved person in the United States",
+   "value": "false",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Commonly taught that it did not free everyone"
+  },
+  {
+   "id": "cw-grant-command",
+   "claim": "Ulysses S. Grant commanded all Union armies from the beginning of the war",
+   "value": "false",
+   "category": "civil-war",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Grant's late promotion is a standard classroom point"
+  },
+  {
+   "id": "lc-departure",
+   "claim": "The Corps of Discovery set out up the Missouri River",
+   "value": "1804",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Expedition known; start year not held"
+  },
+  {
+   "id": "lc-pacific",
+   "claim": "Lewis and Clark reached the Pacific Ocean",
+   "value": "1805",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Reaching the Pacific known, the year not"
+  },
+  {
+   "id": "lc-return",
+   "claim": "The expedition returned to St Louis",
+   "value": "1806",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Return date is not commonly known"
+  },
+  {
+   "id": "lc-louisiana-purchase",
+   "claim": "The Louisiana Purchase gave the United States the land the expedition would cross",
+   "value": "1803",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "1803 is taught hard, but recall is unreliable"
+  },
+  {
+   "id": "lc-distance",
+   "claim": "Distance covered by the expedition, out and back",
+   "value": "8000 miles",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Total mileage is a specialist figure"
+  },
+  {
+   "id": "lc-budget",
+   "claim": "Amount Jefferson requested from Congress to fund the expedition",
+   "value": "2500 dollars",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Congressional appropriation amount"
+  },
+  {
+   "id": "lc-animals",
+   "claim": "Animal species new to science described by the expedition",
+   "value": "122 species",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Species counts are specialist"
+  },
+  {
+   "id": "lc-plants",
+   "claim": "Plant species new to science described by the expedition",
+   "value": "178 species",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Species counts are specialist"
+  },
+  {
+   "id": "lc-floyd",
+   "claim": "Sergeant Charles Floyd became the expedition's only fatality",
+   "value": "1804",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Floyd's death is known only to enthusiasts"
+  },
+  {
+   "id": "lc-sacagawea-joins",
+   "claim": "Sacagawea joined the expedition at the Mandan villages",
+   "value": "1805",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Sacagawea is famous; when she joined is not"
+  },
+  {
+   "id": "lc-sacagawea-age",
+   "claim": "Sacagawea's approximate age during the expedition",
+   "value": "17 years old",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Her age is rarely stated"
+  },
+  {
+   "id": "lc-fort-clatsop",
+   "claim": "The Corps built Fort Clatsop for the winter on the Oregon coast",
+   "value": "1805",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Fort Clatsop known regionally at best"
+  },
+  {
+   "id": "lc-lewis-age",
+   "claim": "Meriwether Lewis's age when the expedition set out",
+   "value": "29 years old",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Personal biographical detail"
+  },
+  {
+   "id": "lc-jefferson-president",
+   "claim": "Thomas Jefferson became president",
+   "value": "1801",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Jefferson known; his term's start year is not"
+  },
+  {
+   "id": "lc-water-route",
+   "claim": "The expedition found the water route across the continent it was sent to find",
+   "value": "false",
+   "category": "lewis-and-clark",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Commonly taught that no water route existed"
+  },
+  {
+   "id": "lc-york",
+   "claim": "An enslaved man travelled with the expedition for its whole journey",
+   "value": "true",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "York the enslaved member is not widely known"
+  },
+  {
+   "id": "lc-first-europeans",
+   "claim": "Lewis and Clark were the first Europeans to cross North America by land",
+   "value": "false",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Mackenzie's earlier crossing is little known"
+  },
+  {
+   "id": "lc-vote",
+   "claim": "The whole party voted on where to spend the winter of 1805",
+   "value": "true",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The winter-camp vote is a specialist detail"
+  },
+  {
+   "id": "lc-newfoundland",
+   "claim": "A dog completed the entire expedition with the Corps",
+   "value": "true",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Seaman the dog is enthusiast-level"
+  },
+  {
+   "id": "lc-journals",
+   "claim": "The expedition's journals were published promptly on its return",
+   "value": "false",
+   "category": "lewis-and-clark",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Publication history is specialist"
+  },
+  {
+   "id": "ln-born",
+   "claim": "Abraham Lincoln was born in a one-room Kentucky log cabin",
+   "value": "1809",
+   "category": "lincoln",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Log cabin story famous; 1809 not held"
+  },
+  {
+   "id": "ln-height",
+   "claim": "Abraham Lincoln's height",
+   "value": "193 centimetres",
+   "category": "lincoln",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Lincoln's tallness known; the exact height less so"
+  },
+  {
+   "id": "ln-debates-year",
+   "claim": "Lincoln and Stephen Douglas held their famous series of debates",
+   "value": "1858",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Debates known by name; the year is not"
+  },
+  {
+   "id": "ln-debates-count",
+   "claim": "Number of Lincoln-Douglas debates",
+   "value": "7 debates",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Seven debates is trivia-level"
+  },
+  {
+   "id": "ln-congress",
+   "claim": "Lincoln began his single term in the United States House of Representatives",
+   "value": "1847",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "His single House term is barely known"
+  },
+  {
+   "id": "ln-age-president",
+   "claim": "Lincoln's age when he became president",
+   "value": "52 years old",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Age at inauguration rarely known"
+  },
+  {
+   "id": "ln-sons",
+   "claim": "Number of sons born to Abraham and Mary Lincoln",
+   "value": "4 sons",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Family details not widely known"
+  },
+  {
+   "id": "ln-patent",
+   "claim": "Lincoln was granted a patent for a device to lift boats over shoals",
+   "value": "1849",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "The patent is an obscure curiosity"
+  },
+  {
+   "id": "ln-beard",
+   "claim": "Lincoln grew his beard after a letter from an eleven-year-old girl",
+   "value": "1860",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The Grace Bedell story is known but not dated"
+  },
+  {
+   "id": "ln-second-inaugural",
+   "claim": "Lincoln delivered his second inaugural address",
+   "value": "1865",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Speech quoted; its year not held"
+  },
+  {
+   "id": "ln-house-divided",
+   "claim": "Lincoln gave the 'house divided against itself cannot stand' speech",
+   "value": "1858",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The line is famous, the 1858 date is not"
+  },
+  {
+   "id": "ln-memorial",
+   "claim": "The Lincoln Memorial in Washington was dedicated",
+   "value": "1922",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Dedication year is not widely known"
+  },
+  {
+   "id": "ln-statue-height",
+   "claim": "Height of the seated Lincoln statue inside the Lincoln Memorial",
+   "value": "19 feet",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Monument dimension"
+  },
+  {
+   "id": "ln-penny",
+   "claim": "Lincoln first appeared on the American one-cent coin",
+   "value": "1909",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Coin design year is specialist"
+  },
+  {
+   "id": "ln-salary",
+   "claim": "Lincoln's annual salary as president",
+   "value": "25000 dollars",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Presidential salary figure"
+  },
+  {
+   "id": "ln-gettysburg-minutes",
+   "claim": "Minutes Lincoln took to deliver the Gettysburg Address",
+   "value": "2 minutes",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The about-two-minutes line is semi-known"
+  },
+  {
+   "id": "ln-outside-thirteen",
+   "claim": "Lincoln was the first president born outside the original thirteen states",
+   "value": "true",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Requires knowing Kentucky's statehood context"
+  },
+  {
+   "id": "ln-self-taught",
+   "claim": "Lincoln had almost no formal schooling and taught himself law",
+   "value": "true",
+   "category": "lincoln",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Self-education is central to the Lincoln legend"
+  },
+  {
+   "id": "ln-wrestler",
+   "claim": "Lincoln was an accomplished wrestler as a young man",
+   "value": "true",
+   "category": "lincoln",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Wrestling is a popular but not universal anecdote"
+  },
+  {
+   "id": "ln-first-assassinated",
+   "claim": "Lincoln was the first American president to be assassinated",
+   "value": "true",
+   "category": "lincoln",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Widely known that Lincoln was the first"
+  },
+  {
+   "id": "pm-eruption",
+   "claim": "Vesuvius erupted and buried Pompeii and Herculaneum",
+   "value": "79",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "AD 79 is unknown to almost all Americans"
+  },
+  {
+   "id": "pm-rediscovered",
+   "claim": "Systematic excavation of Pompeii began",
+   "value": "1748",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Excavation start date is specialist"
+  },
+  {
+   "id": "pm-deaths",
+   "claim": "Estimated deaths in the eruption of Vesuvius",
+   "value": "2000 deaths",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Death estimate not widely cited"
+  },
+  {
+   "id": "pm-population",
+   "claim": "Estimated population of Pompeii before the eruption",
+   "value": "11000 people",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Ancient town population estimate"
+  },
+  {
+   "id": "pm-ash-depth",
+   "claim": "Depth of ash and pumice that buried Pompeii",
+   "value": "5 metres",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Site measurement"
+  },
+  {
+   "id": "pm-column-height",
+   "claim": "Height of the eruption column above Vesuvius",
+   "value": "33 kilometres",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Volcanological figure"
+  },
+  {
+   "id": "pm-earthquake",
+   "claim": "A severe earthquake damaged Pompeii years before the eruption",
+   "value": "62",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "The earlier earthquake is specialist knowledge"
+  },
+  {
+   "id": "pm-casts",
+   "claim": "Giuseppe Fiorelli devised the technique of casting the voids left by bodies",
+   "value": "1863",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Fiorelli's technique is known, its date is not"
+  },
+  {
+   "id": "pm-area",
+   "claim": "Area of the excavated site at Pompeii",
+   "value": "44 hectares",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Site area in hectares"
+  },
+  {
+   "id": "pm-vesuvius-height",
+   "claim": "Present height of Mount Vesuvius",
+   "value": "1281 metres",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Mountain elevation"
+  },
+  {
+   "id": "pm-last-eruption",
+   "claim": "Vesuvius last erupted",
+   "value": "1944",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most do not know Vesuvius erupted in 1944"
+  },
+  {
+   "id": "pm-pliny-age",
+   "claim": "Age of Pliny the Younger when he witnessed the eruption",
+   "value": "17 years old",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Biographical detail"
+  },
+  {
+   "id": "pm-loaves",
+   "claim": "Carbonised loaves of bread have been recovered from Pompeii and Herculaneum",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Carbonised bread is a museum-visitor's fact"
+  },
+  {
+   "id": "pm-graffiti",
+   "claim": "Thousands of pieces of graffiti survive on Pompeii's walls",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Pompeii graffiti gets wide popular coverage"
+  },
+  {
+   "id": "pm-lava",
+   "claim": "Pompeii was destroyed by flowing lava",
+   "value": "false",
+   "category": "pompeii",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The ash-not-lava image is the familiar one"
+  },
+  {
+   "id": "pm-pliny-elder",
+   "claim": "Pliny the Elder died during the eruption",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Pliny the Elder's death is little known"
+  },
+  {
+   "id": "pm-herculaneum-scrolls",
+   "claim": "A library of scrolls survived carbonised at Herculaneum",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Scrolls known mainly through recent tech news"
+  },
+  {
+   "id": "pm-forgotten",
+   "claim": "The location of Pompeii was completely forgotten for centuries",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Lost-city-rediscovered is the standard story"
+  },
+  {
+   "id": "pm-fast-food",
+   "claim": "Pompeii had street counters serving hot food to passers-by",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Street food counters known only to recent visitors"
+  },
+  {
+   "id": "pm-unesco",
+   "claim": "Pompeii is a UNESCO World Heritage Site",
+   "value": "true",
+   "category": "pompeii",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Easy to guess for a site this famous"
+  },
+  {
+   "id": "rt-prohibition-start",
+   "claim": "Prohibition took effect across the United States",
+   "value": "1920",
+   "category": "roaring-twenties",
+   "fame": "household",
+   "confidence": "low",
+   "why": "Prohibition is bound to the twenties in memory"
+  },
+  {
+   "id": "rt-prohibition-end",
+   "claim": "Prohibition was repealed by the Twenty-first Amendment",
+   "value": "1933",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Repeal known; 1933 not reliably held"
+  },
+  {
+   "id": "rt-suffrage",
+   "claim": "The Nineteenth Amendment gave American women the vote",
+   "value": "1920",
+   "category": "roaring-twenties",
+   "fame": "household",
+   "confidence": "low",
+   "why": "1920 for women's suffrage is widely taught and cited"
+  },
+  {
+   "id": "rt-valentine",
+   "claim": "The St Valentine's Day Massacre took place in Chicago",
+   "value": "1929",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Massacre known by name; year not"
+  },
+  {
+   "id": "rt-capone-convicted",
+   "claim": "Al Capone was convicted of tax evasion",
+   "value": "1931",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Tax-evasion conviction known, year not"
+  },
+  {
+   "id": "rt-lindbergh",
+   "claim": "Charles Lindbergh flew alone and nonstop across the Atlantic",
+   "value": "1927",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Flight famous; 1927 not widely held"
+  },
+  {
+   "id": "rt-jazz-singer",
+   "claim": "The Jazz Singer brought synchronised speech to feature films",
+   "value": "1927",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "First talkie known vaguely, year not"
+  },
+  {
+   "id": "rt-gatsby",
+   "claim": "F. Scott Fitzgerald published The Great Gatsby",
+   "value": "1925",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Novel household; publication year not"
+  },
+  {
+   "id": "rt-crash",
+   "claim": "The Wall Street crash ended the boom",
+   "value": "1929",
+   "category": "roaring-twenties",
+   "fame": "household",
+   "confidence": "high",
+   "why": "The 1929 crash is a fixed date in American memory"
+  },
+  {
+   "id": "rt-model-t-price",
+   "claim": "Price of a Ford Model T by the mid-1920s",
+   "value": "260 dollars",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Specific price point"
+  },
+  {
+   "id": "rt-radios",
+   "claim": "American households with a radio by 1930",
+   "value": "40 percent",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Adoption statistic"
+  },
+  {
+   "id": "rt-speakeasies",
+   "claim": "Estimated speakeasies operating in New York City at Prohibition's height",
+   "value": "30000 speakeasies",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Estimate of illegal bars"
+  },
+  {
+   "id": "rt-dow-peak",
+   "claim": "Peak of the Dow Jones average before the 1929 crash",
+   "value": "381 points",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Index level from 1929"
+  },
+  {
+   "id": "rt-empire-state",
+   "claim": "The Empire State Building opened in New York",
+   "value": "1931",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Building famous; its opening year is not"
+  },
+  {
+   "id": "rt-harlem",
+   "claim": "The Harlem Renaissance flourished during the 1920s",
+   "value": "true",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Harlem Renaissance is standard curriculum"
+  },
+  {
+   "id": "rt-drinking-illegal",
+   "claim": "Drinking alcohol was itself a crime under Prohibition",
+   "value": "false",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most assume drinking itself was banned"
+  },
+  {
+   "id": "rt-flappers",
+   "claim": "The flapper style was widely condemned at the time",
+   "value": "true",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Flapper backlash is part of the standard story"
+  },
+  {
+   "id": "rt-prohibition-worked",
+   "claim": "Alcohol consumption fell during Prohibition",
+   "value": "true",
+   "category": "roaring-twenties",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Counterintuitive; most assume it failed outright"
+  },
+  {
+   "id": "rt-scopes",
+   "claim": "A Tennessee teacher was prosecuted in 1925 for teaching evolution",
+   "value": "true",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The Scopes trial is widely taught"
+  },
+  {
+   "id": "rt-credit",
+   "claim": "Buying goods on instalment credit became widespread in the 1920s",
+   "value": "true",
+   "category": "roaring-twenties",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Instalment buying is a standard 1920s lesson"
+  },
+  {
+   "id": "s6-jfk-assassinated",
+   "claim": "President John F. Kennedy was assassinated in Dallas",
+   "value": "1963",
+   "category": "sixties-america",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1963 in Dallas is fixed in American memory"
+  },
+  {
+   "id": "s6-moon-landing",
+   "claim": "Apollo 11 landed the first humans on the Moon",
+   "value": "1969",
+   "category": "sixties-america",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1969 is universally known"
+  },
+  {
+   "id": "s6-civil-rights-act",
+   "claim": "The Civil Rights Act outlawed segregation in public places",
+   "value": "1964",
+   "category": "sixties-america",
+   "fame": "household",
+   "confidence": "low",
+   "why": "The year is part of the law's common name"
+  },
+  {
+   "id": "s6-voting-rights-act",
+   "claim": "The Voting Rights Act banned literacy tests and other barriers to voting",
+   "value": "1965",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Less recited than the 1964 Act"
+  },
+  {
+   "id": "s6-mlk-assassinated",
+   "claim": "Martin Luther King Jr. was assassinated in Memphis",
+   "value": "1968",
+   "category": "sixties-america",
+   "fame": "household",
+   "confidence": "medium",
+   "why": "1968 is widely known, often paired with RFK"
+  },
+  {
+   "id": "s6-rfk-assassinated",
+   "claim": "Robert F. Kennedy was assassinated in Los Angeles",
+   "value": "1968",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Known event; year held less firmly than his brother's"
+  },
+  {
+   "id": "s6-woodstock",
+   "claim": "The Woodstock festival was held on a dairy farm in New York",
+   "value": "1969",
+   "category": "sixties-america",
+   "fame": "household",
+   "confidence": "low",
+   "why": "Woodstock '69 is a set phrase, though not for everyone"
+  },
+  {
+   "id": "s6-cuban-missile-crisis",
+   "claim": "The Cuban Missile Crisis brought the superpowers to the edge of nuclear war",
+   "value": "1962",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Crisis famous; 1962 not reliably recalled"
+  },
+  {
+   "id": "s6-march-on-washington",
+   "claim": "The March on Washington ended with the 'I Have a Dream' speech",
+   "value": "1963",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Speech famous; the year is fuzzier"
+  },
+  {
+   "id": "s6-march-crowd",
+   "claim": "Size of the crowd at the March on Washington",
+   "value": "250000 people",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Crowd estimate"
+  },
+  {
+   "id": "s6-woodstock-crowd",
+   "claim": "Number of people who turned up at Woodstock",
+   "value": "400000 people",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Attendance figure varies in retellings"
+  },
+  {
+   "id": "s6-tonkin",
+   "claim": "The Gulf of Tonkin Resolution let the president wage war in Vietnam without a declaration",
+   "value": "1964",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Resolution known to buffs; year not"
+  },
+  {
+   "id": "s6-tet",
+   "claim": "The Tet Offensive turned American opinion against the Vietnam War",
+   "value": "1968",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Tet known by name to older Americans only"
+  },
+  {
+   "id": "s6-troop-peak",
+   "claim": "Peak number of American troops in Vietnam",
+   "value": "543000 troops",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Troop-strength figure"
+  },
+  {
+   "id": "s6-stonewall",
+   "claim": "The Stonewall uprising began in Greenwich Village",
+   "value": "1969",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Stonewall widely known now; the year less so"
+  },
+  {
+   "id": "s6-beatles-sullivan",
+   "claim": "The Beatles first played The Ed Sullivan Show",
+   "value": "1964",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Broadcast famous; 1964 not universally held"
+  },
+  {
+   "id": "s6-vietnam-us-deaths",
+   "claim": "American military deaths in the Vietnam War",
+   "value": "58000 deaths",
+   "category": "sixties-america",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "58,000 is often cited but rarely recalled precisely"
+  },
+  {
+   "id": "s6-vietnam-ended",
+   "claim": "The Vietnam War ended during the 1960s",
+   "value": "false",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Many know the war ran into the 1970s"
+  },
+  {
+   "id": "s6-kennedy-moon-goal",
+   "claim": "Kennedy committed the country to landing on the Moon in a speech to Congress in 1961",
+   "value": "true",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The before-this-decade-is-out pledge is well known"
+  },
+  {
+   "id": "s6-lbj-signed-cra",
+   "claim": "Lyndon Johnson signed the Civil Rights Act of 1964",
+   "value": "true",
+   "category": "sixties-america",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Johnson's signing is standard curriculum"
+  },
+  {
+   "id": "ti-sank",
+   "claim": "The Titanic struck an iceberg and sank on her maiden voyage",
+   "value": "1912",
+   "category": "titanic",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1912 is one of the best-known dates anywhere"
+  },
+  {
+   "id": "ti-wreck-found",
+   "claim": "The wreck of the Titanic was located on the sea floor",
+   "value": "1985",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "Discovery was major news but the year has faded"
+  },
+  {
+   "id": "ti-deaths",
+   "claim": "People who died when the Titanic sank",
+   "value": "1500 deaths",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "About 1,500 is widely repeated, though not precisely held"
+  },
+  {
+   "id": "ti-aboard",
+   "claim": "People aboard the Titanic when she sailed",
+   "value": "2220 people",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Passenger total is not commonly known"
+  },
+  {
+   "id": "ti-lifeboats",
+   "claim": "Lifeboats carried by the Titanic",
+   "value": "20 lifeboats",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Lifeboat shortage known; the count is not"
+  },
+  {
+   "id": "ti-length",
+   "claim": "Length of the Titanic",
+   "value": "269 metres",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Ship dimension"
+  },
+  {
+   "id": "ti-time-to-sink",
+   "claim": "Time between striking the iceberg and going under",
+   "value": "160 minutes",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The two-hour-forty figure is enthusiast knowledge"
+  },
+  {
+   "id": "ti-depth",
+   "claim": "Depth at which the Titanic wreck lies",
+   "value": "3800 metres",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Wreck depth"
+  },
+  {
+   "id": "ti-compartments",
+   "claim": "Watertight compartments in the Titanic's hull",
+   "value": "16 compartments",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Engineering detail"
+  },
+  {
+   "id": "ti-carpathia",
+   "claim": "Hours the Carpathia took to reach the survivors",
+   "value": "4 hours",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Rescue timing detail"
+  },
+  {
+   "id": "ti-built",
+   "claim": "The Titanic was launched at the Harland and Wolff yard in Belfast",
+   "value": "1911",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Launch year is easily confused with the sinking"
+  },
+  {
+   "id": "ti-crew-survivors",
+   "claim": "Percentage of first-class women who survived",
+   "value": "97 percent",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Class-and-gender survival percentage"
+  },
+  {
+   "id": "ti-speed",
+   "claim": "Titanic's speed when she struck the iceberg",
+   "value": "22 knots",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Speed in knots"
+  },
+  {
+   "id": "ti-film",
+   "claim": "James Cameron's film Titanic was released",
+   "value": "1997",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "low",
+   "why": "1997 is remembered by adults who lived it, not by all"
+  },
+  {
+   "id": "ti-unsinkable",
+   "claim": "The White Star Line officially advertised the Titanic as unsinkable",
+   "value": "false",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The never-officially-advertised correction is little known"
+  },
+  {
+   "id": "ti-band",
+   "claim": "The ship's musicians kept playing as the Titanic went down",
+   "value": "true",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "The band playing on is part of the popular story"
+  },
+  {
+   "id": "ti-broke-apart",
+   "claim": "The Titanic broke in two before sinking",
+   "value": "true",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "The film made the break-up famous"
+  },
+  {
+   "id": "ti-californian",
+   "claim": "Another ship was close enough to see the Titanic's distress rockets",
+   "value": "true",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "The Californian is known to enthusiasts"
+  },
+  {
+   "id": "ti-sister",
+   "claim": "The Titanic had two nearly identical sister ships",
+   "value": "true",
+   "category": "titanic",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Olympic and Britannic are not widely known"
+  },
+  {
+   "id": "ti-radio-rules",
+   "claim": "The disaster led to new rules requiring lifeboats for everyone aboard",
+   "value": "true",
+   "category": "titanic",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Lifeboats-for-all reform is commonly mentioned"
+  },
+  {
+   "id": "vk-lindisfarne",
+   "claim": "The raid on Lindisfarne opened the Viking Age in Britain",
+   "value": "793",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "793 is British curriculum, not American"
+  },
+  {
+   "id": "vk-vinland",
+   "claim": "Norse sailors established a settlement in North America",
+   "value": "1021",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Precise Vinland dating is recent and specialist"
+  },
+  {
+   "id": "vk-hastings",
+   "claim": "The Viking Age is usually said to end with the Norman Conquest",
+   "value": "1066",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "1066 is famous in Britain, much less so in the US"
+  },
+  {
+   "id": "vk-iceland",
+   "claim": "Norse settlers began colonising Iceland",
+   "value": "874",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Settlement date is specialist"
+  },
+  {
+   "id": "vk-greenland",
+   "claim": "Erik the Red led settlers to Greenland",
+   "value": "985",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Erik the Red known; the year is not"
+  },
+  {
+   "id": "vk-great-army",
+   "claim": "The Great Heathen Army landed in England",
+   "value": "865",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Great Heathen Army known mainly from television"
+  },
+  {
+   "id": "vk-longship-speed",
+   "claim": "Top speed of a Viking longship under sail",
+   "value": "15 knots",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Nautical performance figure"
+  },
+  {
+   "id": "vk-crew",
+   "claim": "Typical crew of a large Viking longship",
+   "value": "60 men",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Crew size detail"
+  },
+  {
+   "id": "vk-danelaw",
+   "claim": "Alfred the Great and Guthrum agreed the treaty creating the Danelaw",
+   "value": "878",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "The Danelaw treaty is specialist"
+  },
+  {
+   "id": "vk-normandy",
+   "claim": "The Norse leader Rollo was granted the land that became Normandy",
+   "value": "911",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Rollo's grant is specialist"
+  },
+  {
+   "id": "vk-oseberg",
+   "claim": "The Oseberg ship burial was excavated in Norway",
+   "value": "1904",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Excavation year"
+  },
+  {
+   "id": "vk-constantinople",
+   "claim": "The Varangian Guard was formed from Norse warriors in Constantinople",
+   "value": "988",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Varangian Guard is enthusiast knowledge"
+  },
+  {
+   "id": "vk-jorvik",
+   "claim": "Norse forces captured York, which they called Jorvik",
+   "value": "866",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Capture of York is specialist"
+  },
+  {
+   "id": "vk-horned-helmets",
+   "claim": "Vikings wore horned helmets into battle",
+   "value": "false",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The no-horns correction is now widely repeated"
+  },
+  {
+   "id": "vk-columbus",
+   "claim": "Norse sailors reached North America before Columbus",
+   "value": "true",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Norse beating Columbus is common knowledge"
+  },
+  {
+   "id": "vk-farmers",
+   "claim": "Most Norse people were farmers rather than raiders",
+   "value": "true",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The farmers-not-raiders point is broadly taught"
+  },
+  {
+   "id": "vk-women-rights",
+   "claim": "Norse women could own property and seek divorce",
+   "value": "true",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Norse women's rights appear in popular coverage"
+  },
+  {
+   "id": "vk-runes",
+   "claim": "The Norse had a written alphabet of their own",
+   "value": "true",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "high",
+   "why": "Runes are widely recognised as Norse writing"
+  },
+  {
+   "id": "vk-weekdays",
+   "claim": "Four English weekday names come from Norse gods",
+   "value": "true",
+   "category": "vikings",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Thursday-Thor link is common trivia"
+  },
+  {
+   "id": "vk-hygiene",
+   "claim": "Norse men were noted by contemporaries for grooming and bathing",
+   "value": "true",
+   "category": "vikings",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Grooming reputation is a specialist detail"
+  },
+  {
+   "id": "we-invasion-poland",
+   "claim": "Germany invaded Poland, beginning the war in Europe",
+   "value": "1939",
+   "category": "wwii-europe",
+   "fame": "household",
+   "confidence": "high",
+   "why": "1939 as the war's start is standard knowledge"
+  },
+  {
+   "id": "we-dunkirk",
+   "claim": "British and Allied troops were evacuated from Dunkirk",
+   "value": "1940",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Dunkirk known via film; 1940 not reliably held"
+  },
+  {
+   "id": "we-britain",
+   "claim": "The Battle of Britain was fought in the skies over England",
+   "value": "1940",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Battle known by name; the year less so"
+  },
+  {
+   "id": "we-barbarossa",
+   "claim": "Germany invaded the Soviet Union",
+   "value": "1941",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Invasion of Russia known; 1941 not always"
+  },
+  {
+   "id": "we-stalingrad",
+   "claim": "The German Sixth Army surrendered at Stalingrad",
+   "value": "1943",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Stalingrad known by name; the surrender year is not"
+  },
+  {
+   "id": "we-dday",
+   "claim": "Allied forces landed in Normandy on D-Day",
+   "value": "1944",
+   "category": "wwii-europe",
+   "fame": "household",
+   "confidence": "medium",
+   "why": "June 1944 is fixed in American memory"
+  },
+  {
+   "id": "we-ve-day",
+   "claim": "Germany surrendered, ending the war in Europe",
+   "value": "1945",
+   "category": "wwii-europe",
+   "fame": "household",
+   "confidence": "high",
+   "why": "The war ending in 1945 is universal"
+  },
+  {
+   "id": "we-bulge",
+   "claim": "The Battle of the Bulge began in the Ardennes",
+   "value": "1944",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Battle famous in the US; the year not always held"
+  },
+  {
+   "id": "we-dday-troops",
+   "claim": "Allied troops landed in Normandy on the first day",
+   "value": "156000 troops",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "First-day landing figure"
+  },
+  {
+   "id": "we-dunkirk-rescued",
+   "claim": "Troops evacuated from the beaches at Dunkirk",
+   "value": "338000 troops",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Evacuation total"
+  },
+  {
+   "id": "we-soviet-deaths",
+   "claim": "Soviet deaths in the Second World War",
+   "value": "27000000 deaths",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Scale of Soviet losses surprises most Americans"
+  },
+  {
+   "id": "we-blitz-deaths",
+   "claim": "Civilians killed in Britain during the Blitz",
+   "value": "43000 deaths",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Civilian casualty figure"
+  },
+  {
+   "id": "we-leningrad-siege",
+   "claim": "Days the siege of Leningrad lasted",
+   "value": "872 days",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "Siege duration in days"
+  },
+  {
+   "id": "we-enigma",
+   "claim": "Bletchley Park's codebreakers first broke into German naval Enigma traffic",
+   "value": "1941",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "high",
+   "why": "The naval Enigma break date is specialist"
+  },
+  {
+   "id": "we-us-entry",
+   "claim": "Germany declared war on the United States, not the other way round",
+   "value": "true",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "Most assume the US declared war on Germany"
+  },
+  {
+   "id": "we-eastern-front",
+   "claim": "Most German army losses in the war happened on the Eastern Front",
+   "value": "true",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "The Eastern Front's scale is broadly taught"
+  },
+  {
+   "id": "we-churchill-pm",
+   "claim": "Churchill was Prime Minister when Britain declared war in 1939",
+   "value": "false",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Chamberlain's appeasement is commonly taught"
+  },
+  {
+   "id": "we-radar",
+   "claim": "Britain had a working radar early-warning network before the Battle of Britain",
+   "value": "true",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Radar's role in 1940 is a standard point"
+  },
+  {
+   "id": "we-women-work",
+   "claim": "British women were conscripted for war work",
+   "value": "true",
+   "category": "wwii-europe",
+   "fame": "obscure",
+   "confidence": "medium",
+   "why": "British conscription of women is little known in the US"
+  },
+  {
+   "id": "we-italy-side",
+   "claim": "Italy changed sides during the war",
+   "value": "true",
+   "category": "wwii-europe",
+   "fame": "familiar",
+   "confidence": "medium",
+   "why": "Italy's switch is commonly mentioned"
+  }
+ ]
+}

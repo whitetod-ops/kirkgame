@@ -22,6 +22,13 @@
      node scripts/screen-all.mjs --apply          run it
      node scripts/screen-all.mjs --apply --limit 20
      node scripts/screen-all.mjs --apply --force  re-check facts already done
+     node scripts/screen-all.mjs --apply --force --out review/flags2.json
+
+   When review/adjudication.json is present the run scores itself against it at
+   the end: of the flags landing on a question Todd has already ruled on, how
+   many he agreed were bad, and how many of his bad calls this run found. That
+   is the only way to tell whether a rubric edit helped -- the flag count alone
+   goes down whenever the rubric gets shorter.
 */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -32,10 +39,10 @@ import { MODELS, estimateCostUsd } from '../lib/aiModels.mjs';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RATINGS = resolve(ROOT, 'review/ratings.json');
 const RUBRIC = resolve(ROOT, 'review/rubric.md');
-const OUT = resolve(ROOT, 'review/flags.json');
+const CALLS = resolve(ROOT, 'review/adjudication.json');
 
 export function parseArgs(argv) {
-  const o = { apply: false, limit: 0, force: false, concurrency: 4 };
+  const o = { apply: false, limit: 0, force: false, concurrency: 4, out: 'review/flags.json' };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--apply') o.apply = true;
@@ -44,6 +51,8 @@ export function parseArgs(argv) {
     else if (a === '--limit') o.limit = Number(argv[++i]);
     else if (a.startsWith('--limit=')) o.limit = Number(a.split('=')[1]);
     else if (a === '--concurrency') o.concurrency = Number(argv[++i]);
+    else if (a === '--out') o.out = argv[++i];
+    else if (a.startsWith('--out=')) o.out = a.split('=')[1];
   }
   return o;
 }
@@ -150,8 +159,21 @@ async function pool(items, n, fn) {
   }));
 }
 
+/* Scores a finished run against Todd's rulings. Only the flags he has actually
+   ruled on can be scored -- an unruled flag is neither right nor wrong yet. */
+export function score(flags, calls) {
+  const ruled = new Map(calls.map((c) => [`${c.id}|${c.n}`, c.todd]));
+  const judged = flags.filter((f) => ruled.has(`${f.id}|${f.n}`));
+  const right = judged.filter((f) => ruled.get(`${f.id}|${f.n}`) === 'bad').length;
+  const flagged = new Set(flags.map((f) => `${f.id}|${f.n}`));
+  const hisBad = calls.filter((c) => c.todd === 'bad');
+  const found = hisBad.filter((c) => flagged.has(`${c.id}|${c.n}`)).length;
+  return { judged: judged.length, right, hisBad: hisBad.length, found };
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
+  const OUT = resolve(ROOT, opts.out);
 
   if (!existsSync(RATINGS)) { console.error(`No ${RATINGS}.`); process.exit(2); }
   if (!existsSync(RUBRIC)) {
@@ -163,7 +185,10 @@ async function main() {
   const facts = JSON.parse(readFileSync(RATINGS, 'utf8')).examples || [];
 
   const prior = (!opts.force && existsSync(OUT)) ? JSON.parse(readFileSync(OUT, 'utf8')) : { checked: {}, flags: [] };
-  let todo = facts.filter((f) => !prior.checked[f.id]);
+  /* `in`, not truthiness: checked[id] is the flag COUNT, so a clean fact stores
+     0 and a truthiness test re-screens it on every run. That was 176 of 272
+     facts being paid for again each time. */
+  let todo = facts.filter((f) => !(f.id in prior.checked));
   if (opts.limit) todo = todo.slice(0, opts.limit);
 
   const model = MODELS.anthropic;
@@ -223,9 +248,23 @@ async function main() {
   console.log(`    ${already} you had already marked  (of your ${hisTotal} -- so it found ${Math.round(already / hisTotal * 100)}% of them)`);
   console.log(`    ${fresh} you had not`);
   console.log(`\n  Cost about $${estimateCostUsd(model, inTok, outTok).toFixed(2)}.`);
-  console.log(`  Written to ${OUT}\n`);
-  console.log('  Commit and push it, and the adjudication desk gets built from it:');
-  console.log('    git add review/flags.json && git commit -m "Machine flags" && git push\n');
+  console.log(`  Written to ${OUT}`);
+
+  if (existsSync(CALLS)) {
+    const calls = JSON.parse(readFileSync(CALLS, 'utf8')).calls || [];
+    const s = score(doc.flags, calls);
+    console.log(`\n  Scored against your ${calls.length} rulings:`);
+    if (s.judged) {
+      console.log(`    ${s.right} of ${s.judged} flags you have ruled on are ones you called bad  (${Math.round(s.right / s.judged * 100)}% precision)`);
+      console.log(`    ${s.found} of your ${s.hisBad} bad calls were flagged                       (${Math.round(s.found / s.hisBad * 100)}% recall)`);
+      console.log('    The last rubric scored 39% precision.');
+    } else {
+      console.log('    None of the flags land on a question you have ruled on.');
+    }
+  }
+
+  console.log('\n  Commit and push it, and the adjudication desk gets rebuilt from it:');
+  console.log(`    git add ${opts.out} && git commit -m "Machine flags" && git push\n`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

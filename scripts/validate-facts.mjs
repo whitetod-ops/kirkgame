@@ -50,6 +50,21 @@ for (const file of readdirSync(FACTS_DIR).filter((f) => f.endsWith('.json')).sor
       if (f.kind === 'number') {
         if (!f.unit) where(f, 'number fact needs a unit');
         if (f.value <= 0) where(f, 'number value must be positive');
+        /* The plausible range of the thing itself, which is not a multiple of
+           the answer. Without it the engine can only scale the true value, and
+           scaling produced 3,330 people aboard a ship that held 3,300 and a
+           wreck at 5,700 metres where the ocean is 3,800. */
+        if (!f.range) {
+          warnings.push(`${file} [${f.id}] no range -- probes can only be a multiple of ${f.value}`);
+        } else {
+          const { min, max } = f.range;
+          if (typeof min !== 'number' || typeof max !== 'number') where(f, 'range needs numeric min and max');
+          else if (min >= max) where(f, `range min ${min} is not below max ${max}`);
+          else if (f.value < min || f.value > max) where(f, `value ${f.value} sits outside its own range ${min}-${max}`);
+          else if (min === f.value || max === f.value) {
+            warnings.push(`${file} [${f.id}] range touches the answer on one side -- every probe there lands on ${f.value}`);
+          }
+        }
       }
       if ('answer' in f) where(f, 'numeric fact must not carry an answer');
     }

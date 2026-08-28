@@ -96,7 +96,11 @@
         "title": "Longship",
         "url": "https://en.wikipedia.org/wiki/Longship"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 6,
+        "max": 25
+      }
     },
     {
       "id": "vk-crew",
@@ -111,7 +115,11 @@
         "title": "Longship",
         "url": "https://en.wikipedia.org/wiki/Longship"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 25,
+        "max": 85
+      }
     },
     {
       "id": "vk-danelaw",

@@ -1,85 +1,296 @@
 {
   "id": "wwii-europe",
   "facts": [
-    { "id": "we-invasion-poland", "kind": "year", "claim": "Germany invaded Poland, beginning the war in Europe", "value": 1939,
+    {
+      "id": "we-invasion-poland",
+      "kind": "year",
+      "claim": "Germany invaded Poland, beginning the war in Europe",
+      "value": 1939,
       "context": "The invasion began on 1 September 1939; Britain and France declared war two days later.",
       "goDeeper": "The Soviet Union invaded Poland from the east sixteen days later, under a secret clause of the Nazi-Soviet pact.",
-      "source": { "title": "Invasion of Poland", "url": "https://en.wikipedia.org/wiki/Invasion_of_Poland" }, "status": "draft" },
-    { "id": "we-dunkirk", "kind": "year", "claim": "British and Allied troops were evacuated from Dunkirk", "value": 1940,
+      "source": {
+        "title": "Invasion of Poland",
+        "url": "https://en.wikipedia.org/wiki/Invasion_of_Poland"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-dunkirk",
+      "kind": "year",
+      "claim": "British and Allied troops were evacuated from Dunkirk",
+      "value": 1940,
       "context": "Some 338,000 men were lifted from the beaches between 26 May and 4 June 1940.",
       "goDeeper": "Hundreds of civilian boats crossed the Channel to help, many crewed by their owners.",
-      "source": { "title": "Dunkirk evacuation", "url": "https://en.wikipedia.org/wiki/Dunkirk_evacuation" }, "status": "draft" },
-    { "id": "we-britain", "kind": "year", "claim": "The Battle of Britain was fought in the skies over England", "value": 1940,
+      "source": {
+        "title": "Dunkirk evacuation",
+        "url": "https://en.wikipedia.org/wiki/Dunkirk_evacuation"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-britain",
+      "kind": "year",
+      "claim": "The Battle of Britain was fought in the skies over England",
+      "value": 1940,
       "context": "The RAF held off the Luftwaffe between July and October 1940, preventing a German invasion.",
       "goDeeper": "It was the first major campaign fought entirely by air forces.",
-      "source": { "title": "Battle of Britain", "url": "https://en.wikipedia.org/wiki/Battle_of_Britain" }, "status": "draft" },
-    { "id": "we-barbarossa", "kind": "year", "claim": "Germany invaded the Soviet Union", "value": 1941,
+      "source": {
+        "title": "Battle of Britain",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Britain"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-barbarossa",
+      "kind": "year",
+      "claim": "Germany invaded the Soviet Union",
+      "value": 1941,
       "context": "Operation Barbarossa opened on 22 June 1941 along a front of nearly 2,900 km.",
       "goDeeper": "It was the largest land invasion in history, and it broke the pact the two powers had signed less than two years earlier.",
-      "source": { "title": "Operation Barbarossa", "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa" }, "status": "draft" },
-    { "id": "we-stalingrad", "kind": "year", "claim": "The German Sixth Army surrendered at Stalingrad", "value": 1943,
+      "source": {
+        "title": "Operation Barbarossa",
+        "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-stalingrad",
+      "kind": "year",
+      "claim": "The German Sixth Army surrendered at Stalingrad",
+      "value": 1943,
       "context": "The surrender at the end of January 1943 marked the turning point of the war in the east.",
       "goDeeper": "Of roughly 91,000 Germans taken prisoner there, only about 5,000 ever returned home.",
-      "source": { "title": "Battle of Stalingrad", "url": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad" }, "status": "draft" },
-    { "id": "we-dday", "kind": "year", "claim": "Allied forces landed in Normandy on D-Day", "value": 1944,
+      "source": {
+        "title": "Battle of Stalingrad",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-dday",
+      "kind": "year",
+      "claim": "Allied forces landed in Normandy on D-Day",
+      "value": 1944,
       "context": "The landings began on 6 June 1944 across five beaches.",
       "goDeeper": "The invasion had been postponed by a day because of weather; the next window would have been two weeks later.",
-      "source": { "title": "Normandy landings", "url": "https://en.wikipedia.org/wiki/Normandy_landings" }, "status": "draft" },
-    { "id": "we-ve-day", "kind": "year", "claim": "Germany surrendered, ending the war in Europe", "value": 1945,
+      "source": {
+        "title": "Normandy landings",
+        "url": "https://en.wikipedia.org/wiki/Normandy_landings"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-ve-day",
+      "kind": "year",
+      "claim": "Germany surrendered, ending the war in Europe",
+      "value": 1945,
       "context": "The unconditional surrender took effect on 8 May 1945.",
       "goDeeper": "The war in the Pacific continued for another three months.",
-      "source": { "title": "Victory in Europe Day", "url": "https://en.wikipedia.org/wiki/Victory_in_Europe_Day" }, "status": "draft" },
-    { "id": "we-bulge", "kind": "year", "claim": "The Battle of the Bulge began in the Ardennes", "value": 1944,
+      "source": {
+        "title": "Victory in Europe Day",
+        "url": "https://en.wikipedia.org/wiki/Victory_in_Europe_Day"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-bulge",
+      "kind": "year",
+      "claim": "The Battle of the Bulge began in the Ardennes",
+      "value": 1944,
       "context": "A surprise German offensive launched on 16 December 1944 through wooded, snowbound country.",
       "goDeeper": "It was the costliest single battle for American forces in the entire war.",
-      "source": { "title": "Battle of the Bulge", "url": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge" }, "status": "draft" },
-    { "id": "we-dday-troops", "kind": "number", "claim": "Allied troops landed in Normandy on the first day", "value": 156000, "unit": "troops", "approx": true,
+      "source": {
+        "title": "Battle of the Bulge",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-dday-troops",
+      "kind": "number",
+      "claim": "Allied troops landed in Normandy on the first day",
+      "value": 156000,
+      "unit": "troops",
+      "approx": true,
       "context": "About 156,000 came ashore or landed by air on 6 June 1944.",
       "goDeeper": "Nearly 7,000 vessels took part, the largest seaborne invasion ever mounted.",
-      "source": { "title": "Normandy landings", "url": "https://en.wikipedia.org/wiki/Normandy_landings" }, "status": "draft" },
-    { "id": "we-dunkirk-rescued", "kind": "number", "claim": "Troops evacuated from the beaches at Dunkirk", "value": 338000, "unit": "troops", "approx": true,
+      "source": {
+        "title": "Normandy landings",
+        "url": "https://en.wikipedia.org/wiki/Normandy_landings"
+      },
+      "status": "draft",
+      "range": {
+        "min": 60000,
+        "max": 250000
+      }
+    },
+    {
+      "id": "we-dunkirk-rescued",
+      "kind": "number",
+      "claim": "Troops evacuated from the beaches at Dunkirk",
+      "value": 338000,
+      "unit": "troops",
+      "approx": true,
       "context": "About 338,000 British and Allied soldiers were taken off between 26 May and 4 June 1940.",
       "goDeeper": "Churchill had expected perhaps 45,000 to be saved. He still called it a deliverance, not a victory.",
-      "source": { "title": "Dunkirk evacuation", "url": "https://en.wikipedia.org/wiki/Dunkirk_evacuation" }, "status": "draft" },
-    { "id": "we-soviet-deaths", "kind": "number", "claim": "Soviet deaths in the Second World War", "value": 27000000, "unit": "deaths", "approx": true, "sensitive": true,
+      "source": {
+        "title": "Dunkirk evacuation",
+        "url": "https://en.wikipedia.org/wiki/Dunkirk_evacuation"
+      },
+      "status": "draft",
+      "range": {
+        "min": 200000,
+        "max": 450000
+      }
+    },
+    {
+      "id": "we-soviet-deaths",
+      "kind": "number",
+      "claim": "Soviet deaths in the Second World War",
+      "value": 27000000,
+      "unit": "deaths",
+      "approx": true,
+      "sensitive": true,
       "context": "Around 27 million Soviet citizens died, military and civilian, more than any other nation.",
       "goDeeper": "Roughly two-thirds of the total were civilians.",
-      "source": { "title": "World War II casualties", "url": "https://en.wikipedia.org/wiki/World_War_II_casualties" }, "status": "draft" },
-    { "id": "we-blitz-deaths", "kind": "number", "claim": "Civilians killed in Britain during the Blitz", "value": 43000, "unit": "deaths", "approx": true, "sensitive": true,
+      "source": {
+        "title": "World War II casualties",
+        "url": "https://en.wikipedia.org/wiki/World_War_II_casualties"
+      },
+      "status": "draft",
+      "range": {
+        "min": 5000000,
+        "max": 35000000
+      }
+    },
+    {
+      "id": "we-blitz-deaths",
+      "kind": "number",
+      "claim": "Civilians killed in Britain during the Blitz",
+      "value": 43000,
+      "unit": "deaths",
+      "approx": true,
+      "sensitive": true,
       "context": "About 43,000 British civilians died in the bombing between September 1940 and May 1941.",
       "goDeeper": "London was bombed on 57 consecutive nights at the start of the campaign.",
-      "source": { "title": "The Blitz", "url": "https://en.wikipedia.org/wiki/The_Blitz" }, "status": "draft" },
-    { "id": "we-leningrad-siege", "kind": "number", "claim": "Days the siege of Leningrad lasted", "value": 872, "unit": "days",
+      "source": {
+        "title": "The Blitz",
+        "url": "https://en.wikipedia.org/wiki/The_Blitz"
+      },
+      "status": "draft",
+      "range": {
+        "min": 15000,
+        "max": 80000
+      }
+    },
+    {
+      "id": "we-leningrad-siege",
+      "kind": "number",
+      "claim": "Days the siege of Leningrad lasted",
+      "value": 872,
+      "unit": "days",
       "context": "The city was encircled for 872 days, from September 1941 to January 1944.",
       "goDeeper": "Supplies came across frozen Lake Ladoga by truck, on a route the city called the Road of Life.",
-      "source": { "title": "Siege of Leningrad", "url": "https://en.wikipedia.org/wiki/Siege_of_Leningrad" }, "status": "draft" },
-    { "id": "we-enigma", "kind": "year", "claim": "Bletchley Park's codebreakers first broke into German naval Enigma traffic", "value": 1941,
+      "source": {
+        "title": "Siege of Leningrad",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Leningrad"
+      },
+      "status": "draft",
+      "range": {
+        "min": 400,
+        "max": 1200
+      }
+    },
+    {
+      "id": "we-enigma",
+      "kind": "year",
+      "claim": "Bletchley Park's codebreakers first broke into German naval Enigma traffic",
+      "value": 1941,
       "context": "Breakthroughs in 1941, helped by captured material, opened up naval Enigma.",
       "goDeeper": "The work stayed secret until the 1970s, so those who did it could not be publicly credited for thirty years.",
-      "source": { "title": "Cryptanalysis of the Enigma", "url": "https://en.wikipedia.org/wiki/Cryptanalysis_of_the_Enigma" }, "status": "draft" },
-    { "id": "we-us-entry", "kind": "boolean", "claim": "Germany declared war on the United States, not the other way round", "answer": true,
+      "source": {
+        "title": "Cryptanalysis of the Enigma",
+        "url": "https://en.wikipedia.org/wiki/Cryptanalysis_of_the_Enigma"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-us-entry",
+      "kind": "boolean",
+      "claim": "Germany declared war on the United States, not the other way round",
+      "answer": true,
       "context": "Hitler declared war on the US on 11 December 1941, four days after Pearl Harbor. Congress then reciprocated.",
       "goDeeper": "He was not obliged to. The Tripartite Pact only required Germany to act if Japan were attacked.",
-      "source": { "title": "German declaration of war against the United States", "url": "https://en.wikipedia.org/wiki/German_declaration_of_war_against_the_United_States" }, "status": "draft" },
-    { "id": "we-eastern-front", "kind": "boolean", "claim": "Most German army losses in the war happened on the Eastern Front", "answer": true,
+      "source": {
+        "title": "German declaration of war against the United States",
+        "url": "https://en.wikipedia.org/wiki/German_declaration_of_war_against_the_United_States"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-eastern-front",
+      "kind": "boolean",
+      "claim": "Most German army losses in the war happened on the Eastern Front",
+      "answer": true,
       "context": "Around three-quarters of German military casualties were sustained fighting the Soviet Union.",
       "goDeeper": "The Eastern Front was the largest theatre of land warfare in history.",
-      "source": { "title": "Eastern Front (World War II)", "url": "https://en.wikipedia.org/wiki/Eastern_Front_(World_War_II)" }, "status": "draft" },
-    { "id": "we-churchill-pm", "kind": "boolean", "claim": "Churchill was Prime Minister when Britain declared war in 1939", "answer": false,
+      "source": {
+        "title": "Eastern Front (World War II)",
+        "url": "https://en.wikipedia.org/wiki/Eastern_Front_(World_War_II)"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-churchill-pm",
+      "kind": "boolean",
+      "claim": "Churchill was Prime Minister when Britain declared war in 1939",
+      "answer": false,
       "context": "Neville Chamberlain declared war. Churchill became Prime Minister in May 1940, eight months later.",
       "goDeeper": "He took office on the same day Germany invaded France and the Low Countries.",
-      "source": { "title": "Winston Churchill", "url": "https://en.wikipedia.org/wiki/Winston_Churchill" }, "status": "draft" },
-    { "id": "we-radar", "kind": "boolean", "claim": "Britain had a working radar early-warning network before the Battle of Britain", "answer": true,
+      "source": {
+        "title": "Winston Churchill",
+        "url": "https://en.wikipedia.org/wiki/Winston_Churchill"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-radar",
+      "kind": "boolean",
+      "claim": "Britain had a working radar early-warning network before the Battle of Britain",
+      "answer": true,
       "context": "The Chain Home stations were operating from 1938 and gave the RAF warning of incoming raids.",
       "goDeeper": "Radar let a smaller force be in the right place. Without it the numbers alone would probably have told.",
-      "source": { "title": "Chain Home", "url": "https://en.wikipedia.org/wiki/Chain_Home" }, "status": "draft" },
-    { "id": "we-women-work", "kind": "boolean", "claim": "British women were conscripted for war work", "answer": true,
+      "source": {
+        "title": "Chain Home",
+        "url": "https://en.wikipedia.org/wiki/Chain_Home"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-women-work",
+      "kind": "boolean",
+      "claim": "British women were conscripted for war work",
+      "answer": true,
       "context": "From December 1941 unmarried women aged 20 to 30 could be called up for the services, industry or land work.",
       "goDeeper": "Britain was the first country to conscript women, and by 1943 around 90 percent of single women were in war work.",
-      "source": { "title": "Women in World War II", "url": "https://en.wikipedia.org/wiki/Women_in_World_War_II" }, "status": "draft" },
-    { "id": "we-italy-side", "kind": "boolean", "claim": "Italy changed sides during the war", "answer": true,
+      "source": {
+        "title": "Women in World War II",
+        "url": "https://en.wikipedia.org/wiki/Women_in_World_War_II"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "we-italy-side",
+      "kind": "boolean",
+      "claim": "Italy changed sides during the war",
+      "answer": true,
       "context": "Mussolini was deposed in July 1943 and Italy surrendered in September, then declared war on Germany in October.",
       "goDeeper": "German forces occupied the north and the fighting up the Italian peninsula continued until 1945.",
-      "source": { "title": "Italian campaign (World War II)", "url": "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)" }, "status": "draft" }
+      "source": {
+        "title": "Italian campaign (World War II)",
+        "url": "https://en.wikipedia.org/wiki/Italian_campaign_(World_War_II)"
+      },
+      "status": "draft"
+    }
   ]
 }

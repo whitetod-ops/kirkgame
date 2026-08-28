@@ -81,7 +81,11 @@
         "title": "Great Pyramid of Giza",
         "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 60,
+        "max": 220
+      }
     },
     {
       "id": "eg-ramesses-reign",
@@ -95,7 +99,11 @@
         "title": "Ramesses II",
         "url": "https://en.wikipedia.org/wiki/Ramesses_II"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 30,
+        "max": 80
+      }
     },
     {
       "id": "eg-kadesh",
@@ -178,7 +186,11 @@
         "title": "Tutankhamun",
         "url": "https://en.wikipedia.org/wiki/Tutankhamun"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 14,
+        "max": 30
+      }
     },
     {
       "id": "eg-nile-length",
@@ -193,7 +205,11 @@
         "title": "Nile",
         "url": "https://en.wikipedia.org/wiki/Nile"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 4500,
+        "max": 10000
+      }
     },
     {
       "id": "eg-pyramid-count",
@@ -208,7 +224,11 @@
         "title": "Egyptian pyramids",
         "url": "https://en.wikipedia.org/wiki/Egyptian_pyramids"
       },
-      "status": "draft"
+      "status": "draft",
+      "range": {
+        "min": 50,
+        "max": 200
+      }
     },
     {
       "id": "eg-tut-mask-weight",

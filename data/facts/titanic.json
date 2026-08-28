@@ -1,85 +1,308 @@
 {
   "id": "titanic",
   "facts": [
-    { "id": "ti-sank", "kind": "year", "claim": "The Titanic struck an iceberg and sank on her maiden voyage", "value": 1912,
+    {
+      "id": "ti-sank",
+      "kind": "year",
+      "claim": "The Titanic struck an iceberg and sank on her maiden voyage",
+      "value": 1912,
       "context": "She hit the iceberg late on 14 April 1912 and sank in the early hours of the 15th.",
       "goDeeper": "The voyage was only four days old when she went down.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-wreck-found", "kind": "year", "claim": "The wreck of the Titanic was located on the sea floor", "value": 1985,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-wreck-found",
+      "kind": "year",
+      "claim": "The wreck of the Titanic was located on the sea floor",
+      "value": 1985,
       "context": "Found by a joint expedition led by Robert Ballard in September 1985, 73 years after the sinking.",
       "goDeeper": "The search was partly cover for a secret US Navy mission to survey two sunken nuclear submarines.",
-      "source": { "title": "Wreck of the Titanic", "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-deaths", "kind": "number", "claim": "People who died when the Titanic sank", "value": 1500, "unit": "deaths", "approx": true, "sensitive": true,
+      "source": {
+        "title": "Wreck of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-deaths",
+      "kind": "number",
+      "claim": "People who died when the Titanic sank",
+      "value": 1500,
+      "unit": "deaths",
+      "approx": true,
+      "sensitive": true,
       "context": "Roughly 1,500 of about 2,220 aboard died. Exact figures still vary between sources.",
       "goDeeper": "Most died of cold rather than drowning; the water was around minus two degrees Celsius.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-aboard", "kind": "number", "claim": "People aboard the Titanic when she sailed", "value": 2220, "unit": "people", "approx": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 300,
+        "max": 2220
+      }
+    },
+    {
+      "id": "ti-aboard",
+      "kind": "number",
+      "claim": "People aboard the Titanic when she sailed",
+      "value": 2220,
+      "unit": "people",
+      "approx": true,
       "context": "About 2,220 passengers and crew, well below her capacity of roughly 3,300.",
       "goDeeper": "A national coal strike had cancelled other sailings, so she carried passengers transferred from other ships.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-lifeboats", "kind": "number", "claim": "Lifeboats carried by the Titanic", "value": 20, "unit": "lifeboats",
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 800,
+        "max": 3300
+      }
+    },
+    {
+      "id": "ti-lifeboats",
+      "kind": "number",
+      "claim": "Lifeboats carried by the Titanic",
+      "value": 20,
+      "unit": "lifeboats",
       "context": "Twenty, with room for about 1,178 people — roughly half those aboard.",
       "goDeeper": "That was more than British regulations required. The rules were based on ship tonnage, not passenger numbers, and were badly out of date.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-length", "kind": "number", "claim": "Length of the Titanic", "value": 269, "unit": "metres", "approx": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-length",
+      "kind": "number",
+      "claim": "Length of the Titanic",
+      "value": 269,
+      "unit": "metres",
+      "approx": true,
       "context": "About 269 metres, or 882 feet — among the largest moving objects yet built.",
       "goDeeper": "A modern cruise ship like Icon of the Seas is longer and roughly five times her tonnage.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-time-to-sink", "kind": "number", "claim": "Time between striking the iceberg and going under", "value": 160, "unit": "minutes", "approx": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 150,
+        "max": 350
+      }
+    },
+    {
+      "id": "ti-time-to-sink",
+      "kind": "number",
+      "claim": "Time between striking the iceberg and going under",
+      "value": 160,
+      "unit": "minutes",
+      "approx": true,
       "context": "About two hours forty minutes, from 11:40pm to 2:20am.",
       "goDeeper": "Her designer Thomas Andrews inspected the damage and gave her about two hours. He was close.",
-      "source": { "title": "Sinking of the Titanic", "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-depth", "kind": "number", "claim": "Depth at which the Titanic wreck lies", "value": 3800, "unit": "metres", "approx": true,
+      "source": {
+        "title": "Sinking of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 60,
+        "max": 260
+      }
+    },
+    {
+      "id": "ti-depth",
+      "kind": "number",
+      "claim": "Depth at which the Titanic wreck lies",
+      "value": 3800,
+      "unit": "metres",
+      "approx": true,
       "context": "About 3,800 metres down, roughly 12,500 feet, off Newfoundland.",
       "goDeeper": "That is deeper than most submarines can go; reaching it needs a purpose-built submersible.",
-      "source": { "title": "Wreck of the Titanic", "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-compartments", "kind": "number", "claim": "Watertight compartments in the Titanic's hull", "value": 16, "unit": "compartments",
+      "source": {
+        "title": "Wreck of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 1000,
+        "max": 4500
+      }
+    },
+    {
+      "id": "ti-compartments",
+      "kind": "number",
+      "claim": "Watertight compartments in the Titanic's hull",
+      "value": 16,
+      "unit": "compartments",
       "context": "Sixteen. She could stay afloat with four flooded. The iceberg opened five.",
       "goDeeper": "The bulkheads did not extend high enough, so water spilled from one compartment into the next like an ice-cube tray.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-carpathia", "kind": "number", "claim": "Hours the Carpathia took to reach the survivors", "value": 4, "unit": "hours", "approx": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft",
+      "range": {
+        "min": 4,
+        "max": 20
+      }
+    },
+    {
+      "id": "ti-carpathia",
+      "kind": "number",
+      "claim": "Hours the Carpathia took to reach the survivors",
+      "value": 4,
+      "unit": "hours",
+      "approx": true,
       "context": "The Carpathia picked up the distress call and arrived at about 4am, some four hours later.",
       "goDeeper": "Her captain shut off heating to the cabins to squeeze extra speed out of the engines.",
-      "source": { "title": "RMS Carpathia", "url": "https://en.wikipedia.org/wiki/RMS_Carpathia" }, "status": "draft" },
-    { "id": "ti-built", "kind": "year", "claim": "The Titanic was launched at the Harland and Wolff yard in Belfast", "value": 1911,
+      "source": {
+        "title": "RMS Carpathia",
+        "url": "https://en.wikipedia.org/wiki/RMS_Carpathia"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-built",
+      "kind": "year",
+      "claim": "The Titanic was launched at the Harland and Wolff yard in Belfast",
+      "value": 1911,
       "context": "Launched 31 May 1911, then fitted out for nearly a year before her maiden voyage.",
       "goDeeper": "She was launched without engines, funnels or interiors — just a hull, sliding into the water on tallow and soap.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-crew-survivors", "kind": "number", "claim": "Percentage of first-class women who survived", "value": 97, "unit": "percent", "approx": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-crew-survivors",
+      "kind": "number",
+      "claim": "Percentage of first-class women who survived",
+      "value": 97,
+      "unit": "percent",
+      "approx": true,
       "context": "Almost all first-class women survived. Among third-class women the figure was closer to half.",
       "goDeeper": "Overall, about 75 percent of women aboard survived and about 20 percent of men.",
-      "source": { "title": "Sinking of the Titanic", "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-speed", "kind": "number", "claim": "Titanic's speed when she struck the iceberg", "value": 22, "unit": "knots", "approx": true,
+      "source": {
+        "title": "Sinking of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-speed",
+      "kind": "number",
+      "claim": "Titanic's speed when she struck the iceberg",
+      "value": 22,
+      "unit": "knots",
+      "approx": true,
       "context": "About 22 knots, close to her maximum, in a region where ice had been reported.",
       "goDeeper": "Ice warnings had come in by wireless all day. At least one was never passed to the bridge.",
-      "source": { "title": "Sinking of the Titanic", "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-film", "kind": "year", "claim": "James Cameron's film Titanic was released", "value": 1997,
+      "source": {
+        "title": "Sinking of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-film",
+      "kind": "year",
+      "claim": "James Cameron's film Titanic was released",
+      "value": 1997,
       "context": "Released in December 1997; it became the first film to take more than a billion dollars.",
       "goDeeper": "Cameron made 33 dives to the real wreck. The footage in the film's opening is genuine.",
-      "source": { "title": "Titanic (1997 film)", "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)" }, "status": "draft" },
-    { "id": "ti-unsinkable", "kind": "boolean", "claim": "The White Star Line officially advertised the Titanic as unsinkable", "answer": false,
+      "source": {
+        "title": "Titanic (1997 film)",
+        "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-unsinkable",
+      "kind": "boolean",
+      "claim": "The White Star Line officially advertised the Titanic as unsinkable",
+      "answer": false,
       "context": "The company never made that claim in its advertising. The phrase came from press coverage and trade journals, and grew in the retelling after the sinking.",
       "goDeeper": "A 1911 shipping journal said she was 'practically unsinkable'. The qualifier did not survive.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-band", "kind": "boolean", "claim": "The ship's musicians kept playing as the Titanic went down", "answer": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-band",
+      "kind": "boolean",
+      "claim": "The ship's musicians kept playing as the Titanic went down",
+      "answer": true,
       "context": "Multiple survivor accounts agree the band played on deck to the end. None of the eight musicians survived.",
       "goDeeper": "What they played last is disputed; survivors named different tunes.",
-      "source": { "title": "Titanic", "url": "https://en.wikipedia.org/wiki/Titanic" }, "status": "draft" },
-    { "id": "ti-broke-apart", "kind": "boolean", "claim": "The Titanic broke in two before sinking", "answer": true,
+      "source": {
+        "title": "Titanic",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-broke-apart",
+      "kind": "boolean",
+      "claim": "The Titanic broke in two before sinking",
+      "answer": true,
       "context": "Survivors said so at the time and were largely disbelieved. The 1985 discovery of the bow and stern lying far apart settled it.",
       "goDeeper": "The two halves rest about 600 metres from each other on the sea floor.",
-      "source": { "title": "Wreck of the Titanic", "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic" }, "status": "draft" },
-    { "id": "ti-californian", "kind": "boolean", "claim": "Another ship was close enough to see the Titanic's distress rockets", "answer": true,
+      "source": {
+        "title": "Wreck of the Titanic",
+        "url": "https://en.wikipedia.org/wiki/Wreck_of_the_Titanic"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-californian",
+      "kind": "boolean",
+      "claim": "Another ship was close enough to see the Titanic's distress rockets",
+      "answer": true,
       "context": "The Californian lay stopped in ice nearby. Her crew saw rockets but did not respond; her wireless operator had gone to bed.",
       "goDeeper": "Both the British and American inquiries condemned her conduct, and the argument about how close she really was has never fully ended.",
-      "source": { "title": "SS Californian", "url": "https://en.wikipedia.org/wiki/SS_Californian" }, "status": "draft" },
-    { "id": "ti-sister", "kind": "boolean", "claim": "The Titanic had two nearly identical sister ships", "answer": true,
+      "source": {
+        "title": "SS Californian",
+        "url": "https://en.wikipedia.org/wiki/SS_Californian"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-sister",
+      "kind": "boolean",
+      "claim": "The Titanic had two nearly identical sister ships",
+      "answer": true,
       "context": "Olympic and Britannic. Olympic served for 24 years; Britannic sank in 1916 after striking a mine.",
       "goDeeper": "One nurse, Violet Jessop, served aboard all three — and survived both sinkings.",
-      "source": { "title": "Olympic-class ocean liner", "url": "https://en.wikipedia.org/wiki/Olympic-class_ocean_liner" }, "status": "draft" },
-    { "id": "ti-radio-rules", "kind": "boolean", "claim": "The disaster led to new rules requiring lifeboats for everyone aboard", "answer": true,
+      "source": {
+        "title": "Olympic-class ocean liner",
+        "url": "https://en.wikipedia.org/wiki/Olympic-class_ocean_liner"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "ti-radio-rules",
+      "kind": "boolean",
+      "claim": "The disaster led to new rules requiring lifeboats for everyone aboard",
+      "answer": true,
       "context": "The 1914 Convention for the Safety of Life at Sea required lifeboat places for all aboard and a continuous radio watch.",
       "goDeeper": "SOLAS is still the treaty governing ship safety today, more than a century on.",
-      "source": { "title": "SOLAS Convention", "url": "https://en.wikipedia.org/wiki/SOLAS_Convention" }, "status": "draft" }
+      "source": {
+        "title": "SOLAS Convention",
+        "url": "https://en.wikipedia.org/wiki/SOLAS_Convention"
+      },
+      "status": "draft"
+    }
   ]
 }

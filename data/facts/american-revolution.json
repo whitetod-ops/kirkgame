@@ -93,7 +93,11 @@
         "url": "https://en.wikipedia.org/wiki/Signing_of_the_United_States_Declaration_of_Independence"
       },
       "status": "draft",
-      "fame": "obscure"
+      "fame": "obscure",
+      "range": {
+        "min": 35,
+        "max": 80
+      }
     },
     {
       "id": "ar-stamp-act",
@@ -233,7 +237,11 @@
         "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies"
       },
       "status": "draft",
-      "fame": "household"
+      "fame": "household",
+      "range": {
+        "min": 9,
+        "max": 16
+      }
     },
     {
       "id": "ar-july-4-signing",

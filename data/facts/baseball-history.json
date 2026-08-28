@@ -168,7 +168,11 @@
         "url": "https://en.wikipedia.org/wiki/Babe_Ruth"
       },
       "status": "draft",
-      "fame": "familiar"
+      "fame": "familiar",
+      "range": {
+        "min": 500,
+        "max": 800
+      }
     },
     {
       "id": "bb-dimaggio-streak",
@@ -183,7 +187,11 @@
         "url": "https://en.wikipedia.org/wiki/Joe_DiMaggio"
       },
       "status": "draft",
-      "fame": "familiar"
+      "fame": "familiar",
+      "range": {
+        "min": 35,
+        "max": 75
+      }
     },
     {
       "id": "bb-base-distance",
@@ -198,7 +206,11 @@
         "url": "https://en.wikipedia.org/wiki/Baseball_field"
       },
       "status": "draft",
-      "fame": "household"
+      "fame": "household",
+      "range": {
+        "min": 75,
+        "max": 110
+      }
     },
     {
       "id": "bb-doubleday",

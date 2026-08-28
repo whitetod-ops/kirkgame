@@ -304,6 +304,42 @@
       }
     }
 
+    /* A quantity has a range in the world, and that range is not a multiple of
+       the answer. Todd ruled on 52 number probes and the multiplier predicted
+       nothing: at exactly half the true value he kept seven and rejected six,
+       at one and a half he kept nine and rejected seven. What he rejected were
+       values that cannot be true of the thing itself -- 3,330 people aboard a
+       ship that held 3,300, a wreck at 5,700 metres where the ocean is 3,800,
+       16,200 failures out of the country's 25,000 banks.
+
+       So the fact may carry its own floor and ceiling. Reflect an out-of-range
+       probe to the far side first, since that keeps the distance the band asked
+       for; only pull it to the edge if the far side is no better. */
+    if (fact.kind === 'number' && fact.range) {
+      var lo = typeof fact.range.min === 'number' ? fact.range.min : -Infinity;
+      var hi = typeof fact.range.max === 'number' ? fact.range.max : Infinity;
+      if (p < lo || p > hi) {
+        anchor = null;
+        var span = Math.abs(p - fact.value);
+        var far = fact.value + (p > fact.value ? -span : span);
+        if (far >= lo && far <= hi && far !== fact.value) {
+          p = far;
+        } else {
+          /* Land inside the range rather than exactly on it. The boundary is
+             the least plausible value still allowed, and clamping put every
+             wide easy probe on the same number. */
+          var edge = p > hi ? hi : lo;
+          var inward = Math.round(Math.abs(edge - fact.value) * randFloat(0, 0.15));
+          p = edge + (p > hi ? -inward : inward);
+          if (p === fact.value) {
+            var room = edge > fact.value ? fact.value - lo : hi - fact.value;
+            var back = Math.max(1, Math.round(room * 0.4));
+            p = edge > fact.value ? fact.value - back : fact.value + back;
+          }
+        }
+      }
+    }
+
     /* Units carry limits the arithmetic does not know about. "Percentage of
        first-class women who survived: 230 percent, more or fewer?" was a live
        question. */
