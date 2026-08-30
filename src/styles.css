@@ -27,6 +27,10 @@
    swallowing every tap aimed at the answer buttons behind it. */
 [hidden] { display: none !important; }
 
+/* The shell is pinned to the viewport and nothing outside it may scroll. On
+   iOS the page itself rubber-bands otherwise, and the answer buttons ride out
+   of sight with it. */
+html, body { height: 100%; overflow: hidden; }
 html { -webkit-text-size-adjust: 100%; }
 
 body {
@@ -45,7 +49,24 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- shell ---------- */
 
-.app { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+/* svh, not dvh, and a vh fallback under both.
+
+   dvh is the CURRENT viewport, which on iOS Safari is the tall one whenever
+   the page is at rest and the toolbar has not been collapsed. This page never
+   scrolls, so the toolbar never collapses -- the shell was being sized to a
+   viewport about sixty pixels taller than the part you can actually see, and
+   the answer buttons sat underneath Safari's own bar. svh is the small
+   viewport: the height that is visible while the browser chrome is showing,
+   which for a shell that cannot scroll is the only height that is ever true.
+
+   The plain vh first is for iOS before 15.4, where svh and dvh are both
+   unknown -- without it the whole declaration is dropped, .app falls back to
+   auto height, and the buttons end up below the fold entirely. */
+.app {
+  height: 100vh;
+  height: 100svh;
+  display: flex; flex-direction: column; overflow: hidden;
+}
 
 .screen { display: none; flex: 1 1 auto; flex-direction: column; min-height: 0; }
 .screen.on { display: flex; }
@@ -435,7 +456,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   position: fixed;
   left: 0; right: 0; bottom: 0;
   z-index: 21;
-  max-height: 82dvh;
+  max-height: 82vh;
+  max-height: 82svh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background: var(--surface);
